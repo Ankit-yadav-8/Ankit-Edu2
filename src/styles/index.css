@@ -153,13 +153,13 @@ ul { list-style: none; }
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: 18px;
-  min-height: 98px;
+  gap: 16px;
+  min-height: 108px;
 }
 
 /* Brand logos (RC left, NABET right) — sized large & fully visible */
 .brand-logo { display: flex; align-items: center; }
-.brand-logo img { height: 66px; width: auto; }
+.brand-logo img { height: 74px; width: auto; }
 .nabet-logo { display: flex; align-items: center; }
 .nabet-logo img { height: 62px; width: auto; }
 
@@ -168,22 +168,23 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 2px;
 }
 .nav-links a {
   position: relative;
   font-weight: 600;
-  font-size: 0.93rem;
+  font-size: 0.86rem;
   color: var(--ink);
-  padding: 9px 14px;
+  padding: 8px 10px;
   border-radius: 8px;
   border: 1.5px solid transparent;
+  white-space: nowrap;
   transition: color 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
 }
 /* campusloom-style underline grow from centre */
 .nav-links a::after {
   content: "";
-  position: absolute; left: 14px; right: 14px; bottom: 4px; height: 2.5px;
+  position: absolute; left: 10px; right: 10px; bottom: 4px; height: 2.5px;
   background: var(--grad); border-radius: 3px;
   transform: scaleX(0); transform-origin: center;
   transition: transform 0.26s cubic-bezier(.4, 0, .2, 1);
@@ -193,7 +194,8 @@ ul { list-style: none; }
 .nav-links a.active { color: var(--violet-700); border-color: var(--violet-500); background: #fff; }
 .nav-links a.active::after { display: none; }
 
-.nav-right { display: flex; align-items: center; gap: 14px; }
+.nav-right { display: flex; align-items: center; gap: 12px; }
+.nav-actions { display: flex; align-items: center; gap: 8px; }
 .nav-mobile-cta { display: none; }
 
 .avatar {
@@ -868,26 +870,32 @@ ul { list-style: none; }
   .auth-wrap { grid-template-columns: 1fr; }
   .auth-side { display: none; }
 
-  .nav-inner { min-height: 74px; }
-  .brand-logo img { height: 52px; }
-  .nabet-logo img { height: 48px; }
+  /* logo (left) ......... toggle (right) */
+  .nav-inner { display: flex; justify-content: space-between; min-height: 80px; }
+  .brand-logo img { height: 56px; }
+  .nav-actions { display: none; }
 
   .nav-links {
     position: fixed;
-    inset: 74px 0 auto 0;
+    inset: 80px 0 auto 0;
     flex-direction: column;
     align-items: stretch;
     background: #fff;
+    border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
-    padding: 16px 20px 22px;
-    gap: 6px;
+    padding: 14px 18px 20px;
+    gap: 4px;
     box-shadow: var(--shadow);
-    transform: translateY(-140%);
+    transform: translateY(-150%);
     transition: transform 0.3s ease;
     z-index: 90;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
   }
   .nav-links.open { transform: translateY(0); }
-  .nav-links a { width: 100%; padding: 12px 16px; }
+  .nav-links a { width: 100%; padding: 13px 16px; border-radius: 10px; }
+  .nav-links a::after { display: none; }
+  .nav-links a:hover, .nav-links a.active { background: var(--violet-50); }
   .nav-mobile-cta { display: flex; gap: 10px; margin-top: 10px; padding-top: 14px; border-top: 1px solid var(--line); }
   .nav-mobile-cta .btn { flex: 1; }
   .nav-toggle { display: flex; }
@@ -901,13 +909,13 @@ ul { list-style: none; }
   .hero-slide__media img { max-height: 210px; }
   .hero-slide .hero-lead { font-size: 1rem; }
 
-  /* Mobile navbar: just RC logo (left) + hamburger (right), tight padding */
+  /* Mobile navbar: RC logo (left) + hamburger (far right), tight padding */
   .navbar .container { width: calc(100% - 16px); }
-  .nav-inner { min-height: 64px; gap: 8px; }
-  .brand-logo img { height: 44px; }
+  .nav-inner { min-height: 72px; gap: 8px; }
+  .brand-logo img { height: 50px; }
   .nabet-logo { display: none; }
   .nav-right { gap: 6px; }
-  .nav-links { inset: 64px 0 auto 0; }
+  .nav-links { inset: 72px 0 auto 0; max-height: calc(100vh - 72px); }
 
   /* Working force: show only the card on mobile */
   .wf-row { grid-template-columns: 1fr; }
