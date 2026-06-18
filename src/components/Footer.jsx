@@ -1,0 +1,76 @@
+import { Link } from "react-router-dom";
+import { RCLogo } from "./Logos.jsx";
+import { Insta, FB, LI, XTw, YT, IconPin, IconPhone, IconMail } from "./Icons.jsx";
+
+export default function Footer() {
+  const year = new Date().getFullYear();
+  return (
+    <footer className="footer">
+      <div className="container">
+        <div className="footer-grid">
+          <div>
+            <div className="brand-logo">
+              <RCLogo size={44} />
+              <span className="logo-text">
+                <b>Rejig GreenLogic</b>
+                <span>Private Limited</span>
+              </span>
+            </div>
+            <p className="desc">
+              Your techno-legal advisory partner in environmental consultancy — trusted by 3,000+
+              industrial units across 50+ sectors in India and abroad.
+            </p>
+            <div className="socials">
+              <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><Insta /></a>
+              <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><FB /></a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><LI /></a>
+              <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="X"><XTw /></a>
+              <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><YT /></a>
+            </div>
+          </div>
+
+          <div className="footer-col">
+            <h4>Company</h4>
+            <Link to="/about">About Us</Link>
+            <Link to="/services">Services</Link>
+            <Link to="/products">Products</Link>
+            <Link to="/contact">Contact</Link>
+            <Link to="/login">Client Login</Link>
+          </div>
+
+          <div className="footer-col">
+            <h4>Expertise</h4>
+            <Link to="/services">EIA / ESIA Studies</Link>
+            <Link to="/services">Forest & Wildlife Clearance</Link>
+            <Link to="/services">Remote Sensing & GIS</Link>
+            <Link to="/products">CEQMS Monitoring</Link>
+            <Link to="/services">ESG & Climate Risk</Link>
+          </div>
+
+          <div>
+            <h4>Get in touch</h4>
+            <ul className="foot-contact">
+              <li>
+                <IconPin size={16} />
+                <span>7th Floor, Block C, AWFIS Coworking, Laxmi Cyber City, Hitech City, Kondapur, Hyderabad - 500081</span>
+              </li>
+              <li>
+                <IconPhone size={16} />
+                <a href="tel:+918949472643">+91 89494 72643</a>
+              </li>
+              <li>
+                <IconMail size={16} />
+                <a href="mailto:rgpl@rgreenlogic.com">rgpl@rgreenlogic.com</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <span>© {year} Rejig GreenLogic Private Limited. All rights reserved.</span>
+          <span>NABET · MoEFCC · NSIC Accredited &nbsp;|&nbsp; Crafted with care</span>
+        </div>
+      </div>
+    </footer>
+  );
+}

@@ -1,0 +1,57 @@
+// Full service catalogue used by the Services page search & filter.
+export const SERVICE_CATEGORIES = [
+  { key: "all", label: "All" },
+  { key: "Assessment", label: "Assessment" },
+  { key: "Clearance", label: "Clearances" },
+  { key: "Monitoring", label: "Monitoring" },
+  { key: "Audit", label: "Audit & Compliance" },
+  { key: "Geospatial", label: "Geospatial" },
+  { key: "ESG", label: "ESG & Sustainability" },
+];
+
+export const SERVICES = [
+  { t: "Techno-Legal Advisory", c: "Assessment", d: "Your techno-legal partner across environmental regulation and approvals." },
+  { t: "Environmental Impact Assessment (EIA)", c: "Assessment", d: "Full EIA studies across 20 NABET-accredited sectors." },
+  { t: "Environment & Social Impact Assessment (ESIA)", c: "Assessment", d: "ESIA studies aligned to IFC & ADB guidelines." },
+  { t: "Social Impact Assessment (SIA)", c: "Assessment", d: "Stakeholder, resettlement and rehabilitation studies." },
+  { t: "Chemical / Industrial Risk Assessment", c: "Assessment", d: "Hazard and consequence analysis for industrial facilities." },
+  { t: "Biodiversity Impact Assessment (BIA)", c: "Clearance", d: "Habitat and species impact studies for clearances." },
+  { t: "Ecology & Biodiversity Study / Tree Enumeration", c: "Clearance", d: "Field ecology surveys and tree census." },
+  { t: "Forest Clearance & Wildlife Clearances", c: "Clearance", d: "End-to-end forest and wildlife clearance support." },
+  { t: "Wildlife Conservation / Mangrove Management Plan", c: "Clearance", d: "Conservation and mangrove management planning." },
+  { t: "Coastal Regulatory Zone (CRZ) Clearance", c: "Clearance", d: "CRZ assessment and clearance documentation." },
+  { t: "Environmental Monitoring", c: "Monitoring", d: "Air, water, noise and soil baseline & compliance monitoring." },
+  { t: "Marine Environment Monitoring", c: "Monitoring", d: "Marine and coastal environmental monitoring." },
+  { t: "Hydrodynamic Study", c: "Monitoring", d: "Coastal and water-body hydrodynamic modelling." },
+  { t: "Indoor Air Quality (IAQ) Testing", c: "Monitoring", d: "Workplace and building indoor air-quality testing." },
+  { t: "Odour Monitoring Services", c: "Monitoring", d: "Odour measurement, mapping and management." },
+  { t: "Online Monitoring System", c: "Monitoring", d: "Continuous online emission & effluent monitoring." },
+  { t: "Environmental Compliance Auditing", c: "Audit", d: "Verification against consent and clearance conditions." },
+  { t: "Environmental Due Diligence", c: "Audit", d: "Pre-transaction environmental due diligence." },
+  { t: "Building Physical & Environmental Due Diligence", c: "Audit", d: "Asset-level physical and environmental assessment." },
+  { t: "Environmental Permitting", c: "Audit", d: "Consents, authorisations and permit management." },
+  { t: "Environment / Waste / Green Audits", c: "Audit", d: "Statutory and voluntary environmental audits." },
+  { t: "Damage Assessment", c: "Audit", d: "Environmental damage and restoration assessment." },
+  { t: "Leak Detection and Repair (LDAR) Studies", c: "Audit", d: "Fugitive-emission LDAR programmes." },
+  { t: "Corporate EHS", c: "Audit", d: "Environment, Health & Safety management support." },
+  { t: "Remote Sensing & GIS", c: "Geospatial", d: "Spatial analysis with ArcGIS / Erdas workflows." },
+  { t: "Land Use / Land Cover by Satellite Imagery", c: "Geospatial", d: "LU/LC mapping and AI-assisted change detection." },
+  { t: "Mining Plan Preparation & DGPS Surveys", c: "Geospatial", d: "Mining plans and high-precision DGPS surveys." },
+  { t: "Geological Consulting", c: "Geospatial", d: "Geological and hydrogeological advisory." },
+  { t: "Disaster Management Plan", c: "Geospatial", d: "On-site and off-site emergency planning." },
+  { t: "Sustainability & ESDD Studies", c: "ESG", d: "Environmental & social due-diligence for investors." },
+  { t: "ESG Management System / Framework", c: "ESG", d: "ESGMS frameworks and reporting systems." },
+  { t: "Climate Change Risk Assessment (CCRA)", c: "ESG", d: "Physical and transition climate-risk assessment." },
+  { t: "IGBC / LEED Green Building Documentation", c: "ESG", d: "Green-building certification documentation." },
+  { t: "Trainings", c: "ESG", d: "Capacity-building and EHS/ESG training programmes." },
+];
+
+// Clientele names shown on the home page.
+export const CLIENTS = [
+  { name: "NSL Power", note: "Clean energy" },
+  { name: "SFAL", note: "K-Tech CoE for Fabless" },
+  { name: "Hariom", note: "Pipes · Scaffoldings" },
+  { name: "NGS Cement", note: "Cement" },
+  { name: "MS Agarwal Foundries", note: "Foundries Pvt. Ltd." },
+  { name: "VBC Ferro Alloys", note: "Ferro Alloys Ltd." },
+];
