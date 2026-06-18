@@ -5,6 +5,7 @@ import HeroCarousel from "../components/HeroCarousel.jsx";
 import { CLIENT_LOGOS } from "../data/clients.js";
 import { AI_FEATURES } from "../data/aiFeatures.js";
 import SmartImg from "../components/SmartImg.jsx";
+import visionImg from "../assets/vision-handshake.png";
 import {
   IconDoc, IconLeaf, IconEye, IconShield, IconChart, IconGlobe,
   IconCheck, IconActivity, IconArrow, IconUsers, IconBeaker, IconStar,
