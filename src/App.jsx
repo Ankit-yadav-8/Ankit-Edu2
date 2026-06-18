@@ -10,6 +10,7 @@ import Services from "./pages/Services.jsx";
 import Products from "./pages/Products.jsx";
 import Infrastructure from "./pages/Infrastructure.jsx";
 import Clientele from "./pages/Clientele.jsx";
+import AiIntegration from "./pages/AiIntegration.jsx";
 import Contact from "./pages/Contact.jsx";
 import Login from "./pages/Login.jsx";
 import Signup from "./pages/Signup.jsx";
@@ -27,6 +28,7 @@ export default function App() {
       "/products": "Products & AI | Rejig GreenLogic",
       "/infrastructure": "Infrastructure | Rejig GreenLogic",
       "/clientele": "Clientele | Rejig GreenLogic",
+      "/ai-integration": "AI Integration | Rejig GreenLogic",
       "/contact": "Contact Us | Rejig GreenLogic",
       "/login": "Log In | Rejig GreenLogic",
       "/signup": "Sign Up | Rejig GreenLogic",
@@ -46,6 +48,7 @@ export default function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/infrastructure" element={<Infrastructure />} />
           <Route path="/clientele" element={<Clientele />} />
+          <Route path="/ai-integration" element={<AiIntegration />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />

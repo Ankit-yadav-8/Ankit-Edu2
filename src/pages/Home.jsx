@@ -2,7 +2,9 @@ import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal.jsx";
 import Counter from "../components/Counter.jsx";
 import HeroCarousel from "../components/HeroCarousel.jsx";
-import { CLIENTS } from "../data/services.js";
+import { CLIENT_LOGOS, CLIENTS_STRIP } from "../data/clients.js";
+import { AI_FEATURES } from "../data/aiFeatures.js";
+import visionImg from "../assets/vision-handshake.png";
 import {
   IconDoc, IconLeaf, IconEye, IconShield, IconChart, IconGlobe,
   IconCheck, IconActivity, IconArrow, IconUsers, IconBeaker, IconStar,
@@ -130,10 +132,27 @@ export default function Home() {
               <li><span className="tick">✓</span> AI-assisted satellite analysis for forest, mining &amp; hydrology</li>
               <li><span className="tick">✓</span> Predictive alerts on CEQMS &amp; air-quality sensor data</li>
             </ul>
-            <Link to="/products" className="btn btn-ghost" style={{ marginTop: 22 }}>
-              See our AI roadmap <IconArrow size={18} />
+            <Link to="/ai-integration" className="btn btn-ghost" style={{ marginTop: 22 }}>
+              Explore our AI approach <IconArrow size={18} />
             </Link>
           </Reveal>
+        </div>
+
+        {/* AI feature teaser */}
+        <div className="container" style={{ marginTop: 40 }}>
+          <div className="grid grid-3">
+            {AI_FEATURES.slice(0, 3).map((f, i) => (
+              <Reveal key={f.id} delay={(i % 3) + 1} className="card">
+                <div className="ico">{f.icon}</div>
+                <span className="tag">{f.phase}</span>
+                <h3>{f.label}</h3>
+                <p>{f.summary}</p>
+              </Reveal>
+            ))}
+          </div>
+          <div className="text-center" style={{ marginTop: 30 }}>
+            <Link to="/ai-integration" className="btn btn-primary">See all 5 AI features <IconArrow size={18} /></Link>
+          </div>
         </div>
       </section>
 
@@ -144,18 +163,29 @@ export default function Home() {
             <span className="eyebrow">Our purpose</span>
             <h2 className="section-title">Vision &amp; Mission</h2>
           </Reveal>
-          <div className="grid grid-2" style={{ marginTop: 40 }}>
-            <Reveal className="vm-tile">
-              <h3>🎯 Our Vision</h3>
-              <p>To become the valued partner with which clients can pivot their green image &amp; sustainability drive.</p>
+          <div className="vm-split" style={{ marginTop: 44 }}>
+            <Reveal className="vm-image">
+              <img src={visionImg} alt="Nature and industry in partnership" />
             </Reveal>
-            <Reveal delay={1} className="vm-tile alt">
-              <h3>🚀 Our Mission</h3>
-              <p>
-                Maintaining the highest integrity to QCI, NABET and MoEF&amp;CC standards — built on a
-                culture of trust, responsibility, collaboration and performance, as a responsible
-                entity preaching green initiatives.
-              </p>
+            <Reveal delay={1} className="vm-cards">
+              <div className="vm-card">
+                <div className="ico"><IconEye size={26} /></div>
+                <div>
+                  <h3>Our Vision</h3>
+                  <p>To become the valued partner with which clients can pivot their green image &amp; sustainability drive.</p>
+                </div>
+              </div>
+              <div className="vm-card">
+                <div className="ico"><IconShield size={26} /></div>
+                <div>
+                  <h3>Our Mission</h3>
+                  <p>
+                    Maintaining the highest integrity to QCI, NABET and MoEF&amp;CC standards — built on a
+                    culture of trust, responsibility, collaboration and performance, as a responsible
+                    entity preaching green initiatives that delight our customers.
+                  </p>
+                </div>
+              </div>
             </Reveal>
           </div>
         </div>
@@ -192,14 +222,19 @@ export default function Home() {
             <h2 className="section-title">Our clientele</h2>
             <p className="section-sub">A few of the 3,000+ organisations who rely on RGPL.</p>
           </Reveal>
-          <Reveal className="logo-strip">
-            {CLIENTS.map((c) => (
-              <div className="logo-pill" key={c.name}>
-                {c.name}
-                <small>{c.note}</small>
+          <Reveal className="client-grid">
+            {CLIENT_LOGOS.map((c) => (
+              <div className="client-logo" key={c.name}>
+                <img src={c.src} alt={c.name} loading="lazy" />
               </div>
             ))}
           </Reveal>
+          <Reveal className="clients-strip">
+            <img src={CLIENTS_STRIP} alt="More RGPL clients" loading="lazy" />
+          </Reveal>
+          <div className="text-center" style={{ marginTop: 28 }}>
+            <Link to="/clientele" className="btn btn-ghost">See all clientele <IconArrow size={18} /></Link>
+          </div>
         </div>
       </section>
 

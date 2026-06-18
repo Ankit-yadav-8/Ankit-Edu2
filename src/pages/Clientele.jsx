@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal.jsx";
 import Counter from "../components/Counter.jsx";
-import { CLIENTS } from "../data/services.js";
+import { CLIENT_LOGOS, CLIENTS_STRIP } from "../data/clients.js";
 import { IconArrow } from "../components/Icons.jsx";
 
 const SECTORS = [
@@ -40,13 +40,15 @@ export default function Clientele() {
             <span className="eyebrow">Our clientele</span>
             <h2 className="section-title">A few of the organisations we work with</h2>
           </Reveal>
-          <Reveal className="logo-strip">
-            {CLIENTS.map((c) => (
-              <div className="logo-pill" key={c.name}>
-                {c.name}
-                <small>{c.note}</small>
+          <Reveal className="client-grid">
+            {CLIENT_LOGOS.map((c) => (
+              <div className="client-logo" key={c.name}>
+                <img src={c.src} alt={c.name} loading="lazy" />
               </div>
             ))}
+          </Reveal>
+          <Reveal className="clients-strip">
+            <img src={CLIENTS_STRIP} alt="More RGPL clients" loading="lazy" />
           </Reveal>
         </div>
       </section>

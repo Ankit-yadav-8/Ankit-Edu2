@@ -41,7 +41,7 @@ export default function Footer() {
             <Link to="/services">Forest & Wildlife Clearance</Link>
             <Link to="/services">Remote Sensing & GIS</Link>
             <Link to="/products">CEQMS Monitoring</Link>
-            <Link to="/services">ESG & Climate Risk</Link>
+            <Link to="/ai-integration">AI Integration</Link>
           </div>
 
           <div>
