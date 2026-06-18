@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { IconChat, IconSend, IconLeaf } from "./Icons.jsx";
+import { localAnswer } from "../data/chatKb.js";
 
 const SUGGESTIONS = [
   "What services do you offer?",
@@ -40,23 +41,23 @@ export default function ChatWidget() {
     setShowSuggest(false);
     setTyping(true);
 
+    let reply;
     try {
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: value, history: history.current }),
       });
+      if (!res.ok) throw new Error("api");
       const data = await res.json();
-      setMessages((m) => [...m, { who: "bot", text: data.reply }]);
-      history.current.push({ role: "assistant", content: data.reply });
+      reply = data.reply;
     } catch {
-      setMessages((m) => [
-        ...m,
-        { who: "bot", text: "Sorry, I couldn't reach the server. Please email us at rgpl@rgreenlogic.com." },
-      ]);
-    } finally {
-      setTyping(false);
+      // No backend (e.g. static GitHub Pages build) — answer from the local KB.
+      reply = localAnswer(value);
     }
+    setMessages((m) => [...m, { who: "bot", text: reply }]);
+    history.current.push({ role: "assistant", content: reply });
+    setTyping(false);
   }
 
   const onSubmit = (e) => {

@@ -1,9 +1,12 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-// React (Vite) frontend. The Express API runs on :5000 and is proxied in dev.
-// `npm run build` emits the static SPA to /dist, which server.js serves in prod.
-export default defineConfig({
+// React (Vite) frontend.
+// - Local dev / Express prod serving uses base "/".
+// - The GitHub Pages build (`npm run deploy`, mode "ghpages") uses the repo
+//   sub-path so assets resolve at https://<user>.github.io/Ankit-Edu2/.
+export default defineConfig(({ mode }) => ({
+  base: mode === "ghpages" ? "/Ankit-Edu2/" : "/",
   plugins: [react()],
   server: {
     port: 5173,
@@ -15,4 +18,4 @@ export default defineConfig({
     outDir: "dist",
     emptyOutDir: true,
   },
-});
+}));

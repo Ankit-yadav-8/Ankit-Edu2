@@ -11,9 +11,20 @@
     "server": "node server.js",
     "server:dev": "nodemon server.js",
     "start": "node server.js",
-    "dev:full": "concurrently -n web,api -c cyan,magenta \"vite\" \"nodemon server.js\""
+    "dev:full": "concurrently -n web,api -c cyan,magenta \"vite\" \"nodemon server.js\"",
+    "predeploy": "vite build --mode ghpages",
+    "deploy": "gh-pages -d dist -t"
   },
-  "keywords": ["environment", "consultancy", "rgpl", "ai", "react", "vite", "mongodb"],
+  "homepage": "https://ankit-yadav-8.github.io/Ankit-Edu2",
+  "keywords": [
+    "environment",
+    "consultancy",
+    "rgpl",
+    "ai",
+    "react",
+    "vite",
+    "mongodb"
+  ],
   "author": "Rejig GreenLogic Private Limited",
   "license": "MIT",
   "dependencies": {
@@ -31,6 +42,7 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.1",
     "concurrently": "^9.0.1",
+    "gh-pages": "^6.3.0",
     "nodemon": "^3.1.4",
     "vite": "^5.4.2"
   }
