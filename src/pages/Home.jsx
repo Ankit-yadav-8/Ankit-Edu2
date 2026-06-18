@@ -2,28 +2,31 @@ import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal.jsx";
 import Counter from "../components/Counter.jsx";
 import HeroCarousel from "../components/HeroCarousel.jsx";
-import { CLIENT_LOGOS, CLIENTS_STRIP } from "../data/clients.js";
+import { CLIENT_LOGOS } from "../data/clients.js";
 import { AI_FEATURES } from "../data/aiFeatures.js";
-import visionImg from "../assets/vision-handshake.png";
+import SmartImg from "../components/SmartImg.jsx";
 import {
   IconDoc, IconLeaf, IconEye, IconShield, IconChart, IconGlobe,
   IconCheck, IconActivity, IconArrow, IconUsers, IconBeaker, IconStar,
 } from "../components/Icons.jsx";
 
+const U = (id) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=720&q=60`;
+const WELCOME_IMG = U("1542601906990-b4d3fb778b09"); // hands / green earth
+
 const SERVICES = [
-  { icon: <IconDoc size={26} />, title: "EIA & ESIA Studies", desc: "Full Environmental & Social Impact Assessment studies aligned to IFC and ADB guidelines, with baseline monitoring and compliance auditing." },
-  { icon: <IconLeaf size={26} />, title: "Forest & Wildlife Clearance", desc: "Biodiversity Impact Assessment, forest & wildlife clearances, conservation and mangrove management plans, tree enumeration and ecology studies." },
-  { icon: <IconEye size={26} />, title: "Remote Sensing & GIS", desc: "Land Use / Land Cover mapping by satellite imagery, mining plan preparation, DGPS surveys and AI-assisted change detection." },
-  { icon: <IconShield size={26} />, title: "Compliance & Auditing", desc: "Environmental compliance auditing, due diligence, permitting, green / waste audits and corporate EHS support." },
-  { icon: <IconChart size={26} />, title: "ESG & Climate Risk", desc: "Sustainability & ESDD studies, ESG management frameworks, Climate Change Risk Assessment and IGBC/LEED documentation." },
-  { icon: <IconGlobe size={26} />, title: "Coastal & Marine", desc: "Coastal Regulatory Zone (CRZ) clearance, marine environment monitoring, hydrodynamic and hydrological studies." },
+  { icon: <IconDoc size={26} />, title: "EIA & ESIA Studies", img: U("1454165804606-c3d57bc86b40"), desc: "Full Environmental & Social Impact Assessment studies aligned to IFC and ADB guidelines, with baseline monitoring and compliance auditing." },
+  { icon: <IconLeaf size={26} />, title: "Forest & Wildlife Clearance", img: U("1441974231531-c6227db76b6e"), desc: "Biodiversity Impact Assessment, forest & wildlife clearances, conservation and mangrove management plans, tree enumeration and ecology studies." },
+  { icon: <IconEye size={26} />, title: "Remote Sensing & GIS", img: U("1502920917128-1aa500764cbd"), desc: "Land Use / Land Cover mapping by satellite imagery, mining plan preparation, DGPS surveys and AI-assisted change detection." },
+  { icon: <IconShield size={26} />, title: "Compliance & Auditing", img: U("1450101499163-c8848c66ca85"), desc: "Environmental compliance auditing, due diligence, permitting, green / waste audits and corporate EHS support." },
+  { icon: <IconChart size={26} />, title: "ESG & Climate Risk", img: U("1473773508845-188df298d2d1"), desc: "Sustainability & ESDD studies, ESG management frameworks, Climate Change Risk Assessment and IGBC/LEED documentation." },
+  { icon: <IconGlobe size={26} />, title: "Coastal & Marine", img: U("1505142468610-359e7d316be0"), desc: "Coastal Regulatory Zone (CRZ) clearance, marine environment monitoring, hydrodynamic and hydrological studies." },
 ];
 
 const WORKFORCE = [
-  { icon: <IconUsers size={22} />, role: "Technical Crew", count: 12, sub: "Senior & project consultants" },
-  { icon: <IconBeaker size={22} />, role: "Lab Experts", count: 5, sub: "Sampling & analysis specialists" },
-  { icon: <IconStar size={22} />, role: "Field Officers", count: 3, sub: "On-site monitoring & surveys" },
-  { icon: <IconCheck size={22} />, role: "Auxiliary Staff", count: 5, sub: "Coordination & operations" },
+  { icon: <IconUsers size={22} />, role: "Technical Crew", count: 12, sub: "Senior & project consultants", desc: "Senior consultants and project leads who scope studies, draft EIA/ESIA reports and steer projects through SEAC/EAC appraisal." },
+  { icon: <IconBeaker size={22} />, role: "Lab Experts", count: 5, sub: "Sampling & analysis specialists", desc: "Sampling and analysis specialists handling air, water, soil and noise testing through our NABL-grade laboratory partner." },
+  { icon: <IconStar size={22} />, role: "Field Officers", count: 3, sub: "On-site monitoring & surveys", desc: "On-ground officers running baseline monitoring, ecological surveys and DGPS field work across project sites pan-India." },
+  { icon: <IconCheck size={22} />, role: "Auxiliary Staff", count: 5, sub: "Coordination & operations", desc: "Coordination and operations staff who keep documentation, regulatory liaison and client communication running smoothly." },
 ];
 
 export default function Home() {
@@ -68,14 +71,19 @@ export default function Home() {
             </Link>
           </Reveal>
 
-          <Reveal delay={1}>
-            <div className="stats grid-2">
-              <div className="stat"><div className="num"><Counter to={3000} suffix="+" /></div><div className="lbl">Industrial units served</div></div>
-              <div className="stat"><div className="num"><Counter to={50} suffix="+" /></div><div className="lbl">Sectoral areas</div></div>
-              <div className="stat"><div className="num"><Counter to={20} /></div><div className="lbl">NABET sectors</div></div>
-              <div className="stat"><div className="num"><Counter to={25} suffix="+" /></div><div className="lbl">Expert team members</div></div>
-            </div>
+          <Reveal delay={1} className="welcome-media">
+            <SmartImg src={WELCOME_IMG} alt="Hands protecting a green earth" />
           </Reveal>
+        </div>
+
+        {/* stats band */}
+        <div className="container" style={{ marginTop: 40 }}>
+          <div className="stats grid-4">
+            <div className="stat"><div className="num"><Counter to={3000} suffix="+" /></div><div className="lbl">Industrial units served</div></div>
+            <div className="stat"><div className="num"><Counter to={50} suffix="+" /></div><div className="lbl">Sectoral areas</div></div>
+            <div className="stat"><div className="num"><Counter to={20} /></div><div className="lbl">NABET sectors</div></div>
+            <div className="stat"><div className="num"><Counter to={25} suffix="+" /></div><div className="lbl">Expert team members</div></div>
+          </div>
         </div>
       </section>
 
@@ -93,8 +101,11 @@ export default function Home() {
 
           <div className="grid grid-3" style={{ marginTop: 44 }}>
             {SERVICES.map((s, i) => (
-              <Reveal key={s.title} delay={(i % 3) + 1} className="card">
-                <div className="ico">{s.icon}</div>
+              <Reveal key={s.title} delay={(i % 3) + 1} className="card svc-photo-card">
+                <div className="svc-photo">
+                  <SmartImg src={s.img} alt={s.title} />
+                  <span className="svc-photo__ico">{s.icon}</span>
+                </div>
                 <h3>{s.title}</h3>
                 <p>{s.desc}</p>
               </Reveal>
@@ -199,15 +210,20 @@ export default function Home() {
             <h2 className="section-title">Introduction to our working force</h2>
             <p className="section-sub">A multidisciplinary crew of consultants, lab experts and field officers.</p>
           </Reveal>
-          <div className="grid grid-4" style={{ marginTop: 44 }}>
-            {WORKFORCE.map((w, i) => (
-              <Reveal key={w.role} delay={(i % 4)} className="card text-center">
-                <div className="ico" style={{ margin: "0 auto 16px" }}>{w.icon}</div>
-                <h3>{w.role}</h3>
-                <div className="num" style={{ fontFamily: "var(--font-head)", fontSize: "2.1rem", fontWeight: 800 }}>
-                  <span className="gradient-text"><Counter to={w.count} /></span>
+          <div className="workforce">
+            {WORKFORCE.map((w) => (
+              <Reveal key={w.role} className="wf-row">
+                <div className="wf-text">
+                  <span className="tag">{w.sub}</span>
+                  <h3>{w.role}</h3>
+                  <p>{w.desc}</p>
                 </div>
-                <p>{w.sub}</p>
+                <div className="wf-card">
+                  <div className="ico">{w.icon}</div>
+                  <div className="wf-num"><span className="gradient-text"><Counter to={w.count} /></span></div>
+                  <div className="wf-card__label">Employees</div>
+                  <div className="wf-card__role">{w.role}</div>
+                </div>
               </Reveal>
             ))}
           </div>
@@ -228,9 +244,6 @@ export default function Home() {
                 <img src={c.src} alt={c.name} loading="lazy" />
               </div>
             ))}
-          </Reveal>
-          <Reveal className="clients-strip">
-            <img src={CLIENTS_STRIP} alt="More RGPL clients" loading="lazy" />
           </Reveal>
           <div className="text-center" style={{ marginTop: 28 }}>
             <Link to="/clientele" className="btn btn-ghost">See all clientele <IconArrow size={18} /></Link>

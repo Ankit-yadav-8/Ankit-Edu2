@@ -46,8 +46,6 @@ export default function HeroCarousel() {
   const paused = useRef(false);
 
   const go = useCallback((n) => setI((n + SLIDES.length) % SLIDES.length), []);
-  const next = useCallback(() => setI((p) => (p + 1) % SLIDES.length), []);
-  const prev = useCallback(() => setI((p) => (p - 1 + SLIDES.length) % SLIDES.length), []);
 
   useEffect(() => {
     timer.current = setInterval(() => {
@@ -85,13 +83,6 @@ export default function HeroCarousel() {
           </div>
         </div>
       ))}
-
-      <button className="hero-arrow prev" aria-label="Previous slide" onClick={prev}>
-        <IconArrow size={20} style={{ transform: "rotate(180deg)" }} />
-      </button>
-      <button className="hero-arrow next" aria-label="Next slide" onClick={next}>
-        <IconArrow size={20} />
-      </button>
 
       <div className="hero-dots">
         {SLIDES.map((_, idx) => (

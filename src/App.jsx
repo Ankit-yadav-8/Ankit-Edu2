@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import ChatWidget from "./components/ChatWidget.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
+import BackToTop from "./components/BackToTop.jsx";
+import WhatsAppButton from "./components/WhatsAppButton.jsx";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Services from "./pages/Services.jsx";
@@ -57,6 +59,8 @@ export default function App() {
       </main>
       <Footer />
       <ChatWidget />
+      <WhatsAppButton />
+      <BackToTop />
     </>
   );
 }

@@ -1,20 +1,24 @@
 import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal.jsx";
-import { SERVICES, SERVICE_CATEGORIES } from "../data/services.js";
 import PageHero from "../components/PageHero.jsx";
+import SmartImg from "../components/SmartImg.jsx";
+import { SERVICES, SERVICE_CATEGORIES, CATEGORY_IMG } from "../data/services.js";
 import { IconSearch, IconLeaf, IconArrow } from "../components/Icons.jsx";
 
 export default function Services() {
   const [cat, setCat] = useState("all");
   const [term, setTerm] = useState("");
+  const [open, setOpen] = useState(null);
 
   const list = useMemo(() => {
     const q = term.toLowerCase().trim();
     return SERVICES.filter(
       (s) =>
         (cat === "all" || s.c === cat) &&
-        (s.t.toLowerCase().includes(q) || s.d.toLowerCase().includes(q))
+        (s.t.toLowerCase().includes(q) ||
+          s.d.toLowerCase().includes(q) ||
+          (s.more || "").toLowerCase().includes(q))
     );
   }, [cat, term]);
 
@@ -24,7 +28,7 @@ export default function Services() {
         eyebrow="Product & Services"
         title="Everything you need for"
         highlight="environmental compliance"
-        subtitle="From impact assessments to clearances, audits and ESG — a single partner across the entire compliance lifecycle."
+        subtitle="From impact assessments to clearances, audits and ESG — a single partner across the entire compliance lifecycle. Click any service to see the full scope."
         breadcrumb="Product & Services"
         cards={[
           { type: "info", icon: "📋", title: "30+ Services", sub: "Full compliance lifecycle", tone: "green" },
@@ -50,7 +54,7 @@ export default function Services() {
                 <button
                   key={c.key}
                   className={`chip ${cat === c.key ? "active" : ""}`}
-                  onClick={() => setCat(c.key)}
+                  onClick={() => { setCat(c.key); setOpen(null); }}
                 >
                   {c.label}
                 </button>
@@ -60,16 +64,31 @@ export default function Services() {
 
           {list.length ? (
             <div className="grid grid-3">
-              {list.map((s) => (
-                <div className="card svc-card" key={s.t}>
-                  <div className="ico"><IconLeaf size={22} /></div>
-                  <div>
-                    <span className="tag">{s.c}</span>
-                    <h3>{s.t}</h3>
-                    <p style={{ marginTop: 6 }}>{s.d}</p>
+              {list.map((s) => {
+                const isOpen = open === s.t;
+                return (
+                  <div className={`card svc-card2 ${isOpen ? "open" : ""}`} key={s.t}>
+                    <button className="svc-card2__head" onClick={() => setOpen(isOpen ? null : s.t)} aria-expanded={isOpen}>
+                      <div className="svc-thumb">
+                        <SmartImg src={CATEGORY_IMG[s.c]} alt={s.c} />
+                        <span className="svc-thumb__ico"><IconLeaf size={20} /></span>
+                      </div>
+                      <div className="svc-card2__body">
+                        <span className="tag">{s.c}</span>
+                        <h3>{s.t}</h3>
+                        <p>{s.d}</p>
+                      </div>
+                      <span className={`svc-caret ${isOpen ? "open" : ""}`} aria-hidden="true">▾</span>
+                    </button>
+                    <div className="svc-detail" style={{ maxHeight: isOpen ? 320 : 0 }}>
+                      <div className="svc-detail__inner">
+                        <p>{s.more}</p>
+                        <Link to="/contact" className="btn btn-primary btn-sm">Enquire about this <IconArrow size={16} /></Link>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           ) : (
             <p className="empty-note">No services match your search. Try a different term or filter.</p>

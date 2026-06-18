@@ -2,37 +2,9 @@ import { Link } from "react-router-dom";
 import Reveal from "./Reveal.jsx";
 import Counter from "./Counter.jsx";
 
-/* Rich inner-page hero: heading on the left, a staggered "mix card"
-   collage on the right (College-Parichay / JEE-style). Pass `cards`
-   as a flat array; they're split into two offset columns. */
-function CollageCard({ c }) {
-  if (c.type === "image") {
-    return (
-      <div className="collage-card collage-card--image">
-        <img src={c.src} alt={c.alt || ""} loading="lazy" />
-      </div>
-    );
-  }
-  if (c.type === "stat") {
-    return (
-      <div className={`collage-card collage-card--stat tone-${c.tone || "green"}`}>
-        <div className="collage-num">
-          <Counter to={c.num} suffix={c.suffix || ""} />
-        </div>
-        <div className="collage-label">{c.label}</div>
-      </div>
-    );
-  }
-  // info
-  return (
-    <div className={`collage-card collage-card--info tone-${c.tone || "green"}`}>
-      <span className="collage-ico">{c.icon}</span>
-      <b>{c.title}</b>
-      {c.sub && <small>{c.sub}</small>}
-    </div>
-  );
-}
-
+/* Rich inner-page hero: heading on the left, and a single cohesive
+   info panel on the right that holds all the data (optional image on top,
+   then a 2-column grid of stats / info cells separated by hairline dividers). */
 export default function PageHero({
   eyebrow,
   title,
@@ -43,8 +15,8 @@ export default function PageHero({
   cards = [],
   cta,
 }) {
-  const colA = cards.filter((_, i) => i % 2 === 0);
-  const colB = cards.filter((_, i) => i % 2 === 1);
+  const image = cards.find((c) => c.type === "image");
+  const data = cards.filter((c) => c.type !== "image");
 
   return (
     <section className="page-hero">
@@ -73,20 +45,40 @@ export default function PageHero({
         </Reveal>
 
         {cards.length > 0 && (
-          <Reveal delay={1} className="hero-collage">
-            <div className="collage-col">
-              {colA.map((c, i) => (
-                <div key={i} className="collage-wrap" style={{ animationDelay: `${i * 0.6}s` }}>
-                  <CollageCard c={c} />
+          <Reveal delay={1} className="hero-panel-wrap">
+            <div className="hero-panel">
+              {image && (
+                <div className="hero-panel__img">
+                  <img src={image.src} alt={image.alt || ""} loading="lazy" />
                 </div>
-              ))}
-            </div>
-            <div className="collage-col collage-col--offset">
-              {colB.map((c, i) => (
-                <div key={i} className="collage-wrap" style={{ animationDelay: `${i * 0.6 + 0.3}s` }}>
-                  <CollageCard c={c} />
+              )}
+              {data.length > 0 && (
+                <div className="hero-panel__grid">
+                  {data.map((c, i) => (
+                    <div
+                      key={i}
+                      className={`hero-panel__item ${c.type === "stat" ? "is-stat" : ""} tone-${c.tone || "green"}`}
+                    >
+                      {c.type === "stat" ? (
+                        <>
+                          <div className="hp-num">
+                            <Counter to={c.num} suffix={c.suffix || ""} />
+                          </div>
+                          <div className="hp-label">{c.label}</div>
+                        </>
+                      ) : (
+                        <>
+                          <span className="hp-ico">{c.icon}</span>
+                          <div>
+                            <b>{c.title}</b>
+                            {c.sub && <small>{c.sub}</small>}
+                          </div>
+                        </>
+                      )}
+                    </div>
+                  ))}
                 </div>
-              ))}
+              )}
             </div>
           </Reveal>
         )}

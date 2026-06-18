@@ -15,10 +15,11 @@ export default function Infrastructure() {
         subtitle="Industry-standard modelling, geospatial and monitoring tools — backed by ISO 9001:2015 quality management."
         breadcrumb="Infrastructure"
         cards={[
-          { type: "info", icon: "🛰️", title: "GIS & Remote Sensing", sub: "ArcGIS 10.8 · Erdas 9.2", tone: "green" },
-          { type: "info", icon: "🌬️", title: "AERMOD", sub: "Air dispersion modelling", tone: "teal" },
           { type: "image", src: isoCert, alt: "ISO 9001:2015 Certificate of Registration" },
-          { type: "info", icon: "🧪", title: "NABL Lab", sub: "JM Envirolab, Gurgaon", tone: "amber" },
+          { type: "info", icon: "🛰️", title: "GIS & Remote Sensing", sub: "ArcGIS · Erdas", tone: "green" },
+          { type: "info", icon: "🌬️", title: "AERMOD", sub: "Air dispersion", tone: "teal" },
+          { type: "info", icon: "🧪", title: "NABL Lab", sub: "JM Envirolab", tone: "amber" },
+          { type: "stat", num: 5, label: "Capability areas", tone: "green" },
         ]}
       />
 
@@ -52,13 +53,16 @@ export default function Infrastructure() {
         <div className="container split">
           <Reveal>
             <span className="eyebrow">Laboratory</span>
-            <h2 className="section-title">{LAB.name}</h2>
+            <div className="cert-frame" style={{ marginBottom: 22 }}>
+              <img src={isoCert} alt="ISO 9001:2015 Certificate of Registration" loading="lazy" />
+            </div>
+            <h2 className="section-title" style={{ fontSize: "1.7rem" }}>{LAB.name}</h2>
             <p className="body">{LAB.intro}</p>
             <div className="lab-meta">
               <span className="tag">{LAB.accreditation}</span>
               <span className="tag">{LAB.location}</span>
             </div>
-            <Link to="/contact" className="btn btn-primary" style={{ marginTop: 24 }}>
+            <Link to="/contact" className="btn btn-primary" style={{ marginTop: 22 }}>
               Request lab services <IconArrow size={18} />
             </Link>
           </Reveal>

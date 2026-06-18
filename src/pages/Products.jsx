@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal.jsx";
 import PageHero from "../components/PageHero.jsx";
 import { IconBeaker, IconActivity, IconArrow } from "../components/Icons.jsx";
+import productSensor from "../assets/product-sensor.png";
 
 const ROADMAP = [
   { emoji: "🔎", tag: "Internal", title: "AI Research & Drafting Assistant", desc: "Trained on RGPL's own EIA/ESIA reports and regulations — cited answers in seconds instead of searching PDFs by hand." },
@@ -35,7 +36,34 @@ export default function Products() {
         ]}
       />
 
+      {/* OUR PRODUCT — flagship launch */}
       <section className="section">
+        <div className="container split">
+          <Reveal className="product-frame">
+            <img src={productSensor} alt="AiRawat Sensor Prime — Mobile Air Quality Monitoring System" loading="lazy" />
+          </Reveal>
+          <Reveal delay={1}>
+            <span className="eyebrow">🚀 Our Product</span>
+            <h2 className="section-title">Launched at New Delhi by the Secretary, MeitY</h2>
+            <p className="body">
+              Our <b>Mobile Sensor-Based Air Quality Monitoring System</b> and{" "}
+              <b>Continuous Effluent Quality Monitoring System (CEQMS)</b> were launched by the
+              Secretary, MeitY on <b>18.01.2023 in New Delhi</b>.
+            </p>
+            <ul className="checklist">
+              <li><span className="tick">✓</span> Supply of monitoring systems</li>
+              <li><span className="tick">✓</span> Installation &amp; commissioning</li>
+              <li><span className="tick">✓</span> Calibration to regulatory standards</li>
+              <li><span className="tick">✓</span> Performance evaluation</li>
+            </ul>
+            <Link to="/contact" className="btn btn-primary" style={{ marginTop: 22 }}>
+              Enquire about our product <IconArrow size={18} />
+            </Link>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="section section--soft">
         <div className="container">
           <div className="grid grid-2">
             <Reveal className="card">

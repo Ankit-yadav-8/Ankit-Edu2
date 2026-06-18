@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal.jsx";
 import Counter from "../components/Counter.jsx";
-import { CLIENT_LOGOS, CLIENTS_STRIP } from "../data/clients.js";
+import { CLIENT_LOGOS } from "../data/clients.js";
 import PageHero from "../components/PageHero.jsx";
 import { IconArrow } from "../components/Icons.jsx";
 
@@ -52,9 +52,6 @@ export default function Clientele() {
                 <img src={c.src} alt={c.name} loading="lazy" />
               </div>
             ))}
-          </Reveal>
-          <Reveal className="clients-strip">
-            <img src={CLIENTS_STRIP} alt="More RGPL clients" loading="lazy" />
           </Reveal>
         </div>
       </section>
