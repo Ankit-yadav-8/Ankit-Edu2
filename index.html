@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- SPA redirect restore for GitHub Pages (pairs with public/404.html) -->
+    <script type="text/javascript">
+      (function () {
+        var l = window.location;
+        if (l.search[1] === "/") {
+          var decoded = l.search
+            .slice(1)
+            .split("&")
+            .map(function (s) {
+              return s.replace(/~and~/g, "&");
+            })
+            .join("?");
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+        }
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rejig GreenLogic Private Limited | Environmental Consultancy & AI-Driven Solutions</title>
+    <meta
+      name="description"
+      content="RGPL is your techno-legal advisory partner in environmental consultancy — EIA/ESIA studies, forest & wildlife clearance, remote sensing & GIS, ESG and AI-driven monitoring. NABET · MoEFCC · NSIC accredited. 3,000+ industrial units served."
+    />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctext y='20' font-size='20'%3E%F0%9F%8C%BF%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/Ankit-Edu2/assets/index-ClG7KOf0.js"></script>
+    <link rel="stylesheet" crossorigin href="/Ankit-Edu2/assets/index-B_3Qc0Fo.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
