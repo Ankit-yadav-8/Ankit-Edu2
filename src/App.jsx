@@ -8,6 +8,8 @@ import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Services from "./pages/Services.jsx";
 import Products from "./pages/Products.jsx";
+import Infrastructure from "./pages/Infrastructure.jsx";
+import Clientele from "./pages/Clientele.jsx";
 import Contact from "./pages/Contact.jsx";
 import Login from "./pages/Login.jsx";
 import Signup from "./pages/Signup.jsx";
@@ -23,6 +25,8 @@ export default function App() {
       "/about": "About Us | Rejig GreenLogic",
       "/services": "Services | Rejig GreenLogic",
       "/products": "Products & AI | Rejig GreenLogic",
+      "/infrastructure": "Infrastructure | Rejig GreenLogic",
+      "/clientele": "Clientele | Rejig GreenLogic",
       "/contact": "Contact Us | Rejig GreenLogic",
       "/login": "Log In | Rejig GreenLogic",
       "/signup": "Sign Up | Rejig GreenLogic",
@@ -40,6 +44,8 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/infrastructure" element={<Infrastructure />} />
+          <Route path="/clientele" element={<Clientele />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />

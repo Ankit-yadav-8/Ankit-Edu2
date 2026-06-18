@@ -6,8 +6,9 @@ import { useAuth } from "../context/AuthContext.jsx";
 const NAV = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About Us" },
-  { to: "/services", label: "Services" },
-  { to: "/products", label: "Products" },
+  { to: "/services", label: "Product & Services" },
+  { to: "/infrastructure", label: "Infrastructure" },
+  { to: "/clientele", label: "Clientele" },
   { to: "/contact", label: "Contact Us" },
 ];
 
@@ -27,14 +28,15 @@ export default function Navbar() {
   const handleLogout = () => {
     logout();
     navigate("/");
+    setOpen(false);
   };
 
   return (
     <header className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="container nav-inner">
-        {/* Left — RC brand */}
+        {/* Left — RC brand logo */}
         <Link className="brand-logo" to="/" onClick={() => setOpen(false)}>
-          <RCLogo height={52} />
+          <RCLogo height={66} />
         </Link>
 
         {/* Center — nav links */}
@@ -51,35 +53,30 @@ export default function Navbar() {
               </NavLink>
             </li>
           ))}
-        </ul>
 
-        {/* Right — NABET logo + actions */}
-        <div className="nav-right">
-          <div className="nav-cta">
+          {/* shown only inside the mobile dropdown */}
+          <li className="nav-mobile-cta">
             {user ? (
-              <div className="user-chip">
-                <span className="avatar">{(user.name?.[0] || "U").toUpperCase()}</span>
-                <span>{user.name?.split(" ")[0]}</span>
-                <button className="btn btn-ghost btn-sm" onClick={handleLogout}>
-                  Log out
-                </button>
-              </div>
+              <button className="btn btn-ghost btn-sm" onClick={handleLogout}>Log out</button>
             ) : (
               <>
-                <Link to="/login" className="btn btn-ghost btn-sm">
-                  Log in
-                </Link>
-                <Link to="/contact" className="btn btn-primary btn-sm">
-                  Get a Quote →
-                </Link>
+                <Link to="/login" className="btn btn-ghost btn-sm" onClick={() => setOpen(false)}>Log in</Link>
+                <Link to="/contact" className="btn btn-primary btn-sm" onClick={() => setOpen(false)}>Get a Quote →</Link>
               </>
             )}
-          </div>
+          </li>
+        </ul>
 
+        {/* Right — NABET logo (+ user chip / mobile toggle) */}
+        <div className="nav-right">
+          {user && (
+            <div className="user-chip">
+              <span className="avatar">{(user.name?.[0] || "U").toUpperCase()}</span>
+            </div>
+          )}
           <div className="nabet-logo" title="NABET Accredited">
-            <NabetLogo height={50} />
+            <NabetLogo height={62} />
           </div>
-
           <button
             className={`nav-toggle ${open ? "open" : ""}`}
             aria-label="Menu"

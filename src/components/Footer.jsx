@@ -28,8 +28,9 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Company</h4>
             <Link to="/about">About Us</Link>
-            <Link to="/services">Services</Link>
-            <Link to="/products">Products</Link>
+            <Link to="/services">Product & Services</Link>
+            <Link to="/infrastructure">Infrastructure</Link>
+            <Link to="/clientele">Clientele</Link>
             <Link to="/contact">Contact</Link>
             <Link to="/login">Client Login</Link>
           </div>
