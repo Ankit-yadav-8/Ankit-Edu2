@@ -9,12 +9,8 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div>
-            <div className="brand-logo">
-              <RCLogo size={44} />
-              <span className="logo-text">
-                <b>Rejig GreenLogic</b>
-                <span>Private Limited</span>
-              </span>
+            <div className="footer-logo">
+              <RCLogo height={54} />
             </div>
             <p className="desc">
               Your techno-legal advisory partner in environmental consultancy — trusted by 3,000+

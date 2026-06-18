@@ -34,11 +34,7 @@ export default function Navbar() {
       <div className="container nav-inner">
         {/* Left — RC brand */}
         <Link className="brand-logo" to="/" onClick={() => setOpen(false)}>
-          <RCLogo size={46} />
-          <span className="logo-text">
-            <b>Rejig GreenLogic</b>
-            <span>Private Limited</span>
-          </span>
+          <RCLogo height={52} />
         </Link>
 
         {/* Center — nav links */}
@@ -81,11 +77,7 @@ export default function Navbar() {
           </div>
 
           <div className="nabet-logo" title="NABET Accredited">
-            <NabetLogo size={42} />
-            <span className="nabet-text">
-              <b>NABET</b>
-              <span>Accredited</span>
-            </span>
+            <NabetLogo height={50} />
           </div>
 
           <button
