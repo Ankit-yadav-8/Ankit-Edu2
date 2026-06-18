@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal.jsx";
 import Counter from "../components/Counter.jsx";
+import HeroCarousel from "../components/HeroCarousel.jsx";
 import { CLIENTS } from "../data/services.js";
 import {
   IconDoc, IconLeaf, IconEye, IconShield, IconChart, IconGlobe,
@@ -26,50 +27,8 @@ const WORKFORCE = [
 export default function Home() {
   return (
     <>
-      {/* ===================== HERO ===================== */}
-      <section className="hero">
-        <div className="container hero-grid">
-          <Reveal>
-            <span className="eyebrow">🌿 Environmental Consultancy & Techno-Legal Advisory</span>
-            <h1>
-              Helping industry turn{" "}
-              <span className="gradient-text">compliance into a green advantage</span>
-            </h1>
-            <p className="lead">
-              RGPL is a team of well-known environmental experts delivering EIA/ESIA studies,
-              clearances, monitoring and ESG advisory — now powered by AI to make every assessment
-              faster and sharper.
-            </p>
-            <div className="hero-actions">
-              <Link to="/contact" className="btn btn-primary">Request a Proposal <IconArrow size={18} /></Link>
-              <Link to="/services" className="btn btn-ghost">Explore Services</Link>
-            </div>
-            <div className="hero-badges">
-              <span><b>NABET</b> Accredited</span>
-              <span><b>MoEFCC</b> Empanelled</span>
-              <span><b>NSIC</b> Registered</span>
-            </div>
-          </Reveal>
-
-          <Reveal delay={1} className="hero-visual">
-            <div className="hero-blob" />
-            <div className="hero-card float">
-              <div className="hc-row">
-                <span className="hc-ico"><IconCheck size={22} /></span>
-                <div><b>EIA / ESIA Studies</b><small>IFC &amp; ADB aligned · NABET sectors</small></div>
-              </div>
-              <div className="hc-row">
-                <span className="hc-ico"><IconEye size={22} /></span>
-                <div><b>Remote Sensing &amp; GIS</b><small>AI-assisted satellite change detection</small></div>
-              </div>
-              <div className="hc-row">
-                <span className="hc-ico"><IconActivity size={22} /></span>
-                <div><b>CEQMS &amp; Air Quality</b><small>Predictive, real-time monitoring</small></div>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
+      {/* ===================== HERO CAROUSEL ===================== */}
+      <HeroCarousel />
 
       {/* ===================== CREDIBILITY STRIP ===================== */}
       <div className="cred-strip">
