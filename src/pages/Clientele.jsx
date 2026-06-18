@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal.jsx";
 import Counter from "../components/Counter.jsx";
 import { CLIENT_LOGOS, CLIENTS_STRIP } from "../data/clients.js";
+import PageHero from "../components/PageHero.jsx";
 import { IconArrow } from "../components/Icons.jsx";
 
 const SECTORS = [
@@ -13,15 +14,20 @@ const SECTORS = [
 export default function Clientele() {
   return (
     <>
-      <section className="page-hero">
-        <div className="container">
-          <Reveal>
-            <span className="eyebrow">Clientele</span>
-            <h1>Trusted by <span className="gradient-text">3,000+ industrial units</span> across India &amp; abroad</h1>
-            <p className="breadcrumb"><Link to="/">Home</Link> / Clientele</p>
-          </Reveal>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Clientele"
+        title="Trusted by"
+        highlight="3,000+ industrial units"
+        titleEnd="across India & abroad"
+        subtitle="From cement and power to mining, chemicals and infrastructure — leading industrial names rely on RGPL."
+        breadcrumb="Clientele"
+        cards={[
+          { type: "stat", num: 3000, suffix: "+", label: "Units served", tone: "green" },
+          { type: "stat", num: 50, suffix: "+", label: "Sectors", tone: "teal" },
+          { type: "info", icon: "🤝", title: "Trusted partner", sub: "India & abroad", tone: "amber" },
+          { type: "stat", num: 29, label: "Years", tone: "green" },
+        ]}
+      />
 
       <section className="section">
         <div className="container">

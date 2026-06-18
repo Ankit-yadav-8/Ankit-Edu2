@@ -1,20 +1,26 @@
 import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal.jsx";
+import PageHero from "../components/PageHero.jsx";
 import { CAPABILITIES, LAB } from "../data/infrastructure.js";
 import { IconArrow, IconCheck, IconBeaker } from "../components/Icons.jsx";
+import isoCert from "../assets/iso-certificate.png";
 
 export default function Infrastructure() {
   return (
     <>
-      <section className="page-hero">
-        <div className="container">
-          <Reveal>
-            <span className="eyebrow">Infrastructure</span>
-            <h1>Software, instruments &amp; a <span className="gradient-text">NABL-certified laboratory</span></h1>
-            <p className="breadcrumb"><Link to="/">Home</Link> / Infrastructure</p>
-          </Reveal>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Infrastructure"
+        title="Impact-assessment tools, software &amp; a"
+        highlight="NABL-certified laboratory"
+        subtitle="Industry-standard modelling, geospatial and monitoring tools — backed by ISO 9001:2015 quality management."
+        breadcrumb="Infrastructure"
+        cards={[
+          { type: "info", icon: "🛰️", title: "GIS & Remote Sensing", sub: "ArcGIS 10.8 · Erdas 9.2", tone: "green" },
+          { type: "info", icon: "🌬️", title: "AERMOD", sub: "Air dispersion modelling", tone: "teal" },
+          { type: "image", src: isoCert, alt: "ISO 9001:2015 Certificate of Registration" },
+          { type: "info", icon: "🧪", title: "NABL Lab", sub: "JM Envirolab, Gurgaon", tone: "amber" },
+        ]}
+      />
 
       {/* Technical capabilities */}
       <section className="section">

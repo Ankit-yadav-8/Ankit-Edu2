@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal.jsx";
+import PageHero from "../components/PageHero.jsx";
 import { IconMail, IconPhone, IconPin, IconBuilding, IconArrow } from "../components/Icons.jsx";
 
 const SECTORS = [
@@ -42,15 +43,19 @@ export default function Contact() {
 
   return (
     <>
-      <section className="page-hero">
-        <div className="container">
-          <Reveal>
-            <span className="eyebrow">Get in touch</span>
-            <h1>Request a proposal — <span className="gradient-text">our smart intake makes it faster</span></h1>
-            <p className="breadcrumb"><Link to="/">Home</Link> / Contact Us</p>
-          </Reveal>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Get in touch"
+        title="Request a proposal —"
+        highlight="our smart intake makes it faster"
+        subtitle="Tell us your sector, location and project type and our team will respond with a structured, accurate proposal."
+        breadcrumb="Contact Us"
+        cards={[
+          { type: "info", icon: "📧", title: "Email", sub: "rgpl@rgreenlogic.com", tone: "green" },
+          { type: "info", icon: "📞", title: "Phone", sub: "+91 89494 72643", tone: "teal" },
+          { type: "info", icon: "📍", title: "Hyderabad", sub: "Telangana, India", tone: "amber" },
+          { type: "stat", num: 24, suffix: "h", label: "Typical response", tone: "green" },
+        ]}
+      />
 
       <section className="section">
         <div className="container contact-grid">

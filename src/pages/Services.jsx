@@ -2,6 +2,7 @@ import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal.jsx";
 import { SERVICES, SERVICE_CATEGORIES } from "../data/services.js";
+import PageHero from "../components/PageHero.jsx";
 import { IconSearch, IconLeaf, IconArrow } from "../components/Icons.jsx";
 
 export default function Services() {
@@ -19,15 +20,19 @@ export default function Services() {
 
   return (
     <>
-      <section className="page-hero">
-        <div className="container">
-          <Reveal>
-            <span className="eyebrow">Our Services</span>
-            <h1>Everything you need for <span className="gradient-text">environmental compliance</span></h1>
-            <p className="breadcrumb"><Link to="/">Home</Link> / Services</p>
-          </Reveal>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Product & Services"
+        title="Everything you need for"
+        highlight="environmental compliance"
+        subtitle="From impact assessments to clearances, audits and ESG — a single partner across the entire compliance lifecycle."
+        breadcrumb="Product & Services"
+        cards={[
+          { type: "info", icon: "📋", title: "30+ Services", sub: "Full compliance lifecycle", tone: "green" },
+          { type: "stat", num: 20, label: "NABET sectors", tone: "teal" },
+          { type: "info", icon: "🌿", title: "EIA / ESIA", sub: "IFC & ADB aligned", tone: "amber" },
+          { type: "stat", num: 6, label: "Service categories", tone: "green" },
+        ]}
+      />
 
       <section className="section">
         <div className="container">

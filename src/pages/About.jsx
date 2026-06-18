@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal.jsx";
 import Counter from "../components/Counter.jsx";
+import PageHero from "../components/PageHero.jsx";
 import { IconArrow, IconUsers, IconBeaker, IconStar, IconCheck } from "../components/Icons.jsx";
 
 const TEAM = [
@@ -19,15 +20,19 @@ const ACCRED = [
 export default function About() {
   return (
     <>
-      <section className="page-hero">
-        <div className="container">
-          <Reveal>
-            <span className="eyebrow">About RGPL</span>
-            <h1>A team of environmental experts, <span className="gradient-text">pooled for your green journey</span></h1>
-            <p className="breadcrumb"><Link to="/">Home</Link> / About Us</p>
-          </Reveal>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="About RGPL"
+        title="A team of environmental experts,"
+        highlight="pooled for your green journey"
+        subtitle="Incorporated in 2021, RGPL is your techno-legal advisory partner across environmental consultancy — backed by 29 years of legacy."
+        breadcrumb="About Us"
+        cards={[
+          { type: "stat", num: 3000, suffix: "+", label: "Units served", tone: "green" },
+          { type: "stat", num: 50, suffix: "+", label: "Sectoral areas", tone: "teal" },
+          { type: "info", icon: "🏅", title: "NABET Accredited", sub: "20 sectors", tone: "amber" },
+          { type: "stat", num: 29, label: "Years of legacy", tone: "green" },
+        ]}
+      />
 
       <section className="section">
         <div className="container split">

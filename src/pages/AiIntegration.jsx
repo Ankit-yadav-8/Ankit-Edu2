@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal.jsx";
 import { AI_FEATURES, PHASES } from "../data/aiFeatures.js";
+import PageHero from "../components/PageHero.jsx";
 import { IconArrow, IconCheck } from "../components/Icons.jsx";
 
 export default function AiIntegration() {
@@ -10,15 +11,20 @@ export default function AiIntegration() {
 
   return (
     <>
-      <section className="page-hero">
-        <div className="container">
-          <Reveal>
-            <span className="eyebrow">✨ AI Integration</span>
-            <h1>How we put <span className="gradient-text">AI to work</span> — responsibly</h1>
-            <p className="breadcrumb"><Link to="/">Home</Link> / AI Integration</p>
-          </Reveal>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="✨ AI Integration"
+        title="How we put"
+        highlight="AI to work"
+        titleEnd="— responsibly"
+        subtitle="Five AI agents mapped to real RGPL services, rolled out in three phases — every output reviewed by a qualified consultant."
+        breadcrumb="AI Integration"
+        cards={[
+          { type: "info", icon: "💬", title: "Visitor Assistant", sub: "24/7 chat", tone: "green" },
+          { type: "info", icon: "📋", title: "Smart Intake", sub: "Clearance analysis", tone: "teal" },
+          { type: "info", icon: "🛰️", title: "Geospatial AI", sub: "Change detection", tone: "amber" },
+          { type: "info", icon: "📡", title: "CEQMS Monitor", sub: "Predictive alerts", tone: "green" },
+        ]}
+      />
 
       {/* Approach intro */}
       <section className="section">

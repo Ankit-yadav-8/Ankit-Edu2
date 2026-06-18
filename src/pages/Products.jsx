@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal.jsx";
+import PageHero from "../components/PageHero.jsx";
 import { IconBeaker, IconActivity, IconArrow } from "../components/Icons.jsx";
 
 const ROADMAP = [
@@ -20,15 +21,19 @@ const PHASES = [
 export default function Products() {
   return (
     <>
-      <section className="page-hero">
-        <div className="container">
-          <Reveal>
-            <span className="eyebrow">Products & AI</span>
-            <h1>Monitoring products, now made <span className="gradient-text">predictive with AI</span></h1>
-            <p className="breadcrumb"><Link to="/">Home</Link> / Products</p>
-          </Reveal>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Products & AI"
+        title="Monitoring products, now made"
+        highlight="predictive with AI"
+        subtitle="CEQMS and a mobile air-quality monitoring system — enhanced with anomaly detection and breach forecasting."
+        breadcrumb="Products"
+        cards={[
+          { type: "info", icon: "📡", title: "CEQMS", sub: "Effluent monitoring", tone: "green" },
+          { type: "info", icon: "💨", title: "AAQMS", sub: "Air quality", tone: "teal" },
+          { type: "info", icon: "🤖", title: "Predictive AI", sub: "Breach forecasting", tone: "amber" },
+          { type: "stat", num: 5, label: "AI features", tone: "green" },
+        ]}
+      />
 
       <section className="section">
         <div className="container">
