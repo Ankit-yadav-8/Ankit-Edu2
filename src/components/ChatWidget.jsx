@@ -31,6 +31,10 @@ export default function ChatWidget() {
 
   useEffect(() => {
     if (open) setTimeout(() => inputRef.current?.focus(), 120);
+    // flag on <body> so the other floating buttons (WhatsApp / back-to-top)
+    // can hide themselves and not collide with the open chat panel.
+    document.body.classList.toggle("chat-open", open);
+    return () => document.body.classList.remove("chat-open");
   }, [open]);
 
   async function send(text) {
