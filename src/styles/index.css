@@ -816,24 +816,24 @@ ul { list-style: none; }
 /* ===================================================================
    FOOTER
    =================================================================== */
-.footer { background: var(--ink); color: #c8cae0; padding: 70px 0 28px; }
+.footer { background: var(--ink); color: #dbe8dc; padding: 70px 0 28px; }
 .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.4fr; gap: 40px; }
 .footer-logo { display: inline-flex; background: #fff; padding: 12px 16px; border-radius: 14px; box-shadow: var(--shadow-sm); }
-.footer .desc { margin: 18px 0; font-size: 0.92rem; color: #9498be; max-width: 280px; }
+.footer .desc { margin: 18px 0; font-size: 0.92rem; color: #b6c9b8; max-width: 280px; }
 .footer h4 { color: #fff; font-size: 1rem; margin-bottom: 16px; }
-.footer-col a { display: block; color: #9498be; font-size: 0.9rem; padding: 5px 0; transition: color 0.16s; }
+.footer-col a { display: block; color: #c2d4c4; font-size: 0.9rem; padding: 5px 0; transition: color 0.16s; }
 .footer-col a:hover { color: #fff; }
 .socials { display: flex; gap: 10px; margin-top: 6px; }
-.socials a { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 10px; background: rgba(255,255,255,0.08); color: #c8cae0; transition: 0.18s; }
+.socials a { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 10px; background: rgba(255,255,255,0.08); color: #dbe8dc; transition: 0.18s; }
 .socials a:hover { background: var(--violet-600); color: #fff; transform: translateY(-3px); }
-.foot-contact li { display: flex; gap: 10px; align-items: flex-start; font-size: 0.88rem; color: #9498be; padding: 6px 0; }
-.foot-contact a { color: #c8cae0; }
+.foot-contact li { display: flex; gap: 10px; align-items: flex-start; font-size: 0.88rem; color: #c2d4c4; padding: 6px 0; }
+.foot-contact a { color: #dbe8dc; }
 .foot-contact svg { flex: none; margin-top: 3px; color: var(--violet-400); }
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255,255,255,0.12);
   margin-top: 44px; padding-top: 22px;
   display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
-  font-size: 0.84rem; color: #8b8fb5;
+  font-size: 0.84rem; color: #a6b9a8;
 }
 
 /* ===================================================================
@@ -993,7 +993,13 @@ ul { list-style: none; }
 @media (max-width: 620px) {
   .section { padding: 64px 0; }
   .grid-2, .grid-3 { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr; }
+  /* extra bottom space so the floating WhatsApp / chat / back-to-top buttons
+     don't sit on top of the contact details & copyright */
+  .footer { padding: 56px 0 150px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+  .footer-bottom { margin-top: 32px; text-align: center; align-items: center; }
+  /* keep the contact text clear of the right-hand floating buttons */
+  .foot-contact { padding-right: 64px; }
   .row-2 { grid-template-columns: 1fr; }
   .cta-band { padding: 44px 22px; }
   .hero-badges { gap: 14px; }
