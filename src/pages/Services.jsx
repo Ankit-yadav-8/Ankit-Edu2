@@ -4,7 +4,7 @@ import Reveal from "../components/Reveal.jsx";
 import PageHero from "../components/PageHero.jsx";
 import SmartImg from "../components/SmartImg.jsx";
 import { SERVICES, SERVICE_CATEGORIES, CATEGORY_IMG } from "../data/services.js";
-import { IconSearch, IconLeaf, IconArrow } from "../components/Icons.jsx";
+import { IconSearch, IconArrow } from "../components/Icons.jsx";
 
 export default function Services() {
   const [searchParams] = useSearchParams();
@@ -82,7 +82,6 @@ export default function Services() {
                     <button className="svc-card2__head" onClick={() => setOpen(isOpen ? null : s.t)} aria-expanded={isOpen}>
                       <div className="svc-thumb">
                         <SmartImg src={CATEGORY_IMG[s.c]} alt={s.c} />
-                        <span className="svc-thumb__ico"><IconLeaf size={20} /></span>
                       </div>
                       <div className="svc-card2__body">
                         <span className="tag">{s.c}</span>

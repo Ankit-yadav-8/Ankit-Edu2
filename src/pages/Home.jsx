@@ -105,9 +105,8 @@ export default function Home() {
               <Reveal key={s.title} delay={(i % 3) + 1} className="card svc-photo-card">
                 <div className="svc-photo">
                   <SmartImg src={s.img} alt={s.title} />
-                  <span className="svc-photo__ico">{s.icon}</span>
                 </div>
-                <h3>{s.title}</h3>
+                <h3><span className="svc-ico">{s.icon}</span>{s.title}</h3>
                 <p>{s.desc}</p>
               </Reveal>
             ))}
