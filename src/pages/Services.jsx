@@ -1,5 +1,5 @@
-import { useState, useMemo } from "react";
-import { Link } from "react-router-dom";
+import { useState, useMemo, useEffect } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import Reveal from "../components/Reveal.jsx";
 import PageHero from "../components/PageHero.jsx";
 import SmartImg from "../components/SmartImg.jsx";
@@ -7,9 +7,20 @@ import { SERVICES, SERVICE_CATEGORIES, CATEGORY_IMG } from "../data/services.js"
 import { IconSearch, IconLeaf, IconArrow } from "../components/Icons.jsx";
 
 export default function Services() {
-  const [cat, setCat] = useState("all");
+  const [searchParams] = useSearchParams();
+  const [cat, setCat] = useState(searchParams.get("cat") || "all");
   const [term, setTerm] = useState("");
   const [open, setOpen] = useState(null);
+
+  // Deep-link support: navbar/footer links like /services?cat=Clearance
+  // pre-select the matching category each time the query param changes.
+  useEffect(() => {
+    const next = searchParams.get("cat");
+    if (next) {
+      setCat(next);
+      setOpen(null);
+    }
+  }, [searchParams]);
 
   const list = useMemo(() => {
     const q = term.toLowerCase().trim();

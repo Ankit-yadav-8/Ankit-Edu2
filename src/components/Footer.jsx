@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { RCLogo } from "./Logos.jsx";
 import { Insta, FB, LI, XTw, YT, IconPin, IconPhone, IconMail } from "./Icons.jsx";
+import { EXPERTISE_LINKS } from "../data/services.js";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -36,12 +37,10 @@ export default function Footer() {
           </div>
 
           <div className="footer-col">
-            <h4>Expertise</h4>
-            <Link to="/services">EIA / ESIA Studies</Link>
-            <Link to="/services">Forest & Wildlife Clearance</Link>
-            <Link to="/services">Remote Sensing & GIS</Link>
-            <Link to="/products">CEQMS Monitoring</Link>
-            <Link to="/ai-integration">AI Integration</Link>
+            <h4>Product & Services</h4>
+            {EXPERTISE_LINKS.map((l) => (
+              <Link key={l.to} to={l.to}>{l.label}</Link>
+            ))}
           </div>
 
           <div>

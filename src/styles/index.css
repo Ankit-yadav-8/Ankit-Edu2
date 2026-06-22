@@ -198,6 +198,51 @@ ul { list-style: none; }
 .nav-actions { display: flex; align-items: center; gap: 8px; }
 .nav-mobile-cta { display: none; }
 
+/* Product & Services dropdown */
+.has-dropdown { position: relative; }
+.dd-row { display: flex; align-items: center; }
+.dd-caret {
+  display: none;
+  background: none; border: none; cursor: pointer;
+  color: var(--ink); font-size: 0.7rem; padding: 6px 8px;
+  transition: transform 0.25s ease;
+}
+/* bridge the gap so hover doesn't drop between the link and the menu */
+.has-dropdown::after {
+  content: ""; position: absolute; top: 100%; left: 0; width: 100%; height: 14px;
+}
+.dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  min-width: 248px;
+  list-style: none;
+  margin: 0; padding: 8px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  display: flex; flex-direction: column; gap: 2px;
+  opacity: 0; visibility: hidden; transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  z-index: 95;
+}
+.has-dropdown:hover .dropdown,
+.has-dropdown:focus-within .dropdown {
+  opacity: 1; visibility: visible; transform: translateY(0);
+}
+.dropdown a {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 9px;
+  font-size: 0.85rem; font-weight: 600;
+  white-space: nowrap;
+}
+.dropdown a::after { display: none; }
+.dropdown a:hover { color: var(--violet-700); background: var(--violet-50); transform: none; }
+.dropdown a.active { background: var(--violet-50); border-color: transparent; }
+
 .avatar {
   width: 34px; height: 34px; border-radius: 50%;
   display: grid; place-items: center;
@@ -871,13 +916,13 @@ ul { list-style: none; }
   .auth-side { display: none; }
 
   /* logo (left) ......... toggle (right) */
-  .nav-inner { display: flex; justify-content: space-between; min-height: 80px; }
-  .brand-logo img { height: 56px; }
+  .nav-inner { display: flex; justify-content: space-between; min-height: 92px; }
+  .brand-logo img { height: 64px; }
   .nav-actions { display: none; }
 
   .nav-links {
     position: fixed;
-    inset: 80px 0 auto 0;
+    inset: 92px 0 auto 0;
     flex-direction: column;
     align-items: stretch;
     background: #fff;
@@ -889,7 +934,7 @@ ul { list-style: none; }
     transform: translateY(-150%);
     transition: transform 0.3s ease;
     z-index: 90;
-    max-height: calc(100vh - 80px);
+    max-height: calc(100vh - 92px);
     overflow-y: auto;
   }
   .nav-links.open { transform: translateY(0); }
@@ -899,6 +944,25 @@ ul { list-style: none; }
   .nav-mobile-cta { display: flex; gap: 10px; margin-top: 10px; padding-top: 14px; border-top: 1px solid var(--line); }
   .nav-mobile-cta .btn { flex: 1; }
   .nav-toggle { display: flex; }
+
+  /* Product & Services becomes an inline accordion on mobile */
+  .has-dropdown { display: block; }
+  .has-dropdown::after { display: none; }
+  .dd-row { justify-content: space-between; }
+  .dd-row a { flex: 1; }
+  .dd-caret { display: inline-flex; align-items: center; }
+  .has-dropdown.open .dd-caret { transform: rotate(180deg); }
+  .dropdown {
+    position: static;
+    min-width: 0;
+    opacity: 1; visibility: visible; transform: none;
+    border: none; box-shadow: none; border-radius: 0;
+    padding: 0 0 0 12px;
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.28s ease;
+  }
+  .has-dropdown.open .dropdown { max-height: 360px; }
+  .dropdown a { font-size: 0.82rem; padding: 11px 14px; }
 }
 
 @media (max-width: 860px) {
@@ -909,13 +973,13 @@ ul { list-style: none; }
   .hero-slide__media img { max-height: 210px; }
   .hero-slide .hero-lead { font-size: 1rem; }
 
-  /* Mobile navbar: RC logo (left) + hamburger (far right), tight padding */
-  .navbar .container { width: calc(100% - 16px); }
-  .nav-inner { min-height: 72px; gap: 8px; }
-  .brand-logo img { height: 50px; }
+  /* Mobile navbar: RC logo (left) + hamburger (far right), comfy side padding */
+  .navbar .container { width: calc(100% - 40px); }
+  .nav-inner { min-height: 84px; gap: 10px; }
+  .brand-logo img { height: 60px; }
   .nabet-logo { display: none; }
-  .nav-right { gap: 6px; }
-  .nav-links { inset: 72px 0 auto 0; max-height: calc(100vh - 72px); }
+  .nav-right { gap: 8px; }
+  .nav-links { inset: 84px 0 auto 0; max-height: calc(100vh - 84px); padding: 14px 20px 22px; }
 
   /* Working force: show only the card on mobile */
   .wf-row { grid-template-columns: 1fr; }

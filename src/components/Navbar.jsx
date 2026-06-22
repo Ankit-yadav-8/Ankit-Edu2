@@ -2,11 +2,12 @@ import { useState, useEffect } from "react";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 import { RCLogo, NabetLogo } from "./Logos.jsx";
 import { useAuth } from "../context/AuthContext.jsx";
+import { EXPERTISE_LINKS } from "../data/services.js";
 
 const NAV = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About Us" },
-  { to: "/services", label: "Product & Services" },
+  { to: "/services", label: "Product & Services", children: EXPERTISE_LINKS },
   { to: "/infrastructure", label: "Infrastructure" },
   { to: "/clientele", label: "Clientele" },
   { to: "/contact", label: "Contact Us" },
@@ -14,9 +15,15 @@ const NAV = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [submenu, setSubmenu] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { user, logout } = useAuth();
   const navigate = useNavigate();
+
+  const closeMenu = () => {
+    setOpen(false);
+    setSubmenu(false);
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -28,31 +35,63 @@ export default function Navbar() {
   const handleLogout = () => {
     logout();
     navigate("/");
-    setOpen(false);
+    closeMenu();
   };
 
   return (
     <header className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="container nav-inner">
         {/* Left — RC brand logo */}
-        <Link className="brand-logo" to="/" onClick={() => setOpen(false)}>
+        <Link className="brand-logo" to="/" onClick={closeMenu}>
           <RCLogo height={72} />
         </Link>
 
         {/* Center — nav links (becomes a dropdown on mobile) */}
         <ul className={`nav-links ${open ? "open" : ""}`}>
-          {NAV.map((n) => (
-            <li key={n.to}>
-              <NavLink
-                to={n.to}
-                end={n.to === "/"}
-                className={({ isActive }) => (isActive ? "active" : "")}
-                onClick={() => setOpen(false)}
-              >
-                {n.label}
-              </NavLink>
-            </li>
-          ))}
+          {NAV.map((n) =>
+            n.children ? (
+              <li key={n.to} className={`has-dropdown ${submenu ? "open" : ""}`}>
+                <div className="dd-row">
+                  <NavLink
+                    to={n.to}
+                    className={({ isActive }) => (isActive ? "active" : "")}
+                    onClick={closeMenu}
+                  >
+                    {n.label}
+                  </NavLink>
+                  <button
+                    type="button"
+                    className="dd-caret"
+                    aria-label="Toggle sections"
+                    aria-expanded={submenu}
+                    onClick={() => setSubmenu((s) => !s)}
+                  >
+                    ▾
+                  </button>
+                </div>
+                <ul className="dropdown">
+                  {n.children.map((c) => (
+                    <li key={c.to}>
+                      <NavLink to={c.to} onClick={closeMenu}>
+                        {c.label}
+                      </NavLink>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ) : (
+              <li key={n.to}>
+                <NavLink
+                  to={n.to}
+                  end={n.to === "/"}
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                  onClick={closeMenu}
+                >
+                  {n.label}
+                </NavLink>
+              </li>
+            )
+          )}
 
           {/* shown only inside the mobile dropdown */}
           <li className="nav-mobile-cta">
@@ -60,8 +99,8 @@ export default function Navbar() {
               <button className="btn btn-ghost btn-sm" onClick={handleLogout}>Log out</button>
             ) : (
               <>
-                <Link to="/login" className="btn btn-ghost btn-sm" onClick={() => setOpen(false)}>Log in</Link>
-                <Link to="/signup" className="btn btn-primary btn-sm" onClick={() => setOpen(false)}>Sign up</Link>
+                <Link to="/login" className="btn btn-ghost btn-sm" onClick={closeMenu}>Log in</Link>
+                <Link to="/signup" className="btn btn-primary btn-sm" onClick={closeMenu}>Sign up</Link>
               </>
             )}
           </li>
@@ -91,7 +130,7 @@ export default function Navbar() {
             className={`nav-toggle ${open ? "open" : ""}`}
             aria-label="Menu"
             aria-expanded={open}
-            onClick={() => setOpen((o) => !o)}
+            onClick={() => setOpen((o) => { if (o) setSubmenu(false); return !o; })}
           >
             <span></span>
             <span></span>

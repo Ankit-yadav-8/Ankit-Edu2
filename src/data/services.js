@@ -1,3 +1,13 @@
+// Shared "Product & Services" sections — used by the navbar dropdown AND the footer
+// so the two always stay in sync. Each lands on a *distinct* destination.
+export const EXPERTISE_LINKS = [
+  { to: "/services?cat=Assessment", label: "EIA / ESIA Studies" },
+  { to: "/services?cat=Clearance", label: "Forest & Wildlife Clearance" },
+  { to: "/services?cat=Geospatial", label: "Remote Sensing & GIS" },
+  { to: "/products", label: "CEQMS Monitoring" },
+  { to: "/ai-integration", label: "AI Integration" },
+];
+
 // Full service catalogue used by the Services page search, filter & expandable detail.
 export const SERVICE_CATEGORIES = [
   { key: "all", label: "All" },
