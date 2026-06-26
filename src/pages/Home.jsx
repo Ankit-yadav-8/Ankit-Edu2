@@ -88,33 +88,145 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===================== SERVICES ===================== */}
-      <section className="section section--soft">
+      {/* ===================== INTRO ===================== */}
+      <section className="section section--soft" style={{ paddingBottom: 40 }}>
         <div className="container">
           <Reveal className="section-head text-center">
             <span className="eyebrow">What we do</span>
-            <h2 className="section-title">Comprehensive environmental services</h2>
-            <p className="section-sub">
-              From impact assessments to clearances, audits and ESG — a single partner across the
-              entire compliance lifecycle.
+            <h2 className="section-title">Environment Management and Engineering Services</h2>
+            <p className="section-sub" style={{ textAlign: "justify", marginTop: 24, fontSize: "1.05rem", maxWidth: "900px", marginInline: "auto" }}>
+              Rejig GreenLogic (RGPL) is a full-service environmental consulting and engineering firm. We provide expertise in regulatory compliance, permitting, technical services, and the development of environmental programs. Our stellar reputation is built on our commitment to excellence in the design, implementation, and management of innovative solutions for both private and public sector clients.
+            </p>
+            <p className="section-sub" style={{ textAlign: "justify", marginTop: 12, fontSize: "1.05rem", maxWidth: "900px", marginInline: "auto" }}>
+              We are serving clients with a team of experts and associates accredited by the Quality Council of India-NABET and an in-house well-equipped EPA-recognized and NABL accredited laboratories. We assess all factors contributing to environmental concerns in view of legal, statutory compliances & consultancy services.
             </p>
           </Reveal>
+        </div>
+      </section>
 
-          <div className="grid grid-3" style={{ marginTop: 44 }}>
-            {SERVICES.map((s, i) => (
-              <Reveal key={s.title} delay={(i % 3) + 1} className="card svc-photo-card">
-                <div className="svc-photo">
-                  <SmartImg src={s.img} alt={s.title} />
-                </div>
-                <h3><span className="svc-ico">{s.icon}</span>{s.title}</h3>
-                <p>{s.desc}</p>
-              </Reveal>
-            ))}
-          </div>
+      {/* ===================== DETAILED PANELS ===================== */}
+      
+      {/* Panel 1 */}
+      <section className="detailed-panel">
+        <div className="container dp-grid">
+          <Reveal className="dp-text">
+            <span className="eyebrow">Accredited by QCI-NABET | Empanelled with Pollution Control Board</span>
+            <h2>Environment Consultancy Services</h2>
+            <p>
+              RGPL's Environment Management & Engineering Division is a full-service consulting partner helping organizations enhance environmental performance, ensure compliance, and achieve sustainability goals. Backed by state-of-the-art laboratories and an expert team, we deliver end-to-end solutions.
+            </p>
+            <p style={{ marginBottom: 24, color: "var(--muted)" }}>
+              Our primary service includes obtaining environmental clearance (in accordance with the Environment Impact Assessment Notification) from the Ministry of Environment and Forest (MoEFCC) as well as from the State Environmental Impact Assessment Authority and NOC/consent from Pollution Control Board.
+            </p>
+            <ul className="dp-list">
+              <li><strong>Environmental Clearance (EC)</strong> under EIA Notification, 2006</li>
+              <li><strong>NOC/Consent</strong> from Pollution Control Board</li>
+              <li><strong>Baseline Environmental Monitoring</strong> for Air, Water, Soil & Noise</li>
+              <li><strong>Environmental & Social Impact Assessment (ESIA)</strong></li>
+              <li><strong>Environment Management Plan (EMP)</strong> implementation</li>
+              <li><strong>Environmental Due Diligence</strong> & Audits</li>
+            </ul>
+            <Link to="/services" className="btn btn-primary">Know more <IconArrow size={18} /></Link>
+          </Reveal>
+          <Reveal delay={1} className="dp-media">
+            <SmartImg src={U("1454165804606-c3d57bc86b40")} alt="Environment Consultancy" />
+          </Reveal>
+        </div>
+      </section>
 
-          <div className="text-center" style={{ marginTop: 36 }}>
-            <Link to="/services" className="btn btn-primary">View all 30+ services <IconArrow size={18} /></Link>
-          </div>
+      {/* Panel 2 */}
+      <section className="detailed-panel">
+        <div className="container dp-grid reverse">
+          <Reveal className="dp-text">
+            <span className="eyebrow">EPC & Turnkey Expertise | From Design to Water Sustainability</span>
+            <h2>Wastewater Treatment & Water Management</h2>
+            <p>
+              We deliver end-to-end wastewater and water management solutions, specializing in Sewage Treatment Plants (STPs) and Effluent Treatment Plants (ETPs). With a proven EPC and turnkey execution model, we enable industries, municipalities, and institutions to achieve regulatory compliance, clean water access, and long-term sustainability.
+            </p>
+            <ul className="dp-list">
+              <li><strong>Design & Engineering</strong> – Robust, scalable treatment systems aligned with discharge norms.</li>
+              <li><strong>EPC & Turnkey Execution</strong> – Complete Engineering, Procurement & Construction for seamless delivery.</li>
+              <li><strong>Equipment Supply</strong> – High-quality pumps, blowers, MBBR, SBR, tertiary systems.</li>
+              <li><strong>Operation & Maintenance (O&M)</strong> – Skilled operators, audits & digital monitoring.</li>
+              <li><strong>Water Conservation & Watershed Management</strong> – Total Water & Plant Water Budgeting.</li>
+            </ul>
+            <Link to="/services" className="btn btn-primary">Know more <IconArrow size={18} /></Link>
+          </Reveal>
+          <Reveal delay={1} className="dp-media">
+            <SmartImg src={U("1516934812323-c91726a42142")} alt="Wastewater Treatment" />
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Panel 3 */}
+      <section className="detailed-panel">
+        <div className="container dp-grid">
+          <Reveal className="dp-text">
+            <span className="eyebrow">Ecology & Conservation | Scientific Management</span>
+            <h2>Forestry, Wildlife & Biodiversity Conservation</h2>
+            <p>
+              Navigating the complex regulatory landscape of forest and wildlife clearances requires scientific rigor and deep ecological understanding. Our expert ecologists conduct extensive terrestrial and aquatic biodiversity assessments to ensure industrial projects coexist harmoniously with nature.
+            </p>
+            <ul className="dp-list">
+              <li><strong>Forest Clearances</strong> – Turnkey support for diversion of forest land under FCA.</li>
+              <li><strong>Wildlife Clearances & Conservation Plans</strong> – NBWL clearances and specialized mitigation strategies.</li>
+              <li><strong>Biodiversity Impact Assessment (BIA)</strong> – Comprehensive flora and fauna cataloging.</li>
+              <li><strong>Mangrove Management Plans</strong> – Coastal ecology preservation and restoration.</li>
+              <li><strong>Tree Enumeration & Greenbelt Development</strong> – Scientific planning for compensatory afforestation.</li>
+            </ul>
+            <Link to="/services" className="btn btn-primary">Know more <IconArrow size={18} /></Link>
+          </Reveal>
+          <Reveal delay={1} className="dp-media">
+            <SmartImg src={U("1441974231531-c6227db76b6e")} alt="Forestry & Wildlife" />
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Panel 4 */}
+      <section className="detailed-panel">
+        <div className="container dp-grid reverse">
+          <Reveal className="dp-text">
+            <span className="eyebrow">Corporate Responsibility | Strategic Growth</span>
+            <h2>ESG, Sustainability & Climate Risk Assessment</h2>
+            <p>
+              Modern businesses must measure and mitigate their environmental footprint. We guide corporations through rigorous Environmental, Social, and Governance (ESG) frameworks, helping them identify gaps, manage climate risks, and secure a sustainable, profitable future.
+            </p>
+            <ul className="dp-list">
+              <li><strong>Sustainability & ESDD Studies</strong> – Corporate EHS and Environmental & Social Due Diligence.</li>
+              <li><strong>ESG Management System (ESGMS)</strong> – Framework development, training, and action plans.</li>
+              <li><strong>Climate Change Risk Assessment (CCRA)</strong> – Identifying physical and transition risks.</li>
+              <li><strong>Green Audits & Damage Assessment</strong> – Rigorous compliance auditing as per OM B04(E).</li>
+              <li><strong>IGBC / LEED Documentation</strong> – Comprehensive support for Green Building Certifications.</li>
+            </ul>
+            <Link to="/services" className="btn btn-primary">Know more <IconArrow size={18} /></Link>
+          </Reveal>
+          <Reveal delay={1} className="dp-media">
+            <SmartImg src={U("1473773508845-188df298d2d1")} alt="ESG and Sustainability" />
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Panel 5 */}
+      <section className="detailed-panel">
+        <div className="container dp-grid">
+          <Reveal className="dp-text">
+            <span className="eyebrow">Marine Environments | Advanced Geospatial Analysis</span>
+            <h2>Coastal, Marine & Remote Sensing Solutions</h2>
+            <p>
+              Our specialized team leverages advanced technology to monitor and protect fragile ecosystems. From intricate Coastal Regulatory Zone (CRZ) clearances to AI-assisted satellite imagery change detection, we provide high-fidelity data for accurate environmental planning.
+            </p>
+            <ul className="dp-list">
+              <li><strong>Coastal Regulatory Zone (CRZ) Clearance</strong> – Comprehensive reporting and regulatory liaison.</li>
+              <li><strong>Marine Environment Monitoring</strong> – Sea bed sediment sampling and marine water analysis.</li>
+              <li><strong>Hydrodynamic Studies</strong> – Advanced modeling for coastal projects and outfalls.</li>
+              <li><strong>Remote Sensing & GIS</strong> – Land Use / Land Cover mapping via satellite imagery.</li>
+              <li><strong>Mining Plan Preparation & DGPS Surveys</strong> – Highly accurate geospatial data collection.</li>
+            </ul>
+            <Link to="/services" className="btn btn-primary">Know more <IconArrow size={18} /></Link>
+          </Reveal>
+          <Reveal delay={1} className="dp-media">
+            <SmartImg src={U("1505142468610-359e7d316be0")} alt="Coastal and Marine" />
+          </Reveal>
         </div>
       </section>
 

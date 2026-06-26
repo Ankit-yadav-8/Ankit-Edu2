@@ -61,6 +61,17 @@ export default function HeroCarousel() {
       onMouseEnter={() => (paused.current = true)}
       onMouseLeave={() => (paused.current = false)}
     >
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="hero-video-bg"
+      >
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-forest-stream-in-the-sunlight-529-large.mp4" type="video/mp4" />
+      </video>
+      <div className="hero-overlay"></div>
+
       {SLIDES.map((s, idx) => (
         <div key={idx} className={`hero-slide ${idx === i ? "active" : ""}`} aria-hidden={idx !== i}>
           <div className="container hero-slide__grid">
