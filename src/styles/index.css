@@ -1399,7 +1399,7 @@ body.chat-open .back-to-top { opacity: 0; visibility: hidden; pointer-events: no
 .sector-list .sector-badge { font-size: 0.62rem; padding: 3px 8px; }
 
 /* Navbar — AI quick link pill */
-.nav-links .ai-link-li { display: flex; align-items: center; }
+.nav-links .ai-link-li { display: flex; align-items: center; margin: 0 18px; }
 .nav-links .ai-link {
   display: inline-flex; align-items: center; justify-content: center; gap: 4px;
   background: var(--grad-soft); color: #2f8b4a !important;
