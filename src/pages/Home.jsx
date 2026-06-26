@@ -6,6 +6,9 @@ import { CLIENT_LOGOS } from "../data/clients.js";
 import { AI_FEATURES } from "../data/aiFeatures.js";
 import SmartImg from "../components/SmartImg.jsx";
 import visionImg from "../assets/vision-handshake.png";
+import nabetLogo from "../assets/nabet-logo.png";
+import nabetCert from "../assets/nabet-certificate.png";
+import isoCert from "../assets/iso-certificate.png";
 import {
   IconDoc, IconLeaf, IconEye, IconShield, IconChart, IconGlobe,
   IconCheck, IconActivity, IconArrow, IconUsers, IconBeaker, IconStar,
@@ -133,6 +136,70 @@ export default function Home() {
             </ul>
             <Link to="/services" className="btn btn-primary" style={{ marginTop: 12 }}>Know more <IconArrow size={18} /></Link>
           </Reveal>
+        </div>
+      </section>
+
+      {/* ===================== CREDENTIALS ===================== */}
+      <section className="section section--soft">
+        <div className="container">
+          <Reveal className="section-head text-center">
+            <h2 className="section-title" style={{ color: "#143a52", marginBottom: 40 }}>Credentials</h2>
+          </Reveal>
+          
+          <div className="grid grid-2" style={{ alignItems: "center", gap: 60 }}>
+            {/* Left side: Logo & Text */}
+            <Reveal className="text-center">
+              <div style={{ 
+                display: "inline-flex", 
+                justifyContent: "center", 
+                alignItems: "center",
+                width: 150, 
+                height: 150, 
+                borderRadius: "50%", 
+                boxShadow: "var(--shadow)", 
+                background: "#fff",
+                marginBottom: 24
+              }}>
+                <img src={nabetLogo} alt="NABET Logo" style={{ width: 100, objectFit: "contain" }} />
+              </div>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: 700, lineHeight: 1.5 }}>Accreditation By Quality Council Of India, NABET As An EIA Consultant For 14 Sectors</h3>
+            </Reveal>
+            
+            {/* Right side: Certificate */}
+            <Reveal delay={1}>
+              <div style={{ border: "1px solid var(--line)", padding: 8, background: "#fff", boxShadow: "var(--shadow-lg)" }}>
+                <img src={nabetCert} alt="NABET Certificate" style={{ width: "100%", height: "auto" }} loading="lazy" />
+              </div>
+            </Reveal>
+          </div>
+
+          <div className="grid grid-2" style={{ alignItems: "center", gap: 60, marginTop: 80 }}>
+            {/* Left side: Certificate */}
+            <Reveal delay={1}>
+              <div style={{ border: "1px solid var(--line)", padding: 8, background: "#fff", boxShadow: "var(--shadow-lg)" }}>
+                <img src={isoCert} alt="ISO Certificate" style={{ width: "100%", height: "auto" }} loading="lazy" />
+              </div>
+            </Reveal>
+
+            {/* Right side: Text */}
+            <Reveal className="text-center">
+              <div style={{ 
+                display: "inline-flex", 
+                justifyContent: "center", 
+                alignItems: "center",
+                width: 150, 
+                height: 150, 
+                borderRadius: "50%", 
+                boxShadow: "var(--shadow)", 
+                background: "#fff",
+                marginBottom: 24,
+                color: "var(--violet-600)"
+              }}>
+                <IconCheck size={64} />
+              </div>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: 700, lineHeight: 1.5 }}>ISO 9001:2015 Certified Organization</h3>
+            </Reveal>
+          </div>
         </div>
       </section>
 
