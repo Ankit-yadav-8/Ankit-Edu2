@@ -27,6 +27,13 @@ export const PROJECTS = [
       "Stage-I forest clearance proposal on PARIVESH",
       "Public hearing & EAC appraisal support",
     ],
+    results: [
+      "Environmental Clearance granted by the EAC",
+      "Phased ramp-up plan from 2 to 5 MTPA approved",
+      "Ambient air & water parameters kept within norms",
+      "Compensatory afforestation plan implemented",
+    ],
+    frameworks: ["EIA Notification 2006", "Forest (Conservation) Act", "Wildlife (Protection) Act", "PARIVESH portal"],
     stats: [
       { num: "5", label: "MTPA capacity" },
       { num: "1 yr", label: "Baseline season" },
@@ -52,6 +59,13 @@ export const PROJECTS = [
       "Biodiversity & land-use screening",
       "Environmental & Social Management System (ESMS)",
     ],
+    results: [
+      "ESIA cleared lender due-diligence",
+      "Project financing successfully unlocked",
+      "Auditable ESMS handed to the operator",
+      "Community grievance mechanism established",
+    ],
+    frameworks: ["IFC Performance Standards", "ADB Safeguard Policy", "Equator Principles", "National EIA regime"],
     stats: [
       { num: "500", label: "MW capacity" },
       { num: "IFC PS", label: "Standards met" },
@@ -77,6 +91,13 @@ export const PROJECTS = [
       "Marine & intertidal ecology survey",
       "SCZMA clearance documentation",
     ],
+    results: [
+      "CRZ clearance secured from the SCZMA",
+      "Mangrove & intertidal zones safeguarded",
+      "Alignment optimised to minimise impact",
+      "Construction-phase monitoring plan defined",
+    ],
+    frameworks: ["CRZ Notification 2019", "Coastal Zone Management Plan", "Wildlife (Protection) Act", "EIA Notification 2006"],
     stats: [
       { num: "2019", label: "CRZ Notification" },
       { num: "Cadastral", label: "Mapping scale" },
@@ -102,6 +123,13 @@ export const PROJECTS = [
       "Consequence modelling (fire, explosion, toxic)",
       "On-site & off-site Disaster Management Plans",
     ],
+    results: [
+      "Defensible safety case established",
+      "Prioritised risk-reduction measures identified",
+      "Emergency response plans validated by mock drills",
+      "Compliance with MSIHC & Factories Act achieved",
+    ],
+    frameworks: ["Factories Act", "MSIHC Rules", "Chemical Accidents (EPPR) Rules", "OISD standards"],
     stats: [
       { num: "MAH", label: "Facility class" },
       { num: "QRA", label: "Risk modelled" },
@@ -127,6 +155,13 @@ export const PROJECTS = [
       "Documentation & submittals",
       "Certification through final award",
     ],
+    results: [
+      "IGBC Green certification awarded",
+      "Significant water reuse & recycling achieved",
+      "Improved energy performance across blocks",
+      "Construction & operational waste plan in place",
+    ],
+    frameworks: ["IGBC Green Townships", "ECBC energy code", "CPCB waste rules", "National Building Code"],
     stats: [
       { num: "IGBC", label: "Green rating" },
       { num: "Mixed-use", label: "Township scale" },
@@ -152,6 +187,13 @@ export const PROJECTS = [
       "Net-zero / decarbonisation roadmap",
       "BRSR & GRI-aligned ESG reporting",
     ],
+    results: [
+      "Board-approved net-zero roadmap adopted",
+      "Repeatable ESG reporting system established",
+      "Scope 1, 2 & 3 emissions baselined",
+      "Decarbonisation levers prioritised by ROI",
+    ],
+    frameworks: ["GHG Protocol", "TCFD recommendations", "SEBI BRSR", "GRI Standards"],
     stats: [
       { num: "Net-Zero", label: "Roadmap" },
       { num: "TCFD", label: "Risk aligned" },

@@ -21,6 +21,12 @@ export default function ProjectDetail() {
   const prev = PROJECTS[(idx - 1 + PROJECTS.length) % PROJECTS.length];
   const next = PROJECTS[(idx + 1) % PROJECTS.length];
 
+  const steps = [
+    { n: "01", h: "The challenge", t: project.challenge },
+    { n: "02", h: "Our approach", t: project.solution },
+    { n: "03", h: "The outcome", t: project.outcome },
+  ];
+
   return (
     <>
       <PageHero
@@ -41,88 +47,112 @@ export default function ProjectDetail() {
         ]}
       />
 
-      {/* Overview */}
-      <section className="section">
-        <div className="container split">
-          <Reveal>
-            <span className="eyebrow">Project overview</span>
-            <h2 className="section-title">{project.title}</h2>
-            <p className="body" style={{ marginTop: 14 }}>{project.summary}</p>
-            <div className="lab-meta" style={{ marginTop: 18 }}>
-              <span className="tag">{project.tag}</span>
-              <span className="tag">{project.location}</span>
-            </div>
-            <div className="hero-actions" style={{ marginTop: 24 }}>
-              <Link to="/contact" className="btn btn-primary">Request a proposal <IconArrow size={18} /></Link>
-              <Link to="/services" className="btn btn-ghost">Related services</Link>
-            </div>
-          </Reveal>
-          <Reveal delay={1} className="cert-frame">
-            <img src={project.image} alt={project.title} loading="lazy" />
-          </Reveal>
-        </div>
-      </section>
-
-      {/* Key stats */}
-      <section className="section section--soft">
+      {/* Overview + at-a-glance + stats */}
+      <section className="section case-sec">
         <div className="container">
-          <div className="stats grid-3">
+          <div className="case-overview">
+            <Reveal className="case-overview__main">
+              <span className="eyebrow">Project overview</span>
+              <h2 className="section-title">{project.title}</h2>
+              <p className="body" style={{ marginTop: 14 }}>{project.summary}</p>
+              <p className="body">
+                Delivered end-to-end by RGPL's NABET Category-A team — from baseline studies and
+                technical assessment through to regulatory submission, appraisal support and the
+                final clearance or certification.
+              </p>
+              <div className="hero-actions" style={{ marginTop: 22 }}>
+                <Link to="/contact" className="btn btn-primary">Request a proposal <IconArrow size={18} /></Link>
+                <Link to="/services" className="btn btn-ghost">Related services</Link>
+              </div>
+            </Reveal>
+
+            <Reveal delay={1} className="case-facts">
+              <div className="case-facts__img">
+                <img src={project.image} alt={project.title} loading="lazy" />
+              </div>
+              <h3 className="case-facts__h">At a glance</h3>
+              <dl className="case-facts__list">
+                <div><dt>Sector</dt><dd>{project.tag}</dd></div>
+                <div><dt>Location</dt><dd>{project.location}</dd></div>
+                <div><dt>Accreditation</dt><dd>NABET Category-A</dd></div>
+                <div><dt>Services</dt><dd>{project.services.length} workstreams</dd></div>
+              </dl>
+            </Reveal>
+          </div>
+
+          <div className="case-stats">
             {project.stats.map((s) => (
-              <div className="stat" key={s.label}>
-                <div className="num">{s.num}</div>
-                <div className="lbl">{s.label}</div>
+              <div className="case-stat" key={s.label}>
+                <div className="case-stat__num">{s.num}</div>
+                <div className="case-stat__lbl">{s.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Challenge / Solution / Outcome */}
-      <section className="section">
+      {/* Challenge / Approach / Outcome */}
+      <section className="section section--soft case-sec">
         <div className="container">
-          <div className="grid grid-3" style={{ marginTop: 8 }}>
+          <Reveal className="section-head text-center">
+            <span className="eyebrow">How we delivered</span>
+            <h2 className="section-title">Challenge, approach &amp; outcome</h2>
+          </Reveal>
+          <div className="case-steps">
+            {steps.map((s, i) => (
+              <Reveal key={s.n} delay={i} className="case-step">
+                <span className="case-step__n">{s.n}</span>
+                <h3 className="case-step__h">{s.h}</h3>
+                <p className="body">{s.t}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services delivered + frameworks + results */}
+      <section className="section case-sec">
+        <div className="container">
+          <div className="case-delivery">
             <Reveal className="card">
-              <span className="cap-index">01</span>
-              <h3 style={{ marginTop: 6, marginBottom: 10 }}>The challenge</h3>
-              <p className="body">{project.challenge}</p>
+              <div className="ico"><IconCheck size={26} /></div>
+              <h3 style={{ marginBottom: 14 }}>Services delivered</h3>
+              <ul className="checklist">
+                {project.services.map((s) => (
+                  <li key={s}><span className="tick">✓</span> {s}</li>
+                ))}
+              </ul>
+              {project.frameworks?.length > 0 && (
+                <>
+                  <h4 className="case-fw__h">Regulatory frameworks</h4>
+                  <div className="case-fw">
+                    {project.frameworks.map((f) => (
+                      <span className="tag" key={f}>{f}</span>
+                    ))}
+                  </div>
+                </>
+              )}
             </Reveal>
-            <Reveal delay={1} className="card">
-              <span className="cap-index">02</span>
-              <h3 style={{ marginTop: 6, marginBottom: 10 }}>Our approach</h3>
-              <p className="body">{project.solution}</p>
-            </Reveal>
-            <Reveal delay={2} className="card">
-              <span className="cap-index">03</span>
-              <h3 style={{ marginTop: 6, marginBottom: 10 }}>The outcome</h3>
-              <p className="body">{project.outcome}</p>
+
+            <Reveal delay={1} className="card case-results">
+              <div className="ico"><IconArrow size={26} /></div>
+              <h3 style={{ marginBottom: 14 }}>Results &amp; impact</h3>
+              <ul className="checklist">
+                {(project.results || []).map((r) => (
+                  <li key={r}><span className="tick">✓</span> {r}</li>
+                ))}
+              </ul>
+              <p className="body" style={{ marginTop: 16 }}>
+                Our NABET Category-A accreditation and multidisciplinary team let us take projects
+                like this from baseline to clearance under one roof.
+              </p>
             </Reveal>
           </div>
         </div>
       </section>
 
-      {/* Services delivered */}
-      <section className="section section--soft">
-        <div className="container split">
-          <Reveal className="card">
-            <div className="ico"><IconCheck size={26} /></div>
-            <h3 style={{ marginBottom: 14 }}>Services delivered</h3>
-            <ul className="checklist">
-              {project.services.map((s) => (
-                <li key={s}><span className="tick">✓</span> {s}</li>
-              ))}
-            </ul>
-          </Reveal>
-          <Reveal delay={1} className="card">
-            <div className="ico"><IconArrow size={26} /></div>
-            <h3 style={{ marginBottom: 14 }}>Why it matters</h3>
-            <p className="body">{project.summary}</p>
-            <p className="body">Our NABET Category-A accreditation and multidisciplinary team let us take projects like this from baseline to clearance under one roof.</p>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* Prev / next project navigation */}
-      <section className="section">
+      {/* Prev / next + CTA */}
+      <section className="section section--soft case-sec">
         <div className="container">
           <div className="sector-nav">
             <Link to={`/projects/${prev.slug}`} className="sector-nav__btn">
@@ -135,12 +165,8 @@ export default function ProjectDetail() {
               <span className="sector-nav__name">{next.title}</span>
             </Link>
           </div>
-        </div>
-      </section>
 
-      <section className="section section--soft">
-        <div className="container">
-          <Reveal className="cta-band">
+          <Reveal className="cta-band" style={{ marginTop: 36 }}>
             <h2>Planning a similar {project.tag.toLowerCase()} project?</h2>
             <p>Let our accredited team scope the right assessment, clearance and monitoring pathway for you.</p>
             <Link to="/contact" className="btn btn-light">Get in touch <IconArrow size={18} /></Link>
