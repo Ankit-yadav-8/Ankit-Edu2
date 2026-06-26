@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { RCLogo } from "./Logos.jsx";
 import { Insta, FB, LI, XTw, YT, IconPin, IconPhone, IconMail } from "./Icons.jsx";
 import { EXPERTISE_LINKS } from "../data/services.js";
+import { SECTORS } from "../data/sectors.js";
 import nabetLogo from "../assets/nabet-logo.png";
 
 export default function Footer() {
@@ -43,6 +44,14 @@ export default function Footer() {
             {EXPERTISE_LINKS.map((l) => (
               <Link key={l.to} to={l.to}>{l.label}</Link>
             ))}
+          </div>
+
+          <div className="footer-col">
+            <h4>NABET Sectors</h4>
+            {SECTORS.map((s) => (
+              <Link key={s.slug} to={`/sectors/${s.slug}`}>{s.name}</Link>
+            ))}
+            <Link to="/sectors" className="foot-all-sectors">All Sectors →</Link>
           </div>
 
           <div>

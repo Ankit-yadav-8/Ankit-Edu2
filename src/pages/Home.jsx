@@ -16,7 +16,6 @@ import imgS5 from "../assets/service-5.png";
 import imgS6 from "../assets/service-6.png";
 import imgForest from "../assets/forest-biodiversity.png";
 import imgEsg from "../assets/esg-sustainability.png";
-import imgWater from "../assets/water-treatment.png";
 import certNabet from "../assets/nabet-certificate.png";
 import certIso from "../assets/iso-certificate.png";
 import Credentials from "../components/Credentials.jsx";
@@ -195,21 +194,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* ═══ WATER MANAGEMENT DIAGRAM ══════════════════════════ */}
-      <section className="section" style={{ background: "var(--off)", padding: "80px 0" }}>
-        <div className="container">
-          <Reveal className="text-center" style={{ marginBottom: "40px" }}>
-            <span className="eyebrow" style={{ color: "var(--violet-700)", fontSize: "11px", fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase" }}>Key Expertise</span>
-            <h2 className="section-title" style={{ fontFamily: "var(--font-head)", fontSize: "32px", color: "var(--ink)", margin: "10px 0 16px" }}>Advanced Sustainable Water Management Solutions</h2>
-          </Reveal>
-          <Reveal>
-            <div style={{ background: "#fff", padding: "12px", borderRadius: "16px", boxShadow: "0 10px 40px rgba(0,0,0,0.06)" }}>
-              <img src={imgWater} alt="Advanced Sustainable Water Management Solutions" style={{ width: "100%", height: "auto", display: "block", borderRadius: "8px" }} />
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
       {/* ═══ INDUSTRIES ════════════════════════════════════════ */}
       <section className="sec ind-sec" id="industries">
         <div className="wrap">
