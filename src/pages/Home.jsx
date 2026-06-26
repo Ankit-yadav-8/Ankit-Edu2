@@ -19,6 +19,7 @@ import imgEsg from "../assets/esg-sustainability.png";
 import imgWater from "../assets/water-treatment.png";
 import certNabet from "../assets/nabet-certificate.png";
 import certIso from "../assets/iso-certificate.png";
+import Credentials from "../components/Credentials.jsx";
 
 export default function Home() {
   return (
@@ -365,54 +366,57 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ NABET ACCREDITATION ═══════════════════════════════ */}
-      <section className="sec" id="accreditation">
-        <div className="wrap">
-          <Reveal className="nabet-grid">
-            <div className="nabet-card">
-              <div className="nabet-bdg">
-                <span className="n-dot">●</span> Highest Standard of Quality
-              </div>
-              <h3 className="nabet-ct">QCI - NABET Accredited Organization</h3>
-              <p className="nabet-cs">
-                Rejig GreenLogic Pvt. Ltd. holds the prestigious Quality Council of India (QCI) - 
-                National Accreditation Board for Education and Training (NABET) accreditation. 
-                This certification empowers us to conduct EIA studies and present cases before 
-                the EAC (MoEFCC) and SEAC across India.
-              </p>
-              <div className="nabet-tags">
-                <span className="nabet-t">ISO 9001:2015</span>
-                <span className="nabet-t">ISO 14001:2015</span>
-                <span className="nabet-t">OHSAS 45001:2018</span>
-                <span className="nabet-t">MoEFCC</span>
-                <span className="nabet-t">QCI</span>
-              </div>
-              <div style={{ display: "flex", gap: "16px", marginTop: "32px", flexWrap: "wrap" }}>
-                <img src={certNabet} alt="NABET Certificate" style={{ width: "100%", maxWidth: "160px", borderRadius: "6px", border: "1px solid rgba(255,255,255,0.15)" }} />
-                <img src={certIso} alt="ISO Certificate" style={{ width: "100%", maxWidth: "160px", borderRadius: "6px", border: "1px solid rgba(255,255,255,0.15)" }} />
-              </div>
-            </div>
-            <div>
-              <div className="tag" style={{ display: "block", marginBottom: 14, textAlign: "left" }}>Accredited Sectors</div>
-              <div className="sectors-grid">
-                <div className="sec-row"><span className="sec-dot"></span> Mining of minerals (Opencast)</div>
-                <div className="sec-row"><span className="sec-dot"></span> Thermal power plants</div>
-                <div className="sec-row"><span className="sec-dot"></span> Coal washeries</div>
-                <div className="sec-row"><span className="sec-dot"></span> Metallurgical industries</div>
-                <div className="sec-row"><span className="sec-dot"></span> Cement plants</div>
-                <div className="sec-row"><span className="sec-dot"></span> Synthetic organic chemicals</div>
-                <div className="sec-row"><span className="sec-dot"></span> Distilleries</div>
-                <div className="sec-row"><span className="sec-dot"></span> Sugar Industry</div>
-                <div className="sec-row"><span className="sec-dot"></span> Oil &amp; gas transportation</div>
-                <div className="sec-row"><span className="sec-dot"></span> Highways</div>
-                <div className="sec-row"><span className="sec-dot"></span> Building and construction</div>
-                <div className="sec-row"><span className="sec-dot"></span> Townships and Area dev</div>
-              </div>
-              <div className="sec-note">* Partial list of accredited sectors. Please refer to our official NABET certificate for the complete scope.</div>
-            </div>
+      {/* ═══ ACCREDITATIONS (Image 1) ══════════════════════════ */}
+      <section className="section" style={{ padding: "80px 0" }}>
+        <div className="container">
+          <Reveal className="text-center" style={{ marginBottom: 48 }}>
+            <span className="eyebrow" style={{ color: "var(--violet-700)", fontSize: "11px", fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase" }}>CERTIFICATIONS</span>
+            <h2 className="section-title" style={{ fontFamily: "var(--font-head)", fontSize: "36px", color: "var(--ink)", margin: "10px 0 16px" }}>Accredited &amp; certified</h2>
+            <p className="section-sub" style={{ margin: "0 auto", maxWidth: 640, color: "var(--muted)", fontSize: "15px", lineHeight: 1.6 }}>
+              Our credentials are independently verified — QCI-NABET accreditation for EIA and ISO 9001:2015 for quality management.
+            </p>
           </Reveal>
+          
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }}>
+            <Reveal delay={0} style={{ display: "flex", gap: "20px", padding: "24px", border: "1px solid var(--violet-100)", borderRadius: "12px", background: "#fff", boxShadow: "0 8px 30px rgba(0,0,0,0.04)", alignItems: "center" }}>
+              <div style={{ flexShrink: 0, width: "130px", padding: "10px", border: "1px solid var(--violet-50)", borderRadius: "8px", background: "#fafafa" }}>
+                <img src={certNabet} alt="NABET Certificate" style={{ width: "100%", display: "block" }} />
+              </div>
+              <div>
+                <div style={{ display: "inline-flex", gap: "6px", alignItems: "center", background: "var(--violet-50)", color: "var(--violet-700)", padding: "4px 10px", borderRadius: "100px", fontSize: "11px", fontWeight: 700, marginBottom: "12px" }}>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                  QCI-NABET
+                </div>
+                <h3 style={{ fontSize: "18px", color: "var(--ink)", marginBottom: "8px", lineHeight: 1.3 }}>Category-'A' EIA Consultant Accreditation</h3>
+                <p style={{ fontSize: "13px", color: "var(--muted)", marginBottom: "16px", lineHeight: 1.5 }}>
+                  Certificate No. NABET/EIA/24-27/SA 0262 · valid up to 28 January 2027.
+                </p>
+                <Link to="/about" style={{ fontSize: "13.5px", fontWeight: 700, color: "var(--violet-700)", textDecoration: "none" }}>View certificate →</Link>
+              </div>
+            </Reveal>
+
+            <Reveal delay={1} style={{ display: "flex", gap: "20px", padding: "24px", border: "1px solid var(--violet-100)", borderRadius: "12px", background: "#fff", boxShadow: "0 8px 30px rgba(0,0,0,0.04)", alignItems: "center" }}>
+              <div style={{ flexShrink: 0, width: "130px", padding: "10px", border: "1px solid var(--violet-50)", borderRadius: "8px", background: "#fafafa" }}>
+                <img src={certIso} alt="ISO Certificate" style={{ width: "100%", display: "block" }} />
+              </div>
+              <div>
+                <div style={{ display: "inline-flex", gap: "6px", alignItems: "center", background: "var(--violet-50)", color: "var(--violet-700)", padding: "4px 10px", borderRadius: "100px", fontSize: "11px", fontWeight: 700, marginBottom: "12px" }}>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                  ISO 9001:2015
+                </div>
+                <h3 style={{ fontSize: "18px", color: "var(--ink)", marginBottom: "8px", lineHeight: 1.3 }}>Quality Management System Certification</h3>
+                <p style={{ fontSize: "13px", color: "var(--muted)", marginBottom: "16px", lineHeight: 1.5 }}>
+                  Certificate No. 305023020720Q · issued by Quality Research Organization (QRO).
+                </p>
+                <Link to="/about" style={{ fontSize: "13.5px", fontWeight: 700, color: "var(--violet-700)", textDecoration: "none" }}>View certificate →</Link>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
+
+      {/* ═══ CREDENTIALS DIAGRAM (Image 2) ═════════════════════ */}
+      <Credentials />
     </>
   );
 }

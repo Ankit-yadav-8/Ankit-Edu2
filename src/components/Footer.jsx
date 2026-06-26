@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { RCLogo } from "./Logos.jsx";
 import { Insta, FB, LI, XTw, YT, IconPin, IconPhone, IconMail } from "./Icons.jsx";
 import { EXPERTISE_LINKS } from "../data/services.js";
+import nabetLogo from "../assets/nabet-logo.png";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -10,8 +11,9 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div>
-            <div className="footer-logo">
+            <div className="footer-logo" style={{ display: "flex", gap: "20px", alignItems: "center" }}>
               <RCLogo height={54} />
+              <img src={nabetLogo} alt="NABET Logo" style={{ height: "48px" }} />
             </div>
             <p className="desc">
               Your techno-legal advisory partner in environmental consultancy — trusted by 3,000+
