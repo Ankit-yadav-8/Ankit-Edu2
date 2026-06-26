@@ -11,6 +11,8 @@ import nabetCert from "../assets/nabet-certificate.png";
 import isoCert from "../assets/iso-certificate.png";
 import waterTreatmentImg from "../assets/water-treatment.png";
 import forestBioImg from "../assets/forest-biodiversity.png";
+import esgImg from "../assets/esg-sustainability.png";
+import coastalImg from "../assets/coastal-marine.png";
 import {
   IconDoc, IconLeaf, IconEye, IconShield, IconChart, IconGlobe,
   IconCheck, IconActivity, IconArrow, IconUsers, IconBeaker, IconStar,
@@ -377,26 +379,129 @@ export default function Home() {
       <section className="detailed-panel" style={{ backgroundColor: "#f9fafb" }}>
         <div className="container dp-grid">
           <Reveal className="dp-text" style={{ gridColumn: "1 / -1", maxWidth: "100%" }}>
-            <span className="eyebrow">Corporate Responsibility | Strategic Growth</span>
+            <span className="eyebrow">Building Responsible Businesses for a Sustainable Future</span>
             <h2>ESG, Sustainability & Climate Risk Assessment</h2>
-            <p style={{ marginBottom: 24, textAlign: "justify" }}>
-              Modern businesses must measure and mitigate their environmental footprint. We guide corporations through rigorous Environmental, Social, and Governance (ESG) frameworks, helping them identify gaps, manage climate risks, and secure a sustainable, profitable future.
+
+            <p style={{ textAlign: "justify" }}>
+              Environmental responsibility, social accountability, and strong corporate governance are no longer optional—they are essential pillars of modern business success. Investors, regulators, customers, financial institutions, and communities increasingly expect organizations to operate transparently, minimize environmental impacts, create positive social value, and maintain high standards of governance. At the same time, climate change is introducing new operational, financial, and regulatory risks that require organizations to strengthen resilience and adopt forward-looking sustainability strategies.
             </p>
-            <h3 style={{ marginBottom: 16, fontSize: "1.2rem", fontWeight: 700 }}>Core Expertise:</h3>
-            <ul className="dp-list" style={{ columns: "2", columnGap: "40px" }}>
-              <li><strong>ESG Framework Development:</strong> Custom strategies aligned with GRI, SASB, and TCFD.</li>
-              <li><strong>Sustainability & ESDD Studies:</strong> Environmental & Social Due Diligence for investments.</li>
-              <li><strong>Carbon Footprint Mapping (GHG Accounting):</strong> Scope 1, 2, and 3 emissions tracking.</li>
-              <li><strong>Climate Change Risk Assessment (CCRA):</strong> Identifying physical and transition climate risks.</li>
-              <li><strong>ESG Management System (ESGMS):</strong> Institutionalizing sustainability practices.</li>
-              <li><strong>Net Zero Strategy Consulting:</strong> Roadmaps for achieving carbon neutrality.</li>
-              <li><strong>Water & Energy Audits:</strong> Identifying resource optimization opportunities.</li>
-              <li><strong>Green Audits & Damage Assessment:</strong> Rigorous compliance auditing as per OM B04(E).</li>
-              <li><strong>IGBC / LEED Documentation:</strong> Comprehensive support for Green Building Certifications.</li>
-              <li><strong>Social Impact Assessments (SIA):</strong> Evaluating community impacts and CSR effectiveness.</li>
-              <li><strong>EHS Compliance Audits:</strong> Ensuring adherence to occupational health and safety laws.</li>
-              <li><strong>Sustainability Reporting:</strong> Drafting annual reports (BRSR, CDP, etc.).</li>
+            <p style={{ textAlign: "justify" }}>
+              Rejib Green Private Limited provides comprehensive Environmental, Social, and Governance (ESG), Sustainability, and Climate Risk Assessment services that help organizations integrate responsible business practices into every stage of planning, operations, and growth. We combine scientific expertise, environmental engineering, sustainability consulting, climate analytics, regulatory knowledge, and digital technologies to support industries, infrastructure projects, government agencies, financial institutions, developers, and multinational corporations in achieving measurable sustainability outcomes.
+            </p>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              Our integrated approach enables organizations to improve ESG performance, identify climate-related risks and opportunities, strengthen regulatory compliance, reduce environmental impacts, enhance stakeholder confidence, improve operational efficiency, and create long-term value for businesses and society.
+            </p>
+
+            {/* Image row */}
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, marginBottom: 32 }}>
+              <img src={esgImg} alt="ESG Sustainability Consulting" style={{ width: "100%", borderRadius: 12, boxShadow: "var(--shadow-lg)" }} loading="lazy" />
+              <SmartImg src={U("1473773508845-188df298d2d1")} alt="Climate Risk Assessment" style={{ width: "100%", borderRadius: 12, boxShadow: "var(--shadow-lg)" }} />
+            </div>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Driving Sustainable Growth Through ESG Excellence</h3>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              Global markets are undergoing a significant transformation. Governments are strengthening environmental regulations, investors are prioritizing sustainable investments, financial institutions are integrating ESG performance into lending decisions, and customers increasingly prefer environmentally responsible businesses. Organizations that proactively manage sustainability and climate risks are better positioned to improve resilience, enhance competitiveness, attract investment, and achieve sustainable growth. Rejib Green Private Limited partners with organizations to develop practical ESG strategies, climate adaptation plans, sustainability roadmaps, and risk management frameworks that align with international best practices while supporting local regulatory requirements.
+            </p>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Our Vision</h3>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              To become a trusted leader in ESG consulting, sustainability advisory, and climate risk assessment by helping organizations create resilient, responsible, and future-ready businesses that generate lasting environmental, social, and economic value.
+            </p>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Our Mission</h3>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              Our mission is to empower organizations with innovative sustainability solutions, robust ESG frameworks, climate risk intelligence, and science-based environmental strategies that strengthen resilience, improve governance, enhance stakeholder trust, and support responsible development.
+            </p>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Our Core Values</h3>
+            <p style={{ textAlign: "justify", marginBottom: 8 }}>At Rejib Green Private Limited, every sustainability initiative is guided by a commitment to excellence, integrity, and environmental responsibility.</p>
+            <ul className="dp-list" style={{ columns: "2", columnGap: "40px", marginBottom: 24 }}>
+              <li>Sustainability Leadership</li>
+              <li>Environmental Stewardship</li>
+              <li>Scientific Integrity</li>
+              <li>Ethical Governance</li>
+              <li>Innovation and Technology</li>
+              <li>Transparency</li>
+              <li>Accountability</li>
+              <li>Collaboration</li>
+              <li>Continuous Improvement</li>
+              <li>Long-Term Value Creation</li>
             </ul>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Understanding ESG</h3>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              Environmental, Social, and Governance (ESG) is a framework used to evaluate how organizations manage environmental impacts, social responsibilities, and governance practices. ESG has become a critical component of corporate strategy because it reflects an organization's commitment to responsible business operations, risk management, transparency, and long-term value creation. A strong ESG program supports regulatory compliance, improves operational efficiency, strengthens investor confidence, enhances brand reputation, reduces business risks, and contributes to sustainable economic development.
+            </p>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Environmental Responsibility</h3>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              The environmental pillar focuses on how an organization manages its impact on natural resources and ecosystems. Responsible environmental management includes reducing greenhouse gas emissions, improving energy efficiency, conserving water resources, minimizing waste, preventing pollution, protecting biodiversity, and adopting sustainable resource management practices.
+            </p>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Social Responsibility</h3>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              The social pillar evaluates how organizations interact with employees, customers, suppliers, local communities, and other stakeholders. Strong social performance contributes to workforce well-being, community development, occupational health and safety, diversity and inclusion, ethical labor practices, and responsible supply chain management.
+            </p>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Corporate Governance</h3>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              Effective governance ensures that organizations operate transparently, ethically, and responsibly. Strong governance systems promote accountability, risk management, regulatory compliance, ethical decision-making, internal controls, board oversight, and responsible leadership.
+            </p>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Sustainability as a Business Strategy</h3>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              Sustainability is more than environmental protection—it is a comprehensive approach to creating long-term economic, environmental, and social value. Organizations that integrate sustainability into business strategy often experience improved efficiency, lower operating costs, stronger stakeholder trust, enhanced innovation, and greater resilience to market changes.
+            </p>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Climate Change and Business Risk</h3>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              Climate change presents both physical and transition risks that can significantly affect business operations, infrastructure, supply chains, financial performance, and regulatory obligations. Rising temperatures, extreme weather events, flooding, droughts, changing precipitation patterns, sea-level rise, and evolving climate policies require organizations to assess vulnerabilities and strengthen resilience. Climate risk assessment enables organizations to identify potential impacts, evaluate exposure, prioritize mitigation measures, and develop adaptive strategies that reduce long-term risks while supporting sustainable growth.
+            </p>
+
+            <h3 style={{ marginBottom: 16, fontSize: "1.2rem", fontWeight: 700 }}>Our ESG and Sustainability Services:</h3>
+            <ul className="dp-list" style={{ columns: "2", columnGap: "40px", marginBottom: 24 }}>
+              <li>ESG Strategy Development</li>
+              <li>ESG Materiality Assessment</li>
+              <li>Sustainability Strategy and Roadmap</li>
+              <li>Sustainability Reporting</li>
+              <li>ESG Gap Assessment</li>
+              <li>Environmental Performance Assessment</li>
+              <li>Carbon Footprint Assessment</li>
+              <li>Greenhouse Gas (GHG) Inventory</li>
+              <li>Scope 1, Scope 2, and Scope 3 Emissions Analysis</li>
+              <li>Net Zero Transition Planning</li>
+              <li>Climate Risk Assessment</li>
+              <li>Climate Vulnerability Assessment</li>
+              <li>Climate Adaptation Planning</li>
+              <li>Climate Resilience Strategy</li>
+              <li>Physical Climate Risk Analysis</li>
+              <li>Transition Risk Assessment</li>
+              <li>Decarbonization Planning</li>
+              <li>Energy Efficiency Assessment</li>
+              <li>Renewable Energy Advisory</li>
+              <li>Circular Economy Strategy</li>
+              <li>Waste Reduction and Resource Efficiency</li>
+              <li>Water Stewardship Programs</li>
+              <li>Sustainable Supply Chain Assessment</li>
+              <li>Biodiversity Risk Assessment</li>
+              <li>Social Impact Assessment</li>
+              <li>Stakeholder Engagement Strategy</li>
+              <li>Human Rights Due Diligence</li>
+              <li>Occupational Health and Safety Advisory</li>
+              <li>Corporate Governance Assessment</li>
+              <li>Regulatory Compliance Support</li>
+              <li>ESG Data Management</li>
+              <li>Sustainability KPI Development</li>
+              <li>ESG Performance Monitoring</li>
+              <li>Sustainable Finance Advisory</li>
+              <li>Green Project Evaluation</li>
+              <li>Environmental and Social Risk Assessment</li>
+              <li>ESG Training and Capacity Building</li>
+            </ul>
+
+            <p style={{ textAlign: "justify", fontStyle: "italic", color: "var(--muted)" }}>
+              Our consulting services align with internationally recognized sustainability and ESG frameworks to ensure credibility, consistency, and global relevance. We assist organizations in understanding, implementing, and reporting in accordance with leading standards and best practices, helping them meet stakeholder expectations and regulatory requirements while improving transparency and accountability.
+            </p>
             <Link to="/services" className="btn btn-primary" style={{ marginTop: 12 }}>Know more <IconArrow size={18} /></Link>
           </Reveal>
         </div>
@@ -406,26 +511,153 @@ export default function Home() {
       <section className="detailed-panel">
         <div className="container dp-grid">
           <Reveal className="dp-text" style={{ gridColumn: "1 / -1", maxWidth: "100%" }}>
-            <span className="eyebrow">Marine Environments | Advanced Geospatial Analysis</span>
+            <span className="eyebrow">Advancing Coastal Resilience Through Marine Science and Geospatial Intelligence</span>
             <h2>Coastal, Marine & Remote Sensing Solutions</h2>
-            <p style={{ marginBottom: 24, textAlign: "justify" }}>
-              Our specialized team leverages advanced technology to monitor and protect fragile ecosystems. From intricate Coastal Regulatory Zone (CRZ) clearances to AI-assisted satellite imagery change detection, we provide high-fidelity data for accurate environmental planning.
+
+            <p style={{ textAlign: "justify" }}>
+              Coastal and marine ecosystems are among the most productive and valuable natural environments on Earth. They support biodiversity, fisheries, tourism, transportation, renewable energy, coastal communities, and global trade while providing essential ecosystem services such as carbon sequestration, shoreline protection, climate regulation, and nutrient cycling. However, these ecosystems face increasing pressures from climate change, sea-level rise, coastal erosion, pollution, habitat degradation, urban expansion, industrial development, and extreme weather events.
             </p>
-            <h3 style={{ marginBottom: 16, fontSize: "1.2rem", fontWeight: 700 }}>Core Expertise:</h3>
-            <ul className="dp-list" style={{ columns: "2", columnGap: "40px" }}>
-              <li><strong>Coastal Regulatory Zone (CRZ) Clearance:</strong> Comprehensive reporting and regulatory liaison.</li>
-              <li><strong>CRZ Mapping & Demarcation:</strong> Utilizing HTL/LTL maps from authorized agencies.</li>
-              <li><strong>Marine Environment Monitoring:</strong> Sea bed sediment sampling and marine water analysis.</li>
-              <li><strong>Hydrodynamic Modeling & Studies:</strong> Simulating coastal currents and outfall dispersion.</li>
-              <li><strong>Bathymetric & Topographic Surveys:</strong> Detailed mapping of underwater and coastal terrains.</li>
-              <li><strong>Remote Sensing & GIS Applications:</strong> Advanced spatial data analysis using satellite imagery.</li>
-              <li><strong>Land Use / Land Cover (LULC) Mapping:</strong> Tracking temporal changes in landscapes.</li>
-              <li><strong>Marine Biodiversity Assessments:</strong> Evaluating impacts on coral reefs and fisheries.</li>
-              <li><strong>Disaster Risk Mapping:</strong> Assessing vulnerabilities to cyclones and sea-level rise.</li>
-              <li><strong>Dredging Impact Studies:</strong> Environmental assessment of port and harbor development.</li>
-              <li><strong>Mining Plan Preparation & DGPS Surveys:</strong> Highly accurate geospatial data collection.</li>
-              <li><strong>Outfall & Intake Design Consulting:</strong> Ensuring environmental compliance for coastal plants.</li>
+            <p style={{ textAlign: "justify" }}>
+              Rejib Green Private Limited delivers comprehensive Coastal, Marine, and Remote Sensing Solutions that combine environmental science, oceanography, hydrography, geospatial technologies, satellite observations, drone surveys, Geographic Information Systems (GIS), remote sensing, artificial intelligence, and environmental engineering to support sustainable coastal development and marine resource management.
+            </p>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              Our multidisciplinary team provides innovative and science-based solutions for governments, ports, coastal infrastructure developers, offshore industries, environmental agencies, research organizations, renewable energy developers, and private enterprises. From shoreline monitoring and marine environmental impact assessments to satellite image analysis and digital mapping, we help clients make informed decisions that protect natural ecosystems while supporting responsible economic development.
+            </p>
+
+            {/* Image row */}
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, marginBottom: 32 }}>
+              <img src={coastalImg} alt="Coastal Marine Environment" style={{ width: "100%", borderRadius: 12, boxShadow: "var(--shadow-lg)" }} loading="lazy" />
+              <SmartImg src={U("1505142468610-359e7d316be0")} alt="Remote Sensing" style={{ width: "100%", borderRadius: 12, boxShadow: "var(--shadow-lg)" }} />
+            </div>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Protecting Coastal and Marine Resources for Future Generations</h3>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              More than one-third of the world's population lives in coastal regions. These areas are economic hubs that support ports, industries, fisheries, tourism, transportation, renewable energy, and urban development. At the same time, they are among the most vulnerable regions to climate change, rising sea levels, cyclones, flooding, coastal erosion, saltwater intrusion, and habitat loss. Effective coastal management requires accurate environmental data, advanced spatial analysis, continuous monitoring, scientific assessments, and integrated planning.
+            </p>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Our Vision</h3>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              To become a trusted leader in coastal, marine, and geospatial consulting by delivering innovative, technology-driven solutions that protect marine ecosystems, strengthen climate resilience, support sustainable coastal development, and promote responsible environmental stewardship.
+            </p>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Our Mission</h3>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              Our mission is to integrate marine science, geospatial intelligence, remote sensing technologies, and environmental engineering to deliver reliable, sustainable, and future-ready solutions that protect coastal environments while supporting economic growth and resilient infrastructure development.
+            </p>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Our Core Values</h3>
+            <p style={{ textAlign: "justify", marginBottom: 8 }}>Every project undertaken by Rejib Green Private Limited is guided by values that reflect our commitment to environmental excellence and sustainable development.</p>
+            <ul className="dp-list" style={{ columns: "2", columnGap: "40px", marginBottom: 24 }}>
+              <li>Environmental Responsibility</li>
+              <li>Scientific Integrity</li>
+              <li>Innovation and Technology</li>
+              <li>Sustainability</li>
+              <li>Accuracy and Quality</li>
+              <li>Transparency</li>
+              <li>Collaboration</li>
+              <li>Safety</li>
+              <li>Client-Centric Solutions</li>
+              <li>Continuous Improvement</li>
             </ul>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Understanding Coastal Management</h3>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              Coastal management is the process of planning, protecting, developing, and sustainably managing coastal zones and marine environments. It involves balancing environmental conservation with economic activities such as ports, shipping, fisheries, tourism, renewable energy, and coastal infrastructure development. Integrated Coastal Zone Management (ICZM) promotes coordinated decision-making across environmental, social, and economic sectors to ensure long-term sustainability of coastal ecosystems.
+            </p>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Marine Environmental Solutions</h3>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              Marine ecosystems include oceans, estuaries, lagoons, coral reefs, mangroves, seagrass beds, salt marshes, and coastal wetlands. These ecosystems support an extraordinary diversity of marine life while providing critical ecosystem services that benefit both nature and society. Our marine environmental services help organizations understand marine ecological conditions, evaluate environmental impacts, protect sensitive habitats, monitor ecosystem health, and develop sustainable marine management strategies.
+            </p>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Remote Sensing for Environmental Intelligence</h3>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              Remote sensing uses satellite imagery, drones, aircraft, LiDAR, radar, and sensor technologies to collect environmental information without direct physical contact. Modern remote sensing enables continuous monitoring of land, water, forests, coastlines, infrastructure, and natural resources over large geographic areas with exceptional accuracy. Through advanced image processing, GIS integration, machine learning, and artificial intelligence, we transform complex environmental data into actionable insights that support better decision-making.
+            </p>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Geographic Information Systems (GIS)</h3>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              GIS is a powerful technology that enables organizations to collect, manage, analyze, and visualize spatial information. By integrating environmental data, satellite imagery, field surveys, topographic information, climate datasets, and infrastructure records, GIS supports informed planning and sustainable resource management. GIS enables clients to understand spatial relationships, identify environmental risks, monitor changes over time, and optimize project planning.
+            </p>
+
+            <h3 style={{ marginBottom: 16, fontSize: "1.2rem", fontWeight: 700 }}>Our Comprehensive Services:</h3>
+            <ul className="dp-list" style={{ columns: "2", columnGap: "40px", marginBottom: 24 }}>
+              <li>Coastal Zone Management</li>
+              <li>Integrated Coastal Zone Management (ICZM)</li>
+              <li>Shoreline Change Analysis</li>
+              <li>Coastal Vulnerability Assessment</li>
+              <li>Coastal Erosion Studies</li>
+              <li>Sediment Transport Analysis</li>
+              <li>Beach Profiling</li>
+              <li>Coastal Infrastructure Planning</li>
+              <li>Marine Environmental Impact Assessment (MEIA)</li>
+              <li>Marine Ecological Surveys</li>
+              <li>Coral Reef Assessment</li>
+              <li>Mangrove Mapping and Restoration</li>
+              <li>Seagrass Habitat Assessment</li>
+              <li>Wetland Mapping</li>
+              <li>Marine Biodiversity Surveys</li>
+              <li>Fisheries Resource Assessment</li>
+              <li>Oceanographic Studies</li>
+              <li>Bathymetric Surveys</li>
+              <li>Hydrographic Surveys</li>
+              <li>Tidal Analysis</li>
+              <li>Wave Climate Assessment</li>
+              <li>Coastal Flood Risk Assessment</li>
+              <li>Storm Surge Modeling</li>
+              <li>Sea-Level Rise Assessment</li>
+              <li>Climate Change Vulnerability Assessment</li>
+              <li>Blue Carbon Assessment</li>
+              <li>Marine Pollution Monitoring</li>
+              <li>Water Quality Monitoring</li>
+              <li>Sediment Quality Assessment</li>
+              <li>Oil Spill Risk Assessment</li>
+              <li>Environmental Baseline Studies</li>
+              <li>Habitat Suitability Modeling</li>
+              <li>Ecosystem Restoration Planning</li>
+              <li>Coastal Regulation Compliance</li>
+              <li>Environmental Monitoring Programs</li>
+              <li>GIS Mapping Services</li>
+              <li>Remote Sensing Applications</li>
+              <li>Satellite Image Analysis</li>
+              <li>Drone Surveys</li>
+              <li>LiDAR Mapping</li>
+              <li>Terrain Modeling</li>
+              <li>Land Use and Land Cover Mapping</li>
+              <li>Change Detection Analysis</li>
+              <li>Spatial Data Management</li>
+              <li>Geospatial Decision Support Systems</li>
+              <li>Digital Environmental Dashboards</li>
+            </ul>
+
+            <h3 style={{ marginBottom: 16, fontSize: "1.2rem", fontWeight: 700 }}>Advanced Technologies We Use:</h3>
+            <ul className="dp-list" style={{ columns: "2", columnGap: "40px", marginBottom: 24 }}>
+              <li>Geographic Information Systems (GIS)</li>
+              <li>Satellite Remote Sensing</li>
+              <li>UAV and Drone Mapping</li>
+              <li>LiDAR Surveys</li>
+              <li>GNSS and GPS Surveying</li>
+              <li>Bathymetric Survey Systems</li>
+              <li>Hydrographic Survey Equipment</li>
+              <li>Acoustic Monitoring Technologies</li>
+              <li>Oceanographic Instruments</li>
+              <li>Environmental Monitoring Sensors</li>
+              <li>Artificial Intelligence</li>
+              <li>Machine Learning Algorithms</li>
+              <li>Big Data Analytics</li>
+              <li>Spatial Data Infrastructure</li>
+              <li>Digital Elevation Models</li>
+              <li>Coastal Simulation Models</li>
+              <li>Hydrodynamic Modeling</li>
+              <li>Environmental Data Visualization</li>
+              <li>Cloud-Based Geospatial Platforms</li>
+              <li>Interactive Mapping Portals</li>
+            </ul>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Climate Change and Coastal Resilience</h3>
+            <p style={{ textAlign: "justify" }}>
+              Climate change is transforming coastal environments through rising sea levels, stronger storms, changing ocean temperatures, coastal flooding, shoreline erosion, saltwater intrusion, and shifting marine ecosystems. Building climate-resilient coastal infrastructure requires scientific assessments, predictive modeling, ecosystem restoration, and adaptive management strategies. Rejib Green Private Limited develops climate resilience solutions that help governments, industries, and coastal communities understand future risks, strengthen preparedness, protect critical infrastructure, and conserve vulnerable ecosystems through integrated planning and sustainable engineering.
+            </p>
             <Link to="/services" className="btn btn-primary" style={{ marginTop: 12 }}>Know more <IconArrow size={18} /></Link>
           </Reveal>
         </div>
