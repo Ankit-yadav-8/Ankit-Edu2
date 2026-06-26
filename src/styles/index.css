@@ -1253,3 +1253,94 @@ body.chat-open .back-to-top { opacity: 0; visibility: hidden; pointer-events: no
   .cred-row { grid-template-columns: 1fr; gap: 8px; }
 }
 
+
+/* ===================================================================
+   NEW SERVICES CARD UI
+   =================================================================== */
+.svc-card3 {
+  background: #ffffff;
+  border: 1px solid var(--violet-100);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  height: 100%;
+}
+.svc-card3:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+  border-color: var(--violet-200);
+}
+.svc-card3__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.svc-card3__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--violet-50);
+  color: var(--violet-600);
+}
+.svc-card3__icon.cat-Assessment { background: #e0f2fe; color: #0284c7; }
+.svc-card3__icon.cat-Clearance { background: #dcfce7; color: #16a34a; }
+.svc-card3__icon.cat-Monitoring { background: #ffedd5; color: #ea580c; }
+.svc-card3__icon.cat-Audit { background: #f3e8ff; color: #9333ea; }
+.svc-card3__icon.cat-Geospatial { background: #e0e7ff; color: #4f46e5; }
+.svc-card3__icon.cat-ESG { background: #ecfccb; color: #4d7c0f; }
+
+.svc-card3__tag {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--violet-600);
+  background: var(--violet-50);
+  padding: 5px 12px;
+  border-radius: 100px;
+}
+.svc-card3 h3 {
+  font-size: 1.15rem;
+  color: var(--ink);
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+.svc-card3__d {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+.svc-card3__divider {
+  border: none;
+  border-top: 1px dashed var(--violet-200);
+  margin: 0 0 20px 0;
+}
+.svc-card3__more {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 28px;
+  flex: 1;
+}
+.svc-card3__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--violet-700);
+  transition: color 0.15s ease;
+  margin-top: auto;
+}
+.svc-card3__link:hover {
+  color: var(--violet-500);
+}

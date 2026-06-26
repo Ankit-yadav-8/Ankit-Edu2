@@ -6,11 +6,22 @@ import SmartImg from "../components/SmartImg.jsx";
 import { SERVICES, SERVICE_CATEGORIES, CATEGORY_IMG } from "../data/services.js";
 import { IconSearch, IconArrow } from "../components/Icons.jsx";
 
+const getCatIcon = (cat) => {
+  switch(cat) {
+    case 'Assessment': return <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>;
+    case 'Clearance': return <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><polyline points="16 13 8 13"></polyline><polyline points="16 17 8 17"></polyline><polyline points="10 9 9 9 8 9"></polyline></svg>;
+    case 'Monitoring': return <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>;
+    case 'Audit': return <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>;
+    case 'Geospatial': return <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" y1="3" x2="9" y2="18"></line><line x1="15" y1="6" x2="15" y2="21"></line></svg>;
+    case 'ESG': return <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M2 22A20 20 0 0 1 22 2c0 0-5.3 0-10 4.7C7.3 11.4 2 22 2 22z"></path><path d="M2 22a20 20 0 0 0 20-20"></path><line x1="12" y1="12" x2="2" y2="22"></line></svg>;
+    default: return <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>;
+  }
+}
+
 export default function Services() {
   const [searchParams] = useSearchParams();
   const [cat, setCat] = useState(searchParams.get("cat") || "all");
   const [term, setTerm] = useState("");
-  const [open, setOpen] = useState(null);
 
   // Deep-link support: navbar/footer links like /services?cat=Clearance
   // pre-select the matching category each time the query param changes.
@@ -18,7 +29,6 @@ export default function Services() {
     const next = searchParams.get("cat");
     if (next) {
       setCat(next);
-      setOpen(null);
     }
   }, [searchParams]);
 
@@ -49,9 +59,9 @@ export default function Services() {
         ]}
       />
 
-      <section className="section">
+      <section className="section" style={{ background: "var(--off)", padding: "60px 0 100px" }}>
         <div className="container">
-          <div className="toolbar">
+          <div className="toolbar" style={{ marginBottom: "40px" }}>
             <div className="search-wrap">
               <IconSearch size={18} />
               <input
@@ -65,7 +75,7 @@ export default function Services() {
                 <button
                   key={c.key}
                   className={`chip ${cat === c.key ? "active" : ""}`}
-                  onClick={() => { setCat(c.key); setOpen(null); }}
+                  onClick={() => setCat(c.key)}
                 >
                   {c.label}
                 </button>
@@ -74,31 +84,24 @@ export default function Services() {
           </div>
 
           {list.length ? (
-            <div className="grid grid-3">
-              {list.map((s) => {
-                const isOpen = open === s.t;
-                return (
-                  <div className={`card svc-card2 ${isOpen ? "open" : ""}`} key={s.t}>
-                    <button className="svc-card2__head" onClick={() => setOpen(isOpen ? null : s.t)} aria-expanded={isOpen}>
-                      <div className="svc-thumb">
-                        <SmartImg src={CATEGORY_IMG[s.c]} alt={s.c} />
+            <div className="grid grid-3" style={{ gap: "32px", alignItems: "stretch" }}>
+              {list.map((s, i) => (
+                <Reveal key={s.t} delay={i % 3}>
+                  <div className="svc-card3">
+                    <div className="svc-card3__top">
+                      <div className={`svc-card3__icon cat-${s.c.replace(/[^a-zA-Z]/g, '')}`}>
+                        {getCatIcon(s.c)}
                       </div>
-                      <div className="svc-card2__body">
-                        <span className="tag">{s.c}</span>
-                        <h3>{s.t}</h3>
-                        <p>{s.d}</p>
-                      </div>
-                      <span className={`svc-caret ${isOpen ? "open" : ""}`} aria-hidden="true">▾</span>
-                    </button>
-                    <div className="svc-detail" style={{ maxHeight: isOpen ? 320 : 0 }}>
-                      <div className="svc-detail__inner">
-                        <p>{s.more}</p>
-                        <Link to="/contact" className="btn btn-primary btn-sm">Enquire about this <IconArrow size={16} /></Link>
-                      </div>
+                      <span className="svc-card3__tag">{s.c}</span>
                     </div>
+                    <h3>{s.t}</h3>
+                    <p className="svc-card3__d">{s.d}</p>
+                    <hr className="svc-card3__divider" />
+                    <p className="svc-card3__more">{s.more}</p>
+                    <Link to="/contact" className="svc-card3__link">Enquire about this <IconArrow size={14} /></Link>
                   </div>
-                );
-              })}
+                </Reveal>
+              ))}
             </div>
           ) : (
             <p className="empty-note">No services match your search. Try a different term or filter.</p>
