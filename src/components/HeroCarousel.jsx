@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { IconArrow } from "./Icons.jsx";
-import hero1 from "../assets/hero-1.png";
-import hero2 from "../assets/hero-2.png";
-import hero3 from "../assets/hero-3.png";
+import hero1 from "../assets/hero-1-new.png";
+import hero2 from "../assets/hero-2-new.png";
+import hero3 from "../assets/hero-3-new.png";
 
 const SLIDES = [
   {
