@@ -17,7 +17,6 @@ import imgS6 from "../assets/service-6.png";
 import imgForest from "../assets/forest-biodiversity.png";
 import imgEsg from "../assets/esg-sustainability.png";
 import imgWater from "../assets/water-treatment.png";
-import imgHandshake from "../assets/vision-handshake.png";
 import certNabet from "../assets/nabet-certificate.png";
 import certIso from "../assets/iso-certificate.png";
 import Credentials from "../components/Credentials.jsx";
@@ -69,46 +68,6 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
-      {/* ═══ VISION & MISSION ══════════════════════════════════ */}
-      <section className="section" style={{ background: "#fff", padding: "0" }}>
-        <div style={{ display: "flex", flexWrap: "wrap" }}>
-          {/* Left Side: Background Image */}
-          <div style={{ flex: "1 1 50%", minHeight: "500px", backgroundImage: `url(${imgHandshake})`, backgroundSize: "cover", backgroundPosition: "center" }}>
-          </div>
-          
-          {/* Right Side: Content */}
-          <div style={{ flex: "1 1 50%", padding: "80px 6%", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-            
-            <Reveal delay={0} style={{ display: "flex", gap: "24px", marginBottom: "48px" }}>
-              <div style={{ flexShrink: 0, width: "64px", height: "64px", background: "#fff", borderRadius: "12px", border: "1px solid #f0f0f0", boxShadow: "0 10px 30px rgba(0,0,0,0.04)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2D6A4F" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg> 
-              </div>
-              <div>
-                <h3 style={{ color: "#2D6A4F", fontSize: "20px", fontWeight: 700, marginBottom: "12px", textTransform: "uppercase", letterSpacing: "1px" }}>Our Vision</h3>
-                <p style={{ color: "var(--gtxt)", fontSize: "14.5px", lineHeight: 1.7, maxWidth: "400px" }}>
-                  To Become The Valued Partner With Which Client Can Pivot Their Green Image &amp; Sustainability Drive.
-                </p>
-              </div>
-            </Reveal>
-
-            <Reveal delay={1} style={{ display: "flex", gap: "24px" }}>
-              <div style={{ flexShrink: 0, width: "64px", height: "64px", background: "#fff", borderRadius: "12px", border: "1px solid #f0f0f0", boxShadow: "0 10px 30px rgba(0,0,0,0.04)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2D6A4F" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg> 
-              </div>
-              <div>
-                <h3 style={{ color: "#2D6A4F", fontSize: "20px", fontWeight: 700, marginBottom: "12px", textTransform: "uppercase", letterSpacing: "1px" }}>Our Mission</h3>
-                <ul style={{ color: "var(--gtxt)", fontSize: "14px", lineHeight: 1.7, paddingLeft: "16px", margin: 0, display: "flex", flexDirection: "column", gap: "10px", maxWidth: "500px" }}>
-                  <li>Maintaining the Highest Levels of Integrity and Meet all Standards of Quality of QCI, NABET and MoEF&amp;CC;</li>
-                  <li>Adopting a Culture of Trust, Responsibility, Collaboration and Performance to Achieve our Business Goals;</li>
-                  <li>Be a Responsible Entity by Preaching the Green Initiatives in the Work Culture as well as Personal Lives of Associates; To be customer delight.</li>
-                </ul>
-              </div>
-            </Reveal>
-
-          </div>
-        </div>
-      </section>
-
       {/* ═══ STATS ═════════════════════════════════════════════ */}
       <div className="stats-band">
         <div className="s-wrap">
