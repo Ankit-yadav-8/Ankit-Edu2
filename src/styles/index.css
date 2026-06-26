@@ -1041,6 +1041,65 @@ body.chat-open .back-to-top { opacity: 0; visibility: hidden; pointer-events: no
 .mb-24 { margin-bottom: 24px !important; }
 
 /* Vertical Animated List */
+
+/* Vision & Mission */
+.vm-split {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 40px;
+  align-items: center;
+}
+.vm-image-grid {
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+  height: 100%;
+  min-height: 480px;
+}
+.vm-img-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.vm-img-left img {
+  border-radius: 16px;
+  width: 100%;
+  aspect-ratio: 1 / 1.15;
+  object-fit: cover;
+  box-shadow: var(--shadow-lg);
+}
+.vm-img-right {
+  flex: 1;
+  display: flex;
+}
+.vm-img-right img {
+  border-radius: 16px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: var(--shadow-lg);
+}
+.vm-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.vm-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.vm-card {
+  display: flex;
+  gap: 16px;
+  background: #fff;
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 .vertical-list {
   display: flex;
   flex-direction: column;
