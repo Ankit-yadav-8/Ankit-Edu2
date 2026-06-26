@@ -87,11 +87,11 @@ export default function Navbar() {
                     <div key={ci}>
                       {col.map((s) => (
                         <Link key={s.slug} to={`/sectors/${s.slug}`} className="m-lnk" onClick={closeMenu}>
-                          {s.name} <span className="ma">→</span>
+                          <span className="m-nm">{s.name}</span> <span className="ma">→</span>
                         </Link>
                       ))}
                       {ci === 2 && (
-                        <Link to="/sectors" className="m-lnk accent" onClick={closeMenu}>All Sectors <span className="ma">→</span></Link>
+                        <Link to="/sectors" className="m-lnk accent" onClick={closeMenu}><span className="m-nm">All Sectors</span> <span className="ma">→</span></Link>
                       )}
                     </div>
                   ))}
