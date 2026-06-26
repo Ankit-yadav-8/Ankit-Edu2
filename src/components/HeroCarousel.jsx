@@ -68,7 +68,7 @@ export default function HeroCarousel() {
         playsInline
         className="hero-video-bg"
       >
-        <source src="https://assets.mixkit.co/videos/preview/mixkit-forest-stream-in-the-sunlight-529-large.mp4" type="video/mp4" />
+        <source src="https://cdn.coverr.co/videos/coverr-beautiful-waterfall-in-a-forest-4770/1080p.mp4" type="video/mp4" />
       </video>
       <div className="hero-overlay"></div>
 
