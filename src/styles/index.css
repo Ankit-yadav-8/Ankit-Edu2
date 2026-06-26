@@ -1398,10 +1398,11 @@ body.chat-open .back-to-top { opacity: 0; visibility: hidden; pointer-events: no
 .sector-list .sector-badge { font-size: 0.62rem; padding: 3px 8px; }
 
 /* Navbar — AI quick link pill */
+.nav-links .ai-link-li { display: flex; align-items: center; }
 .nav-links .ai-link {
-  display: inline-flex; align-items: center; gap: 4px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 4px;
   background: var(--grad-soft); color: #2f8b4a !important;
-  padding: 6px 13px; border-radius: 999px; font-weight: 700;
+  padding: 6px 13px; border-radius: 999px; font-weight: 700; line-height: 1;
 }
 .nav-links .ai-link:hover { box-shadow: var(--ring); }
 .nav-links .ai-link.active { background: var(--grad); color: #fff !important; }
