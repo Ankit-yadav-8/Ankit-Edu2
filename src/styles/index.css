@@ -1040,6 +1040,61 @@ body.chat-open .back-to-top { opacity: 0; visibility: hidden; pointer-events: no
 }
 .mb-24 { margin-bottom: 24px !important; }
 
+/* Vertical Animated List */
+.vertical-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+}
+.vl-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.vl-item:hover {
+  transform: translateX(6px);
+  box-shadow: var(--shadow);
+  border-color: var(--violet-400);
+}
+.vl-img {
+  width: 90px;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--bg);
+}
+.vl-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.vl-text {
+  font-size: 0.95rem;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .vl-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px;
+  }
+  .vl-img {
+    width: 100%;
+    height: 140px;
+  }
+}
+
 .dp-list li {
   position: relative;
   padding-left: 28px;

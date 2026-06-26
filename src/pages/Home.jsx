@@ -37,6 +37,19 @@ const WORKFORCE = [
   { icon: <IconCheck size={22} />, role: "Auxiliary Staff", count: 5, sub: "Coordination & operations", desc: "Coordination and operations staff who keep documentation, regulatory liaison and client communication running smoothly." },
 ];
 
+const CORE_EXPERTISE_LIST = [
+  { img: U("1454165804606-c3d57bc86b40"), text: <><strong>Techno-Legal Advisory, Environment & Social Impacts Assessment (ESIA)</strong> Studies (as per IFC & ADB Guidelines) & Environmental Impact Assessment (EIA) Studies, Environmental Monitoring and Environmental Compliance Auditing: Environmental Due Diligence, Environmental Permitting</> },
+  { img: U("1542601906990-b4d3fb778b09"), text: <><strong>Social Impact Assessment (SIA) Studies</strong>, Chemical/Industrial Risk Assessment, Biodiversity Impact Assessment (BIA), Ecology and Biodiversity Study/Tree Enumeration</> },
+  { img: U("1473773508845-188df298d2d1"), text: <><strong>Sustainability & ESDD studies</strong> - Corporate EHS (Environment, Health & Safety), ESGMS Framework/ Management System (ESGMS) and Trainings, The gaps identified in E&S and E&S Action Plan (ESAP), ES DD/ Red Flag Assessment, Climate Change Risk Assessment (CCRA)</> },
+  { img: U("1581091226825-a6a2a5aee158"), text: <><strong>ESIA Study, ESR DD</strong> (to Understand The Business Feasibility)</> },
+  { img: U("1505142468610-359e7d316be0"), text: <><strong>Coastal Regulatory Zone Clearance</strong>, Marine Environment Monitoring (Marine Water & Sea Bed Sediment Sampling & Analysis), Hydrodynamic Study</> },
+  { img: U("1441974231531-c6227db76b6e"), text: <><strong>Forest Clearance & Wildlife Clearances</strong>, Wildlife Conservation Plan/Mangrove Management Plan</> },
+  { img: U("1450101499163-c8848c66ca85"), text: <><strong>Environment/Waste/Green Audits</strong>, Damage assessment as per OM B04(E)</> },
+  { img: U("1581092144883-93d39db26ff8"), text: <><strong>Leak Detection and Repair (LDAR)</strong> studies in Pharma & Oil Refining Industries, Indoor Air Quality (IAQ) Testing in IT/ITES/Hospitality/Hospitals Facilities</> },
+  { img: U("1518005020951-eccb11d835cb"), text: <><strong>IGBC/LEED Documentation</strong> For Green Building Certification</> },
+  { img: U("1516934812323-c91726a42142"), text: <><strong>Mining Plan Preparation & Dgps Surveys</strong></> },
+];
+
 export default function Home() {
   return (
     <>
@@ -126,19 +139,19 @@ export default function Home() {
               Our primary service includes obtaining environmental clearance (in accordance with the Environment Impact Assessment Notification) from the Ministry of Environment and Forest (MoEFCC) as well as from the State Environmental Impact Assessment Authority and NOC/consent from Pollution Control Board.
             </p>
             <h3 style={{ marginBottom: 16, fontSize: "1.2rem", fontWeight: 700 }}>Core Expertise:</h3>
-            <ul className="dp-list dp-list-cols">
-              <li><strong>Techno-Legal Advisory, Environment & Social Impacts Assessment (ESIA)</strong> Studies (as per IFC & ADB Guidelines) & Environmental Impact Assessment (EIA) Studies, Environmental Monitoring and Environmental Compliance Auditing: Environmental Due Diligence, Environmental Permitting</li>
-              <li><strong>Social Impact Assessment (SIA) Studies</strong>, Chemical/Industrial Risk Assessment, Biodiversity Impact Assessment (BIA), Ecology and Biodiversity Study/Tree Enumeration</li>
-              <li><strong>Sustainability & ESDD studies</strong> - Corporate EHS (Environment, Health & Safety), ESGMS Framework/ Management System (ESGMS) and Trainings, The gaps identified in E&S and E&S Action Plan (ESAP), ES DD/ Red Flag Assessment, Climate Change Risk Assessment (CCRA)</li>
-              <li><strong>ESIA Study, ESR DD</strong> (to Understand The Business Feasibility)</li>
-              <li><strong>Coastal Regulatory Zone Clearance</strong>, Marine Environment Monitoring (Marine Water & Sea Bed Sediment Sampling & Analysis), Hydrodynamic Study</li>
-              <li><strong>Forest Clearance & Wildlife Clearances</strong>, Wildlife Conservation Plan/Mangrove Management Plan</li>
-              <li><strong>Environment/Waste/Green Audits</strong>, Damage assessment as per OM B04(E)</li>
-              <li><strong>Leak Detection and Repair (LDAR)</strong> studies in Pharma & Oil Refining Industries, Indoor Air Quality (IAQ) Testing in IT/ITES/Hospitality/Hospitals Facilities</li>
-              <li><strong>IGBC/LEED Documentation</strong> For Green Building Certification</li>
-              <li><strong>Mining Plan Preparation & Dgps Surveys</strong></li>
-            </ul>
-            <Link to="/services" className="btn btn-primary" style={{ marginTop: 12 }}>Know more <IconArrow size={18} /></Link>
+            <div className="vertical-list">
+              {CORE_EXPERTISE_LIST.map((item, idx) => (
+                <Reveal key={idx} delay={idx * 0.1}>
+                  <div className="vl-item">
+                    <div className="vl-img">
+                      <SmartImg src={item.img} alt="Expertise thumbnail" />
+                    </div>
+                    <div className="vl-text">{item.text}</div>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+            <Link to="/services" className="btn btn-primary" style={{ marginTop: 24 }}>Know more <IconArrow size={18} /></Link>
           </Reveal>
         </div>
       </section>
