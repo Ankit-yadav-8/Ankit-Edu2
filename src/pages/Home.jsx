@@ -109,7 +109,7 @@ export default function Home() {
 
       {/* ===================== DETAILED PANELS ===================== */}
       
-      {/* Panel 1 (Combined all topics) */}
+      {/* Panel 1 (Environment Consultancy Services) */}
       <section className="detailed-panel">
         <div className="container dp-grid">
           <Reveal className="dp-text" style={{ gridColumn: "1 / -1", maxWidth: "100%" }}>
@@ -122,7 +122,7 @@ export default function Home() {
               Our primary service includes obtaining environmental clearance (in accordance with the Environment Impact Assessment Notification) from the Ministry of Environment and Forest (MoEFCC) as well as from the State Environmental Impact Assessment Authority and NOC/consent from Pollution Control Board.
             </p>
             <h3 style={{ marginBottom: 16, fontSize: "1.2rem", fontWeight: 700 }}>Core Expertise:</h3>
-            <ul className="dp-list" style={{ columns: "1", columnGap: "40px" }}>
+            <ul className="dp-list" style={{ columns: "2", columnGap: "40px" }}>
               <li><strong>Techno-Legal Advisory, Environment & Social Impacts Assessment (ESIA)</strong> Studies (as per IFC & ADB Guidelines) & Environmental Impact Assessment (EIA) Studies, Environmental Monitoring and Environmental Compliance Auditing: Environmental Due Diligence, Environmental Permitting</li>
               <li><strong>Social Impact Assessment (SIA) Studies</strong>, Chemical/Industrial Risk Assessment, Biodiversity Impact Assessment (BIA), Ecology and Biodiversity Study/Tree Enumeration</li>
               <li><strong>Sustainability & ESDD studies</strong> - Corporate EHS (Environment, Health & Safety), ESGMS Framework/ Management System (ESGMS) and Trainings, The gaps identified in E&S and E&S Action Plan (ESAP), ES DD/ Red Flag Assessment, Climate Change Risk Assessment (CCRA)</li>
@@ -133,6 +133,125 @@ export default function Home() {
               <li><strong>Leak Detection and Repair (LDAR)</strong> studies in Pharma & Oil Refining Industries, Indoor Air Quality (IAQ) Testing in IT/ITES/Hospitality/Hospitals Facilities</li>
               <li><strong>IGBC/LEED Documentation</strong> For Green Building Certification</li>
               <li><strong>Mining Plan Preparation & Dgps Surveys</strong></li>
+            </ul>
+            <Link to="/services" className="btn btn-primary" style={{ marginTop: 12 }}>Know more <IconArrow size={18} /></Link>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Panel 2 (Wastewater Treatment & Water Management) */}
+      <section className="detailed-panel" style={{ backgroundColor: "#f9fafb" }}>
+        <div className="container dp-grid">
+          <Reveal className="dp-text" style={{ gridColumn: "1 / -1", maxWidth: "100%" }}>
+            <span className="eyebrow">EPC & Turnkey Expertise | From Design to Water Sustainability</span>
+            <h2>Wastewater Treatment & Water Management</h2>
+            <p style={{ marginBottom: 24, textAlign: "justify" }}>
+              We deliver end-to-end wastewater and water management solutions, specializing in Sewage Treatment Plants (STPs) and Effluent Treatment Plants (ETPs). With a proven EPC and turnkey execution model, we enable industries, municipalities, and institutions to achieve regulatory compliance, clean water access, and long-term sustainability.
+            </p>
+            <h3 style={{ marginBottom: 16, fontSize: "1.2rem", fontWeight: 700 }}>Core Expertise:</h3>
+            <ul className="dp-list" style={{ columns: "2", columnGap: "40px" }}>
+              <li><strong>Importance of Wastewater Treatment:</strong> Protecting ecosystems and public health.</li>
+              <li><strong>Water Management Services:</strong> Comprehensive planning for resource optimization.</li>
+              <li><strong>Industrial Wastewater Treatment:</strong> Handling complex effluents across manufacturing sectors.</li>
+              <li><strong>Municipal Wastewater Treatment:</strong> Large-scale civic water purification.</li>
+              <li><strong>Effluent Treatment Plants (ETP):</strong> Custom-designed for specific pollutant loads.</li>
+              <li><strong>Sewage Treatment Plants (STP):</strong> Advanced biological and physical treatment.</li>
+              <li><strong>Zero Liquid Discharge (ZLD):</strong> Closing the loop on industrial water consumption.</li>
+              <li><strong>Water Recycling & Reuse:</strong> Treating wastewater to potable or process-grade standards.</li>
+              <li><strong>Technologies & Equipment:</strong> Deployment of MBBR, SBR, RO, and UF systems.</li>
+              <li><strong>Engineering & Design:</strong> Scalable, robust, and energy-efficient system architectures.</li>
+              <li><strong>Industries Served:</strong> Pharma, textiles, chemical, food & beverage, and more.</li>
+              <li><strong>Regulatory Compliance & Standards:</strong> Meeting CPCB and state-specific discharge norms.</li>
+              <li><strong>Project Execution Methodology:</strong> Turnkey delivery from concept to commissioning.</li>
+              <li><strong>Sustainability & Environmental Benefits:</strong> Reducing freshwater footprint.</li>
+              <li><strong>Why Choose Rejig Private Limited:</strong> Unmatched expertise, reliability, and technology.</li>
+            </ul>
+            <Link to="/services" className="btn btn-primary" style={{ marginTop: 12 }}>Know more <IconArrow size={18} /></Link>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Panel 3 (Forestry, Wildlife & Biodiversity Conservation) */}
+      <section className="detailed-panel">
+        <div className="container dp-grid">
+          <Reveal className="dp-text" style={{ gridColumn: "1 / -1", maxWidth: "100%" }}>
+            <span className="eyebrow">Ecology & Conservation | Scientific Management</span>
+            <h2>Forestry, Wildlife & Biodiversity Conservation</h2>
+            <p style={{ marginBottom: 24, textAlign: "justify" }}>
+              Navigating the complex regulatory landscape of forest and wildlife clearances requires scientific rigor and deep ecological understanding. Our expert ecologists conduct extensive terrestrial and aquatic biodiversity assessments to ensure industrial projects coexist harmoniously with nature.
+            </p>
+            <h3 style={{ marginBottom: 16, fontSize: "1.2rem", fontWeight: 700 }}>Core Expertise:</h3>
+            <ul className="dp-list" style={{ columns: "2", columnGap: "40px" }}>
+              <li><strong>Forest Clearances (Stage I & II):</strong> Turnkey support for diversion of forest land under FCA.</li>
+              <li><strong>Wildlife Clearances:</strong> Securing approvals from State and National Boards for Wildlife (NBWL).</li>
+              <li><strong>Wildlife Conservation Plans:</strong> Developing strategies to mitigate project impacts on fauna.</li>
+              <li><strong>Biodiversity Impact Assessment (BIA):</strong> Comprehensive flora and fauna cataloging.</li>
+              <li><strong>Mangrove Management Plans:</strong> Coastal ecology preservation and restoration strategies.</li>
+              <li><strong>Tree Enumeration & Tagging:</strong> Detailed surveys using GPS and GIS technologies.</li>
+              <li><strong>Greenbelt Development Planning:</strong> Scientific planning for compensatory afforestation.</li>
+              <li><strong>Ecological Restoration:</strong> Rehabilitating degraded landscapes post-mining or construction.</li>
+              <li><strong>Avifauna & Herpetofauna Studies:</strong> Specialized surveys for birds, reptiles, and amphibians.</li>
+              <li><strong>Aquatic Ecology Assessments:</strong> Studying riverine and marine life health and diversity.</li>
+              <li><strong>Human-Wildlife Conflict Mitigation:</strong> Designing safe corridors and barriers.</li>
+              <li><strong>Regulatory Representation:</strong> Liaising with MoEFCC and Forest Departments.</li>
+            </ul>
+            <Link to="/services" className="btn btn-primary" style={{ marginTop: 12 }}>Know more <IconArrow size={18} /></Link>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Panel 4 (ESG, Sustainability & Climate Risk Assessment) */}
+      <section className="detailed-panel" style={{ backgroundColor: "#f9fafb" }}>
+        <div className="container dp-grid">
+          <Reveal className="dp-text" style={{ gridColumn: "1 / -1", maxWidth: "100%" }}>
+            <span className="eyebrow">Corporate Responsibility | Strategic Growth</span>
+            <h2>ESG, Sustainability & Climate Risk Assessment</h2>
+            <p style={{ marginBottom: 24, textAlign: "justify" }}>
+              Modern businesses must measure and mitigate their environmental footprint. We guide corporations through rigorous Environmental, Social, and Governance (ESG) frameworks, helping them identify gaps, manage climate risks, and secure a sustainable, profitable future.
+            </p>
+            <h3 style={{ marginBottom: 16, fontSize: "1.2rem", fontWeight: 700 }}>Core Expertise:</h3>
+            <ul className="dp-list" style={{ columns: "2", columnGap: "40px" }}>
+              <li><strong>ESG Framework Development:</strong> Custom strategies aligned with GRI, SASB, and TCFD.</li>
+              <li><strong>Sustainability & ESDD Studies:</strong> Environmental & Social Due Diligence for investments.</li>
+              <li><strong>Carbon Footprint Mapping (GHG Accounting):</strong> Scope 1, 2, and 3 emissions tracking.</li>
+              <li><strong>Climate Change Risk Assessment (CCRA):</strong> Identifying physical and transition climate risks.</li>
+              <li><strong>ESG Management System (ESGMS):</strong> Institutionalizing sustainability practices.</li>
+              <li><strong>Net Zero Strategy Consulting:</strong> Roadmaps for achieving carbon neutrality.</li>
+              <li><strong>Water & Energy Audits:</strong> Identifying resource optimization opportunities.</li>
+              <li><strong>Green Audits & Damage Assessment:</strong> Rigorous compliance auditing as per OM B04(E).</li>
+              <li><strong>IGBC / LEED Documentation:</strong> Comprehensive support for Green Building Certifications.</li>
+              <li><strong>Social Impact Assessments (SIA):</strong> Evaluating community impacts and CSR effectiveness.</li>
+              <li><strong>EHS Compliance Audits:</strong> Ensuring adherence to occupational health and safety laws.</li>
+              <li><strong>Sustainability Reporting:</strong> Drafting annual reports (BRSR, CDP, etc.).</li>
+            </ul>
+            <Link to="/services" className="btn btn-primary" style={{ marginTop: 12 }}>Know more <IconArrow size={18} /></Link>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Panel 5 (Coastal, Marine & Remote Sensing Solutions) */}
+      <section className="detailed-panel">
+        <div className="container dp-grid">
+          <Reveal className="dp-text" style={{ gridColumn: "1 / -1", maxWidth: "100%" }}>
+            <span className="eyebrow">Marine Environments | Advanced Geospatial Analysis</span>
+            <h2>Coastal, Marine & Remote Sensing Solutions</h2>
+            <p style={{ marginBottom: 24, textAlign: "justify" }}>
+              Our specialized team leverages advanced technology to monitor and protect fragile ecosystems. From intricate Coastal Regulatory Zone (CRZ) clearances to AI-assisted satellite imagery change detection, we provide high-fidelity data for accurate environmental planning.
+            </p>
+            <h3 style={{ marginBottom: 16, fontSize: "1.2rem", fontWeight: 700 }}>Core Expertise:</h3>
+            <ul className="dp-list" style={{ columns: "2", columnGap: "40px" }}>
+              <li><strong>Coastal Regulatory Zone (CRZ) Clearance:</strong> Comprehensive reporting and regulatory liaison.</li>
+              <li><strong>CRZ Mapping & Demarcation:</strong> Utilizing HTL/LTL maps from authorized agencies.</li>
+              <li><strong>Marine Environment Monitoring:</strong> Sea bed sediment sampling and marine water analysis.</li>
+              <li><strong>Hydrodynamic Modeling & Studies:</strong> Simulating coastal currents and outfall dispersion.</li>
+              <li><strong>Bathymetric & Topographic Surveys:</strong> Detailed mapping of underwater and coastal terrains.</li>
+              <li><strong>Remote Sensing & GIS Applications:</strong> Advanced spatial data analysis using satellite imagery.</li>
+              <li><strong>Land Use / Land Cover (LULC) Mapping:</strong> Tracking temporal changes in landscapes.</li>
+              <li><strong>Marine Biodiversity Assessments:</strong> Evaluating impacts on coral reefs and fisheries.</li>
+              <li><strong>Disaster Risk Mapping:</strong> Assessing vulnerabilities to cyclones and sea-level rise.</li>
+              <li><strong>Dredging Impact Studies:</strong> Environmental assessment of port and harbor development.</li>
+              <li><strong>Mining Plan Preparation & DGPS Surveys:</strong> Highly accurate geospatial data collection.</li>
+              <li><strong>Outfall & Intake Design Consulting:</strong> Ensuring environmental compliance for coastal plants.</li>
             </ul>
             <Link to="/services" className="btn btn-primary" style={{ marginTop: 12 }}>Know more <IconArrow size={18} /></Link>
           </Reveal>
