@@ -19,6 +19,7 @@ import imgEsg from "../assets/esg-sustainability.png";
 import certNabet from "../assets/nabet-certificate.png";
 import certIso from "../assets/iso-certificate.png";
 import Credentials from "../components/Credentials.jsx";
+import { CLIENT_LOGOS } from "../data/clients.js";
 
 export default function Home() {
   return (
@@ -244,6 +245,30 @@ export default function Home() {
               <div className="ind-nm">Oil &amp; Gas Pipelines <span>→</span></div>
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* ═══ CLIENTS ═══════════════════════════════════════════ */}
+      <section className="sec" id="clients">
+        <div className="wrap">
+          <Reveal className="sec-hd">
+            <div className="tag">Our Clientele</div>
+            <h2 className="sec-t">Trusted by Leading Industrial Names</h2>
+            <p className="sec-s">
+              From cement and power to mining, chemicals and infrastructure — 3,000+
+              industrial units across India and abroad rely on RGPL.
+            </p>
+          </Reveal>
+          <Reveal className="client-grid">
+            {CLIENT_LOGOS.map((c) => (
+              <div className="client-logo" key={c.name}>
+                <img src={c.src} alt={c.name} loading="lazy" />
+              </div>
+            ))}
+          </Reveal>
+          <Reveal className="text-center" style={{ marginTop: 32 }}>
+            <Link to="/clientele" className="btn btn-light">View all clients <IconArrow size={18} /></Link>
+          </Reveal>
         </div>
       </section>
 
