@@ -35,10 +35,13 @@ export default function Navbar() {
             <RCLogo height={72} />
           </Link>
 
-          {/* Center — nav links (Mega menus) */}
-          <ul className="nav-list">
-            <li className="nav-item">
-              <button className="nav-btn">Solutions <span className="arr">▾</span></button>
+          {/* Center — nav links (Mega menus inside previous design structure) */}
+          <ul className={`nav-links ${open ? "open" : ""}`}>
+            <li className="has-dropdown">
+              <div className="dd-row">
+                <NavLink to="/services" className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>Solutions</NavLink>
+                <button type="button" className="dd-caret" aria-label="Toggle solutions" onClick={() => {}}>▾</button>
+              </div>
               <div className="mega">
                 <div className="mega-l">
                   <div className="m-label">Solutions</div>
@@ -77,8 +80,11 @@ export default function Navbar() {
               </div>
             </li>
 
-            <li className="nav-item">
-              <button className="nav-btn">Industries <span className="arr">▾</span></button>
+            <li className="has-dropdown">
+              <div className="dd-row">
+                <NavLink to="/industries" className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>Industries</NavLink>
+                <button type="button" className="dd-caret" aria-label="Toggle industries" onClick={() => {}}>▾</button>
+              </div>
               <div className="mega">
                 <div className="mega-l">
                   <div className="m-label">Industries</div>
@@ -105,8 +111,11 @@ export default function Navbar() {
               </div>
             </li>
 
-            <li className="nav-item">
-              <button className="nav-btn">About <span className="arr">▾</span></button>
+            <li className="has-dropdown">
+              <div className="dd-row">
+                <NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>About Us</NavLink>
+                <button type="button" className="dd-caret" aria-label="Toggle about" onClick={() => {}}>▾</button>
+              </div>
               <div className="mega">
                 <div className="mega-l">
                   <div className="m-label">About</div>
@@ -134,11 +143,26 @@ export default function Navbar() {
               </div>
             </li>
 
-            <li className="nav-item">
-              <NavLink to="/projects" className="nav-btn" onClick={closeMenu}>Projects</NavLink>
+            <li>
+              <NavLink to="/infrastructure" className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>Infrastructure</NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink to="/insights" className="nav-btn" onClick={closeMenu}>Insights</NavLink>
+            <li>
+              <NavLink to="/clientele" className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>Clientele</NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>Contact Us</NavLink>
+            </li>
+            
+            {/* shown only inside the mobile dropdown */}
+            <li className="nav-mobile-cta">
+              {user ? (
+                <button className="btn btn-ghost btn-sm" onClick={handleLogout}>Log out</button>
+              ) : (
+                <>
+                  <Link to="/login" className="btn btn-ghost btn-sm" onClick={closeMenu}>Log in</Link>
+                  <Link to="/signup" className="btn btn-primary btn-sm" onClick={closeMenu}>Sign up</Link>
+                </>
+              )}
             </li>
           </ul>
 
