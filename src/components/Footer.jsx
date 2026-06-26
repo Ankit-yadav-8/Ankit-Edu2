@@ -11,14 +11,14 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div>
-            <div className="footer-logo" style={{ display: "flex", gap: "20px", alignItems: "center" }}>
+            <div className="footer-logo">
               <RCLogo height={54} />
-              <img src={nabetLogo} alt="NABET Logo" style={{ height: "48px" }} />
             </div>
             <p className="desc">
               Your techno-legal advisory partner in environmental consultancy — trusted by 3,000+
               industrial units across 50+ sectors in India and abroad.
             </p>
+            <img src={nabetLogo} alt="NABET Logo" style={{ height: "48px", display: "block", marginBottom: "14px" }} />
             <div className="socials">
               <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><Insta /></a>
               <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><FB /></a>
