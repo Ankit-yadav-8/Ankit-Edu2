@@ -13,6 +13,7 @@ import Products from "./pages/Products.jsx";
 import Infrastructure from "./pages/Infrastructure.jsx";
 import Sectors from "./pages/Sectors.jsx";
 import SectorDetail from "./pages/SectorDetail.jsx";
+import ProjectDetail from "./pages/ProjectDetail.jsx";
 import Clientele from "./pages/Clientele.jsx";
 import AiIntegration from "./pages/AiIntegration.jsx";
 import Contact from "./pages/Contact.jsx";
@@ -38,8 +39,8 @@ export default function App() {
       "/login": "Log In | Rejig GreenLogic",
       "/signup": "Sign Up | Rejig GreenLogic",
     };
-    // Sector detail pages (/sectors/:slug) set their own document title.
-    if (/^\/(sectors|industries)\/.+/.test(pathname)) return;
+    // Detail pages (/sectors/:slug, /projects/:slug) set their own document title.
+    if (/^\/(sectors|industries|projects)\/.+/.test(pathname)) return;
     document.title = titles[pathname] || "Rejig GreenLogic Private Limited";
   }, [pathname]);
 
@@ -58,6 +59,7 @@ export default function App() {
           <Route path="/sectors/:slug" element={<SectorDetail />} />
           <Route path="/industries" element={<Sectors />} />
           <Route path="/industries/:slug" element={<SectorDetail />} />
+          <Route path="/projects/:slug" element={<ProjectDetail />} />
           <Route path="/projects/*" element={<Services />} />
           <Route path="/insights/*" element={<About />} />
           <Route path="/events/*" element={<About />} />

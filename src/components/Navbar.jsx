@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { RCLogo, NabetLogo } from "./Logos.jsx";
 import { SECTORS } from "../data/sectors.js";
+import { EXPERTISE_LINKS } from "../data/services.js";
 
 // Split the 11 NABET sectors into 3 balanced columns for the mega-menu.
 const SECTOR_COLS = [SECTORS.slice(0, 4), SECTORS.slice(4, 8), SECTORS.slice(8)];
@@ -131,8 +132,16 @@ export default function Navbar() {
               </div>
             </li>
 
-            <li className="ai-link-li">
-              <NavLink to="/ai-integration" className={({ isActive }) => (isActive ? "active ai-link" : "ai-link")} onClick={closeMenu}>✨ AI</NavLink>
+            <li className="has-dropdown svc-dd">
+              <div className="dd-row">
+                <NavLink to="/services" className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>Services</NavLink>
+                <button type="button" className="dd-caret" aria-label="Toggle services" onClick={() => {}}>▾</button>
+              </div>
+              <div className="dropdown">
+                {EXPERTISE_LINKS.map((l) => (
+                  <Link key={l.label} to={l.to} onClick={closeMenu}>{l.label}</Link>
+                ))}
+              </div>
             </li>
 
             <li>

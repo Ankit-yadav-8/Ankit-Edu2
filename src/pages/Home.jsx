@@ -8,18 +8,14 @@ import SmartImg from "../components/SmartImg.jsx";
 
 import imgWelcome from "../assets/hero-1-new.png";
 import imgReport from "../assets/hero-2-new.png";
-import imgS1 from "../assets/service-1.png";
-import imgS2 from "../assets/service-2.png";
-import imgS3 from "../assets/service-3.png";
 import imgS4 from "../assets/service-4.png";
-import imgS5 from "../assets/service-5.png";
-import imgS6 from "../assets/service-6.png";
 import imgForest from "../assets/forest-biodiversity.png";
 import imgEsg from "../assets/esg-sustainability.png";
 import certNabet from "../assets/nabet-certificate.png";
 import certIso from "../assets/iso-certificate.png";
 import Credentials from "../components/Credentials.jsx";
 import { CLIENT_LOGOS } from "../data/clients.js";
+import { PROJECTS } from "../data/projects.js";
 
 export default function Home() {
   return (
@@ -248,30 +244,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ CLIENTS ═══════════════════════════════════════════ */}
-      <section className="sec" id="clients">
-        <div className="wrap">
-          <Reveal className="sec-hd">
-            <div className="tag">Our Clientele</div>
-            <h2 className="sec-t">Trusted by Leading Industrial Names</h2>
-            <p className="sec-s">
-              From cement and power to mining, chemicals and infrastructure — 3,000+
-              industrial units across India and abroad rely on RGPL.
-            </p>
-          </Reveal>
-          <Reveal className="client-grid">
-            {CLIENT_LOGOS.map((c) => (
-              <div className="client-logo" key={c.name}>
-                <img src={c.src} alt={c.name} loading="lazy" />
-              </div>
-            ))}
-          </Reveal>
-          <Reveal className="text-center" style={{ marginTop: 32 }}>
-            <Link to="/clientele" className="btn btn-light">View all clients <IconArrow size={18} /></Link>
-          </Reveal>
-        </div>
-      </section>
-
       {/* ═══ PROJECTS ══════════════════════════════════════════ */}
       <section className="sec" id="projects">
         <div className="wrap">
@@ -285,60 +257,17 @@ export default function Home() {
           </Reveal>
 
           <div className="proj-grid">
-            <Link to="/projects" className="proj-card">
-              <img src={imgS1} alt="Mining Project" />
-              <div className="proj-ov">
-                <div className="proj-tag">Mining &amp; Minerals</div>
-                <div className="proj-nm">EIA for 5 MTPA Iron Ore Mine Expansion</div>
-                <div className="proj-loc">Odisha, India</div>
-              </div>
-              <div className="proj-plus">+</div>
-            </Link>
-            <Link to="/projects" className="proj-card">
-              <img src={imgS2} alt="Solar Park" />
-              <div className="proj-ov">
-                <div className="proj-tag">Renewable Energy</div>
-                <div className="proj-nm">ESIA for 500MW Solar Park Development</div>
-                <div className="proj-loc">Rajasthan, India</div>
-              </div>
-              <div className="proj-plus">+</div>
-            </Link>
-            <Link to="/projects" className="proj-card">
-              <img src={imgS3} alt="Coastal Highway" />
-              <div className="proj-ov">
-                <div className="proj-tag">Infrastructure</div>
-                <div className="proj-nm">CRZ Clearance for Coastal Highway</div>
-                <div className="proj-loc">Maharashtra, India</div>
-              </div>
-              <div className="proj-plus">+</div>
-            </Link>
-            <Link to="/projects" className="proj-card">
-              <img src={imgS4} alt="Chemical Plant" />
-              <div className="proj-ov">
-                <div className="proj-tag">Chemical Industry</div>
-                <div className="proj-nm">Quantitative Risk Assessment &amp; HAZOP</div>
-                <div className="proj-loc">Gujarat, India</div>
-              </div>
-              <div className="proj-plus">+</div>
-            </Link>
-            <Link to="/projects" className="proj-card">
-              <img src={imgS5} alt="Township" />
-              <div className="proj-ov">
-                <div className="proj-tag">Real Estate</div>
-                <div className="proj-nm">IGBC Green Township Certification</div>
-                <div className="proj-loc">Karnataka, India</div>
-              </div>
-              <div className="proj-plus">+</div>
-            </Link>
-            <Link to="/projects" className="proj-card">
-              <img src={imgS6} alt="Corporate ESG" />
-              <div className="proj-ov">
-                <div className="proj-tag">Corporate Advisory</div>
-                <div className="proj-nm">Net-Zero Roadmap &amp; ESG Strategy</div>
-                <div className="proj-loc">Pan-India Operations</div>
-              </div>
-              <div className="proj-plus">+</div>
-            </Link>
+            {PROJECTS.map((p) => (
+              <Link key={p.slug} to={`/projects/${p.slug}`} className="proj-card">
+                <img src={p.image} alt={p.title} />
+                <div className="proj-ov">
+                  <div className="proj-tag">{p.tag}</div>
+                  <div className="proj-nm">{p.title}</div>
+                  <div className="proj-loc">{p.location}</div>
+                </div>
+                <div className="proj-plus">+</div>
+              </Link>
+            ))}
           </div>
 
           <div className="mt36 tc">
@@ -439,6 +368,30 @@ export default function Home() {
 
       {/* ═══ CREDENTIALS DIAGRAM (Image 2) ═════════════════════ */}
       <Credentials />
+
+      {/* ═══ CLIENTS ═══════════════════════════════════════════ */}
+      <section className="sec" id="clients">
+        <div className="wrap">
+          <Reveal className="sec-hd">
+            <div className="tag">Our Clientele</div>
+            <h2 className="sec-t">Trusted by Leading Industrial Names</h2>
+            <p className="sec-s">
+              From cement and power to mining, chemicals and infrastructure — 3,000+
+              industrial units across India and abroad rely on RGPL.
+            </p>
+          </Reveal>
+          <Reveal className="client-grid">
+            {CLIENT_LOGOS.map((c) => (
+              <div className="client-logo" key={c.name}>
+                <img src={c.src} alt={c.name} loading="lazy" />
+              </div>
+            ))}
+          </Reveal>
+          <Reveal className="text-center" style={{ marginTop: 32 }}>
+            <Link to="/clientele" className="btn btn-light">View all clients <IconArrow size={18} /></Link>
+          </Reveal>
+        </div>
+      </section>
     </>
   );
 }

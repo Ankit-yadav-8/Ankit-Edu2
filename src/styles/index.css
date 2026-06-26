@@ -1276,7 +1276,7 @@ body.chat-open .back-to-top { opacity: 0; visibility: hidden; pointer-events: no
 .svc-card3 {
   background: #ffffff;
   border: 1px solid var(--violet-100);
-  border-radius: 16px;
+  border-radius: 22px;
   padding: 28px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.02);
   display: flex;
@@ -1298,7 +1298,7 @@ body.chat-open .back-to-top { opacity: 0; visibility: hidden; pointer-events: no
 .svc-card3__icon {
   width: 48px;
   height: 48px;
-  border-radius: 12px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1398,15 +1398,12 @@ body.chat-open .back-to-top { opacity: 0; visibility: hidden; pointer-events: no
 .sector-list__meta .tag { margin-bottom: 0; }
 .sector-list .sector-badge { font-size: 0.62rem; padding: 3px 8px; }
 
-/* Navbar — AI quick link pill */
-.nav-links .ai-link-li { display: flex; align-items: center; margin: 0 18px; }
-.nav-links .ai-link {
-  display: inline-flex; align-items: center; justify-content: center; gap: 4px;
-  background: var(--grad-soft); color: #2f8b4a !important;
-  padding: 6px 13px; border-radius: 999px; font-weight: 700; line-height: 1;
-}
-.nav-links .ai-link:hover { box-shadow: var(--ring); }
-.nav-links .ai-link.active { background: var(--grad); color: #fff !important; }
+/* Navbar — Services compact dropdown (anchors under the Services item) */
+.nav-links .svc-dd { position: relative; }
+.nav-links .svc-dd .dropdown { left: 50%; transform: translateX(-50%) translateY(8px); }
+.nav-links .svc-dd:hover .dropdown,
+.nav-links .svc-dd:focus-within .dropdown,
+.nav-links .svc-dd.open .dropdown { transform: translateX(-50%) translateY(0); }
 
 /* Sector detail — prev / next navigation */
 .sector-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; align-items: stretch; }
