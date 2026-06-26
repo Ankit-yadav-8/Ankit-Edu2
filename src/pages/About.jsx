@@ -14,18 +14,7 @@ const TEAM = [
   { icon: <IconCheck size={22} />, count: 5, role: "Auxiliary Staff", sub: "Coordination & operations" },
 ];
 
-const ACCRED = [
-  { tag: "Accreditation", title: "NABET", desc: "National Accreditation Board for Education and Training — accredited across 20 sectors for EIA/ESIA studies." },
-  { tag: "Empanelment", title: "MoEFCC", desc: "Ministry of Environment, Forest & Climate Change empanelment — recognised for environmental clearance work." },
-  { tag: "Registration", title: "NSIC", desc: "National Small Scale Industrial Corporation registration — supporting credibility for public & private tenders." },
-];
-
-const CREDENTIALS = [
-  { level: "Experience", tone: "teal", points: ["Team of experts who have served for more than 2 decades in Environmental Consultancy", "Environmental services in more than 11 varied industrial sectors"] },
-  { level: "Expertise", tone: "green", points: ["Experts from IBM, UTCL, ACC (Holcim) etc."] },
-  { level: "Strengths", tone: "amber", points: ["Accreditation and empanelment with MoEF/NABET, NABL, IBM, ISO, State Govt (SPCB), Ministry of Water Resources"] },
-  { level: "Infrastructure", tone: "green", points: ["Pan India Presence", "NABL / MoEF Approved Laboratory"] },
-];
+import Credentials from "../components/Credentials.jsx";
 
 const NABET_SECTORS = [
   "Mining of Mineral — opencast mining only",
@@ -62,18 +51,15 @@ export default function About() {
         <div className="container split">
           <Reveal>
             <span className="eyebrow">Our story</span>
-            <h2 className="section-title">Techno-legal advisory you can rely on</h2>
-            <p className="body">
-              REJIG GREENLOGIC PRIVATE LIMITED (RGPL), incorporated on 15th December 2021, is a group
-              of well-known environmental experts pooled up to extend environmental consultancy and be
-              your techno-legal advisory partner.
-            </p>
-            <p className="body" style={{ marginTop: 12 }}>
-              Since incorporation we have successfully provided environmental solutions to{" "}
-              <b>more than 3,000 specialised industrial units</b> across India and abroad, covering
-              more than fifty sectoral areas.
-            </p>
-            <div className="hero-actions">
+            <h2 className="section-title">ABOUT US</h2>
+            <ul className="mini-list" style={{ marginTop: 20 }}>
+              <li>REJIG GREENLOGIC PRIVATE LIMITED (RGPL) has been incorporated in Dec, 2021 for providing Environmental Services and Solution.</li>
+              <li>Company is based in Hyderabad (Telangana);</li>
+              <li>RGPLs establishment in the south region marks an important milestone &amp; similar to JM, will continue to build long - term commitment to render services to the local industries in solving environment related issues.</li>
+              <li>RGPL drive innovation and technology adoption by seamlessly integrating our extensive knowledge and skills into every aspect of our services.</li>
+              <li>By staying attuned to emerging trends and breakthroughs, RGPL ensure that our services remain at the forefront.</li>
+            </ul>
+            <div className="hero-actions" style={{ marginTop: 24 }}>
               <Link to="/contact" className="btn btn-primary">Work with us <IconArrow size={18} /></Link>
               <Link to="/services" className="btn btn-ghost">Our Services</Link>
             </div>
@@ -93,21 +79,17 @@ export default function About() {
       <section className="section section--soft">
         <div className="container">
           <Reveal className="section-head text-center">
-            <span className="eyebrow">What differentiates us</span>
-            <h2 className="section-title">Operations philosophy</h2>
+            <h2 className="section-title">OPERATIONS PHILOSOPHY AND WHAT DIFFERENTIATES US?</h2>
           </Reveal>
-          <div className="grid grid-3" style={{ marginTop: 40 }}>
+          <div style={{ marginTop: 40, display: "flex", flexDirection: "column", gap: 24, textAlign: "justify" }}>
             <Reveal className="card">
-              <h3>Analyse → Visualise → Utilise</h3>
-              <p>We extend services with competence by first analysing, then visualising and finally utilising technically strong, dedicated skill to optimise cost on regulatory governance and customer satisfaction.</p>
+              <p>RGPL Extends Its Services With Competence by First Analyzing Then Visualizing and Finally Utilizing Technically Strong and Dedicated Skill With an Effort To Optimize The Cost On The Regulatory Governance and Customer Satisfaction Leading Your Environmental Management Operations In A More Sustainable Manner.</p>
             </Reveal>
             <Reveal delay={1} className="card">
-              <h3>Turnkey, end-to-end</h3>
-              <p>A Rapid Service Delivery Framework (RSDF) lets us take on every environment-related scope on a turnkey basis — with end-to-end planning and delivery responsibility.</p>
+              <p>We Would be Glad To Assist You With Our Industry Expertise and Rapid Service Delivery Framework (rsdf). We Are Confident In Extending Our Specialized all-services-related-to-word-ENVIRONMENT On A Turnkey Basis With An end-to-end Planning and Delivery Responsibility.</p>
             </Reveal>
             <Reveal delay={2} className="card">
-              <h3>29 years of legacy</h3>
-              <p>RGPL is a sister concern of JM EnviroNet Private Limited (JMEPL), working in the field of environment for the past 29 years — recognised by QCI-NABET, MoEF&amp;CC, MSME, NSIC and more.</p>
+              <p>Rejig Green Logic Private Limited (RGPL) Is A Sister Concern Company Of JM EnviroNet Private Limited (JMEPL), Working In The Field Of Environment For The Past 29 Years. This Consortium Enjoys The Recognitions &amp; Accreditations Of QCI-NABET, Moef &amp; CC, ISO, Msme, Nsic, Moud &amp; Mowr, Govt. of India.</p>
             </Reveal>
           </div>
         </div>
@@ -118,56 +100,28 @@ export default function About() {
         <div className="container">
           <Reveal className="section-head text-center">
             <span className="eyebrow">Our purpose</span>
-            <h2 className="section-title">Our Mission &amp; Vision</h2>
+            <h2 className="section-title">OUR MISSION &amp; VISION</h2>
+            <p className="section-sub" style={{ marginTop: 16, fontWeight: 600, color: 'var(--text)' }}>
+              To Become The Valued Partner With Which Client Can Pivot Their Green Image &amp; Sustainability Drive.
+            </p>
           </Reveal>
-          <div className="vm-split" style={{ marginTop: 40 }}>
+          <div className="vm-split" style={{ marginTop: 40, alignItems: "center" }}>
             <Reveal className="vm-image">
               <img src={visionDice} alt="Mission and Vision" />
             </Reveal>
-            <Reveal delay={1} className="vm-cards">
-              <div className="vm-card">
-                <div className="ico"><IconStar size={24} /></div>
-                <div>
-                  <h3>Our Vision</h3>
-                  <p className="small-text">To become the valued partner with which clients can pivot their green image &amp; sustainability drive.</p>
-                </div>
-              </div>
-              <div className="vm-card">
-                <div className="ico"><IconCheck size={24} /></div>
-                <div>
-                  <h3>Our Mission</h3>
-                  <ul className="mini-list">
-                    <li>Maintaining the highest integrity to and meeting all standards of quality of QCI, NABET and MoEF&amp;CC.</li>
-                    <li>Employing a collaborative approach to ensure that each solution is customized to fit the unique contours of the client's venture — building trust between environmental imperatives and overarching corporate goals.</li>
-                    <li>Being a responsible entity, preaching the green initiatives in the work culture as well as a personal core of associates, to be customer delight.</li>
-                  </ul>
-                </div>
-              </div>
+            <Reveal delay={1} className="vm-cards" style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+              <ul className="checklist">
+                <li><span className="tick">✓</span> Maintaining the highest level of integrity and meet all standards of quality of QCI-NABET and MoEF&amp;CC.</li>
+                <li><span className="tick">✓</span> Employing a collaborative approach, we ensure that each solution is customized to fit the unique contours of the clients venture. This process fosters resonance between environmental imperatives and overarching corporate goals.</li>
+                <li><span className="tick">✓</span> Be a Responsible Entity by preaching the Green Initiatives in the work culture as well as personal lives of Associates: to be customer delight.</li>
+              </ul>
             </Reveal>
           </div>
         </div>
       </section>
 
       {/* Credentials */}
-      <section className="section section--soft">
-        <div className="container">
-          <Reveal className="section-head text-center">
-            <span className="eyebrow">Why RGPL</span>
-            <h2 className="section-title">Credentials</h2>
-            <p className="section-sub">Two decades of experience, deep expertise and pan-India infrastructure.</p>
-          </Reveal>
-          <div className="cred-list" style={{ marginTop: 40 }}>
-            {CREDENTIALS.map((c, i) => (
-              <Reveal key={c.level} delay={(i % 4)} className={`cred-row tone-${c.tone}`}>
-                <div className="cred-level">{c.level}</div>
-                <ul className="mini-list">
-                  {c.points.map((p) => <li key={p}>{p}</li>)}
-                </ul>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Credentials />
 
       {/* Team */}
       <section className="section section--soft">
@@ -192,24 +146,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Accreditations */}
-      <section className="section">
-        <div className="container">
-          <Reveal className="section-head text-center">
-            <span className="eyebrow">Accreditations &amp; Certifications</span>
-            <h2 className="section-title">Recognised by the regulators that matter</h2>
-          </Reveal>
-          <div className="grid grid-3" style={{ marginTop: 44 }}>
-            {ACCRED.map((a, i) => (
-              <Reveal key={a.title} delay={i % 3} className="card">
-                <span className="tag">{a.tag}</span>
-                <h3>{a.title}</h3>
-                <p>{a.desc}</p>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* NABET certificate + sectors */}
       <section className="section section--soft">

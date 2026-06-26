@@ -1,40 +1,55 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { IconArrow } from "./Icons.jsx";
-import hero1 from "../assets/hero-1-new.png";
-import hero2 from "../assets/hero-2-new.png";
-import hero3 from "../assets/hero-3-new.png";
+import img1 from "../assets/ai-hero-1.png";
+import img2 from "../assets/ai-hero-2.png";
+import img3 from "../assets/ai-hero-3.png";
+import img4 from "../assets/ai-hero-4.png";
 
 const SLIDES = [
   {
-    img: hero1,
-    kicker: "Water & Hydrology",
-    titleA: "The total water budget is a ",
-    hl: "comprehensive",
-    titleB: " accounting of inflows & outflows",
-    text: "Hydrodynamic studies, watershed modelling and water-balance assessments that keep industrial operations sustainable.",
-    primary: { to: "/services", label: "Explore Services" },
-    secondary: { to: "/contact", label: "Request a Proposal" },
-  },
-  {
-    img: hero2,
-    kicker: "Environmental Policy",
-    titleA: "Protecting biodiversity, resources & ",
-    hl: "ecosystems",
+    bg: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=80",
+    img: img1,
+    kicker: "QCI-NABET ACCREDITED · CATEGORY-'A'",
+    titleA: "Shaping a sustainable future for industry & ",
+    hl: "infrastructure",
     titleB: "",
-    text: "From waste management to wildlife protection — turnkey environmental policy, clearances and compliance support.",
-    primary: { to: "/services", label: "Our Expertise" },
-    secondary: { to: "/contact", label: "Talk to an Expert" },
+    text: "A QCI-NABET accredited Category-'A' EIA Consultant Organisation helping industry and infrastructure projects across India secure environmental clearances, manage compliance and build a more sustainable future.",
+    primary: { to: "/services", label: "Explore services" },
+    secondary: { to: "/contact", label: "Start your clearance" },
   },
   {
-    img: hero3,
-    kicker: "A Greener Tomorrow",
-    titleA: "Building a greener, more ",
-    hl: "sustainable",
-    titleB: " future together",
-    text: "Helping 3,000+ industrial units across 50+ sectors turn compliance into a genuine green advantage.",
-    primary: { to: "/about", label: "About RGPL" },
-    secondary: { to: "/contact", label: "Get a Quote" },
+    bg: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=1920&q=80",
+    img: img2,
+    kicker: "NABET · MoEFCC · NSIC Accredited",
+    titleA: "India's Trusted Environmental Consultancy ",
+    hl: "Partner",
+    titleB: "",
+    text: "3,000+ industrial units served across India. EIA, forest clearance, GIS, ESG, and AI-driven environmental monitoring — all under one roof.",
+    primary: { to: "/contact", label: "Request Proposal" },
+    secondary: { to: "/services", label: "Explore Solutions" },
+  },
+  {
+    bg: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=80",
+    img: img3,
+    kicker: "REMOTE SENSING & GIS ASSESSMENT",
+    titleA: "Advanced Geospatial ",
+    hl: "Intelligence",
+    titleB: "",
+    text: "Cutting-edge satellite imagery, drone surveys, and AI-powered GIS analysis for land use assessment and continuous environmental monitoring.",
+    primary: { to: "/about", label: "Learn More" },
+    secondary: { to: "/services", label: "Discover More" },
+  },
+  {
+    bg: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=1920&q=80",
+    img: img4,
+    kicker: "ESG & CLIMATE ADVISORY",
+    titleA: "Accelerating Sustainable ",
+    hl: "Transformation",
+    titleB: "",
+    text: "ESG strategy, carbon accounting, climate risk assessment, and net zero roadmaps for India's leading corporations and public sector enterprises.",
+    primary: { to: "/contact", label: "Talk to Expert" },
+    secondary: { to: "/services", label: "Learn More" },
   },
 ];
 
@@ -61,19 +76,10 @@ export default function HeroCarousel() {
       onMouseEnter={() => (paused.current = true)}
       onMouseLeave={() => (paused.current = false)}
     >
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="hero-video-bg"
-      >
-        <source src="https://cdn.coverr.co/videos/coverr-beautiful-waterfall-in-a-forest-4770/1080p.mp4" type="video/mp4" />
-      </video>
-      <div className="hero-overlay"></div>
-
       {SLIDES.map((s, idx) => (
         <div key={idx} className={`hero-slide ${idx === i ? "active" : ""}`} aria-hidden={idx !== i}>
+          <div className="hero-bg" style={{ backgroundImage: `url(${s.bg})` }}></div>
+          <div className="hero-overlay"></div>
           <div className="container hero-slide__grid">
             <div className="hero-slide__text">
               <span className="hero-kicker">🌿 {s.kicker}</span>

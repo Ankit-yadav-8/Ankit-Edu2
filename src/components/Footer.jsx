@@ -46,9 +46,9 @@ export default function Footer() {
           <div>
             <h4>Get in touch</h4>
             <ul className="foot-contact">
-              <li>
-                <IconPin size={16} />
-                <span>7th Floor, Block C, AWFIS Coworking, Laxmi Cyber City, Hitech City, Kondapur, Hyderabad - 500081</span>
+              <li style={{ display: "flex", gap: 10 }}>
+                <IconPin size={18} style={{ color: "var(--primary-light)", flexShrink: 0 }} />
+                <span>7th Floor, Block C, Laxmi Cyber City, White Fields, Hitech City, Kondapur, Hyderabad - 500081</span>
               </li>
               <li>
                 <IconPhone size={16} />

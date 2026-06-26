@@ -18,7 +18,7 @@ export function localAnswer(message) {
   if (has("mining", "dgps", "gis", "remote sensing", "satellite", "land use"))
     return "We do Mining Plan preparation, DGPS surveys, Remote Sensing & GIS, and satellite-based Land Use/Land Cover mapping. AI-assisted change detection is part of our roadmap.";
   if (has("contact", "email", "phone", "call", "reach", "address", "office"))
-    return "📧 rgpl@rgreenlogic.com  ·  📞 +91 8949472643. Corporate office: AWFIS Coworking, Laxmi Cyber City, Hitech City, Kondapur, Hyderabad - 500081. Or use our Contact page to request a proposal.";
+    return "📧 rgpl@rgreenlogic.com  ·  📞 +91 8949472643. Registered & Corporate office: 7th Floor, Block C, Laxmi Cyber City, White Fields, Hitech City, Kondapur, Hyderabad - 500081. Or use our Contact page to request a proposal.";
   if (has("quote", "proposal", "price", "cost", "hire", "start project"))
     return "Great — head to the Contact page and choose your sector, location and project type. Our smart intake gives the team a structured brief so you get an accurate proposal faster.";
   if (has("service", "what do you do", "offer", "help with"))

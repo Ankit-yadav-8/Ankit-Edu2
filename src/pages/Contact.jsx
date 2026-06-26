@@ -76,11 +76,7 @@ export default function Contact() {
             </div>
             <div className="info-card">
               <span className="ico"><IconPin size={22} /></span>
-              <div><b>Corporate Office</b><p>7th Floor, Block C, AWFIS Coworking Space, Laxmi Cyber City, Whitefields, Hitech City, Kondapur, Hyderabad, Telangana - 500081</p></div>
-            </div>
-            <div className="info-card">
-              <span className="ico"><IconBuilding size={22} /></span>
-              <div><b>Registered Office</b><p>Flat No. 301, 4th Floor, Ashish My Space, Chandanagar, Above Khazana Jewellers, Hyderabad - 500050</p></div>
+              <div><b>Registered & Corporate Office</b><p>7th Floor, Block C, Laxmi Cyber City, White Fields, Hitech City, Kondapur, Hyderabad - 500081</p></div>
             </div>
           </Reveal>
 
