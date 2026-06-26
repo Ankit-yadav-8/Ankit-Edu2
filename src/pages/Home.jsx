@@ -13,6 +13,12 @@ import waterTreatmentImg from "../assets/water-treatment.png";
 import forestBioImg from "../assets/forest-biodiversity.png";
 import esgImg from "../assets/esg-sustainability.png";
 import coastalImg from "../assets/coastal-marine.png";
+import s1 from "../assets/service-1.png";
+import s2 from "../assets/service-2.png";
+import s3 from "../assets/service-3.png";
+import s4 from "../assets/service-4.png";
+import s5 from "../assets/service-5.png";
+import s6 from "../assets/service-6.png";
 import {
   IconDoc, IconLeaf, IconEye, IconShield, IconChart, IconGlobe,
   IconCheck, IconActivity, IconArrow, IconUsers, IconBeaker, IconStar,
@@ -38,16 +44,16 @@ const WORKFORCE = [
 ];
 
 const CORE_EXPERTISE_LIST = [
-  { img: U("1454165804606-c3d57bc86b40"), text: <><strong>Techno-Legal Advisory, Environment & Social Impacts Assessment (ESIA)</strong> Studies (as per IFC & ADB Guidelines) & Environmental Impact Assessment (EIA) Studies, Environmental Monitoring and Environmental Compliance Auditing: Environmental Due Diligence, Environmental Permitting</> },
-  { img: U("1542601906990-b4d3fb778b09"), text: <><strong>Social Impact Assessment (SIA) Studies</strong>, Chemical/Industrial Risk Assessment, Biodiversity Impact Assessment (BIA), Ecology and Biodiversity Study/Tree Enumeration</> },
-  { img: U("1473773508845-188df298d2d1"), text: <><strong>Sustainability & ESDD studies</strong> - Corporate EHS (Environment, Health & Safety), ESGMS Framework/ Management System (ESGMS) and Trainings, The gaps identified in E&S and E&S Action Plan (ESAP), ES DD/ Red Flag Assessment, Climate Change Risk Assessment (CCRA)</> },
-  { img: U("1581091226825-a6a2a5aee158"), text: <><strong>ESIA Study, ESR DD</strong> (to Understand The Business Feasibility)</> },
-  { img: U("1505142468610-359e7d316be0"), text: <><strong>Coastal Regulatory Zone Clearance</strong>, Marine Environment Monitoring (Marine Water & Sea Bed Sediment Sampling & Analysis), Hydrodynamic Study</> },
-  { img: U("1441974231531-c6227db76b6e"), text: <><strong>Forest Clearance & Wildlife Clearances</strong>, Wildlife Conservation Plan/Mangrove Management Plan</> },
-  { img: U("1450101499163-c8848c66ca85"), text: <><strong>Environment/Waste/Green Audits</strong>, Damage assessment as per OM B04(E)</> },
-  { img: U("1581092144883-93d39db26ff8"), text: <><strong>Leak Detection and Repair (LDAR)</strong> studies in Pharma & Oil Refining Industries, Indoor Air Quality (IAQ) Testing in IT/ITES/Hospitality/Hospitals Facilities</> },
-  { img: U("1518005020951-eccb11d835cb"), text: <><strong>IGBC/LEED Documentation</strong> For Green Building Certification</> },
-  { img: U("1516934812323-c91726a42142"), text: <><strong>Mining Plan Preparation & Dgps Surveys</strong></> },
+  { img: s1, title: "Techno-Legal Advisory, ESIA & EIA Studies", desc: "Expert assessment in alignment with IFC & ADB Guidelines. Services include Environmental Monitoring, Compliance Auditing, Environmental Due Diligence, and Permitting." },
+  { img: s2, title: "Social Impact Assessment (SIA) & Biodiversity", desc: "Comprehensive SIA studies, Chemical/Industrial Risk Assessment, Biodiversity Impact Assessment (BIA), and Ecology/Tree Enumeration." },
+  { img: s3, title: "Sustainability & ESDD Studies", desc: "Corporate EHS (Environment, Health & Safety), ESGMS Frameworks & Training, E&S Action Plans (ESAP), Red Flag Assessments, and Climate Change Risk Assessment (CCRA)." },
+  { img: s4, title: "ESIA Study & ESR DD", desc: "Strategic feasibility research and Environmental & Social Due Diligence (ESR DD) to understand and evaluate complete business feasibility." },
+  { img: s5, title: "Coastal Regulatory Zone & Marine Monitoring", desc: "Clearances for Coastal Regulatory Zones, Marine Water & Sea Bed Sediment Sampling & Analysis, and advanced Hydrodynamic Studies." },
+  { img: s6, title: "Forest Clearance & Wildlife Conservation", desc: "Securing Forest & Wildlife Clearances, developing Wildlife Conservation Plans, and specialized Mangrove Management Plans." },
+  { img: U("1450101499163-c8848c66ca85"), title: "Environment, Waste & Green Audits", desc: "Comprehensive environment, waste, and green audits, including detailed Damage Assessments as per OM B04(E) guidelines." },
+  { img: U("1581091226825-a6a2a5aee158"), title: "Leak Detection & Indoor Air Quality (IAQ)", desc: "Specialized LDAR studies in Pharma & Oil Refining Industries, and professional IAQ Testing in IT, Hospitality, and Hospital Facilities." },
+  { img: U("1473773508845-188df298d2d1"), title: "IGBC/LEED Green Building Certification", desc: "End-to-end consultancy and official documentation for prestigious IGBC and LEED Green Building Certifications." },
+  { img: U("1502920917128-1aa500764cbd"), title: "Mining Plan Preparation & DGPS Surveys", desc: "Professional preparation of mining plans supported by highly accurate drone and Differential GPS (DGPS) surveys." },
 ];
 
 export default function Home() {
@@ -146,7 +152,10 @@ export default function Home() {
                     <div className="vl-img">
                       <SmartImg src={item.img} alt="Expertise thumbnail" />
                     </div>
-                    <div className="vl-text">{item.text}</div>
+                    <div className="vl-text">
+                      <h4>{item.title}</h4>
+                      <p>{item.desc}</p>
+                    </div>
                   </div>
                 </Reveal>
               ))}
