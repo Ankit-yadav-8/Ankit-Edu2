@@ -9,6 +9,8 @@ import visionImg from "../assets/vision-handshake.png";
 import nabetLogo from "../assets/nabet-logo.png";
 import nabetCert from "../assets/nabet-certificate.png";
 import isoCert from "../assets/iso-certificate.png";
+import waterTreatmentImg from "../assets/water-treatment.png";
+import forestBioImg from "../assets/forest-biodiversity.png";
 import {
   IconDoc, IconLeaf, IconEye, IconShield, IconChart, IconGlobe,
   IconCheck, IconActivity, IconArrow, IconUsers, IconBeaker, IconStar,
@@ -143,11 +145,74 @@ export default function Home() {
       <section className="detailed-panel" style={{ backgroundColor: "#f9fafb" }}>
         <div className="container dp-grid">
           <Reveal className="dp-text" style={{ gridColumn: "1 / -1", maxWidth: "100%" }}>
-            <span className="eyebrow">EPC & Turnkey Expertise | From Design to Water Sustainability</span>
+            <span className="eyebrow">Transforming Water | Protecting Nature | Empowering Industries</span>
             <h2>Wastewater Treatment & Water Management</h2>
-            <p style={{ marginBottom: 24, textAlign: "justify" }}>
-              We deliver end-to-end wastewater and water management solutions, specializing in Sewage Treatment Plants (STPs) and Effluent Treatment Plants (ETPs). With a proven EPC and turnkey execution model, we enable industries, municipalities, and institutions to achieve regulatory compliance, clean water access, and long-term sustainability.
+
+            <p style={{ textAlign: "justify" }}>
+              Water is one of the world's most valuable natural resources, supporting ecosystems, industries, agriculture, and human life. As industrialization and urbanization continue to grow, the responsible management of water resources has become more important than ever. At Rejib Green Private Limited, we are committed to delivering innovative, sustainable, and technology-driven wastewater treatment and water management solutions that help industries, municipalities, institutions, and commercial facilities conserve water, reduce pollution, comply with environmental regulations, and contribute to a greener future.
             </p>
+            <p style={{ textAlign: "justify" }}>
+              Our comprehensive range of services covers every aspect of water treatment—from raw water purification and process water optimization to wastewater recycling, sewage treatment, industrial effluent management, zero liquid discharge systems, sludge handling, and intelligent water monitoring. By combining engineering expertise, advanced treatment technologies, and environmental responsibility, we create customized solutions that maximize operational efficiency while minimizing environmental impact.
+            </p>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              We believe that every drop of water has value. Through sustainable water management strategies, we help organizations reduce freshwater consumption, recover valuable resources, lower operational costs, and achieve long-term environmental compliance.
+            </p>
+
+            {/* Image row */}
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, marginBottom: 32 }}>
+              <img src={waterTreatmentImg} alt="Modern Wastewater Treatment Plant" style={{ width: "100%", borderRadius: 12, boxShadow: "var(--shadow-lg)" }} loading="lazy" />
+              <SmartImg src={U("1516934812323-c91726a42142")} alt="Water Management" style={{ width: "100%", borderRadius: 12, boxShadow: "var(--shadow-lg)" }} />
+            </div>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Building a Sustainable Water Future</h3>
+            <p style={{ textAlign: "justify" }}>
+              Water scarcity, climate change, population growth, and increasing industrial activities have placed tremendous pressure on global freshwater resources. Every industry today faces the challenge of balancing production requirements with environmental sustainability.
+            </p>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              Rejib Green Private Limited provides integrated water solutions that enable businesses to operate responsibly while improving efficiency and reducing costs. Our engineering team designs, installs, upgrades, and maintains advanced water treatment systems tailored to the specific needs of each client. Whether it is treating industrial wastewater, recycling process water, recovering valuable chemicals, managing sewage, or implementing advanced membrane technologies, our solutions are designed to deliver measurable environmental and economic benefits.
+            </p>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Our Vision</h3>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              To become a trusted global leader in sustainable water management by delivering innovative, efficient, and environmentally responsible wastewater treatment solutions that support industries, communities, and ecosystems.
+            </p>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Our Mission</h3>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              Our mission is to protect water resources through innovative engineering, advanced treatment technologies, and sustainable environmental practices. We strive to help organizations achieve water security, regulatory compliance, operational excellence, and long-term sustainability.
+            </p>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Our Core Values</h3>
+            <p style={{ textAlign: "justify", marginBottom: 8 }}>At Rejib Green Private Limited, our work is guided by:</p>
+            <ul className="dp-list" style={{ columns: "2", columnGap: "40px", marginBottom: 24 }}>
+              <li>Environmental Responsibility</li>
+              <li>Engineering Excellence</li>
+              <li>Innovation</li>
+              <li>Sustainability</li>
+              <li>Customer Satisfaction</li>
+              <li>Safety</li>
+              <li>Quality</li>
+              <li>Transparency</li>
+              <li>Integrity</li>
+              <li>Continuous Improvement</li>
+            </ul>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Why Wastewater Treatment Matters</h3>
+            <p style={{ textAlign: "justify" }}>
+              Wastewater treatment is one of the most important environmental protection activities in modern society. Every day, industries, municipalities, commercial establishments, hospitals, and residential communities generate millions of liters of wastewater containing contaminants that can harm ecosystems if released untreated.
+            </p>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              Proper wastewater treatment removes harmful pollutants before discharge or reuse, protecting rivers, lakes, groundwater, and marine environments. It also enables industries to recycle water, reduce freshwater consumption, recover valuable materials, and comply with environmental regulations. Modern wastewater treatment is no longer just about pollution control—it is a strategic investment that supports operational efficiency, sustainability, and long-term business resilience.
+            </p>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>The Importance of Water Management</h3>
+            <p style={{ textAlign: "justify" }}>
+              Effective water management involves the planning, monitoring, conservation, treatment, distribution, reuse, and responsible disposal of water resources. It helps organizations optimize water consumption while ensuring environmental protection and regulatory compliance.
+            </p>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              A well-designed water management system enables industries to reduce water losses, improve production efficiency, lower operational costs, enhance sustainability performance, and minimize environmental risks. At Rejib Green Private Limited, we integrate engineering expertise with digital technologies, automation, and intelligent monitoring systems to create comprehensive water management strategies that deliver measurable results.
+            </p>
+
             <h3 style={{ marginBottom: 16, fontSize: "1.2rem", fontWeight: 700 }}>Core Expertise:</h3>
             <ul className="dp-list" style={{ columns: "2", columnGap: "40px" }}>
               <li><strong>Importance of Wastewater Treatment:</strong> Protecting ecosystems and public health.</li>
@@ -175,25 +240,133 @@ export default function Home() {
       <section className="detailed-panel">
         <div className="container dp-grid">
           <Reveal className="dp-text" style={{ gridColumn: "1 / -1", maxWidth: "100%" }}>
-            <span className="eyebrow">Ecology & Conservation | Scientific Management</span>
+            <span className="eyebrow">Protecting Forests | Preserving Wildlife | Conserving Biodiversity</span>
             <h2>Forestry, Wildlife & Biodiversity Conservation</h2>
-            <p style={{ marginBottom: 24, textAlign: "justify" }}>
-              Navigating the complex regulatory landscape of forest and wildlife clearances requires scientific rigor and deep ecological understanding. Our expert ecologists conduct extensive terrestrial and aquatic biodiversity assessments to ensure industrial projects coexist harmoniously with nature.
+
+            <p style={{ textAlign: "justify" }}>
+              Nature is the foundation of life. Healthy forests regulate the climate, wildlife maintains ecological balance, and biodiversity supports resilient ecosystems that provide food, water, medicine, clean air, and countless ecosystem services. As environmental challenges continue to grow due to climate change, habitat loss, urban expansion, pollution, and unsustainable resource use, the need for comprehensive forestry, wildlife, and biodiversity conservation has never been greater.
             </p>
-            <h3 style={{ marginBottom: 16, fontSize: "1.2rem", fontWeight: 700 }}>Core Expertise:</h3>
+            <p style={{ textAlign: "justify" }}>
+              Rejib Green Private Limited is committed to delivering innovative, science-based, and sustainable environmental solutions that protect natural ecosystems while supporting responsible development. Our forestry, wildlife, and biodiversity conservation services combine ecological expertise, advanced technologies, environmental planning, geospatial analysis, remote sensing, GIS mapping, field investigations, and regulatory compliance to help governments, industries, infrastructure developers, research institutions, and conservation organizations achieve sustainable environmental outcomes.
+            </p>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              We believe that economic development and environmental conservation can coexist through careful planning, scientific assessment, responsible resource management, and long-term ecological stewardship. Every project we undertake reflects our commitment to preserving nature for future generations while creating practical solutions that meet present-day development needs.
+            </p>
+
+            {/* Image row */}
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, marginBottom: 32 }}>
+              <img src={forestBioImg} alt="Forest Biodiversity Conservation" style={{ width: "100%", borderRadius: 12, boxShadow: "var(--shadow-lg)" }} loading="lazy" />
+              <SmartImg src={U("1441974231531-c6227db76b6e")} alt="Wildlife Conservation" style={{ width: "100%", borderRadius: 12, boxShadow: "var(--shadow-lg)" }} />
+            </div>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Creating a Sustainable Future Through Nature Conservation</h3>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              Forests are among the most valuable natural resources on Earth. They regulate rainfall, capture atmospheric carbon, protect watersheds, prevent soil erosion, support agriculture, provide livelihoods, and sustain millions of plant and animal species. Wildlife contributes to ecological balance through pollination, seed dispersal, nutrient cycling, and maintaining healthy food chains. Biodiversity ensures ecosystem resilience, enabling natural systems to adapt to environmental changes and recover from disturbances. As populations grow and industrial activities expand, protecting these natural assets requires integrated planning, scientific research, community participation, policy support, and innovative environmental technologies. Rejib Green Private Limited works closely with public and private stakeholders to develop conservation strategies that safeguard ecological integrity while enabling sustainable growth.
+            </p>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Our Vision</h3>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              To become a trusted leader in forestry, wildlife, and biodiversity conservation by delivering innovative environmental solutions that protect ecosystems, conserve natural resources, strengthen climate resilience, and promote sustainable development across diverse landscapes.
+            </p>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Our Mission</h3>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              Our mission is to conserve forests, protect wildlife, restore degraded ecosystems, enhance biodiversity, and support environmentally responsible development through scientific research, advanced technologies, ecological planning, and collaborative partnerships with governments, industries, institutions, and local communities.
+            </p>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Our Core Values</h3>
+            <p style={{ textAlign: "justify", marginBottom: 8 }}>At Rejib Green Private Limited, our work is guided by principles that place environmental responsibility at the center of every project.</p>
+            <ul className="dp-list" style={{ columns: "2", columnGap: "40px", marginBottom: 24 }}>
+              <li>Environmental Stewardship</li>
+              <li>Scientific Excellence</li>
+              <li>Ecological Integrity</li>
+              <li>Innovation and Technology</li>
+              <li>Sustainability</li>
+              <li>Transparency</li>
+              <li>Community Engagement</li>
+              <li>Ethical Conservation Practices</li>
+              <li>Continuous Learning</li>
+              <li>Long-Term Environmental Responsibility</li>
+            </ul>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Understanding Forestry Conservation</h3>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              Forestry conservation is the science and practice of protecting, restoring, managing, and sustainably utilizing forest ecosystems. Modern forestry extends beyond timber production and includes biodiversity conservation, watershed protection, carbon sequestration, habitat restoration, climate change mitigation, and community-based forest management. Healthy forests provide essential ecosystem services that support both environmental stability and economic prosperity. Sustainable forestry practices ensure that forest resources remain available for future generations while preserving ecological balance and protecting wildlife habitats. Rejib Green Private Limited develops integrated forestry management solutions that combine ecological science with modern technologies to promote responsible forest conservation and sustainable resource utilization.
+            </p>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Why Forests Matter</h3>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              Forests play a vital role in maintaining life on Earth. They absorb carbon dioxide, release oxygen, regulate local and global climate systems, recharge groundwater, stabilize soils, reduce flooding, support agriculture, and provide habitat for an extraordinary diversity of plant and animal species. Millions of people depend directly on forests for livelihoods, traditional medicine, food resources, and cultural identity. Conserving forests therefore benefits not only biodiversity but also human well-being, economic development, and long-term environmental sustainability.
+            </p>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Wildlife Conservation for Ecological Balance</h3>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              Wildlife conservation focuses on protecting animal species and their habitats from threats such as habitat fragmentation, pollution, illegal hunting, invasive species, climate change, and unsustainable land-use practices. Every species contributes to ecosystem health. Predators regulate prey populations, pollinators support agriculture, herbivores shape vegetation dynamics, and decomposers recycle nutrients. The loss of even a single species can have cascading effects throughout an ecosystem. Rejib Green Private Limited designs wildlife conservation strategies that prioritize habitat protection, ecological connectivity, species monitoring, and sustainable coexistence between people and nature.
+            </p>
+
+            <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Biodiversity Conservation</h3>
+            <p style={{ textAlign: "justify", marginBottom: 24 }}>
+              Biodiversity encompasses the variety of life at genetic, species, and ecosystem levels. Rich biodiversity enhances ecosystem resilience, improves productivity, supports food security, strengthens climate adaptation, and provides valuable resources for medicine, agriculture, and scientific research. Human activities have accelerated biodiversity loss worldwide, making conservation efforts increasingly important. Protecting biodiversity requires habitat conservation, restoration of degraded ecosystems, responsible land management, environmental monitoring, and informed policy decisions. Our biodiversity conservation services integrate scientific surveys, GIS mapping, ecological assessments, restoration planning, and long-term monitoring to support sustainable development while minimizing ecological impacts.
+            </p>
+
+            <h3 style={{ marginBottom: 16, fontSize: "1.2rem", fontWeight: 700 }}>Our Comprehensive Services:</h3>
+            <ul className="dp-list" style={{ columns: "2", columnGap: "40px", marginBottom: 24 }}>
+              <li>Forest Resource Assessment</li>
+              <li>Forest Management Planning</li>
+              <li>Afforestation and Reforestation Programs</li>
+              <li>Habitat Restoration</li>
+              <li>Wildlife Habitat Assessment</li>
+              <li>Biodiversity Surveys</li>
+              <li>Flora and Fauna Inventories</li>
+              <li>Ecological Baseline Studies</li>
+              <li>Wildlife Corridor Identification</li>
+              <li>Protected Area Management Support</li>
+              <li>Environmental Impact Assessment (EIA)</li>
+              <li>Biodiversity Impact Assessment</li>
+              <li>Ecological Risk Assessment</li>
+              <li>Carbon Stock Assessment</li>
+              <li>Forest Carbon Monitoring</li>
+              <li>REDD+ Project Support</li>
+              <li>Ecosystem Restoration Planning</li>
+              <li>Wetland Conservation</li>
+              <li>Mangrove Restoration</li>
+              <li>Grassland Restoration</li>
+              <li>Watershed Management</li>
+              <li>Invasive Species Management</li>
+              <li>Community Forestry Programs</li>
+              <li>Nature-Based Solutions</li>
+              <li>Climate Change Adaptation Planning</li>
+              <li>GIS and Remote Sensing Applications</li>
+              <li>Drone-Based Ecological Surveys</li>
+              <li>Satellite Image Analysis</li>
+              <li>Wildlife Monitoring Systems</li>
+              <li>Biodiversity Database Development</li>
+              <li>Conservation Planning</li>
+              <li>Environmental Compliance Support</li>
+            </ul>
+
+            <h3 style={{ marginBottom: 16, fontSize: "1.2rem", fontWeight: 700 }}>Advanced Technologies We Utilize:</h3>
             <ul className="dp-list" style={{ columns: "2", columnGap: "40px" }}>
-              <li><strong>Forest Clearances (Stage I & II):</strong> Turnkey support for diversion of forest land under FCA.</li>
-              <li><strong>Wildlife Clearances:</strong> Securing approvals from State and National Boards for Wildlife (NBWL).</li>
-              <li><strong>Wildlife Conservation Plans:</strong> Developing strategies to mitigate project impacts on fauna.</li>
-              <li><strong>Biodiversity Impact Assessment (BIA):</strong> Comprehensive flora and fauna cataloging.</li>
-              <li><strong>Mangrove Management Plans:</strong> Coastal ecology preservation and restoration strategies.</li>
-              <li><strong>Tree Enumeration & Tagging:</strong> Detailed surveys using GPS and GIS technologies.</li>
-              <li><strong>Greenbelt Development Planning:</strong> Scientific planning for compensatory afforestation.</li>
-              <li><strong>Ecological Restoration:</strong> Rehabilitating degraded landscapes post-mining or construction.</li>
-              <li><strong>Avifauna & Herpetofauna Studies:</strong> Specialized surveys for birds, reptiles, and amphibians.</li>
-              <li><strong>Aquatic Ecology Assessments:</strong> Studying riverine and marine life health and diversity.</li>
-              <li><strong>Human-Wildlife Conflict Mitigation:</strong> Designing safe corridors and barriers.</li>
-              <li><strong>Regulatory Representation:</strong> Liaising with MoEFCC and Forest Departments.</li>
+              <li>Geographic Information Systems (GIS)</li>
+              <li>Remote Sensing</li>
+              <li>Satellite Image Interpretation</li>
+              <li>Drone Mapping</li>
+              <li>LiDAR-Based Forest Surveys</li>
+              <li>GPS Field Data Collection</li>
+              <li>Artificial Intelligence for Environmental Analysis</li>
+              <li>Machine Learning-Based Habitat Modeling</li>
+              <li>Environmental Data Analytics</li>
+              <li>Biodiversity Information Systems</li>
+              <li>Cloud-Based Spatial Data Management</li>
+              <li>IoT Environmental Sensors</li>
+              <li>Automated Wildlife Monitoring Cameras</li>
+              <li>Acoustic Monitoring Systems</li>
+              <li>Digital Forest Inventory Tools</li>
+              <li>Climate Modeling Software</li>
+              <li>Hydrological Modeling</li>
+              <li>Carbon Accounting Platforms</li>
+              <li>Decision Support Systems</li>
+              <li>Environmental Dashboards</li>
             </ul>
             <Link to="/services" className="btn btn-primary" style={{ marginTop: 12 }}>Know more <IconArrow size={18} /></Link>
           </Reveal>
