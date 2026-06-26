@@ -99,10 +99,6 @@ export default function Navbar() {
               </div>
             </li>
 
-            <li>
-              <NavLink to="/ai-integration" className={({ isActive }) => (isActive ? "active ai-link" : "ai-link")} onClick={closeMenu}>✨ AI</NavLink>
-            </li>
-
             <li className="has-dropdown">
               <div className="dd-row">
                 <NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>About Us</NavLink>
@@ -133,6 +129,10 @@ export default function Navbar() {
                   </div>
                 </div>
               </div>
+            </li>
+
+            <li className="ai-link-li">
+              <NavLink to="/ai-integration" className={({ isActive }) => (isActive ? "active ai-link" : "ai-link")} onClick={closeMenu}>✨ AI</NavLink>
             </li>
 
             <li>
