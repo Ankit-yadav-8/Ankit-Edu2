@@ -62,8 +62,31 @@ export default function About() {
         </div>
       </section>
 
-      {/* Operations philosophy */}
+      {/* Mission & Vision (image left, heading + text right) */}
       <section className="section section--soft">
+        <div className="container">
+          <div className="vm-split" style={{ alignItems: "center" }}>
+            <Reveal className="vm-image">
+              <img src={visionDice} alt="Mission and Vision" />
+            </Reveal>
+            <Reveal delay={1} className="vm-cards" style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+              <span className="eyebrow">Our purpose</span>
+              <h2 className="section-title">OUR MISSION &amp; VISION</h2>
+              <p className="section-sub" style={{ fontWeight: 600, color: "var(--text)" }}>
+                To Become The Valued Partner With Which Client Can Pivot Their Green Image &amp; Sustainability Drive.
+              </p>
+              <ul className="checklist">
+                <li><span className="tick">✓</span> Maintaining the highest level of integrity and meet all standards of quality of QCI-NABET and MoEF&amp;CC.</li>
+                <li><span className="tick">✓</span> Employing a collaborative approach, we ensure that each solution is customized to fit the unique contours of the clients venture. This process fosters resonance between environmental imperatives and overarching corporate goals.</li>
+                <li><span className="tick">✓</span> Be a Responsible Entity by preaching the Green Initiatives in the work culture as well as personal lives of Associates: to be customer delight.</li>
+              </ul>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Operations philosophy */}
+      <section className="section">
         <div className="container">
           <Reveal className="section-head text-center">
             <h2 className="section-title">OPERATIONS PHILOSOPHY AND WHAT DIFFERENTIATES US?</h2>
@@ -77,31 +100,6 @@ export default function About() {
             </Reveal>
             <Reveal delay={2} className="card">
               <p>Rejig Green Logic Private Limited (RGPL) Is A Sister Concern Company Of JM EnviroNet Private Limited (JMEPL), Working In The Field Of Environment For The Past 29 Years. This Consortium Enjoys The Recognitions &amp; Accreditations Of QCI-NABET, Moef &amp; CC, ISO, Msme, Nsic, Moud &amp; Mowr, Govt. of India.</p>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission & Vision (dice image + small text) */}
-      <section className="section">
-        <div className="container">
-          <Reveal className="section-head text-center">
-            <span className="eyebrow">Our purpose</span>
-            <h2 className="section-title">OUR MISSION &amp; VISION</h2>
-            <p className="section-sub" style={{ marginTop: 16, fontWeight: 600, color: 'var(--text)' }}>
-              To Become The Valued Partner With Which Client Can Pivot Their Green Image &amp; Sustainability Drive.
-            </p>
-          </Reveal>
-          <div className="vm-split" style={{ marginTop: 40, alignItems: "center" }}>
-            <Reveal className="vm-image">
-              <img src={visionDice} alt="Mission and Vision" />
-            </Reveal>
-            <Reveal delay={1} className="vm-cards" style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-              <ul className="checklist">
-                <li><span className="tick">✓</span> Maintaining the highest level of integrity and meet all standards of quality of QCI-NABET and MoEF&amp;CC.</li>
-                <li><span className="tick">✓</span> Employing a collaborative approach, we ensure that each solution is customized to fit the unique contours of the clients venture. This process fosters resonance between environmental imperatives and overarching corporate goals.</li>
-                <li><span className="tick">✓</span> Be a Responsible Entity by preaching the Green Initiatives in the work culture as well as personal lives of Associates: to be customer delight.</li>
-              </ul>
             </Reveal>
           </div>
         </div>

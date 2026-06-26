@@ -8,7 +8,7 @@ import imgOil from "../assets/coastal-marine.png";
 import imgThermal from "../assets/service-2.png";
 import imgMetal from "../assets/service-1.png";
 import imgCement from "../assets/service-3.png";
-import imgChlor from "../assets/water-treatment.png";
+import imgChlor from "../assets/rejig_discussion_meeting_1782487343593.png";
 import imgFiber from "../assets/service-4.png";
 import imgChem from "../assets/service-5.png";
 import imgPipeline from "../assets/service-6.png";
