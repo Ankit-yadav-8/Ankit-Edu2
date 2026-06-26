@@ -45,13 +45,17 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/infrastructure" element={<Infrastructure />} />
-          <Route path="/clientele" element={<Clientele />} />
-          <Route path="/ai-integration" element={<AiIntegration />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/about/*" element={<About />} />
+          <Route path="/services/*" element={<Services />} />
+          <Route path="/products/*" element={<Products />} />
+          <Route path="/infrastructure/*" element={<Infrastructure />} />
+          <Route path="/industries/*" element={<Infrastructure />} />
+          <Route path="/projects/*" element={<Services />} />
+          <Route path="/insights/*" element={<About />} />
+          <Route path="/events/*" element={<About />} />
+          <Route path="/clientele/*" element={<Clientele />} />
+          <Route path="/ai-integration/*" element={<AiIntegration />} />
+          <Route path="/contact/*" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="*" element={<NotFound />} />

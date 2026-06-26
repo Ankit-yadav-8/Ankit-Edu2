@@ -6,8 +6,19 @@ import { IconArrow } from "../components/Icons.jsx";
 import { NabetLogo } from "../components/Logos.jsx";
 import SmartImg from "../components/SmartImg.jsx";
 
-const U = (id) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=720&q=60`;
-const WELCOME_IMG = U("1542601906990-b4d3fb778b09");
+import imgWelcome from "../assets/hero-1-new.png";
+import imgReport from "../assets/hero-2-new.png";
+import imgS1 from "../assets/service-1.png";
+import imgS2 from "../assets/service-2.png";
+import imgS3 from "../assets/service-3.png";
+import imgS4 from "../assets/service-4.png";
+import imgS5 from "../assets/service-5.png";
+import imgS6 from "../assets/service-6.png";
+import imgForest from "../assets/forest-biodiversity.png";
+import imgEsg from "../assets/esg-sustainability.png";
+import imgWater from "../assets/water-treatment.png";
+import certNabet from "../assets/nabet-certificate.png";
+import certIso from "../assets/iso-certificate.png";
 
 export default function Home() {
   return (
@@ -52,7 +63,7 @@ export default function Home() {
           </Reveal>
 
           <Reveal delay={1} className="welcome-media">
-            <SmartImg src={WELCOME_IMG} alt="Hands protecting a green earth" />
+            <SmartImg src={imgWelcome} alt="Hands protecting a green earth" />
           </Reveal>
         </div>
       </section>
@@ -93,7 +104,7 @@ export default function Home() {
             <Link to="/insights" className="feat-cta">Read the full report →</Link>
           </Reveal>
           <Reveal delay={1} className="feat-img">
-            <img src={U("1497435334941-8c899ce9c77c")} alt="Regulatory Report" />
+            <img src={imgReport} alt="Regulatory Report" />
             <div className="feat-img-ov">
               <span className="feat-img-lbl">Download PDF (4.2MB)</span>
             </div>
@@ -251,8 +262,8 @@ export default function Home() {
           </Reveal>
 
           <div className="proj-grid">
-            <Link to="/projects/1" className="proj-card">
-              <img src={U("1518531933037-91b2f5f228f0")} alt="Mining Project" />
+            <Link to="/projects" className="proj-card">
+              <img src={imgS1} alt="Mining Project" />
               <div className="proj-ov">
                 <div className="proj-tag">Mining &amp; Minerals</div>
                 <div className="proj-nm">EIA for 5 MTPA Iron Ore Mine Expansion</div>
@@ -260,8 +271,8 @@ export default function Home() {
               </div>
               <div className="proj-plus">+</div>
             </Link>
-            <Link to="/projects/2" className="proj-card">
-              <img src={U("1513828583332-94285b73d8ab")} alt="Solar Park" />
+            <Link to="/projects" className="proj-card">
+              <img src={imgS2} alt="Solar Park" />
               <div className="proj-ov">
                 <div className="proj-tag">Renewable Energy</div>
                 <div className="proj-nm">ESIA for 500MW Solar Park Development</div>
@@ -269,8 +280,8 @@ export default function Home() {
               </div>
               <div className="proj-plus">+</div>
             </Link>
-            <Link to="/projects/3" className="proj-card">
-              <img src={U("1464627196025-a6e594d7cb27")} alt="Coastal Highway" />
+            <Link to="/projects" className="proj-card">
+              <img src={imgS3} alt="Coastal Highway" />
               <div className="proj-ov">
                 <div className="proj-tag">Infrastructure</div>
                 <div className="proj-nm">CRZ Clearance for Coastal Highway</div>
@@ -278,8 +289,8 @@ export default function Home() {
               </div>
               <div className="proj-plus">+</div>
             </Link>
-            <Link to="/projects/4" className="proj-card">
-              <img src={U("1504938640700-60b64be5a31a")} alt="Chemical Plant" />
+            <Link to="/projects" className="proj-card">
+              <img src={imgS4} alt="Chemical Plant" />
               <div className="proj-ov">
                 <div className="proj-tag">Chemical Industry</div>
                 <div className="proj-nm">Quantitative Risk Assessment &amp; HAZOP</div>
@@ -287,8 +298,8 @@ export default function Home() {
               </div>
               <div className="proj-plus">+</div>
             </Link>
-            <Link to="/projects/5" className="proj-card">
-              <img src={U("1498354178652-c9a7edb7f64d")} alt="Township" />
+            <Link to="/projects" className="proj-card">
+              <img src={imgS5} alt="Township" />
               <div className="proj-ov">
                 <div className="proj-tag">Real Estate</div>
                 <div className="proj-nm">IGBC Green Township Certification</div>
@@ -296,8 +307,8 @@ export default function Home() {
               </div>
               <div className="proj-plus">+</div>
             </Link>
-            <Link to="/projects/6" className="proj-card">
-              <img src={U("1473773508845-188df298d2d1")} alt="Corporate ESG" />
+            <Link to="/projects" className="proj-card">
+              <img src={imgS6} alt="Corporate ESG" />
               <div className="proj-ov">
                 <div className="proj-tag">Corporate Advisory</div>
                 <div className="proj-nm">Net-Zero Roadmap &amp; ESG Strategy</div>
@@ -322,24 +333,24 @@ export default function Home() {
           </Reveal>
 
           <div className="ins-grid">
-            <Link to="/insights/1" className="ins-card">
-              <img src={U("1454165804606-c3d57bc86b40")} alt="News 1" className="ins-img" />
+            <Link to="/insights" className="ins-card">
+              <img src={imgForest} alt="News 1" className="ins-img" />
               <div className="ins-body">
                 <div className="ins-tag">Regulatory Update</div>
                 <div className="ins-t">New MoEFCC Guidelines on Fly Ash Utilization Explained</div>
                 <div className="ins-dt">Oct 12, 2024 · 5 min read</div>
               </div>
             </Link>
-            <Link to="/insights/2" className="ins-card">
-              <img src={U("1516934812323-c91726a42142")} alt="News 2" className="ins-img" />
+            <Link to="/insights" className="ins-card">
+              <img src={imgEsg} alt="News 2" className="ins-img" />
               <div className="ins-body">
                 <div className="ins-tag">ESG Trends</div>
                 <div className="ins-t">The Rise of Biodiversity Metrics in Corporate Sustainability Reporting</div>
                 <div className="ins-dt">Oct 05, 2024 · 7 min read</div>
               </div>
             </Link>
-            <Link to="/insights/3" className="ins-card">
-              <img src={U("1581091226825-a6a2a5aee158")} alt="News 3" className="ins-img" />
+            <Link to="/insights" className="ins-card">
+              <img src={imgWater} alt="News 3" className="ins-img" />
               <div className="ins-body">
                 <div className="ins-tag">Technology</div>
                 <div className="ins-t">Leveraging AI &amp; IoT for Real-time Emission Monitoring in Heavy Industry</div>
@@ -375,6 +386,10 @@ export default function Home() {
                 <span className="nabet-t">OHSAS 45001:2018</span>
                 <span className="nabet-t">MoEFCC</span>
                 <span className="nabet-t">QCI</span>
+              </div>
+              <div style={{ display: "flex", gap: "16px", marginTop: "32px", flexWrap: "wrap" }}>
+                <img src={certNabet} alt="NABET Certificate" style={{ width: "100%", maxWidth: "160px", borderRadius: "6px", border: "1px solid rgba(255,255,255,0.15)" }} />
+                <img src={certIso} alt="ISO Certificate" style={{ width: "100%", maxWidth: "160px", borderRadius: "6px", border: "1px solid rgba(255,255,255,0.15)" }} />
               </div>
             </div>
             <div>
