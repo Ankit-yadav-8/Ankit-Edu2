@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import { NavLink, Link, useNavigate } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { RCLogo, NabetLogo } from "./Logos.jsx";
-import { useAuth } from "../context/AuthContext.jsx";
 import { SECTORS } from "../data/sectors.js";
 
 // Split the 11 NABET sectors into 3 balanced columns for the mega-menu.
@@ -10,8 +9,6 @@ const SECTOR_COLS = [SECTORS.slice(0, 4), SECTORS.slice(4, 8), SECTORS.slice(8)]
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { user, logout } = useAuth();
-  const navigate = useNavigate();
 
   const closeMenu = () => {
     setOpen(false);
@@ -23,12 +20,6 @@ export default function Navbar() {
     onScroll();
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  const handleLogout = () => {
-    logout();
-    navigate("/");
-    closeMenu();
-  };
 
   return (
     <>
@@ -153,18 +144,6 @@ export default function Navbar() {
             <li>
               <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>Contact Us</NavLink>
             </li>
-
-            {/* shown only inside the mobile dropdown */}
-            <li className="nav-mobile-cta">
-              {user ? (
-                <button className="btn btn-ghost btn-sm" onClick={handleLogout}>Log out</button>
-              ) : (
-                <>
-                  <Link to="/login" className="btn btn-ghost btn-sm" onClick={closeMenu}>Log in</Link>
-                  <Link to="/signup" className="btn btn-primary btn-sm" onClick={closeMenu}>Sign up</Link>
-                </>
-              )}
-            </li>
           </ul>
 
           {/* Right — NABET accreditation logo + mobile toggle */}
@@ -212,7 +191,6 @@ export default function Navbar() {
         </div>
         <div className="mob-sec">
           <Link to="/sectors" className="mob-lnk" onClick={closeMenu}>NABET Sectors</Link>
-          <Link to="/login" className="mob-lnk" onClick={closeMenu}>Client Login</Link>
           <Link to="/contact" className="mob-lnk accent" onClick={closeMenu}>Contact Us →</Link>
         </div>
       </div>
