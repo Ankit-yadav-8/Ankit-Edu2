@@ -2,6 +2,10 @@ import { useState, useEffect } from "react";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 import { RCLogo, NabetLogo } from "./Logos.jsx";
 import { useAuth } from "../context/AuthContext.jsx";
+import { SECTORS } from "../data/sectors.js";
+
+// Split the 11 NABET sectors into 3 balanced columns for the mega-menu.
+const SECTOR_COLS = [SECTORS.slice(0, 4), SECTORS.slice(4, 8), SECTORS.slice(8)];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -50,31 +54,27 @@ export default function Navbar() {
                 </div>
                 <div className="mega-r">
                   <div>
-                    <Link to="/services/eia" className="m-lnk" onClick={closeMenu}>EIA / ESIA Studies <span className="ma">→</span></Link>
-                    <Link to="/services/forest" className="m-lnk" onClick={closeMenu}>Forest &amp; Wildlife Clearance <span className="ma">→</span></Link>
-                    <Link to="/services/audit" className="m-lnk" onClick={closeMenu}>Environmental Auditing <span className="ma">→</span></Link>
-                    <Link to="/services/air" className="m-lnk" onClick={closeMenu}>Air Quality Assessment <span className="ma">→</span></Link>
-                    <Link to="/services/gis" className="m-lnk" onClick={closeMenu}>Remote Sensing &amp; GIS <span className="ma">→</span></Link>
-                    <Link to="/services/waste" className="m-lnk" onClick={closeMenu}>Waste Management <span className="ma">→</span></Link>
-                    <Link to="/services/noise" className="m-lnk" onClick={closeMenu}>Noise Impact Studies <span className="ma">→</span></Link>
+                    <Link to="/services?cat=Assessment" className="m-lnk" onClick={closeMenu}>EIA / ESIA Studies <span className="ma">→</span></Link>
+                    <Link to="/services?cat=Clearance" className="m-lnk" onClick={closeMenu}>Forest &amp; Wildlife Clearance <span className="ma">→</span></Link>
+                    <Link to="/services?cat=Audit" className="m-lnk" onClick={closeMenu}>Environmental Auditing <span className="ma">→</span></Link>
+                    <Link to="/services?cat=Monitoring" className="m-lnk" onClick={closeMenu}>Air &amp; Water Monitoring <span className="ma">→</span></Link>
+                    <Link to="/services?cat=Geospatial" className="m-lnk" onClick={closeMenu}>Remote Sensing &amp; GIS <span className="ma">→</span></Link>
+                    <Link to="/services?cat=Audit" className="m-lnk" onClick={closeMenu}>Waste &amp; Compliance <span className="ma">→</span></Link>
                   </div>
                   <div>
-                    <Link to="/services/wildlife" className="m-lnk" onClick={closeMenu}>Wildlife &amp; Biodiversity <span className="ma">→</span></Link>
-                    <Link to="/services/water" className="m-lnk" onClick={closeMenu}>Water Quality Studies <span className="ma">→</span></Link>
-                    <Link to="/services/esg" className="m-lnk" onClick={closeMenu}>ESG Advisory &amp; Reporting <span className="ma">→</span></Link>
-                    <Link to="/services/climate" className="m-lnk" onClick={closeMenu}>Climate Change &amp; Carbon <span className="ma">→</span></Link>
-                    <Link to="/services/ehs" className="m-lnk" onClick={closeMenu}>EHS Management <span className="ma">→</span></Link>
-                    <Link to="/services/risk" className="m-lnk" onClick={closeMenu}>Risk Assessment <span className="ma">→</span></Link>
-                    <Link to="/services/compliance" className="m-lnk" onClick={closeMenu}>Regulatory Compliance <span className="ma">→</span></Link>
+                    <Link to="/services?cat=Clearance" className="m-lnk" onClick={closeMenu}>Wildlife &amp; Biodiversity <span className="ma">→</span></Link>
+                    <Link to="/services?cat=ESG" className="m-lnk" onClick={closeMenu}>ESG Advisory &amp; Reporting <span className="ma">→</span></Link>
+                    <Link to="/services?cat=ESG" className="m-lnk" onClick={closeMenu}>Climate Change &amp; Carbon <span className="ma">→</span></Link>
+                    <Link to="/services?cat=Assessment" className="m-lnk" onClick={closeMenu}>Risk Assessment <span className="ma">→</span></Link>
+                    <Link to="/services?cat=Monitoring" className="m-lnk" onClick={closeMenu}>Marine &amp; Coastal Studies <span className="ma">→</span></Link>
+                    <Link to="/services?cat=ESG" className="m-lnk" onClick={closeMenu}>Training Programmes <span className="ma">→</span></Link>
                   </div>
                   <div>
-                    <Link to="/services/ai" className="m-lnk" onClick={closeMenu}>AI-Driven Monitoring <span className="ma">→</span></Link>
-                    <Link to="/services/social" className="m-lnk" onClick={closeMenu}>Social Impact Assessment <span className="ma">→</span></Link>
-                    <Link to="/services/marine" className="m-lnk" onClick={closeMenu}>Marine Environmental Studies <span className="ma">→</span></Link>
-                    <Link to="/services/bio" className="m-lnk" onClick={closeMenu}>Biodiversity Surveys <span className="ma">→</span></Link>
-                    <Link to="/services/cum" className="m-lnk" onClick={closeMenu}>Cumulative Impact Studies <span className="ma">→</span></Link>
-                    <Link to="/services/rapid" className="m-lnk" onClick={closeMenu}>Rapid EIA <span className="ma">→</span></Link>
-                    <Link to="/services/train" className="m-lnk" onClick={closeMenu}>Training Programs <span className="ma">→</span></Link>
+                    <Link to="/products" className="m-lnk" onClick={closeMenu}>CEQMS Monitoring <span className="ma">→</span></Link>
+                    <Link to="/ai-integration" className="m-lnk" onClick={closeMenu}>AI-Driven Monitoring <span className="ma">→</span></Link>
+                    <Link to="/infrastructure" className="m-lnk" onClick={closeMenu}>NABL Laboratory <span className="ma">→</span></Link>
+                    <Link to="/sectors" className="m-lnk" onClick={closeMenu}>NABET Sectors <span className="ma">→</span></Link>
+                    <Link to="/services" className="m-lnk accent" onClick={closeMenu}>All Solutions <span className="ma">→</span></Link>
                   </div>
                 </div>
               </div>
@@ -82,33 +82,34 @@ export default function Navbar() {
 
             <li className="has-dropdown">
               <div className="dd-row">
-                <NavLink to="/industries" className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>Industries</NavLink>
-                <button type="button" className="dd-caret" aria-label="Toggle industries" onClick={() => {}}>▾</button>
+                <NavLink to="/sectors" className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>Sectors</NavLink>
+                <button type="button" className="dd-caret" aria-label="Toggle sectors" onClick={() => {}}>▾</button>
               </div>
               <div className="mega">
                 <div className="mega-l">
-                  <div className="m-label">Industries</div>
-                  <div className="m-title">We focus on the greatest <em>environmental challenges</em> across all sectors.</div>
-                  <Link to="/industries" className="m-explore" onClick={closeMenu}>Explore →</Link>
+                  <div className="m-label">NABET Sectors</div>
+                  <div className="m-title">Category-A accredited across <em>{SECTORS.length} industrial sectors</em>.</div>
+                  <Link to="/sectors" className="m-explore" onClick={closeMenu}>Explore →</Link>
                 </div>
                 <div className="mega-r">
-                  <div>
-                    <Link to="/industries/mining" className="m-lnk" onClick={closeMenu}>Mining &amp; Minerals <span className="ma">→</span></Link>
-                    <Link to="/industries/oilgas" className="m-lnk" onClick={closeMenu}>Oil &amp; Gas <span className="ma">→</span></Link>
-                    <Link to="/industries/chem" className="m-lnk" onClick={closeMenu}>Chemical Industry <span className="ma">→</span></Link>
-                  </div>
-                  <div>
-                    <Link to="/industries/power" className="m-lnk" onClick={closeMenu}>Power &amp; Energy <span className="ma">→</span></Link>
-                    <Link to="/industries/infra" className="m-lnk" onClick={closeMenu}>Infrastructure <span className="ma">→</span></Link>
-                    <Link to="/industries/pharma" className="m-lnk" onClick={closeMenu}>Pharmaceutical <span className="ma">→</span></Link>
-                  </div>
-                  <div>
-                    <Link to="/industries/mfg" className="m-lnk" onClick={closeMenu}>Manufacturing <span className="ma">→</span></Link>
-                    <Link to="/industries/re" className="m-lnk" onClick={closeMenu}>Real Estate &amp; Construction <span className="ma">→</span></Link>
-                    <Link to="/industries/ports" className="m-lnk" onClick={closeMenu}>Ports &amp; Airports <span className="ma">→</span></Link>
-                  </div>
+                  {SECTOR_COLS.map((col, ci) => (
+                    <div key={ci}>
+                      {col.map((s) => (
+                        <Link key={s.slug} to={`/sectors/${s.slug}`} className="m-lnk" onClick={closeMenu}>
+                          {s.name} <span className="ma">→</span>
+                        </Link>
+                      ))}
+                      {ci === 2 && (
+                        <Link to="/sectors" className="m-lnk accent" onClick={closeMenu}>All Sectors <span className="ma">→</span></Link>
+                      )}
+                    </div>
+                  ))}
                 </div>
               </div>
+            </li>
+
+            <li>
+              <NavLink to="/ai-integration" className={({ isActive }) => (isActive ? "active ai-link" : "ai-link")} onClick={closeMenu}>✨ AI</NavLink>
             </li>
 
             <li className="has-dropdown">
@@ -125,18 +126,18 @@ export default function Navbar() {
                 <div className="mega-r">
                   <div>
                     <Link to="/about" className="m-lnk" onClick={closeMenu}>Our Company <span className="ma">→</span></Link>
-                    <Link to="/about/people" className="m-lnk" onClick={closeMenu}>Our People <span className="ma">→</span></Link>
+                    <Link to="/about" className="m-lnk" onClick={closeMenu}>Our People <span className="ma">→</span></Link>
                     <Link to="/projects" className="m-lnk" onClick={closeMenu}>Our Work <span className="ma">→</span></Link>
-                    <Link to="/about/nabet" className="m-lnk" onClick={closeMenu}>NABET Accreditation <span className="ma">→</span></Link>
+                    <Link to="/sectors" className="m-lnk" onClick={closeMenu}>NABET Accreditation <span className="ma">→</span></Link>
                   </div>
                   <div>
-                    <Link to="/events" className="m-lnk" onClick={closeMenu}>Events <span className="ma">→</span></Link>
+                    <Link to="/infrastructure" className="m-lnk" onClick={closeMenu}>Infrastructure &amp; Lab <span className="ma">→</span></Link>
+                    <Link to="/clientele" className="m-lnk" onClick={closeMenu}>Our Clientele <span className="ma">→</span></Link>
                     <Link to="/contact" className="m-lnk" onClick={closeMenu}>Locations <span className="ma">→</span></Link>
-                    <Link to="/about/moefcc" className="m-lnk" onClick={closeMenu}>MoEFCC Registration <span className="ma">→</span></Link>
                   </div>
                   <div>
-                    <Link to="/insights" className="m-lnk" onClick={closeMenu}>News &amp; Insights <span className="ma">→</span></Link>
-                    <Link to="/about/nsic" className="m-lnk" onClick={closeMenu}>NSIC Certification <span className="ma">→</span></Link>
+                    <Link to="/ai-integration" className="m-lnk" onClick={closeMenu}>AI Integration <span className="ma">→</span></Link>
+                    <Link to="/products" className="m-lnk" onClick={closeMenu}>Products <span className="ma">→</span></Link>
                     <Link to="/contact" className="m-lnk" onClick={closeMenu}>Careers <span className="ma">→</span></Link>
                   </div>
                 </div>
@@ -152,7 +153,7 @@ export default function Navbar() {
             <li>
               <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>Contact Us</NavLink>
             </li>
-            
+
             {/* shown only inside the mobile dropdown */}
             <li className="nav-mobile-cta">
               {user ? (
@@ -166,29 +167,17 @@ export default function Navbar() {
             </li>
           </ul>
 
-          {/* Right — auth buttons + NABET logo + mobile toggle */}
+          {/* Right — NABET accreditation logo + mobile toggle */}
           <div className="nav-right">
-            <div className="nav-actions" style={{ display: "none" }}>
-              {user ? (
-                <>
-                  <span className="user-chip"><span className="avatar">{(user.name?.[0] || "U").toUpperCase()}</span></span>
-                  <button className="btn btn-ghost btn-sm" onClick={handleLogout}>Log out</button>
-                </>
-              ) : (
-                <>
-                  <Link to="/login" className="btn btn-ghost btn-sm">Log in</Link>
-                  <Link to="/signup" className="btn btn-primary btn-sm">Sign up</Link>
-                </>
-              )}
-            </div>
-            
-            <Link to="/contact" className="nav-cta" style={{ display: open ? "none" : "inline-flex" }}>Contact →</Link>
+            <Link to="/sectors" className="nabet-logo" aria-label="NABET accredited — view our sectors" onClick={closeMenu}>
+              <NabetLogo height={58} />
+            </Link>
 
             <button
               className={`hbg ${open ? "open" : ""}`}
               aria-label="Toggle menu"
+              aria-expanded={open}
               onClick={() => setOpen((o) => !o)}
-              style={{ display: "flex", alignSelf: "center", marginLeft: 10 }}
             >
               <span></span><span></span><span></span>
             </button>
@@ -200,32 +189,30 @@ export default function Navbar() {
       <div className={`mob-nav ${open ? "open" : ""}`}>
         <div className="mob-sec">
           <div className="mob-hd">Solutions</div>
-          <Link to="/services/eia" className="mob-lnk" onClick={closeMenu}>EIA / ESIA Studies</Link>
-          <Link to="/services/forest" className="mob-lnk" onClick={closeMenu}>Forest &amp; Wildlife Clearance</Link>
-          <Link to="/services/gis" className="mob-lnk" onClick={closeMenu}>Remote Sensing &amp; GIS</Link>
-          <Link to="/services/esg" className="mob-lnk" onClick={closeMenu}>ESG Advisory</Link>
-          <Link to="/services/ai" className="mob-lnk" onClick={closeMenu}>AI-Driven Monitoring</Link>
-          <Link to="/services/climate" className="mob-lnk" onClick={closeMenu}>Climate Change &amp; Carbon</Link>
+          <Link to="/services?cat=Assessment" className="mob-lnk" onClick={closeMenu}>EIA / ESIA Studies</Link>
+          <Link to="/services?cat=Clearance" className="mob-lnk" onClick={closeMenu}>Forest &amp; Wildlife Clearance</Link>
+          <Link to="/services?cat=Geospatial" className="mob-lnk" onClick={closeMenu}>Remote Sensing &amp; GIS</Link>
+          <Link to="/services?cat=ESG" className="mob-lnk" onClick={closeMenu}>ESG Advisory</Link>
           <Link to="/services" className="mob-lnk accent" onClick={closeMenu}>All Solutions →</Link>
         </div>
         <div className="mob-sec">
-          <div className="mob-hd">Industries</div>
-          <Link to="/industries/mining" className="mob-lnk" onClick={closeMenu}>Mining &amp; Minerals</Link>
-          <Link to="/industries/oilgas" className="mob-lnk" onClick={closeMenu}>Oil &amp; Gas</Link>
-          <Link to="/industries/power" className="mob-lnk" onClick={closeMenu}>Power &amp; Energy</Link>
-          <Link to="/industries/infra" className="mob-lnk" onClick={closeMenu}>Infrastructure</Link>
-          <Link to="/industries" className="mob-lnk accent" onClick={closeMenu}>All Industries →</Link>
+          <div className="mob-hd">Sectors</div>
+          {SECTORS.slice(0, 5).map((s) => (
+            <Link key={s.slug} to={`/sectors/${s.slug}`} className="mob-lnk" onClick={closeMenu}>{s.name}</Link>
+          ))}
+          <Link to="/sectors" className="mob-lnk accent" onClick={closeMenu}>All {SECTORS.length} Sectors →</Link>
         </div>
         <div className="mob-sec">
-          <div className="mob-hd">About</div>
-          <Link to="/about" className="mob-lnk" onClick={closeMenu}>Our Company</Link>
-          <Link to="/about/nabet" className="mob-lnk" onClick={closeMenu}>NABET Accreditation</Link>
-          <Link to="/projects" className="mob-lnk" onClick={closeMenu}>Our Projects</Link>
-          <Link to="/insights" className="mob-lnk" onClick={closeMenu}>News &amp; Insights</Link>
+          <div className="mob-hd">Company</div>
+          <Link to="/ai-integration" className="mob-lnk" onClick={closeMenu}>✨ AI Integration</Link>
+          <Link to="/about" className="mob-lnk" onClick={closeMenu}>About Us</Link>
+          <Link to="/infrastructure" className="mob-lnk" onClick={closeMenu}>Infrastructure</Link>
+          <Link to="/clientele" className="mob-lnk" onClick={closeMenu}>Clientele</Link>
+          <Link to="/products" className="mob-lnk" onClick={closeMenu}>Products</Link>
         </div>
         <div className="mob-sec">
-          <Link to="/projects" className="mob-lnk" onClick={closeMenu}>Projects</Link>
-          <Link to="/insights" className="mob-lnk" onClick={closeMenu}>Insights</Link>
+          <Link to="/sectors" className="mob-lnk" onClick={closeMenu}>NABET Sectors</Link>
+          <Link to="/login" className="mob-lnk" onClick={closeMenu}>Client Login</Link>
           <Link to="/contact" className="mob-lnk accent" onClick={closeMenu}>Contact Us →</Link>
         </div>
       </div>

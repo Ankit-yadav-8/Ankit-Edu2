@@ -11,6 +11,8 @@ import About from "./pages/About.jsx";
 import Services from "./pages/Services.jsx";
 import Products from "./pages/Products.jsx";
 import Infrastructure from "./pages/Infrastructure.jsx";
+import Sectors from "./pages/Sectors.jsx";
+import SectorDetail from "./pages/SectorDetail.jsx";
 import Clientele from "./pages/Clientele.jsx";
 import AiIntegration from "./pages/AiIntegration.jsx";
 import Contact from "./pages/Contact.jsx";
@@ -29,12 +31,15 @@ export default function App() {
       "/services": "Services | Rejig GreenLogic",
       "/products": "Products & AI | Rejig GreenLogic",
       "/infrastructure": "Infrastructure | Rejig GreenLogic",
+      "/sectors": "NABET Sectors | Rejig GreenLogic",
       "/clientele": "Clientele | Rejig GreenLogic",
       "/ai-integration": "AI Integration | Rejig GreenLogic",
       "/contact": "Contact Us | Rejig GreenLogic",
       "/login": "Log In | Rejig GreenLogic",
       "/signup": "Sign Up | Rejig GreenLogic",
     };
+    // Sector detail pages (/sectors/:slug) set their own document title.
+    if (/^\/(sectors|industries)\/.+/.test(pathname)) return;
     document.title = titles[pathname] || "Rejig GreenLogic Private Limited";
   }, [pathname]);
 
@@ -49,7 +54,10 @@ export default function App() {
           <Route path="/services/*" element={<Services />} />
           <Route path="/products/*" element={<Products />} />
           <Route path="/infrastructure/*" element={<Infrastructure />} />
-          <Route path="/industries/*" element={<Infrastructure />} />
+          <Route path="/sectors" element={<Sectors />} />
+          <Route path="/sectors/:slug" element={<SectorDetail />} />
+          <Route path="/industries" element={<Sectors />} />
+          <Route path="/industries/:slug" element={<SectorDetail />} />
           <Route path="/projects/*" element={<Services />} />
           <Route path="/insights/*" element={<About />} />
           <Route path="/events/*" element={<About />} />

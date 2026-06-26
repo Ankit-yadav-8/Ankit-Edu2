@@ -33,11 +33,11 @@
 .nav-item:hover .arr { transform: rotate(180deg); }
 
 .mega {
-  position: absolute; top: calc(100% + 10px); left: 50%; transform: translateX(-50%);
+  position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
   background: #ffffff; border-top: 3px solid var(--violet-600);
-  border-radius: 0 0 14px 14px;
+  border-radius: 0 0 16px 16px;
   box-shadow: 0 20px 56px rgba(0,0,0,.13);
-  padding: 36px 40px; min-width: 860px;
+  padding: 32px 36px; width: min(980px, calc(100vw - 32px));
   display: grid; grid-template-columns: 220px 1fr; gap: 36px;
   opacity: 0; visibility: hidden; pointer-events: none;
   transition: opacity .18s, visibility .18s;

@@ -4,6 +4,7 @@ import Reveal from "../components/Reveal.jsx";
 import PageHero from "../components/PageHero.jsx";
 import SmartImg from "../components/SmartImg.jsx";
 import { SERVICES, SERVICE_CATEGORIES, CATEGORY_IMG } from "../data/services.js";
+import { SECTOR_COUNT } from "../data/sectors.js";
 import { IconSearch, IconArrow } from "../components/Icons.jsx";
 
 const getCatIcon = (cat) => {
@@ -53,7 +54,7 @@ export default function Services() {
         breadcrumb="Product & Services"
         cards={[
           { type: "info", icon: "📋", title: "30+ Services", sub: "Full compliance lifecycle", tone: "green" },
-          { type: "stat", num: 20, label: "NABET sectors", tone: "teal" },
+          { type: "stat", num: SECTOR_COUNT, label: "NABET sectors", tone: "teal" },
           { type: "info", icon: "🌿", title: "EIA / ESIA", sub: "IFC & ADB aligned", tone: "amber" },
           { type: "stat", num: 6, label: "Service categories", tone: "green" },
         ]}

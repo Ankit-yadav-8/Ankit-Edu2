@@ -33,7 +33,7 @@ export default function Home() {
         <div className="container">
           <span><b>3,000+</b> industrial units served</span><span className="dot" />
           <span><b>50+</b> sectoral areas</span><span className="dot" />
-          <span><b>20</b> NABET-accredited sectors</span><span className="dot" />
+          <span><b>11</b> NABET-accredited sectors</span><span className="dot" />
           <span><b>India</b> &amp; abroad</span>
         </div>
       </div>
@@ -121,7 +121,7 @@ export default function Home() {
             <div className="s-lbl">Sectoral Areas<br/>Covered</div>
           </div>
           <div className="s-item">
-            <div className="s-num"><Counter to={20} /></div>
+            <div className="s-num"><Counter to={11} /></div>
             <div className="s-lbl">NABET Accredited<br/>Sectors</div>
           </div>
           <div className="s-item">
@@ -167,63 +167,63 @@ export default function Home() {
 
           <div className="sol-grid">
             <Reveal delay={0}>
-              <Link to="/services/eia" className="sol-card">
+              <Link to="/services?cat=Assessment" className="sol-card">
                 <div className="sol-ico">🌿</div>
                 <div className="sol-nm">EIA / ESIA Studies <span className="sol-a">→</span></div>
-                <div className="sol-d">MoEFCC-compliant Environmental and Social Impact Assessments across 15+ NABET accredited project categories.</div>
+                <div className="sol-d">MoEFCC-compliant Environmental and Social Impact Assessments across our 11 NABET-accredited sectors.</div>
               </Link>
             </Reveal>
             <Reveal delay={1}>
-              <Link to="/services/forest" className="sol-card">
+              <Link to="/services?cat=Clearance" className="sol-card">
                 <div className="sol-ico">🐅</div>
                 <div className="sol-nm">Forest &amp; Wildlife Clearance <span className="sol-a">→</span></div>
                 <div className="sol-d">Biodiversity Impact Assessments, Wildlife Conservation Plans, and seamless processing of Stage I &amp; II forest clearances.</div>
               </Link>
             </Reveal>
             <Reveal delay={2}>
-              <Link to="/services/gis" className="sol-card">
+              <Link to="/services?cat=Geospatial" className="sol-card">
                 <div className="sol-ico">🛰️</div>
                 <div className="sol-nm">Remote Sensing &amp; GIS <span className="sol-a">→</span></div>
                 <div className="sol-d">Advanced Land Use/Land Cover mapping, mining plan preparation, and DGPS surveys utilizing high-res satellite imagery.</div>
               </Link>
             </Reveal>
             <Reveal delay={3}>
-              <Link to="/services/esg" className="sol-card">
+              <Link to="/services?cat=ESG" className="sol-card">
                 <div className="sol-ico">📊</div>
                 <div className="sol-nm">ESG Advisory &amp; Reporting <span className="sol-a">→</span></div>
                 <div className="sol-d">Sustainability strategy development, ESG framework alignment (GRI, SASB), and comprehensive corporate sustainability reporting.</div>
               </Link>
             </Reveal>
             <Reveal delay={4}>
-              <Link to="/services/air" className="sol-card">
+              <Link to="/services?cat=Monitoring" className="sol-card">
                 <div className="sol-ico">💨</div>
                 <div className="sol-nm">Air Quality Assessment <span className="sol-a">→</span></div>
                 <div className="sol-d">Baseline monitoring, emission inventory, and atmospheric dispersion modeling (AERMOD) for industrial and urban projects.</div>
               </Link>
             </Reveal>
             <Reveal delay={5}>
-              <Link to="/services/climate" className="sol-card">
+              <Link to="/services?cat=ESG" className="sol-card">
                 <div className="sol-ico">🌍</div>
                 <div className="sol-nm">Climate Change &amp; Carbon <span className="sol-a">→</span></div>
                 <div className="sol-d">GHG footprint analysis, net-zero roadmaps, and climate risk vulnerability assessments to build resilient operations.</div>
               </Link>
             </Reveal>
             <Reveal delay={6}>
-              <Link to="/services/water" className="sol-card">
+              <Link to="/services?cat=Monitoring" className="sol-card">
                 <div className="sol-ico">💧</div>
                 <div className="sol-nm">Water Quality Studies <span className="sol-a">→</span></div>
                 <div className="sol-d">Hydrogeological assessments, groundwater modeling, and design of effluent treatment and zero liquid discharge (ZLD) systems.</div>
               </Link>
             </Reveal>
             <Reveal delay={7}>
-              <Link to="/services/ehs" className="sol-card">
+              <Link to="/services?cat=Audit" className="sol-card">
                 <div className="sol-ico">🛡️</div>
                 <div className="sol-nm">EHS Management <span className="sol-a">→</span></div>
                 <div className="sol-d">Occupational health and safety audits, risk assessment, and implementation of robust EHS management systems.</div>
               </Link>
             </Reveal>
             <Reveal delay={8}>
-              <Link to="/services/ai" className="sol-card">
+              <Link to="/ai-integration" className="sol-card">
                 <div className="sol-ico">🤖</div>
                 <div className="sol-nm">AI-Driven Monitoring <span className="sol-a">→</span></div>
                 <div className="sol-d">Real-time IoT environmental monitoring and predictive AI analytics to preemptively manage compliance risks.</div>
@@ -232,7 +232,7 @@ export default function Home() {
           </div>
 
           <div className="mt36 tc">
-            <Link to="/services" className="view-all">View all 20+ Solutions →</Link>
+            <Link to="/services" className="view-all">View all Solutions →</Link>
           </div>
         </div>
       </section>
@@ -264,41 +264,41 @@ export default function Home() {
           </Reveal>
 
           <div className="ind-grid">
-            <Link to="/industries/mining" className="ind-card">
+            <Link to="/sectors/mining" className="ind-card">
               <div className="ind-n">01</div>
               <div className="ind-nm">Mining &amp; Minerals <span>→</span></div>
             </Link>
-            <Link to="/industries/oilgas" className="ind-card">
+            <Link to="/sectors/oil-gas-exploration" className="ind-card">
               <div className="ind-n">02</div>
               <div className="ind-nm">Oil &amp; Gas <span>→</span></div>
             </Link>
-            <Link to="/industries/power" className="ind-card">
+            <Link to="/sectors/thermal-power" className="ind-card">
               <div className="ind-n">03</div>
               <div className="ind-nm">Power &amp; Energy <span>→</span></div>
             </Link>
-            <Link to="/industries/infra" className="ind-card">
+            <Link to="/sectors/building-construction" className="ind-card">
               <div className="ind-n">04</div>
-              <div className="ind-nm">Infrastructure &amp; Highways <span>→</span></div>
+              <div className="ind-nm">Infrastructure &amp; Building <span>→</span></div>
             </Link>
-            <Link to="/industries/chem" className="ind-card">
+            <Link to="/sectors/synthetic-organic-chemicals" className="ind-card">
               <div className="ind-n">05</div>
               <div className="ind-nm">Chemical &amp; Petrochemical <span>→</span></div>
             </Link>
-            <Link to="/industries/mfg" className="ind-card">
+            <Link to="/sectors/metallurgical" className="ind-card">
               <div className="ind-n">06</div>
-              <div className="ind-nm">Heavy Manufacturing <span>→</span></div>
+              <div className="ind-nm">Metallurgical Industries <span>→</span></div>
             </Link>
-            <Link to="/industries/pharma" className="ind-card">
+            <Link to="/sectors/cement" className="ind-card">
               <div className="ind-n">07</div>
-              <div className="ind-nm">Pharmaceuticals <span>→</span></div>
+              <div className="ind-nm">Cement Plants <span>→</span></div>
             </Link>
-            <Link to="/industries/re" className="ind-card">
+            <Link to="/sectors/townships" className="ind-card">
               <div className="ind-n">08</div>
               <div className="ind-nm">Real Estate &amp; Townships <span>→</span></div>
             </Link>
-            <Link to="/industries/ports" className="ind-card">
+            <Link to="/sectors/oil-gas-pipeline" className="ind-card">
               <div className="ind-n">09</div>
-              <div className="ind-nm">Ports &amp; Harbours <span>→</span></div>
+              <div className="ind-nm">Oil &amp; Gas Pipelines <span>→</span></div>
             </Link>
           </div>
         </div>

@@ -17,7 +17,7 @@ advisory firm incorporated on 15 December 2021, headquartered in Hyderabad, Tela
 RGPL has delivered environmental solutions to 3,000+ specialised industrial units across India
 and abroad, covering 50+ sectoral areas.
 
-ACCREDITATIONS: NABET accreditation across 20 sectors; MoEFCC (Ministry of Environment, Forest
+ACCREDITATIONS: QCI-NABET Category-A accreditation across 11 sectors; MoEFCC (Ministry of Environment, Forest
 & Climate Change) empanelment; NSIC (National Small Scale Industrial Corporation) registration.
 
 CORE SERVICES: Techno-Legal Advisory; Environmental Impact Assessment (EIA); Environment & Social
@@ -47,7 +47,7 @@ function localAnswer(message) {
   if (has("hi", "hello", "hey") && q.length < 12)
     return "Hello! 👋 I'm RGPL's assistant. Ask me about our services, NABET sectors, accreditations, the CEQMS air/effluent monitoring products, or how to get a proposal.";
   if (has("nabet", "accredit", "moefcc", "nsic", "certif"))
-    return "RGPL holds NABET accreditation across 20 sectors, MoEFCC empanelment, and NSIC registration — so our EIA/ESIA studies are recognised by Indian regulators.";
+    return "RGPL holds QCI-NABET Category-A accreditation across 11 sectors, MoEFCC empanelment, and NSIC registration — so our EIA/ESIA studies are recognised by Indian regulators.";
   if (has("eia", "esia", "environmental impact", "social impact"))
     return "We carry out full EIA and ESIA studies (aligned to IFC & ADB guidelines), including baseline monitoring, compliance auditing and permitting. Want me to route you to our enquiry form?";
   if (has("ceqms", "effluent", "air quality", "aaqms", "sensor", "monitoring product"))

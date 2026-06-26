@@ -8,7 +8,7 @@ export function localAnswer(message) {
   if (has("hi", "hello", "hey") && q.length < 12)
     return "Hello! 👋 I'm RGPL's assistant. Ask me about our services, NABET sectors, accreditations, the CEQMS air/effluent monitoring products, or how to get a proposal.";
   if (has("nabet", "accredit", "moefcc", "nsic", "certif"))
-    return "RGPL holds NABET accreditation across 20 sectors, MoEFCC empanelment, and NSIC registration — so our EIA/ESIA studies are recognised by Indian regulators.";
+    return "RGPL holds QCI-NABET Category-A accreditation across 11 sectors, MoEFCC empanelment, and NSIC registration — so our EIA/ESIA studies are recognised by Indian regulators.";
   if (has("eia", "esia", "environmental impact", "social impact"))
     return "We carry out full EIA and ESIA studies (aligned to IFC & ADB guidelines), including baseline monitoring, compliance auditing and permitting. Want me to route you to our enquiry form?";
   if (has("ceqms", "effluent", "air quality", "aaqms", "sensor", "monitoring product"))

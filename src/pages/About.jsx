@@ -15,20 +15,7 @@ const TEAM = [
 ];
 
 import Credentials from "../components/Credentials.jsx";
-
-const NABET_SECTORS = [
-  "Mining of Mineral — opencast mining only",
-  "Offshore and onshore oil & gas exploration, development & production",
-  "Thermal power plants",
-  "Metallurgical industries (Ferrous & Non-Ferrous)",
-  "Cement plants",
-  "Chlor-Alkali Industry",
-  "Manmade Fibers manufacturing",
-  "Synthetic organic chemicals industry",
-  "Oil & gas transportation projects",
-  "Building and construction projects",
-  "Township and Area development projects",
-];
+import { SECTORS, SECTOR_COUNT } from "../data/sectors.js";
 
 export default function About() {
   return (
@@ -42,7 +29,7 @@ export default function About() {
         cards={[
           { type: "stat", num: 3000, suffix: "+", label: "Units served", tone: "green" },
           { type: "stat", num: 50, suffix: "+", label: "Sectoral areas", tone: "teal" },
-          { type: "info", icon: "🏅", title: "NABET Accredited", sub: "20 sectors", tone: "amber" },
+          { type: "info", icon: "🏅", title: "NABET Accredited", sub: `${SECTOR_COUNT} sectors`, tone: "amber" },
           { type: "stat", num: 29, label: "Years of legacy", tone: "green" },
         ]}
       />
@@ -69,7 +56,7 @@ export default function About() {
               <div className="stat"><div className="num"><Counter to={3000} suffix="+" /></div><div className="lbl">Units served</div></div>
               <div className="stat"><div className="num"><Counter to={50} suffix="+" /></div><div className="lbl">Sectors</div></div>
               <div className="stat"><div className="num"><Counter to={2021} /></div><div className="lbl">Incorporated</div></div>
-              <div className="stat"><div className="num"><Counter to={20} /></div><div className="lbl">NABET sectors</div></div>
+              <div className="stat"><div className="num"><Counter to={SECTOR_COUNT} /></div><div className="lbl">NABET sectors</div></div>
             </div>
           </Reveal>
         </div>
@@ -149,18 +136,32 @@ export default function About() {
 
 
       {/* NABET certificate + sectors */}
-      <section className="section section--soft">
+      <section id="nabet" className="section section--soft">
         <div className="container">
           <Reveal className="section-head text-center">
             <span className="eyebrow">NABET Certificate</span>
-            <h2 className="section-title">Accredited across 11 NABET sectors</h2>
-            <p className="section-sub">Our certificate of accreditation covers the following industrial sectors.</p>
+            <h2 className="section-title">Accredited across {SECTOR_COUNT} NABET sectors</h2>
+            <p className="section-sub">
+              Our QCI-NABET Category-A certificate of accreditation (EIA Consultant Organization, Version 3)
+              covers the following industrial sectors, with their NABET / MoEFCC schedule references.
+            </p>
           </Reveal>
           <div className="cert-split" style={{ marginTop: 40 }}>
             <Reveal className="card">
               <ol className="sector-list">
-                {NABET_SECTORS.map((s) => <li key={s}>{s}</li>)}
+                {SECTORS.map((s) => (
+                  <li key={s.slug}>
+                    <span>{s.name}{s.scope ? ` — ${s.scope.toLowerCase()}` : ""}</span>
+                    <span className="sector-list__meta">
+                      <span className="tag">NABET {s.nabet}</span>
+                      <span className={`sector-badge cat-${s.category}`}>Cat {s.category}</span>
+                    </span>
+                  </li>
+                ))}
               </ol>
+              <Link to="/sectors" className="btn btn-ghost btn-sm" style={{ marginTop: 18 }}>
+                View all sectors in detail <IconArrow size={16} />
+              </Link>
             </Reveal>
             <Reveal delay={1} className="cert-frame">
               <img src={nabetCert} alt="NABET Certificate of Accreditation" loading="lazy" />
