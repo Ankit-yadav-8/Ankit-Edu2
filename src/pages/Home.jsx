@@ -806,47 +806,26 @@ export default function Home() {
             <h2 className="section-title">Vision &amp; Mission</h2>
           </Reveal>
           <div className="vm-split" style={{ marginTop: 44 }}>
-            
-            {/* Left side: 2-image masonry layout */}
-            <Reveal className="vm-image-grid">
-              <div className="vm-img-left">
-                <img src={U("1518509562904-427218683e92")} alt="Sustainable Facility" />
-              </div>
-              <div className="vm-img-right">
-                <img src={U("1507528562238-eb70220fc843")} alt="Ocean Waves" />
-              </div>
+            <Reveal className="vm-image">
+              <img src={visionImg} alt="Nature and industry in partnership" />
             </Reveal>
-
-            {/* Right side: More content + Cards */}
-            <Reveal delay={1} className="vm-content">
-              <h3 style={{ fontSize: "1.8rem", marginBottom: 16, color: "var(--heading)", lineHeight: 1.2 }}>
-                Driving Sustainable Innovation &amp; Engineering
-              </h3>
-              <p style={{ color: "var(--muted)", marginBottom: 28, lineHeight: 1.6, fontSize: "1.05rem" }}>
-                Rejig GreenLogic Private Limited bridges the critical gap between industrial development 
-                and ecological conservation. Our holistic approach integrates rigorous on-ground monitoring, 
-                advanced technology, and strategic advisory to ensure that progress never comes at the cost 
-                of our planet's future. We deliver measurable, sustainable results for organizations worldwide.
-              </p>
-
-              <div className="vm-cards">
-                <div className="vm-card">
-                  <div className="ico"><IconEye size={26} /></div>
-                  <div>
-                    <h3>Our Vision</h3>
-                    <p>To become the valued partner with which clients can pivot their green image &amp; sustainability drive, creating a legacy of environmental excellence.</p>
-                  </div>
+            <Reveal delay={1} className="vm-cards">
+              <div className="vm-card">
+                <div className="ico"><IconEye size={26} /></div>
+                <div>
+                  <h3>Our Vision</h3>
+                  <p>To become the valued partner with which clients can pivot their green image &amp; sustainability drive.</p>
                 </div>
-                <div className="vm-card">
-                  <div className="ico"><IconShield size={26} /></div>
-                  <div>
-                    <h3>Our Mission</h3>
-                    <p>
-                      Maintaining the highest integrity to QCI, NABET and MoEF&amp;CC standards. We build on a 
-                      culture of trust, responsibility, and collaboration to preach and execute green initiatives 
-                      that delight our customers.
-                    </p>
-                  </div>
+              </div>
+              <div className="vm-card">
+                <div className="ico"><IconShield size={26} /></div>
+                <div>
+                  <h3>Our Mission</h3>
+                  <p>
+                    Maintaining the highest integrity to QCI, NABET and MoEF&amp;CC standards — built on a
+                    culture of trust, responsibility, collaboration and performance, as a responsible
+                    entity preaching green initiatives that delight our customers.
+                  </p>
                 </div>
               </div>
             </Reveal>

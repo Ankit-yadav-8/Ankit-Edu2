@@ -1045,46 +1045,16 @@ body.chat-open .back-to-top { opacity: 0; visibility: hidden; pointer-events: no
 /* Vision & Mission */
 .vm-split {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: center;
 }
-.vm-image-grid {
-  display: flex;
-  gap: 16px;
-  align-items: stretch;
-  height: 100%;
-  min-height: 480px;
-}
-.vm-img-left {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.vm-img-left img {
-  border-radius: 16px;
-  width: 100%;
-  aspect-ratio: 1 / 1.15;
-  object-fit: cover;
+.vm-image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
   box-shadow: var(--shadow-lg);
 }
-.vm-img-right {
-  flex: 1;
-  display: flex;
-}
-.vm-img-right img {
-  border-radius: 16px;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  box-shadow: var(--shadow-lg);
-}
-.vm-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+.vm-image img { width: 100%; height: auto; display: block; }
 .vm-cards {
   display: flex;
   flex-direction: column;
