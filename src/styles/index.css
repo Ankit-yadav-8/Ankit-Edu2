@@ -1034,6 +1034,12 @@ body.chat-open .back-to-top { opacity: 0; visibility: hidden; pointer-events: no
 .dp-list {
   margin-bottom: 32px;
 }
+.dp-list-cols {
+  columns: 2;
+  column-gap: 40px;
+}
+.mb-24 { margin-bottom: 24px !important; }
+
 .dp-list li {
   position: relative;
   padding-left: 28px;
@@ -1080,16 +1086,19 @@ body.chat-open .back-to-top { opacity: 0; visibility: hidden; pointer-events: no
     grid-template-columns: 1fr;
     gap: 40px;
   }
+  .dp-list-cols {
+    columns: 1; /* Collapse to 1 column on mobile/tablet */
+  }
   .dp-grid.reverse .dp-text { order: unset; }
   .dp-grid.reverse .dp-media { order: unset; }
 }
 
 @media (max-width: 860px) {
-  .hero-carousel { height: auto; min-height: 600px; }
-  .hero-slide { padding: 30px 0 46px; }
-  .hero-slide__grid { grid-template-columns: 1fr; gap: 20px; }
-  .hero-slide__media { order: -1; aspect-ratio: auto; max-height: 230px; padding: 10px; }
-  .hero-slide__media img { max-height: 210px; }
+  .hero-carousel { height: 100svh; min-height: 850px; }
+  .hero-slide { padding: 90px 0 46px; }
+  .hero-slide__grid { grid-template-columns: 1fr; gap: 24px; }
+  .hero-slide__media { order: -1; aspect-ratio: auto; max-height: 280px; padding: 10px; }
+  .hero-slide__media img { max-height: 260px; }
   .hero-slide .hero-lead { font-size: 1rem; }
 
   /* Mobile navbar: RC logo (left) + hamburger (far right), comfy side padding */

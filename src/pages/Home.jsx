@@ -126,7 +126,7 @@ export default function Home() {
               Our primary service includes obtaining environmental clearance (in accordance with the Environment Impact Assessment Notification) from the Ministry of Environment and Forest (MoEFCC) as well as from the State Environmental Impact Assessment Authority and NOC/consent from Pollution Control Board.
             </p>
             <h3 style={{ marginBottom: 16, fontSize: "1.2rem", fontWeight: 700 }}>Core Expertise:</h3>
-            <ul className="dp-list" style={{ columns: "2", columnGap: "40px" }}>
+            <ul className="dp-list dp-list-cols">
               <li><strong>Techno-Legal Advisory, Environment & Social Impacts Assessment (ESIA)</strong> Studies (as per IFC & ADB Guidelines) & Environmental Impact Assessment (EIA) Studies, Environmental Monitoring and Environmental Compliance Auditing: Environmental Due Diligence, Environmental Permitting</li>
               <li><strong>Social Impact Assessment (SIA) Studies</strong>, Chemical/Industrial Risk Assessment, Biodiversity Impact Assessment (BIA), Ecology and Biodiversity Study/Tree Enumeration</li>
               <li><strong>Sustainability & ESDD studies</strong> - Corporate EHS (Environment, Health & Safety), ESGMS Framework/ Management System (ESGMS) and Trainings, The gaps identified in E&S and E&S Action Plan (ESAP), ES DD/ Red Flag Assessment, Climate Change Risk Assessment (CCRA)</li>
@@ -186,7 +186,7 @@ export default function Home() {
 
             <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Our Core Values</h3>
             <p style={{ textAlign: "justify", marginBottom: 8 }}>At Rejib Green Private Limited, our work is guided by:</p>
-            <ul className="dp-list" style={{ columns: "2", columnGap: "40px", marginBottom: 24 }}>
+            <ul className="dp-list dp-list-cols mb-24">
               <li>Environmental Responsibility</li>
               <li>Engineering Excellence</li>
               <li>Innovation</li>
@@ -216,7 +216,7 @@ export default function Home() {
             </p>
 
             <h3 style={{ marginBottom: 16, fontSize: "1.2rem", fontWeight: 700 }}>Core Expertise:</h3>
-            <ul className="dp-list" style={{ columns: "2", columnGap: "40px" }}>
+            <ul className="dp-list dp-list-cols">
               <li><strong>Importance of Wastewater Treatment:</strong> Protecting ecosystems and public health.</li>
               <li><strong>Water Management Services:</strong> Comprehensive planning for resource optimization.</li>
               <li><strong>Industrial Wastewater Treatment:</strong> Handling complex effluents across manufacturing sectors.</li>
@@ -278,7 +278,7 @@ export default function Home() {
 
             <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Our Core Values</h3>
             <p style={{ textAlign: "justify", marginBottom: 8 }}>At Rejib Green Private Limited, our work is guided by principles that place environmental responsibility at the center of every project.</p>
-            <ul className="dp-list" style={{ columns: "2", columnGap: "40px", marginBottom: 24 }}>
+            <ul className="dp-list dp-list-cols mb-24">
               <li>Environmental Stewardship</li>
               <li>Scientific Excellence</li>
               <li>Ecological Integrity</li>
@@ -312,7 +312,7 @@ export default function Home() {
             </p>
 
             <h3 style={{ marginBottom: 16, fontSize: "1.2rem", fontWeight: 700 }}>Our Comprehensive Services:</h3>
-            <ul className="dp-list" style={{ columns: "2", columnGap: "40px", marginBottom: 24 }}>
+            <ul className="dp-list dp-list-cols mb-24">
               <li>Forest Resource Assessment</li>
               <li>Forest Management Planning</li>
               <li>Afforestation and Reforestation Programs</li>
@@ -348,7 +348,7 @@ export default function Home() {
             </ul>
 
             <h3 style={{ marginBottom: 16, fontSize: "1.2rem", fontWeight: 700 }}>Advanced Technologies We Utilize:</h3>
-            <ul className="dp-list" style={{ columns: "2", columnGap: "40px" }}>
+            <ul className="dp-list dp-list-cols">
               <li>Geographic Information Systems (GIS)</li>
               <li>Remote Sensing</li>
               <li>Satellite Image Interpretation</li>
@@ -415,7 +415,7 @@ export default function Home() {
 
             <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Our Core Values</h3>
             <p style={{ textAlign: "justify", marginBottom: 8 }}>At Rejib Green Private Limited, every sustainability initiative is guided by a commitment to excellence, integrity, and environmental responsibility.</p>
-            <ul className="dp-list" style={{ columns: "2", columnGap: "40px", marginBottom: 24 }}>
+            <ul className="dp-list dp-list-cols mb-24">
               <li>Sustainability Leadership</li>
               <li>Environmental Stewardship</li>
               <li>Scientific Integrity</li>
@@ -459,7 +459,7 @@ export default function Home() {
             </p>
 
             <h3 style={{ marginBottom: 16, fontSize: "1.2rem", fontWeight: 700 }}>Our ESG and Sustainability Services:</h3>
-            <ul className="dp-list" style={{ columns: "2", columnGap: "40px", marginBottom: 24 }}>
+            <ul className="dp-list dp-list-cols mb-24">
               <li>ESG Strategy Development</li>
               <li>ESG Materiality Assessment</li>
               <li>Sustainability Strategy and Roadmap</li>
@@ -547,7 +547,7 @@ export default function Home() {
 
             <h3 style={{ marginBottom: 12, fontSize: "1.2rem", fontWeight: 700 }}>Our Core Values</h3>
             <p style={{ textAlign: "justify", marginBottom: 8 }}>Every project undertaken by Rejib Green Private Limited is guided by values that reflect our commitment to environmental excellence and sustainable development.</p>
-            <ul className="dp-list" style={{ columns: "2", columnGap: "40px", marginBottom: 24 }}>
+            <ul className="dp-list dp-list-cols mb-24">
               <li>Environmental Responsibility</li>
               <li>Scientific Integrity</li>
               <li>Innovation and Technology</li>
@@ -581,7 +581,7 @@ export default function Home() {
             </p>
 
             <h3 style={{ marginBottom: 16, fontSize: "1.2rem", fontWeight: 700 }}>Our Comprehensive Services:</h3>
-            <ul className="dp-list" style={{ columns: "2", columnGap: "40px", marginBottom: 24 }}>
+            <ul className="dp-list dp-list-cols mb-24">
               <li>Coastal Zone Management</li>
               <li>Integrated Coastal Zone Management (ICZM)</li>
               <li>Shoreline Change Analysis</li>
