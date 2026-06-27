@@ -694,6 +694,47 @@ ul { list-style: none; }
 .cred-level { font-family: var(--font-head); font-weight: 800; font-size: 1.15rem; color: var(--ink); }
 .cred-row .mini-list li { font-size: 0.92rem; }
 
+/* ---------- Credentials nested diagram (Experience > Expertise > ...) ---------- */
+/* Colours are supplied per layer via the --cb (border) / --cbg (tab fill) vars. */
+.crd-layer {
+  position: relative;
+  border: 1px solid var(--cb); border-left: none;
+  margin-left: 80px; padding: 28px 28px 28px 0;
+  background: #fff; display: flex; flex-direction: column; min-height: 120px;
+}
+.crd-tab {
+  position: absolute; left: -80px; top: -1px; bottom: -1px; width: 80px;
+  background: var(--cbg); border: 1px solid var(--cb); border-right: none;
+  border-radius: 1000px 0 0 1000px; z-index: 1;
+}
+.crd-row {
+  position: relative; z-index: 2;
+  display: grid; grid-template-columns: 140px 1fr; gap: 20px; align-items: center;
+}
+/* add breathing room below a layer's own row only when it wraps a nested layer */
+.crd-layer:has(.crd-layer) > .crd-row { margin-bottom: 20px; }
+.crd-lvl { color: var(--ink); padding-left: 10px; font-size: 15px; }
+.crd-points { margin: 0; padding-left: 20px; font-size: 13.5px; color: var(--ink); line-height: 1.6; list-style: disc; }
+.crd-points li { margin-bottom: 4px; }
+
+/* Mobile: drop the 80px concentric indent (it pushed text off-screen) and the
+   rounded tab; show each level as a tinted card with the label stacked above
+   its points so everything fits the viewport. */
+@media (max-width: 640px) {
+  .crd-layer {
+    margin-left: 0; min-height: 0;
+    border: 1px solid var(--cb); border-left: 5px solid var(--cb);
+    border-radius: 12px; background: var(--cbg);
+    padding: 14px;
+  }
+  .crd-layer .crd-layer { margin-top: 12px; }
+  .crd-layer:has(.crd-layer) > .crd-row { margin-bottom: 0; }
+  .crd-tab { display: none; }
+  .crd-row { grid-template-columns: 1fr; gap: 6px; }
+  .crd-lvl { padding-left: 0; font-size: 16px; }
+  .crd-points { padding-left: 18px; font-size: 14px; }
+}
+
 /* certificate frames */
 .cert-split { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 36px; align-items: start; }
 .cert-frame { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 14px; box-shadow: var(--shadow); display: grid; place-items: center; }
