@@ -12,14 +12,24 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div>
-            <div className="footer-logo">
-              <RCLogo height={54} />
+            <div className="foot-brands">
+              <div className="foot-brand-card">
+                <RCLogo height={52} />
+                <span className="foot-brand-txt">
+                  Rejig GreenLogic Pvt. Ltd. — your techno-legal environmental advisory partner.
+                </span>
+              </div>
+              <div className="foot-brand-card">
+                <img src={nabetLogo} alt="NABET Accredited" className="foot-brand-img" />
+                <span className="foot-brand-txt">
+                  QCI–NABET Accredited · Category-A EIA Consultant Organization.
+                </span>
+              </div>
             </div>
             <p className="desc">
               Your techno-legal advisory partner in environmental consultancy — trusted by 3,000+
               industrial units across 50+ sectors in India and abroad.
             </p>
-            <img src={nabetLogo} alt="NABET Logo" style={{ height: "48px", display: "block", marginBottom: "14px" }} />
             <div className="socials">
               <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><Insta /></a>
               <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><FB /></a>

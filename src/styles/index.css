@@ -166,7 +166,7 @@ ul { list-style: none; }
 .brand-logo { display: flex; align-items: center; }
 .brand-logo img { height: 74px; width: auto; }
 .nabet-logo { display: flex; align-items: center; }
-.nabet-logo img { height: 62px; width: auto; }
+.nabet-logo img { height: 82px; width: auto; }
 
 /* Nav links */
 .nav-links {
@@ -884,6 +884,16 @@ body.chat-open .back-to-top { opacity: 0; visibility: hidden; pointer-events: no
 .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr 1.4fr; gap: 40px; }
 .footer-col .foot-all-sectors { margin-top: 6px; font-weight: 700; color: var(--primary-light); }
 .footer-logo { display: inline-flex; background: #fff; padding: 12px 16px; border-radius: 14px; box-shadow: var(--shadow-sm); }
+/* Stacked brand cards (Rejig + NABET) at the top of the footer */
+.foot-brands { display: flex; flex-direction: column; gap: 14px; max-width: 320px; }
+.foot-brand-card {
+  display: flex; align-items: center; gap: 16px;
+  background: #fff; border-radius: 14px; padding: 16px 18px;
+  box-shadow: var(--shadow-sm);
+}
+.foot-brand-card .foot-brand-img { height: 60px; width: auto; display: block; flex-shrink: 0; }
+.foot-brand-card > img, .foot-brand-card > a { flex-shrink: 0; }
+.foot-brand-txt { font-size: 0.8rem; line-height: 1.45; font-weight: 600; color: var(--ink); }
 .footer .desc { margin: 18px 0; font-size: 0.92rem; color: #b6c9b8; max-width: 280px; }
 .footer h4 { color: #fff; font-size: 1rem; margin-bottom: 16px; }
 .footer-col a { display: block; color: #c2d4c4; font-size: 0.9rem; padding: 5px 0; transition: color 0.16s; }
@@ -991,27 +1001,10 @@ body.chat-open .back-to-top { opacity: 0; visibility: hidden; pointer-events: no
   .hbg { display: flex; }
   .nabet-logo { display: none; }
 
-  .nav-links {
-    position: fixed;
-    inset: 92px 0 auto 0;
-    flex-direction: column;
-    align-items: stretch;
-    background: #fff;
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-    padding: 14px 18px 20px;
-    gap: 4px;
-    box-shadow: var(--shadow);
-    transform: translateY(-150%);
-    transition: transform 0.3s ease;
-    z-index: 90;
-    max-height: calc(100vh - 92px);
-    overflow-y: auto;
-  }
-  .nav-links.open { transform: translateY(0); }
-  .nav-links a { width: 100%; padding: 13px 16px; border-radius: 10px; }
-  .nav-links a::after { display: none; }
-  .nav-links a:hover, .nav-links a.active { background: var(--violet-50); }
+  /* Mobile uses the dedicated .mob-nav drawer (flat, tappable links) below.
+     The desktop nav-links — and its hover-only mega menus, which can't be
+     opened by touch — are hidden so the two menus no longer stack/overlap. */
+  .nav-links { display: none; }
   .nav-mobile-cta { display: flex; gap: 10px; margin-top: 10px; padding-top: 14px; border-top: 1px solid var(--line); }
   .nav-mobile-cta .btn { flex: 1; }
   .nav-toggle { display: flex; }
@@ -1241,7 +1234,8 @@ body.chat-open .back-to-top { opacity: 0; visibility: hidden; pointer-events: no
   .brand-logo img { height: 60px; }
   .nabet-logo { display: none; }
   .nav-right { gap: 8px; }
-  .nav-links { inset: 84px 0 auto 0; max-height: calc(100vh - 84px); padding: 14px 20px 22px; }
+  /* header is 84px tall here, so align the mobile drawer to it */
+  .mob-nav { top: 84px; }
 
   /* Working force: show only the card on mobile */
   .wf-row { grid-template-columns: 1fr; }

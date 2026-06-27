@@ -158,7 +158,7 @@ export default function Navbar() {
           {/* Right — NABET accreditation logo + mobile toggle */}
           <div className="nav-right">
             <Link to="/sectors" className="nabet-logo" aria-label="NABET accredited — view our sectors" onClick={closeMenu}>
-              <NabetLogo height={58} />
+              <NabetLogo height={82} />
             </Link>
 
             <button

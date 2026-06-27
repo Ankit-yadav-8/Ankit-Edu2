@@ -78,11 +78,13 @@
 .m-lnk .ma { flex-shrink: 0; opacity: .35; font-size: 11px; transition: opacity .16s, transform .16s; }
 .m-lnk:hover .ma { opacity: 1; transform: translateX(3px); }
 
-/* Mobile drawer */
+/* Mobile drawer — sits flush under the sticky header (92px ≤1080, 84px ≤860;
+   see the navbar media queries in index.css). */
 .mob-nav {
-  display: none; position: fixed; top: 70px; left: 0; right: 0; bottom: 0;
+  display: none; position: fixed; top: 92px; left: 0; right: 0; bottom: 0;
   background: #ffffff; overflow-y: auto; z-index: 850;
-  padding: 0 24px 40px;
+  padding: 8px 24px 40px;
+  -webkit-overflow-scrolling: touch;
 }
 .mob-nav.open { display: block; }
 .mob-sec { border-bottom: 1px solid var(--violet-50); padding: 16px 0; }
