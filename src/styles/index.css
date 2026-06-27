@@ -602,11 +602,21 @@ ul { list-style: none; }
 .tool-table__cat li::before { content: "▪"; position: absolute; left: 0; top: 0; color: var(--violet-600); }
 
 /* Laboratory Services (Infrastructure + Home) */
-.lab-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 32px; align-items: start; }
-.lab-services { grid-template-columns: 1fr 1fr; column-gap: 24px; }
-@media (max-width: 760px) {
-  .lab-grid { grid-template-columns: 1fr; }
-  .lab-services { grid-template-columns: 1fr; }
+.lab-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 32px; align-items: stretch; }
+.lab-grid > .card { display: flex; align-items: center; height: 100%; }
+.lab-grid > .cert-frame { height: 100%; align-content: center; }
+.lab-grid > .cert-frame img { max-height: 520px; }
+.lab-services { width: 100%; margin: 0; grid-template-columns: 1fr 1fr; column-gap: 28px; row-gap: 16px; }
+/* Tablet / small laptop — stack cert under the services, keep two service columns */
+@media (max-width: 900px) {
+  .lab-grid { grid-template-columns: 1fr; gap: 24px; }
+  .lab-grid > .card { align-items: flex-start; }
+  .lab-grid > .cert-frame { max-width: 460px; margin: 0 auto; width: 100%; }
+  .lab-grid > .cert-frame img { max-height: none; }
+}
+/* Mobile — single column of services */
+@media (max-width: 560px) {
+  .lab-services { grid-template-columns: 1fr; row-gap: 12px; }
 }
 
 /* ---------- AI Integration explorer ---------- */
