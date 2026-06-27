@@ -149,7 +149,7 @@ export default function About() {
               <ol className="sector-list">
                 {SECTORS.map((s) => (
                   <li key={s.slug}>
-                    <span>{s.name}{s.scope ? ` — ${s.scope.toLowerCase()}` : ""}</span>
+                    <span>{s.certName || s.name}</span>
                     <span className="sector-list__meta">
                       <span className="tag">NABET {s.nabet}</span>
                       <span className={`sector-badge cat-${s.category}`}>Cat {s.category}</span>

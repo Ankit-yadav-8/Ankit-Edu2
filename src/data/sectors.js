@@ -19,6 +19,7 @@ export const SECTORS = [
   {
     slug: "mining",
     name: "Mining of Minerals",
+    certName: "Mining of mineral — opencast mining only",
     scope: "Opencast mining only",
     nabet: "1",
     moefcc: "1(a)(i)",
@@ -51,6 +52,7 @@ export const SECTORS = [
   {
     slug: "oil-gas-exploration",
     name: "Oil & Gas Exploration & Production",
+    certName: "Offshore and onshore oil and gas exploration, development & production",
     scope: "Offshore and onshore exploration, development & production",
     nabet: "2",
     moefcc: "1(b)",
@@ -83,6 +85,7 @@ export const SECTORS = [
   {
     slug: "thermal-power",
     name: "Thermal Power Plants",
+    certName: "Thermal power plants",
     scope: "Coal, gas and liquid-fuel power generation",
     nabet: "4",
     moefcc: "1(d)",
@@ -115,6 +118,7 @@ export const SECTORS = [
   {
     slug: "metallurgical",
     name: "Metallurgical Industries",
+    certName: "Metallurgical industries (ferrous & non-ferrous)",
     scope: "Ferrous & non-ferrous",
     nabet: "8",
     moefcc: "3(a)",
@@ -147,6 +151,7 @@ export const SECTORS = [
   {
     slug: "cement",
     name: "Cement Plants",
+    certName: "Cement plants",
     scope: "Clinker & grinding units",
     nabet: "9",
     moefcc: "3(b)",
@@ -179,6 +184,7 @@ export const SECTORS = [
   {
     slug: "chlor-alkali",
     name: "Chlor-Alkali Industry",
+    certName: "Chlor-alkali industry",
     scope: "Caustic soda, chlorine & allied products",
     nabet: "13",
     moefcc: "4(b)",
@@ -211,6 +217,7 @@ export const SECTORS = [
   {
     slug: "manmade-fibers",
     name: "Manmade Fibers Manufacturing",
+    certName: "Manmade fibers manufacturing",
     scope: "Synthetic fibre & filament production",
     nabet: "19",
     moefcc: "5(d)",
@@ -243,6 +250,7 @@ export const SECTORS = [
   {
     slug: "synthetic-organic-chemicals",
     name: "Synthetic Organic Chemicals Industry",
+    certName: "Synthetic organic chemicals industry",
     scope: "Bulk & specialty organic chemicals",
     nabet: "21",
     moefcc: "5(f)",
@@ -275,6 +283,7 @@ export const SECTORS = [
   {
     slug: "oil-gas-pipeline",
     name: "Oil & Gas Transportation Pipeline",
+    certName: "Oil & gas transportation pipeline",
     scope: "Cross-country crude, product & gas pipelines",
     nabet: "27",
     moefcc: "6(a)",
@@ -307,6 +316,7 @@ export const SECTORS = [
   {
     slug: "building-construction",
     name: "Building & Construction Projects",
+    certName: "Building and construction projects",
     scope: "Built-up area projects",
     nabet: "38",
     moefcc: "8(a)",
@@ -339,6 +349,7 @@ export const SECTORS = [
   {
     slug: "townships",
     name: "Townships & Area Development",
+    certName: "Townships and Area development projects",
     scope: "Integrated townships & area development",
     nabet: "39",
     moefcc: "8(b)",

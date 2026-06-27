@@ -766,7 +766,9 @@ ul { list-style: none; }
 }
 
 /* certificate frames */
-.cert-split { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 36px; align-items: start; }
+.cert-split { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 36px; align-items: stretch; }
+.cert-split > .card { display: flex; flex-direction: column; height: 100%; }
+.cert-split > .cert-frame { height: 100%; align-content: center; }
 .cert-frame { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 14px; box-shadow: var(--shadow); display: grid; place-items: center; }
 .cert-frame img { max-width: 100%; height: auto; display: block; border-radius: 8px; }
 .sector-list { display: grid; gap: 10px; padding-left: 4px; counter-reset: sec; list-style: none; }
