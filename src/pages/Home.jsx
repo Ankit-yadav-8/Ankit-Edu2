@@ -6,7 +6,7 @@ import { IconArrow } from "../components/Icons.jsx";
 import { NabetLogo } from "../components/Logos.jsx";
 import SmartImg from "../components/SmartImg.jsx";
 
-import imgWelcome from "../assets/hero-1-new.png";
+import imgWelcome from "../assets/rejig_discussion_meeting_1782487343593.png";
 import imgReport from "../assets/hero-2-new.png";
 import imgS4 from "../assets/service-4.png";
 import imgForest from "../assets/forest-biodiversity.png";
@@ -60,7 +60,7 @@ export default function Home() {
           </Reveal>
 
           <Reveal delay={1} className="welcome-media">
-            <SmartImg src={imgWelcome} alt="Hands protecting a green earth" />
+            <SmartImg src={imgWelcome} alt="Rejig GreenLogic team in a strategy discussion meeting" />
           </Reveal>
         </div>
       </section>
