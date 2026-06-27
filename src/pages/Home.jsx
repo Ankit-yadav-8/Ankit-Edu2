@@ -328,7 +328,7 @@ export default function Home() {
             </p>
           </Reveal>
           
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }}>
+          <div className="cert-cards">
             <Reveal delay={0} style={{ display: "flex", gap: "20px", padding: "24px", border: "1px solid var(--violet-100)", borderRadius: "12px", background: "#fff", boxShadow: "0 8px 30px rgba(0,0,0,0.04)", alignItems: "center" }}>
               <div style={{ flexShrink: 0, width: "130px", padding: "10px", border: "1px solid var(--violet-50)", borderRadius: "8px", background: "#fafafa" }}>
                 <img src={certNabet} alt="NABET Certificate" style={{ width: "100%", display: "block" }} />

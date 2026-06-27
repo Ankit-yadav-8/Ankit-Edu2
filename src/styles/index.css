@@ -1117,12 +1117,10 @@ body.chat-open .back-to-top { opacity: 0; visibility: hidden; pointer-events: no
 /* Vertical Animated List */
 
 /* Vision & Mission */
-.vm-split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
-}
+/* NOTE: .vm-split is defined earlier (≈line 673) and collapsed to one column
+   by the ≤1080px media query. A duplicate base rule here used to re-declare
+   two columns *after* that media query, overriding the mobile collapse — it has
+   been removed so the section stacks correctly on phones. */
 .vm-image {
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -1133,6 +1131,12 @@ body.chat-open .back-to-top { opacity: 0; visibility: hidden; pointer-events: no
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+/* Home "Accredited & certified" two-up cards — collapse to one column on
+   phones (was an inline 2-col grid that overflowed the viewport). */
+.cert-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+@media (max-width: 760px) {
+  .cert-cards { grid-template-columns: 1fr; }
 }
 .vm-card {
   display: flex;
