@@ -40,11 +40,11 @@ export default function About() {
             <span className="eyebrow">Our story</span>
             <h2 className="section-title">ABOUT US</h2>
             <ul className="mini-list" style={{ marginTop: 20 }}>
-              <li>REJIG GREENLOGIC PRIVATE LIMITED (RGPL) has been incorporated in Dec, 2021 for providing Environmental Services and Solution.</li>
-              <li>Company is based in Hyderabad (Telangana);</li>
-              <li>RGPLs establishment in the south region marks an important milestone &amp; similar to JM, will continue to build long - term commitment to render services to the local industries in solving environment related issues.</li>
+              <li>Rejig Greenlogic Private Limited (RGPL) has been incorporated in Dec, 2021 for providing Environmental Services and Solution; based in Hyderabad (Telangana).</li>
+              <li>RGPL's establishment in the south region marks an important milestone to build long-term commitment &amp; render services to the local industries in solving environment related issues.</li>
+              <li>RGPL is certified by QCI-NABET (National Accreditation Board for Education and Training) under Certificate No. NABET/EIA/24-27/SA0262, valid upto 28.01.2027.</li>
               <li>RGPL drive innovation and technology adoption by seamlessly integrating our extensive knowledge and skills into every aspect of our services.</li>
-              <li>By staying attuned to emerging trends and breakthroughs, RGPL ensure that our services remain at the forefront.</li>
+              <li>By staying attuned to emerging trends and breakthroughs, RGPL ensures that our services remain at the forefront by bringing together a team of experienced environmental experts dedicated to providing top-notch consultancy and serving as your trusted techno-legal advisory partner.</li>
             </ul>
             <div className="hero-actions" style={{ marginTop: 24 }}>
               <Link to="/contact" className="btn btn-primary">Work with us <IconArrow size={18} /></Link>

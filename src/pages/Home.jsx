@@ -14,6 +14,7 @@ import imgEsg from "../assets/esg-sustainability.png";
 import certNabet from "../assets/nabet-certificate.png";
 import certIso from "../assets/iso-certificate.png";
 import Credentials from "../components/Credentials.jsx";
+import LabServices from "../components/LabServices.jsx";
 import { CLIENT_LOGOS } from "../data/clients.js";
 import { PROJECTS } from "../data/projects.js";
 
@@ -68,20 +69,20 @@ export default function Home() {
       <div className="stats-band">
         <div className="s-wrap">
           <div className="s-item">
-            <div className="s-num"><Counter to={3000} suffix="+" /></div>
-            <div className="s-lbl">Industrial Units<br/>Served Globally</div>
+            <div className="s-num"><Counter to={200} suffix="+" /></div>
+            <div className="s-lbl">Environmental Initiatives<br/>Globally in Diverse Sectors</div>
           </div>
           <div className="s-item">
-            <div className="s-num"><Counter to={50} suffix="+" /></div>
-            <div className="s-lbl">Sectoral Areas<br/>Covered</div>
+            <div className="s-num"><Counter to={100} suffix="+" /> ‘A’</div>
+            <div className="s-lbl">Category Large<br/>Scale Projects</div>
           </div>
           <div className="s-item">
-            <div className="s-num"><Counter to={11} /></div>
-            <div className="s-lbl">NABET Accredited<br/>Sectors</div>
+            <div className="s-num"><Counter to={30} suffix="+" /></div>
+            <div className="s-lbl">Projects for Technical<br/>Environmental Consultancy</div>
           </div>
           <div className="s-item">
-            <div className="s-num"><Counter to={25} suffix="+" /></div>
-            <div className="s-lbl">Expert Team<br/>Members</div>
+            <div className="s-num"><Counter to={20} suffix="+" /></div>
+            <div className="s-lbl">Corporate EHS Audits — Power<br/>Plants, Mining &amp; Cement</div>
           </div>
         </div>
       </div>
@@ -368,6 +369,9 @@ export default function Home() {
 
       {/* ═══ CREDENTIALS DIAGRAM (Image 2) ═════════════════════ */}
       <Credentials />
+
+      {/* ═══ LABORATORY SERVICES (NABL certificate) ════════════ */}
+      <LabServices soft />
 
       {/* ═══ CLIENTS ═══════════════════════════════════════════ */}
       <section className="sec" id="clients">

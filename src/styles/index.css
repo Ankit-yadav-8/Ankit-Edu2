@@ -589,6 +589,26 @@ ul { list-style: none; }
 .lab-meta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
 .lab-meta .tag { margin-bottom: 0; }
 
+/* Impact-assessment tools table */
+.tool-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); background: #fff; }
+.tool-table { width: 100%; border-collapse: collapse; }
+.tool-table tr { border-bottom: 1px solid var(--line); }
+.tool-table tr:last-child { border-bottom: none; }
+.tool-table td { padding: 18px 20px; vertical-align: top; }
+.tool-table__num { width: 56px; text-align: center; font-family: var(--font-head); font-weight: 800; font-size: 1.05rem; color: var(--violet-700); background: var(--violet-50); border-right: 1px solid var(--line); }
+.tool-table__cat h3 { font-size: 1.02rem; margin: 0 0 8px; color: var(--ink); }
+.tool-table__cat ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.tool-table__cat li { position: relative; padding-left: 18px; color: var(--ink-soft); font-size: 0.92rem; line-height: 1.45; }
+.tool-table__cat li::before { content: "▪"; position: absolute; left: 0; top: 0; color: var(--violet-600); }
+
+/* Laboratory Services (Infrastructure + Home) */
+.lab-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 32px; align-items: start; }
+.lab-services { grid-template-columns: 1fr 1fr; column-gap: 24px; }
+@media (max-width: 760px) {
+  .lab-grid { grid-template-columns: 1fr; }
+  .lab-services { grid-template-columns: 1fr; }
+}
+
 /* ---------- AI Integration explorer ---------- */
 .ai-explorer { display: grid; grid-template-columns: 300px 1fr; gap: 24px; align-items: start; }
 .ai-list { display: flex; flex-direction: column; gap: 10px; }

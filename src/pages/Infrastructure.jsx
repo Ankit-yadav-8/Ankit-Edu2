@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal.jsx";
 import PageHero from "../components/PageHero.jsx";
-import { CAPABILITIES, LAB } from "../data/infrastructure.js";
-import { IconArrow, IconCheck, IconBeaker } from "../components/Icons.jsx";
+import LabServices from "../components/LabServices.jsx";
+import { CAPABILITIES } from "../data/infrastructure.js";
+import { IconArrow } from "../components/Icons.jsx";
 import isoCert from "../assets/iso-certificate.png";
 
 export default function Infrastructure() {
@@ -28,56 +29,34 @@ export default function Infrastructure() {
         <div className="container">
           <Reveal className="section-head text-center">
             <span className="eyebrow">Technical capability</span>
-            <h2 className="section-title">Software &amp; instruments we work with</h2>
+            <h2 className="section-title">Impact Assessment Tools / Softwares</h2>
             <p className="section-sub">Industry-standard modelling, geospatial and monitoring tools behind every RGPL study.</p>
           </Reveal>
 
-          <div className="grid grid-3" style={{ marginTop: 44 }}>
-            {CAPABILITIES.map((c, i) => (
-              <Reveal key={c.title} delay={(i % 3) + 1} className="card">
-                <span className="cap-index">{String(i + 1).padStart(2, "0")}</span>
-                <h3>{c.title}</h3>
-                <ul className="checklist" style={{ marginTop: 14 }}>
-                  {c.items.map((it) => (
-                    <li key={it}><span className="tick">✓</span> {it}</li>
-                  ))}
-                </ul>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* NABL Laboratory */}
-      <section className="section section--soft">
-        <div className="container split">
-          <Reveal>
-            <span className="eyebrow">Laboratory</span>
-            <div className="cert-frame" style={{ marginBottom: 22 }}>
-              <img src={isoCert} alt="ISO 9001:2015 Certificate of Registration" loading="lazy" />
-            </div>
-            <h2 className="section-title" style={{ fontSize: "1.7rem" }}>{LAB.name}</h2>
-            <p className="body">{LAB.intro}</p>
-            <div className="lab-meta">
-              <span className="tag">{LAB.accreditation}</span>
-              <span className="tag">{LAB.location}</span>
-            </div>
-            <Link to="/contact" className="btn btn-primary" style={{ marginTop: 22 }}>
-              Request lab services <IconArrow size={18} />
-            </Link>
-          </Reveal>
-
-          <Reveal delay={1} className="card">
-            <div className="ico"><IconBeaker size={26} /></div>
-            <h3 style={{ marginBottom: 14 }}>Comprehensive range of services</h3>
-            <ul className="checklist">
-              {LAB.services.map((s) => (
-                <li key={s}><span className="tick">✓</span> {s}</li>
-              ))}
-            </ul>
+          <Reveal className="tool-table-wrap" style={{ marginTop: 44 }}>
+            <table className="tool-table">
+              <tbody>
+                {CAPABILITIES.map((c, i) => (
+                  <tr key={c.title}>
+                    <td className="tool-table__num">{i + 1}.</td>
+                    <td className="tool-table__cat">
+                      <h3>{c.title}</h3>
+                      <ul>
+                        {c.items.map((it) => (
+                          <li key={it}>{it}</li>
+                        ))}
+                      </ul>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </Reveal>
         </div>
       </section>
+
+      {/* Laboratory Services */}
+      <LabServices soft />
 
       <section className="section">
         <div className="container">
