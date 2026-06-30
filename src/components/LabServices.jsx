@@ -1,6 +1,6 @@
 import Reveal from "./Reveal.jsx";
 import { LAB } from "../data/infrastructure.js";
-import nablCert from "../assets/nabl-certificate.png";
+import nablCert from "../assets/nabl-certificate-new.png";
 import lab1 from "../assets/lab-col-1.png";
 import lab2 from "../assets/lab-col-2.png";
 import lab3 from "../assets/lab-col-3.png";

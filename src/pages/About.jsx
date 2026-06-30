@@ -7,6 +7,7 @@ import visionDice from "../assets/vision-mission-updated.png";
 import nabetCert from "../assets/nabet-certificate-new.png";
 import isoCert from "../assets/iso-certificate.png";
 import aboutTeam from "../assets/about-us-team.png";
+import consultingStatsImg from "../assets/consulting-stats.png";
 const TEAM = [
   { icon: <IconUsers size={22} />, count: 12, role: "Technical Crew", sub: "Senior & project consultants" },
   { icon: <IconBeaker size={22} />, count: 5, role: "Lab Experts", sub: "Sampling & analysis specialists" },
@@ -27,6 +28,7 @@ export default function About() {
         subtitle="Incorporated in 2021, RGPL is your techno-legal advisory partner across environmental consultancy — backed by a growing legacy of excellence."
         breadcrumb="About Us"
         cards={[
+          { type: "image", src: consultingStatsImg, alt: "Consulting company analyzing data" },
           { type: "stat", num: 50, suffix: "+", label: "Sectoral areas", tone: "teal" },
           { type: "info", icon: "🏅", title: "NABET Accredited", sub: `${SECTOR_COUNT} sectors`, tone: "amber" },
           { type: "stat", num: 3, suffix: "+", label: "Years of excellence", tone: "green" },
@@ -227,27 +229,10 @@ export default function About() {
           <Reveal className="section-head text-center">
             <span className="eyebrow">Our Presence</span>
             <h2 className="section-title">Office Locations</h2>
-            <p className="section-sub">Headquartered in Hyderabad with branch operations across India.</p>
-          </Reveal>
-        </div>
-      </section>
-
-      <section id="moefcc" className="section">
-        <div className="container">
-          <Reveal className="section-head text-center">
-            <span className="eyebrow">MoEFCC</span>
-            <h2 className="section-title">MoEFCC Registration</h2>
-            <p className="section-sub">Details on our MoEFCC affiliations and registrations.</p>
-          </Reveal>
-        </div>
-      </section>
-
-      <section id="nsic" className="section section--soft">
-        <div className="container">
-          <Reveal className="section-head text-center">
-            <span className="eyebrow">NSIC</span>
-            <h2 className="section-title">NSIC Certification</h2>
-            <p className="section-sub">RGPL is registered with the National Small Industries Corporation.</p>
+            <p className="section-sub">
+              7th Floor, Block C, Laxmi Cyber City, White Fields, Hitech City,<br />
+              Kondapur, Hyderabad - 500081
+            </p>
           </Reveal>
         </div>
       </section>

@@ -48,10 +48,8 @@ export default function Navbar() {
                   <div>
                     <Link to="/about#events" className="m-lnk" onClick={closeMenu}>Events <span className="ma">→</span></Link>
                     <Link to="/about#locations" className="m-lnk" onClick={closeMenu}>Locations <span className="ma">→</span></Link>
-                    <Link to="/about#moefcc" className="m-lnk" onClick={closeMenu}>MoEFCC Registration <span className="ma">→</span></Link>
                   </div>
                   <div>
-                    <Link to="/about#nsic" className="m-lnk" onClick={closeMenu}>NSIC Certification <span className="ma">→</span></Link>
                     <Link to="/about#careers" className="m-lnk" onClick={closeMenu}>Careers <span className="ma">→</span></Link>
                   </div>
                 </div>
@@ -71,31 +69,16 @@ export default function Navbar() {
                 </div>
                 <div className="mega-r">
                   <div>
-                    <Link to="/services?cat=Assessment" className="m-lnk" onClick={closeMenu}>EIA / ESIA STUDIES</Link>
-                    <Link to="/services?cat=Clearance" className="m-lnk" onClick={closeMenu}>FOREST &amp; WILDLIFE CLEARANCE</Link>
-                    <Link to="/services?cat=Audit" className="m-lnk" onClick={closeMenu}>ENVIRONMENTAL AUDITING</Link>
-                    <Link to="/services?cat=Monitoring" className="m-lnk" onClick={closeMenu}>AIR QUALITY ASSESSMENT</Link>
-                    <Link to="/services?cat=Geospatial" className="m-lnk" onClick={closeMenu}>REMOTE SENSING &amp; GIS</Link>
-                    <Link to="/services?cat=Audit" className="m-lnk" onClick={closeMenu}>WASTE MANAGEMENT</Link>
-                    <Link to="/services?cat=Monitoring" className="m-lnk" onClick={closeMenu}>NOISE IMPACT STUDIES</Link>
+                    <Link to="/services?cat=Assessment" className="m-lnk" onClick={closeMenu}>ASSESSMENT</Link>
+                    <Link to="/services?cat=Clearance" className="m-lnk" onClick={closeMenu}>CLEARANCES</Link>
+                    <Link to="/services?cat=Monitoring" className="m-lnk" onClick={closeMenu}>MONITORING</Link>
                   </div>
                   <div>
-                    <Link to="/services?cat=Clearance" className="m-lnk" onClick={closeMenu}>WILDLIFE &amp; BIODIVERSITY</Link>
-                    <Link to="/services?cat=Monitoring" className="m-lnk" onClick={closeMenu}>WATER QUALITY STUDIES</Link>
-                    <Link to="/services?cat=ESG" className="m-lnk" onClick={closeMenu}>ESG ADVISORY &amp; REPORTING</Link>
-                    <Link to="/services?cat=ESG" className="m-lnk" onClick={closeMenu}>CLIMATE CHANGE &amp; CARBON</Link>
-                    <Link to="/services?cat=Audit" className="m-lnk" onClick={closeMenu}>EHS MANAGEMENT</Link>
-                    <Link to="/services?cat=Assessment" className="m-lnk" onClick={closeMenu}>RISK ASSESSMENT</Link>
-                    <Link to="/services?cat=Audit" className="m-lnk" onClick={closeMenu}>REGULATORY COMPLIANCE</Link>
+                    <Link to="/services?cat=Audit" className="m-lnk" onClick={closeMenu}>AUDIT &amp; COMPLIANCE</Link>
+                    <Link to="/services?cat=Geospatial" className="m-lnk" onClick={closeMenu}>GEOSPATIAL</Link>
+                    <Link to="/services?cat=ESG" className="m-lnk" onClick={closeMenu}>ESG &amp; SUSTAINABILITY</Link>
                   </div>
                   <div>
-                    <Link to="/services?cat=Monitoring" className="m-lnk" onClick={closeMenu}>AI-DRIVEN MONITORING</Link>
-                    <Link to="/services?cat=Assessment" className="m-lnk" onClick={closeMenu}>SOCIAL IMPACT ASSESSMENT</Link>
-                    <Link to="/services?cat=Monitoring" className="m-lnk" onClick={closeMenu}>MARINE ENVIRONMENTAL STUDIES</Link>
-                    <Link to="/services?cat=Clearance" className="m-lnk" onClick={closeMenu}>BIODIVERSITY SURVEYS</Link>
-                    <Link to="/services?cat=Assessment" className="m-lnk" onClick={closeMenu}>CUMULATIVE IMPACT STUDIES</Link>
-                    <Link to="/services?cat=Assessment" className="m-lnk" onClick={closeMenu}>RAPID EIA</Link>
-                    <Link to="/services?cat=ESG" className="m-lnk" onClick={closeMenu}>TRAINING PROGRAMS</Link>
                   </div>
                 </div>
               </div>
@@ -117,7 +100,7 @@ export default function Navbar() {
           {/* Right — auth buttons + NABET logo + mobile toggle */}
           <div className="nav-right">
 
-            <div className="nabet-logo" style={{ display: open ? "none" : "flex", alignItems: "center" }}>
+            <div className="nabet-logo">
               <NabetLogo height={64} />
             </div>
 
@@ -125,7 +108,7 @@ export default function Navbar() {
               className={`hbg ${open ? "open" : ""}`}
               aria-label="Toggle menu"
               onClick={() => setOpen((o) => !o)}
-              style={{ alignSelf: "center", marginLeft: 10, display: "none" }} /* Hidden by default, flex in index.css mobile query */
+              style={{ alignSelf: "center", marginLeft: 10 }}
             >
               <span></span><span></span><span></span>
             </button>

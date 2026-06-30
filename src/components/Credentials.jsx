@@ -1,7 +1,7 @@
 import Reveal from "./Reveal.jsx";
 
 const CREDENTIALS = [
-  { level: "Experience", border: "#93c5fd", bg: "#dbeafe", points: ["Team of experts who have served for more than 2 Decades in Environmental Consultancy", "Environmental services in more than 11 varied Industrial sectors"] },
+  { level: "Experience", border: "#93c5fd", bg: "#dbeafe", points: ["Team of experts who have served for more than 2 Decades in Environmental Consultancy", "Environmental services in more than 13 varied Industrial sectors"] },
   { level: "Expertise", border: "#86efac", bg: "#dcfce7", points: ["Experts from IBM, UTCL, ACC (Holcim) etc."] },
   { level: "Strengths", border: "#bef264", bg: "#ecfccb", points: ["Accreditation and empanelment with MoEF/NABET, NABL, IBM, ISO, State Govt (SPCB), Ministry of Water Resources"] },
   { level: "Infrastructure", border: "#fdba74", bg: "#ffedd5", points: ["Pan India Presence", "NABL/MoEF Approved Laboratory"] },

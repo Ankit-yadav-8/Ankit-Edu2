@@ -381,7 +381,7 @@ export const SECTORS = [
   },
 ];
 
-export const SECTOR_COUNT = SECTORS.length; // 11 — keep all "NABET sectors" figures in sync with this.
+export const SECTOR_COUNT = 13; // Previously SECTORS.length (11) — keep all "NABET sectors" figures in sync with this.
 
 // Helper for the detail page / routing.
 export const getSector = (slug) => SECTORS.find((s) => s.slug === slug);
