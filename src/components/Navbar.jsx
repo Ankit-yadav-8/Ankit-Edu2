@@ -118,14 +118,14 @@ export default function Navbar() {
           <div className="nav-right">
 
             <div style={{ display: open ? "none" : "flex", alignItems: "center" }}>
-              <NabetLogo height={42} />
+              <NabetLogo height={64} />
             </div>
 
             <button
               className={`hbg ${open ? "open" : ""}`}
               aria-label="Toggle menu"
               onClick={() => setOpen((o) => !o)}
-              style={{ display: "flex", alignSelf: "center", marginLeft: 10 }}
+              style={{ alignSelf: "center", marginLeft: 10 }}
             >
               <span></span><span></span><span></span>
             </button>
