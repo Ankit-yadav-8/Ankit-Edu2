@@ -59,9 +59,9 @@ export default function Footer() {
           <div className="footer-col">
             <h4>NABET Sectors</h4>
             {SECTORS.map((s) => (
-              <Link key={s.slug} to={`/sectors/${s.slug}`}>{s.name}</Link>
+              <span key={s.slug} style={{ display: 'block', color: 'var(--text-light)', marginBottom: '0.75rem', fontSize: '0.95rem' }}>{s.name}</span>
             ))}
-            <Link to="/sectors" className="foot-all-sectors">All Sectors →</Link>
+            <span className="foot-all-sectors" style={{ display: 'inline-block', marginTop: '0.5rem', fontWeight: 500, color: 'var(--text-light)' }}>All Sectors →</span>
           </div>
 
           <div>

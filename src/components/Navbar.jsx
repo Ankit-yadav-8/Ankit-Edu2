@@ -117,8 +117,9 @@ export default function Navbar() {
           {/* Right — auth buttons + NABET logo + mobile toggle */}
           <div className="nav-right">
 
-            
-            <Link to="/contact" className="nav-cta" style={{ display: open ? "none" : "inline-flex" }}>Contact →</Link>
+            <div style={{ display: open ? "none" : "flex", alignItems: "center" }}>
+              <NabetLogo height={42} />
+            </div>
 
             <button
               className={`hbg ${open ? "open" : ""}`}
