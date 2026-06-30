@@ -156,7 +156,7 @@ export default function About() {
           </Reveal>
           <div className="cert-split" style={{ marginTop: 40 }}>
             <Reveal className="card">
-              <div style={{ overflowX: "auto", paddingBottom: "16px", margin: "0 -16px", padding: "0 16px" }}>
+              <div style={{ overflowX: "auto", overflowY: "auto", maxHeight: "500px", paddingBottom: "16px", margin: "0 -16px", padding: "0 16px" }}>
                 <div style={{ minWidth: "600px", display: "flex", flexDirection: "column", gap: "8px" }}>
                   {/* Header Row */}
                   <div style={{ display: "grid", gridTemplateColumns: "40px 1fr 80px 100px 60px", gap: "16px", padding: "12px 16px", background: "var(--surface)", borderRadius: "8px", fontWeight: "600", color: "var(--violet-700)", border: "1px solid var(--line)", fontSize: "0.95rem" }}>
