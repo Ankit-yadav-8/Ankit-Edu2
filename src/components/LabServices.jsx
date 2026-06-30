@@ -22,17 +22,13 @@ export default function LabServices({ soft = false }) {
           </p>
         </Reveal>
 
-        <div className="lab-grid" style={{ marginTop: 40, display: "grid", gridTemplateColumns: "1fr 1fr", gap: "56px", alignItems: "center" }}>
+        <div className="lab-grid" style={{ marginTop: 40, alignItems: "center" }}>
           <Reveal>
-            <div style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(2, 1fr)",
-              gap: "16px",
-            }}>
-              <img src={lab1} alt="Laboratory facilities" style={{ width: "100%", height: "240px", objectFit: "cover", borderRadius: "16px", boxShadow: "0 4px 16px rgba(0,0,0,0.06)" }} />
-              <img src={lab2} alt="Water testing" style={{ width: "100%", height: "240px", objectFit: "cover", borderRadius: "16px", boxShadow: "0 4px 16px rgba(0,0,0,0.06)" }} />
-              <img src={lab3} alt="Equipment" style={{ width: "100%", height: "240px", objectFit: "cover", borderRadius: "16px", boxShadow: "0 4px 16px rgba(0,0,0,0.06)" }} />
-              <img src={lab4} alt="Scientist inspecting" style={{ width: "100%", height: "240px", objectFit: "cover", borderRadius: "16px", boxShadow: "0 4px 16px rgba(0,0,0,0.06)" }} />
+            <div className="lab-collage">
+              <img src={lab1} alt="Laboratory facilities" />
+              <img src={lab2} alt="Water testing" />
+              <img src={lab3} alt="Equipment" />
+              <img src={lab4} alt="Scientist inspecting" />
             </div>
           </Reveal>
 
