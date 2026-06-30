@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal.jsx";
 import Counter from "../components/Counter.jsx";
 import { CLIENT_LOGOS } from "../data/clients.js";
+import { SECTOR_COUNT } from "../data/sectors.js";
 import PageHero from "../components/PageHero.jsx";
 import { IconArrow } from "../components/Icons.jsx";
 
@@ -32,7 +33,7 @@ export default function Clientele() {
         <div className="container">
           <div className="stats grid-3">
             <div className="stat"><div className="num"><Counter to={50} suffix="+" /></div><div className="lbl">Sectoral areas</div></div>
-            <div className="stat"><div className="num"><Counter to={20} /></div><div className="lbl">NABET sectors</div></div>
+            <div className="stat"><div className="num"><Counter to={SECTOR_COUNT} /></div><div className="lbl">NABET sectors</div></div>
             <div className="stat"><div className="num"><Counter to={29} /></div><div className="lbl">Years of legacy</div></div>
           </div>
         </div>

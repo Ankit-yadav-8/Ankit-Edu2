@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { RCLogo } from "./Logos.jsx";
 import { Insta, FB, LI, XTw, YT, IconPin, IconPhone, IconMail } from "./Icons.jsx";
 import { EXPERTISE_LINKS } from "../data/services.js";
+import { SECTORS } from "../data/sectors.js";
 import nabetLogo from "../assets/nabet-logo.png";
 
 export default function Footer() {
@@ -11,9 +12,19 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div>
-            <div className="footer-logo" style={{ display: "flex", gap: "20px", alignItems: "center" }}>
-              <RCLogo height={54} />
-              <img src={nabetLogo} alt="NABET Logo" style={{ height: "48px" }} />
+            <div className="foot-brands">
+              <div className="foot-brand-card">
+                <RCLogo height={52} />
+                <span className="foot-brand-txt">
+                  Rejig GreenLogic Pvt. Ltd. — your techno-legal environmental advisory partner.
+                </span>
+              </div>
+              <div className="foot-brand-card">
+                <img src={nabetLogo} alt="NABET Accredited" className="foot-brand-img" />
+                <span className="foot-brand-txt">
+                  QCI–NABET Accredited · Category-A EIA Consultant Organization.
+                </span>
+              </div>
             </div>
             <p className="desc">
               Your techno-legal advisory partner in environmental consultancy — trusted by
@@ -43,6 +54,14 @@ export default function Footer() {
             {EXPERTISE_LINKS.map((l) => (
               <Link key={l.to} to={l.to}>{l.label}</Link>
             ))}
+          </div>
+
+          <div className="footer-col">
+            <h4>NABET Sectors</h4>
+            {SECTORS.map((s) => (
+              <Link key={s.slug} to={`/sectors/${s.slug}`}>{s.name}</Link>
+            ))}
+            <Link to="/sectors" className="foot-all-sectors">All Sectors →</Link>
           </div>
 
           <div>

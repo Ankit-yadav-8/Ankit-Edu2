@@ -33,12 +33,12 @@
 .nav-item:hover .arr { transform: rotate(180deg); }
 
 .mega {
-  position: absolute; top: calc(100% + 10px); left: 50%; transform: translateX(-50%);
+  position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
   background: #ffffff; border-top: 3px solid var(--violet-600);
-  border-radius: 0 0 14px 14px;
+  border-radius: 0 0 16px 16px;
   box-shadow: 0 20px 56px rgba(0,0,0,.13);
-  padding: 36px 40px; min-width: 860px;
-  display: grid; grid-template-columns: 220px 1fr; gap: 36px;
+  padding: 32px 36px; width: min(1040px, calc(100vw - 32px));
+  display: grid; grid-template-columns: 200px 1fr; gap: 32px;
   opacity: 0; visibility: hidden; pointer-events: none;
   transition: opacity .18s, visibility .18s;
   z-index: 100;
@@ -58,23 +58,33 @@
   transition: background .2s, transform .15s;
 }
 .m-explore:hover { background: var(--violet-100); transform: translateX(2px); }
-.mega-r { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 18px; }
+.mega-r { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 16px; }
+.mega-r > div { min-width: 0; }
 .m-lnk {
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  min-width: 0;
   padding: 8px 0; border-bottom: 1px solid var(--violet-50);
-  font-size: 10.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  font-size: 10.5px; font-weight: 700; letter-spacing: .03em; text-transform: uppercase;
   color: var(--ink); text-decoration: none;
   transition: color .16s;
 }
+.m-lnk .m-nm { min-width: 0; overflow-wrap: anywhere; line-height: 1.3; }
+/* Override .nav-links a { white-space: nowrap } so long sector names wrap
+   instead of overflowing into the next mega-menu column. Needs >( .nav-links a )
+   specificity, hence the .nav-links prefix. */
+.nav-links .m-lnk,
+.nav-links .m-lnk .m-nm { white-space: normal; }
 .m-lnk:hover { color: var(--violet-700); background: transparent; transform: none; }
-.m-lnk .ma { opacity: .35; font-size: 12px; transition: opacity .16s, transform .16s; }
+.m-lnk .ma { flex-shrink: 0; opacity: .35; font-size: 11px; transition: opacity .16s, transform .16s; }
 .m-lnk:hover .ma { opacity: 1; transform: translateX(3px); }
 
-/* Mobile drawer */
+/* Mobile drawer — sits flush under the sticky header (92px ≤1080, 84px ≤860;
+   see the navbar media queries in index.css). */
 .mob-nav {
-  display: none; position: fixed; top: 70px; left: 0; right: 0; bottom: 0;
+  display: none; position: fixed; top: 92px; left: 0; right: 0; bottom: 0;
   background: #ffffff; overflow-y: auto; z-index: 850;
-  padding: 0 24px 40px;
+  padding: 8px 24px 40px;
+  -webkit-overflow-scrolling: touch;
 }
 .mob-nav.open { display: block; }
 .mob-sec { border-bottom: 1px solid var(--violet-50); padding: 16px 0; }
@@ -140,7 +150,11 @@
   display: grid; grid-template-columns: repeat(3, 1fr);
   gap: 1px; background: var(--violet-50); border: 1px solid var(--violet-50);
 }
+/* Each card is wrapped in a <Reveal> div; make that wrapper a flex cell so the
+   white card fills the full grid cell and no separator background shows through. */
+.sol-grid > * { display: flex; }
 .sol-card {
+  flex: 1; height: 100%;
   background: #ffffff; padding: 28px 28px 24px;
   display: flex; flex-direction: column; gap: 10px;
   cursor: pointer; text-decoration: none; color: inherit;
