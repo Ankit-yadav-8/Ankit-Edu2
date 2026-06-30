@@ -29,10 +29,8 @@ export default function About() {
         breadcrumb="About Us"
         cards={[
           { type: "image", src: consultingStatsImg, alt: "Consulting company analyzing data" },
-          { type: "stat", num: 50, suffix: "+", label: "Sectoral areas", tone: "teal" },
-          { type: "info", icon: "🏅", title: "NABET Accredited", sub: `${SECTOR_COUNT} sectors`, tone: "amber" },
-          { type: "stat", num: 3, suffix: "+", label: "Years of excellence", tone: "green" },
         ]}
+        fullImage={true}
       />
 
       <section id="company" className="section">
@@ -214,36 +212,30 @@ export default function About() {
         </div>
       </section>
 
-      <section id="events" className="section">
+      <section className="section section--soft">
         <div className="container">
-          <Reveal className="section-head text-center">
-            <span className="eyebrow">Events</span>
-            <h2 className="section-title">Latest Events & Insights</h2>
-            <p className="section-sub">Information about our recent events, webinars, and conferences will be updated here soon.</p>
-          </Reveal>
-        </div>
-      </section>
+          <div className="grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24 }}>
+            <Reveal className="card" id="events" style={{ textAlign: 'center', padding: '40px 24px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <span className="eyebrow">Events</span>
+              <h3 style={{ fontSize: '1.4rem', marginBottom: 12, marginTop: 12 }}>Latest Events & Insights</h3>
+              <p className="body" style={{ color: 'var(--muted)' }}>Information about our recent events, webinars, and conferences will be updated here soon.</p>
+            </Reveal>
 
-      <section id="locations" className="section section--soft">
-        <div className="container">
-          <Reveal className="section-head text-center">
-            <span className="eyebrow">Our Presence</span>
-            <h2 className="section-title">Office Locations</h2>
-            <p className="section-sub">
-              7th Floor, Block C, Laxmi Cyber City, White Fields, Hitech City,<br />
-              Kondapur, Hyderabad - 500081
-            </p>
-          </Reveal>
-        </div>
-      </section>
+            <Reveal className="card" id="locations" delay={0.1} style={{ textAlign: 'center', padding: '40px 24px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <span className="eyebrow">Our Presence</span>
+              <h3 style={{ fontSize: '1.4rem', marginBottom: 12, marginTop: 12 }}>Office Locations</h3>
+              <p className="body" style={{ color: 'var(--muted)' }}>
+                7th Floor, Block C, Laxmi Cyber City, White Fields, Hitech City,<br />
+                Kondapur, Hyderabad - 500081
+              </p>
+            </Reveal>
 
-      <section id="careers" className="section">
-        <div className="container">
-          <Reveal className="section-head text-center">
-            <span className="eyebrow">Join Us</span>
-            <h2 className="section-title">Careers at RGPL</h2>
-            <p className="section-sub">Explore opportunities to build a sustainable future with our expert team.</p>
-          </Reveal>
+            <Reveal className="card" id="careers" delay={0.2} style={{ textAlign: 'center', padding: '40px 24px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <span className="eyebrow">Join Us</span>
+              <h3 style={{ fontSize: '1.4rem', marginBottom: 12, marginTop: 12 }}>Careers at RGPL</h3>
+              <p className="body" style={{ color: 'var(--muted)' }}>Explore opportunities to build a sustainable future with our expert team.</p>
+            </Reveal>
+          </div>
         </div>
       </section>
 

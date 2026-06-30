@@ -14,6 +14,7 @@ export default function PageHero({
   breadcrumb,
   cards = [],
   cta,
+  fullImage = false,
 }) {
   const image = cards.find((c) => c.type === "image");
   const data = cards.filter((c) => c.type !== "image");
@@ -46,7 +47,7 @@ export default function PageHero({
 
         {cards.length > 0 && (
           <Reveal delay={1} className="hero-panel-wrap">
-            <div className="hero-panel">
+            <div className={`hero-panel ${fullImage ? "hero-panel--full-image" : ""}`}>
               {image && (
                 <div className="hero-panel__img">
                   <img src={image.src} alt={image.alt || ""} loading="lazy" />
