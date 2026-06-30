@@ -29,15 +29,7 @@ export default function Clientele() {
         fullImage={true}
       />
 
-      <section className="section">
-        <div className="container">
-          <div className="stats grid-3">
-            <div className="stat"><div className="num"><Counter to={50} suffix="+" /></div><div className="lbl">Sectoral areas</div></div>
-            <div className="stat"><div className="num"><Counter to={SECTOR_COUNT} /></div><div className="lbl">NABET sectors</div></div>
-            <div className="stat"><div className="num"><Counter to={3} /></div><div className="lbl">Years of excellence</div></div>
-          </div>
-        </div>
-      </section>
+
 
       <section className="section section--soft">
         <div className="container">
