@@ -3,7 +3,7 @@ import Reveal from "../components/Reveal.jsx";
 import Counter from "../components/Counter.jsx";
 import PageHero from "../components/PageHero.jsx";
 import { IconArrow, IconUsers, IconBeaker, IconStar, IconCheck } from "../components/Icons.jsx";
-import visionDice from "../assets/vision-mission.png";
+import visionDice from "../assets/vision-mission-updated.png";
 import nabetCert from "../assets/nabet-certificate-new.png";
 import isoCert from "../assets/iso-certificate.png";
 import aboutTeam from "../assets/about-us-team.png";
