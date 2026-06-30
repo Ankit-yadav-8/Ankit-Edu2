@@ -5,6 +5,7 @@ import { CLIENT_LOGOS } from "../data/clients.js";
 import { SECTOR_COUNT } from "../data/sectors.js";
 import PageHero from "../components/PageHero.jsx";
 import { IconArrow } from "../components/Icons.jsx";
+import clientsMeetingImg from "../assets/clients_meeting.png";
 
 const SECTORS = [
   "Mining & Minerals", "Thermal / Power", "Cement", "Chemicals & Petrochemicals",
@@ -23,10 +24,9 @@ export default function Clientele() {
         subtitle="From cement and power to mining, chemicals and infrastructure — leading industrial names rely on RGPL."
         breadcrumb="Clientele"
         cards={[
-          { type: "stat", num: 50, suffix: "+", label: "Sectors", tone: "teal" },
-          { type: "info", icon: "🤝", title: "Trusted partner", sub: "across India", tone: "amber" },
-          { type: "stat", num: 3, suffix: "+", label: "Years of excellence", tone: "green" },
+          { type: "image", src: clientsMeetingImg, alt: "Trusted corporate partners" },
         ]}
+        fullImage={true}
       />
 
       <section className="section">
