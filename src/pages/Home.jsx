@@ -235,37 +235,26 @@ export default function Home() {
             </p>
           </Reveal>
           
-          <Reveal>
-            <div className="client-grid" style={{ 
-              display: "grid", 
-              gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))", 
-              gap: "24px",
-              justifyItems: "center",
-              alignItems: "center"
-            }}>
-              {CLIENT_LOGOS.slice(0, 10).map((client, idx) => (
-                <div key={idx} style={{ 
+          <div className="client-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "24px" }}>
+            {CLIENT_LOGOS.map((client, i) => (
+              <Reveal key={i} delay={i % 4}>
+                <div style={{
                   background: "#fff", 
-                  padding: "20px", 
+                  padding: "24px", 
                   borderRadius: "12px",
                   border: "1px solid var(--violet-50)",
                   boxShadow: "0 4px 12px rgba(0,0,0,0.03)",
-                  width: "100%",
-                  aspectRatio: "3/2",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center"
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  height: "120px"
                 }}>
-                  <img src={client.src} alt={client.name} style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain", filter: "grayscale(100%) opacity(0.7)", transition: "0.3s" }} 
-                       onMouseEnter={(e) => { e.currentTarget.style.filter = "grayscale(0%) opacity(1)"; }}
-                       onMouseLeave={(e) => { e.currentTarget.style.filter = "grayscale(100%) opacity(0.7)"; }} />
+                  <img src={client.src} alt={client.name} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
                 </div>
-              ))}
-            </div>
-            <div className="text-center mt36">
-              <Link to="/clientele" className="view-all">View all clients →</Link>
-            </div>
-          </Reveal>
+              </Reveal>
+            ))}
+          </div>
+          <div className="text-center mt36">
+            <Link to="/clientele" className="view-all" style={{ marginTop: "32px", display: "inline-block", color: "var(--violet-700)", fontWeight: "500" }}>View all clients →</Link>
+          </div>
         </div>
       </section>
 

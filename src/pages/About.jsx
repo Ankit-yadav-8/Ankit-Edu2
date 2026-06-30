@@ -3,7 +3,7 @@ import Reveal from "../components/Reveal.jsx";
 import Counter from "../components/Counter.jsx";
 import PageHero from "../components/PageHero.jsx";
 import { IconArrow, IconUsers, IconBeaker, IconStar, IconCheck } from "../components/Icons.jsx";
-import visionDice from "../assets/vision-dice.png";
+import visionDice from "../assets/vision-mission.png";
 import nabetCert from "../assets/nabet-certificate-new.png";
 import isoCert from "../assets/iso-certificate.png";
 
@@ -164,6 +164,7 @@ export default function About() {
                     <span>{s.certName || s.name}</span>
                     <span className="sector-list__meta">
                       <span className="tag">NABET {s.nabet}</span>
+                      <span className="tag" style={{ background: "var(--surface)", border: "1px solid var(--line)", color: "var(--text)" }}>MoEFCC {s.moefcc}</span>
                       <span className={`sector-badge cat-${s.category}`}>Cat {s.category}</span>
                     </span>
                   </li>
