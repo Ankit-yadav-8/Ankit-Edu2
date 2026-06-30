@@ -207,7 +207,7 @@ export default function About() {
             </ul>
           </Reveal>
           <Reveal delay={1} className="cert-frame" style={{ maxHeight: 420 }}>
-            <img src={isoCert} alt="ISO 9001:2015 Certificate of Registration" loading="lazy" style={{ objectPosition: 'top' }} />
+            <img src={isoCert} alt="ISO 9001:2015 Certificate of Registration" loading="lazy" style={{ objectFit: 'contain' }} />
           </Reveal>
         </div>
       </section>
