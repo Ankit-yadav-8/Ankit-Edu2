@@ -49,9 +49,7 @@ export default function App() {
           <Route path="/services/*" element={<Services />} />
           <Route path="/products/*" element={<Products />} />
           <Route path="/infrastructure/*" element={<Infrastructure />} />
-          <Route path="/industries/*" element={<Infrastructure />} />
-          <Route path="/projects/*" element={<Services />} />
-          <Route path="/insights/*" element={<About />} />
+
           <Route path="/events/*" element={<About />} />
           <Route path="/clientele/*" element={<Clientele />} />
           <Route path="/ai-integration/*" element={<AiIntegration />} />

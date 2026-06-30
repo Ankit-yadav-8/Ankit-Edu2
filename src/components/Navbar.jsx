@@ -80,36 +80,7 @@ export default function Navbar() {
               </div>
             </li>
 
-            <li className="has-dropdown">
-              <div className="dd-row">
-                <NavLink to="/industries" className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>Industries</NavLink>
-                <button type="button" className="dd-caret" aria-label="Toggle industries" onClick={() => {}}>▾</button>
-              </div>
-              <div className="mega">
-                <div className="mega-l">
-                  <div className="m-label">Industries</div>
-                  <div className="m-title">We focus on the greatest <em>environmental challenges</em> across all sectors.</div>
-                  <Link to="/industries" className="m-explore" onClick={closeMenu}>Explore →</Link>
-                </div>
-                <div className="mega-r">
-                  <div>
-                    <Link to="/industries/mining" className="m-lnk" onClick={closeMenu}>Mining &amp; Minerals <span className="ma">→</span></Link>
-                    <Link to="/industries/oilgas" className="m-lnk" onClick={closeMenu}>Oil &amp; Gas <span className="ma">→</span></Link>
-                    <Link to="/industries/chem" className="m-lnk" onClick={closeMenu}>Chemical Industry <span className="ma">→</span></Link>
-                  </div>
-                  <div>
-                    <Link to="/industries/power" className="m-lnk" onClick={closeMenu}>Power &amp; Energy <span className="ma">→</span></Link>
-                    <Link to="/industries/infra" className="m-lnk" onClick={closeMenu}>Infrastructure <span className="ma">→</span></Link>
-                    <Link to="/industries/pharma" className="m-lnk" onClick={closeMenu}>Pharmaceutical <span className="ma">→</span></Link>
-                  </div>
-                  <div>
-                    <Link to="/industries/mfg" className="m-lnk" onClick={closeMenu}>Manufacturing <span className="ma">→</span></Link>
-                    <Link to="/industries/re" className="m-lnk" onClick={closeMenu}>Real Estate &amp; Construction <span className="ma">→</span></Link>
-                    <Link to="/industries/ports" className="m-lnk" onClick={closeMenu}>Ports &amp; Airports <span className="ma">→</span></Link>
-                  </div>
-                </div>
-              </div>
-            </li>
+
 
             <li className="has-dropdown">
               <div className="dd-row">
@@ -126,7 +97,6 @@ export default function Navbar() {
                   <div>
                     <Link to="/about" className="m-lnk" onClick={closeMenu}>Our Company <span className="ma">→</span></Link>
                     <Link to="/about/people" className="m-lnk" onClick={closeMenu}>Our People <span className="ma">→</span></Link>
-                    <Link to="/projects" className="m-lnk" onClick={closeMenu}>Our Work <span className="ma">→</span></Link>
                     <Link to="/about/nabet" className="m-lnk" onClick={closeMenu}>NABET Accreditation <span className="ma">→</span></Link>
                   </div>
                   <div>
@@ -135,7 +105,6 @@ export default function Navbar() {
                     <Link to="/about/moefcc" className="m-lnk" onClick={closeMenu}>MoEFCC Registration <span className="ma">→</span></Link>
                   </div>
                   <div>
-                    <Link to="/insights" className="m-lnk" onClick={closeMenu}>News &amp; Insights <span className="ma">→</span></Link>
                     <Link to="/about/nsic" className="m-lnk" onClick={closeMenu}>NSIC Certification <span className="ma">→</span></Link>
                     <Link to="/contact" className="m-lnk" onClick={closeMenu}>Careers <span className="ma">→</span></Link>
                   </div>
@@ -208,24 +177,13 @@ export default function Navbar() {
           <Link to="/services/climate" className="mob-lnk" onClick={closeMenu}>Climate Change &amp; Carbon</Link>
           <Link to="/services" className="mob-lnk accent" onClick={closeMenu}>All Solutions →</Link>
         </div>
-        <div className="mob-sec">
-          <div className="mob-hd">Industries</div>
-          <Link to="/industries/mining" className="mob-lnk" onClick={closeMenu}>Mining &amp; Minerals</Link>
-          <Link to="/industries/oilgas" className="mob-lnk" onClick={closeMenu}>Oil &amp; Gas</Link>
-          <Link to="/industries/power" className="mob-lnk" onClick={closeMenu}>Power &amp; Energy</Link>
-          <Link to="/industries/infra" className="mob-lnk" onClick={closeMenu}>Infrastructure</Link>
-          <Link to="/industries" className="mob-lnk accent" onClick={closeMenu}>All Industries →</Link>
-        </div>
+
         <div className="mob-sec">
           <div className="mob-hd">About</div>
           <Link to="/about" className="mob-lnk" onClick={closeMenu}>Our Company</Link>
           <Link to="/about/nabet" className="mob-lnk" onClick={closeMenu}>NABET Accreditation</Link>
-          <Link to="/projects" className="mob-lnk" onClick={closeMenu}>Our Projects</Link>
-          <Link to="/insights" className="mob-lnk" onClick={closeMenu}>News &amp; Insights</Link>
         </div>
         <div className="mob-sec">
-          <Link to="/projects" className="mob-lnk" onClick={closeMenu}>Projects</Link>
-          <Link to="/insights" className="mob-lnk" onClick={closeMenu}>Insights</Link>
           <Link to="/contact" className="mob-lnk accent" onClick={closeMenu}>Contact Us →</Link>
         </div>
       </div>

@@ -84,7 +84,7 @@
 
 /* ── STATS ──────────────────────────────────────────────── */
 .stats-band { background: var(--ink); padding: 26px 0; }
-.s-wrap { max-width: 1380px; margin: 0 auto; padding: 0 28px; display: grid; grid-template-columns: repeat(4, 1fr); }
+.s-wrap { max-width: 1380px; margin: 0 auto; padding: 0 28px; display: grid; grid-template-columns: repeat(3, 1fr); }
 .s-item { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 8px 0; border-right: 1px solid rgba(255,255,255,.1); }
 .s-item:last-child { border-right: none; }
 .s-num { font-family: var(--font-head); font-size: 34px; color: var(--violet-600); line-height: 1; }

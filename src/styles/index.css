@@ -312,7 +312,7 @@ ul { list-style: none; }
 .hero-slide.active { opacity: 1; visibility: visible; }
 .hero-slide__grid {
   display: grid;
-  grid-template-columns: 1fr 1.05fr;
+  grid-template-columns: 1fr;
   gap: 48px;
   align-items: center;
   width: min(100% - 40px, var(--container));

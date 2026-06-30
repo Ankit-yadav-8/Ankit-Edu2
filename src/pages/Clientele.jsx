@@ -17,22 +17,20 @@ export default function Clientele() {
       <PageHero
         eyebrow="Clientele"
         title="Trusted by"
-        highlight="3,000+ industrial units"
-        titleEnd="across India & abroad"
+        highlight="Industrial units"
+        titleEnd="across India"
         subtitle="From cement and power to mining, chemicals and infrastructure — leading industrial names rely on RGPL."
         breadcrumb="Clientele"
         cards={[
-          { type: "stat", num: 3000, suffix: "+", label: "Units served", tone: "green" },
           { type: "stat", num: 50, suffix: "+", label: "Sectors", tone: "teal" },
-          { type: "info", icon: "🤝", title: "Trusted partner", sub: "India & abroad", tone: "amber" },
+          { type: "info", icon: "🤝", title: "Trusted partner", sub: "across India", tone: "amber" },
           { type: "stat", num: 29, label: "Years", tone: "green" },
         ]}
       />
 
       <section className="section">
         <div className="container">
-          <div className="stats grid-4">
-            <div className="stat"><div className="num"><Counter to={3000} suffix="+" /></div><div className="lbl">Industrial units served</div></div>
+          <div className="stats grid-3">
             <div className="stat"><div className="num"><Counter to={50} suffix="+" /></div><div className="lbl">Sectoral areas</div></div>
             <div className="stat"><div className="num"><Counter to={20} /></div><div className="lbl">NABET sectors</div></div>
             <div className="stat"><div className="num"><Counter to={29} /></div><div className="lbl">Years of legacy</div></div>

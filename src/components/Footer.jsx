@@ -16,8 +16,8 @@ export default function Footer() {
               <img src={nabetLogo} alt="NABET Logo" style={{ height: "48px" }} />
             </div>
             <p className="desc">
-              Your techno-legal advisory partner in environmental consultancy — trusted by 3,000+
-              industrial units across 50+ sectors in India and abroad.
+              Your techno-legal advisory partner in environmental consultancy — trusted by
+              industrial units across 50+ sectors in India.
             </p>
             <div className="socials">
               <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><Insta /></a>

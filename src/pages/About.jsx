@@ -40,7 +40,6 @@ export default function About() {
         subtitle="Incorporated in 2021, RGPL is your techno-legal advisory partner across environmental consultancy — backed by 29 years of legacy."
         breadcrumb="About Us"
         cards={[
-          { type: "stat", num: 3000, suffix: "+", label: "Units served", tone: "green" },
           { type: "stat", num: 50, suffix: "+", label: "Sectoral areas", tone: "teal" },
           { type: "info", icon: "🏅", title: "NABET Accredited", sub: "20 sectors", tone: "amber" },
           { type: "stat", num: 29, label: "Years of legacy", tone: "green" },
@@ -65,8 +64,7 @@ export default function About() {
             </div>
           </Reveal>
           <Reveal delay={1}>
-            <div className="stats grid-2">
-              <div className="stat"><div className="num"><Counter to={3000} suffix="+" /></div><div className="lbl">Units served</div></div>
+            <div className="stats" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}>
               <div className="stat"><div className="num"><Counter to={50} suffix="+" /></div><div className="lbl">Sectors</div></div>
               <div className="stat"><div className="num"><Counter to={2021} /></div><div className="lbl">Incorporated</div></div>
               <div className="stat"><div className="num"><Counter to={20} /></div><div className="lbl">NABET sectors</div></div>

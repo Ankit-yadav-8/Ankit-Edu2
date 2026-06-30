@@ -14,8 +14,7 @@ const chatLimiter = rateLimit({ windowMs: 60 * 1000, max: 20 });
 const KB = `
 Rejig GreenLogic Private Limited (RGPL) is an environmental consultancy and techno-legal
 advisory firm incorporated on 15 December 2021, headquartered in Hyderabad, Telangana, India.
-RGPL has delivered environmental solutions to 3,000+ specialised industrial units across India
-and abroad, covering 50+ sectoral areas.
+RGPL has delivered environmental solutions to specialised industrial units across India, covering 50+ sectoral areas.
 
 ACCREDITATIONS: NABET accreditation across 20 sectors; MoEFCC (Ministry of Environment, Forest
 & Climate Change) empanelment; NSIC (National Small Scale Industrial Corporation) registration.

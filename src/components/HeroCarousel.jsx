@@ -25,7 +25,7 @@ const SLIDES = [
     titleA: "India's Trusted Environmental Consultancy ",
     hl: "Partner",
     titleB: "",
-    text: "3,000+ industrial units served across India. EIA, forest clearance, GIS, ESG, and AI-driven environmental monitoring — all under one roof.",
+    text: "Environmental solutions across India. EIA, forest clearance, GIS, ESG, and AI-driven environmental monitoring — all under one roof.",
     primary: { to: "/contact", label: "Request Proposal" },
     secondary: { to: "/services", label: "Explore Solutions" },
   },
@@ -93,9 +93,6 @@ export default function HeroCarousel() {
                 <Link to={s.secondary.to} className="btn btn-primary">{s.secondary.label} <IconArrow size={18} /></Link>
                 <Link to={s.primary.to} className="btn btn-ghost">{s.primary.label}</Link>
               </div>
-            </div>
-            <div className="hero-slide__media">
-              <img src={s.img} alt={s.kicker} loading={idx === 0 ? "eager" : "lazy"} />
             </div>
           </div>
         </div>

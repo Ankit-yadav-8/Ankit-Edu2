@@ -7,7 +7,7 @@ import { NabetLogo } from "../components/Logos.jsx";
 import SmartImg from "../components/SmartImg.jsx";
 
 import imgWelcome from "../assets/hero-1-new.png";
-import imgReport from "../assets/hero-2-new.png";
+import imgReport from "../assets/media__1782785983888.jpg";
 import imgS1 from "../assets/service-1.png";
 import imgS2 from "../assets/service-2.png";
 import imgS3 from "../assets/service-3.png";
@@ -28,15 +28,7 @@ export default function Home() {
       {/* ═══ HERO ══════════════════════════════════════════════ */}
       <HeroCarousel />
 
-      {/* ═══ CREDIBILITY STRIP ═════════════════════════════════ */}
-      <div className="cred-strip">
-        <div className="container">
-          <span><b>3,000+</b> industrial units served</span><span className="dot" />
-          <span><b>50+</b> sectoral areas</span><span className="dot" />
-          <span><b>20</b> NABET-accredited sectors</span><span className="dot" />
-          <span><b>India</b> &amp; abroad</span>
-        </div>
-      </div>
+
 
       {/* ═══ WELCOME / ABOUT ═══════════════════════════════════ */}
       <section className="section" style={{ padding: "80px 0" }}>
@@ -50,8 +42,7 @@ export default function Home() {
               consultancy and be your techno-legal advisory partner.
             </p>
             <p className="body" style={{ marginTop: 12, color: "var(--gtxt)", lineHeight: 1.75 }}>
-              We have successfully provided environmental solutions to{" "}
-              <b>more than 3,000 specialised industrial units</b> across India and abroad, covering
+              We have successfully provided environmental solutions covering
               more than fifty sectoral areas.
             </p>
             <ul className="checklist" style={{ listStyle: "none", padding: 0, marginTop: "24px", display: "grid", gap: "12px" }}>
@@ -112,10 +103,7 @@ export default function Home() {
       {/* ═══ STATS ═════════════════════════════════════════════ */}
       <div className="stats-band">
         <div className="s-wrap">
-          <div className="s-item">
-            <div className="s-num"><Counter to={3000} suffix="+" /></div>
-            <div className="s-lbl">Industrial Units<br/>Served Globally</div>
-          </div>
+
           <div className="s-item">
             <div className="s-num"><Counter to={50} suffix="+" /></div>
             <div className="s-lbl">Sectoral Areas<br/>Covered</div>
@@ -141,6 +129,8 @@ export default function Home() {
               Navigate the evolving landscape of MoEFCC compliance, ESG reporting mandates, and
               climate-risk policies. Our latest comprehensive report outlines the critical shifts
               impacting heavy industries and infrastructure development in India.
+              <br /><br />
+              This crucial update provides actionable strategies for compliance, reducing operational risks and fostering sustainable growth. Our experts have analyzed recent regulatory changes to help your organization stay ahead of the curve.
             </p>
             <Link to="/insights" className="feat-cta">Read the full report →</Link>
           </Reveal>
@@ -251,174 +241,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ INDUSTRIES ════════════════════════════════════════ */}
-      <section className="sec ind-sec" id="industries">
-        <div className="wrap">
-          <Reveal className="sec-hd">
-            <div className="tag">Sector Expertise</div>
-            <h2 className="sec-t">Driving Sustainability Across Core Industries</h2>
-            <p className="sec-s">
-              Our deep domain knowledge spans across critical infrastructure and heavy manufacturing,
-              ensuring sector-specific regulatory compliance and environmental optimization.
-            </p>
-          </Reveal>
 
-          <div className="ind-grid">
-            <Link to="/industries/mining" className="ind-card">
-              <div className="ind-n">01</div>
-              <div className="ind-nm">Mining &amp; Minerals <span>→</span></div>
-            </Link>
-            <Link to="/industries/oilgas" className="ind-card">
-              <div className="ind-n">02</div>
-              <div className="ind-nm">Oil &amp; Gas <span>→</span></div>
-            </Link>
-            <Link to="/industries/power" className="ind-card">
-              <div className="ind-n">03</div>
-              <div className="ind-nm">Power &amp; Energy <span>→</span></div>
-            </Link>
-            <Link to="/industries/infra" className="ind-card">
-              <div className="ind-n">04</div>
-              <div className="ind-nm">Infrastructure &amp; Highways <span>→</span></div>
-            </Link>
-            <Link to="/industries/chem" className="ind-card">
-              <div className="ind-n">05</div>
-              <div className="ind-nm">Chemical &amp; Petrochemical <span>→</span></div>
-            </Link>
-            <Link to="/industries/mfg" className="ind-card">
-              <div className="ind-n">06</div>
-              <div className="ind-nm">Heavy Manufacturing <span>→</span></div>
-            </Link>
-            <Link to="/industries/pharma" className="ind-card">
-              <div className="ind-n">07</div>
-              <div className="ind-nm">Pharmaceuticals <span>→</span></div>
-            </Link>
-            <Link to="/industries/re" className="ind-card">
-              <div className="ind-n">08</div>
-              <div className="ind-nm">Real Estate &amp; Townships <span>→</span></div>
-            </Link>
-            <Link to="/industries/ports" className="ind-card">
-              <div className="ind-n">09</div>
-              <div className="ind-nm">Ports &amp; Harbours <span>→</span></div>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══ PROJECTS ══════════════════════════════════════════ */}
-      <section className="sec" id="projects">
-        <div className="wrap">
-          <Reveal className="sec-hd">
-            <div className="tag">Our Impact</div>
-            <h2 className="sec-t">Featured Projects &amp; Case Studies</h2>
-            <p className="sec-s">
-              Explore how we've helped leading organizations navigate complex environmental challenges
-              and achieve their sustainability targets.
-            </p>
-          </Reveal>
-
-          <div className="proj-grid">
-            <Link to="/projects" className="proj-card">
-              <img src={imgS1} alt="Mining Project" />
-              <div className="proj-ov">
-                <div className="proj-tag">Mining &amp; Minerals</div>
-                <div className="proj-nm">EIA for 5 MTPA Iron Ore Mine Expansion</div>
-                <div className="proj-loc">Odisha, India</div>
-              </div>
-              <div className="proj-plus">+</div>
-            </Link>
-            <Link to="/projects" className="proj-card">
-              <img src={imgS2} alt="Solar Park" />
-              <div className="proj-ov">
-                <div className="proj-tag">Renewable Energy</div>
-                <div className="proj-nm">ESIA for 500MW Solar Park Development</div>
-                <div className="proj-loc">Rajasthan, India</div>
-              </div>
-              <div className="proj-plus">+</div>
-            </Link>
-            <Link to="/projects" className="proj-card">
-              <img src={imgS3} alt="Coastal Highway" />
-              <div className="proj-ov">
-                <div className="proj-tag">Infrastructure</div>
-                <div className="proj-nm">CRZ Clearance for Coastal Highway</div>
-                <div className="proj-loc">Maharashtra, India</div>
-              </div>
-              <div className="proj-plus">+</div>
-            </Link>
-            <Link to="/projects" className="proj-card">
-              <img src={imgS4} alt="Chemical Plant" />
-              <div className="proj-ov">
-                <div className="proj-tag">Chemical Industry</div>
-                <div className="proj-nm">Quantitative Risk Assessment &amp; HAZOP</div>
-                <div className="proj-loc">Gujarat, India</div>
-              </div>
-              <div className="proj-plus">+</div>
-            </Link>
-            <Link to="/projects" className="proj-card">
-              <img src={imgS5} alt="Township" />
-              <div className="proj-ov">
-                <div className="proj-tag">Real Estate</div>
-                <div className="proj-nm">IGBC Green Township Certification</div>
-                <div className="proj-loc">Karnataka, India</div>
-              </div>
-              <div className="proj-plus">+</div>
-            </Link>
-            <Link to="/projects" className="proj-card">
-              <img src={imgS6} alt="Corporate ESG" />
-              <div className="proj-ov">
-                <div className="proj-tag">Corporate Advisory</div>
-                <div className="proj-nm">Net-Zero Roadmap &amp; ESG Strategy</div>
-                <div className="proj-loc">Pan-India Operations</div>
-              </div>
-              <div className="proj-plus">+</div>
-            </Link>
-          </div>
-
-          <div className="mt36 tc">
-            <Link to="/projects" className="view-all">View Project Portfolio →</Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══ INSIGHTS ══════════════════════════════════════════ */}
-      <section className="sec ins-bg" id="insights">
-        <div className="wrap">
-          <Reveal className="sec-hd">
-            <div className="tag">Knowledge Hub</div>
-            <h2 className="sec-t">Latest News &amp; Environmental Insights</h2>
-          </Reveal>
-
-          <div className="ins-grid">
-            <Link to="/insights" className="ins-card">
-              <img src={imgForest} alt="News 1" className="ins-img" />
-              <div className="ins-body">
-                <div className="ins-tag">Regulatory Update</div>
-                <div className="ins-t">New MoEFCC Guidelines on Fly Ash Utilization Explained</div>
-                <div className="ins-dt">Oct 12, 2024 · 5 min read</div>
-              </div>
-            </Link>
-            <Link to="/insights" className="ins-card">
-              <img src={imgEsg} alt="News 2" className="ins-img" />
-              <div className="ins-body">
-                <div className="ins-tag">ESG Trends</div>
-                <div className="ins-t">The Rise of Biodiversity Metrics in Corporate Sustainability Reporting</div>
-                <div className="ins-dt">Oct 05, 2024 · 7 min read</div>
-              </div>
-            </Link>
-            <Link to="/insights" className="ins-card">
-              <img src={imgS4} alt="News 3" className="ins-img" />
-              <div className="ins-body">
-                <div className="ins-tag">Technology</div>
-                <div className="ins-t">Leveraging AI &amp; IoT for Real-time Emission Monitoring in Heavy Industry</div>
-                <div className="ins-dt">Sep 28, 2024 · 6 min read</div>
-              </div>
-            </Link>
-          </div>
-
-          <div className="mt36 tc">
-            <Link to="/insights" className="view-all">View All Articles →</Link>
-          </div>
-        </div>
-      </section>
 
       {/* ═══ ACCREDITATIONS (Image 1) ══════════════════════════ */}
       <section className="section" style={{ padding: "80px 0" }}>
