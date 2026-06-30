@@ -1,14 +1,10 @@
 import { useState, useEffect } from "react";
-import { NavLink, Link, useNavigate } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { RCLogo, NabetLogo } from "./Logos.jsx";
-import { useAuth } from "../context/AuthContext.jsx";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { user, logout } = useAuth();
-  const navigate = useNavigate();
-
   const closeMenu = () => {
     setOpen(false);
   };
@@ -20,11 +16,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const handleLogout = () => {
-    logout();
-    navigate("/");
-    closeMenu();
-  };
 
   return (
     <>
@@ -37,6 +28,36 @@ export default function Navbar() {
 
           {/* Center — nav links (Mega menus inside previous design structure) */}
           <ul className={`nav-links ${open ? "open" : ""}`}>
+            <li className="has-dropdown">
+              <div className="dd-row">
+                <NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>About Us</NavLink>
+                <button type="button" className="dd-caret" aria-label="Toggle about" onClick={() => {}}>▾</button>
+              </div>
+              <div className="mega">
+                <div className="mega-l">
+                  <div className="m-label">About</div>
+                  <div className="m-title">At RGPL, <em>sustainability</em> is our business.</div>
+                  <Link to="/about" className="m-explore" onClick={closeMenu}>Explore →</Link>
+                </div>
+                <div className="mega-r">
+                  <div>
+                    <Link to="/about" className="m-lnk" onClick={closeMenu}>Our Company <span className="ma">→</span></Link>
+                    <Link to="/about/people" className="m-lnk" onClick={closeMenu}>Our People <span className="ma">→</span></Link>
+                    <Link to="/about/nabet" className="m-lnk" onClick={closeMenu}>NABET Accreditation <span className="ma">→</span></Link>
+                  </div>
+                  <div>
+                    <Link to="/events" className="m-lnk" onClick={closeMenu}>Events <span className="ma">→</span></Link>
+                    <Link to="/contact" className="m-lnk" onClick={closeMenu}>Locations <span className="ma">→</span></Link>
+                    <Link to="/about/moefcc" className="m-lnk" onClick={closeMenu}>MoEFCC Registration <span className="ma">→</span></Link>
+                  </div>
+                  <div>
+                    <Link to="/about/nsic" className="m-lnk" onClick={closeMenu}>NSIC Certification <span className="ma">→</span></Link>
+                    <Link to="/contact" className="m-lnk" onClick={closeMenu}>Careers <span className="ma">→</span></Link>
+                  </div>
+                </div>
+              </div>
+            </li>
+
             <li className="has-dropdown">
               <div className="dd-row">
                 <NavLink to="/services" className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>Solutions</NavLink>
@@ -80,38 +101,6 @@ export default function Navbar() {
               </div>
             </li>
 
-
-
-            <li className="has-dropdown">
-              <div className="dd-row">
-                <NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>About Us</NavLink>
-                <button type="button" className="dd-caret" aria-label="Toggle about" onClick={() => {}}>▾</button>
-              </div>
-              <div className="mega">
-                <div className="mega-l">
-                  <div className="m-label">About</div>
-                  <div className="m-title">At RGPL, <em>sustainability</em> is our business.</div>
-                  <Link to="/about" className="m-explore" onClick={closeMenu}>Explore →</Link>
-                </div>
-                <div className="mega-r">
-                  <div>
-                    <Link to="/about" className="m-lnk" onClick={closeMenu}>Our Company <span className="ma">→</span></Link>
-                    <Link to="/about/people" className="m-lnk" onClick={closeMenu}>Our People <span className="ma">→</span></Link>
-                    <Link to="/about/nabet" className="m-lnk" onClick={closeMenu}>NABET Accreditation <span className="ma">→</span></Link>
-                  </div>
-                  <div>
-                    <Link to="/events" className="m-lnk" onClick={closeMenu}>Events <span className="ma">→</span></Link>
-                    <Link to="/contact" className="m-lnk" onClick={closeMenu}>Locations <span className="ma">→</span></Link>
-                    <Link to="/about/moefcc" className="m-lnk" onClick={closeMenu}>MoEFCC Registration <span className="ma">→</span></Link>
-                  </div>
-                  <div>
-                    <Link to="/about/nsic" className="m-lnk" onClick={closeMenu}>NSIC Certification <span className="ma">→</span></Link>
-                    <Link to="/contact" className="m-lnk" onClick={closeMenu}>Careers <span className="ma">→</span></Link>
-                  </div>
-                </div>
-              </div>
-            </li>
-
             <li>
               <NavLink to="/infrastructure" className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>Infrastructure</NavLink>
             </li>
@@ -122,34 +111,12 @@ export default function Navbar() {
               <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>Contact Us</NavLink>
             </li>
             
-            {/* shown only inside the mobile dropdown */}
-            <li className="nav-mobile-cta">
-              {user ? (
-                <button className="btn btn-ghost btn-sm" onClick={handleLogout}>Log out</button>
-              ) : (
-                <>
-                  <Link to="/login" className="btn btn-ghost btn-sm" onClick={closeMenu}>Log in</Link>
-                  <Link to="/signup" className="btn btn-primary btn-sm" onClick={closeMenu}>Sign up</Link>
-                </>
-              )}
-            </li>
+
           </ul>
 
           {/* Right — auth buttons + NABET logo + mobile toggle */}
           <div className="nav-right">
-            <div className="nav-actions" style={{ display: "none" }}>
-              {user ? (
-                <>
-                  <span className="user-chip"><span className="avatar">{(user.name?.[0] || "U").toUpperCase()}</span></span>
-                  <button className="btn btn-ghost btn-sm" onClick={handleLogout}>Log out</button>
-                </>
-              ) : (
-                <>
-                  <Link to="/login" className="btn btn-ghost btn-sm">Log in</Link>
-                  <Link to="/signup" className="btn btn-primary btn-sm">Sign up</Link>
-                </>
-              )}
-            </div>
+
             
             <Link to="/contact" className="nav-cta" style={{ display: open ? "none" : "inline-flex" }}>Contact →</Link>
 
@@ -168,6 +135,12 @@ export default function Navbar() {
       {/* ═══ MOBILE NAV ════════════════════════════════════════ */}
       <div className={`mob-nav ${open ? "open" : ""}`}>
         <div className="mob-sec">
+          <div className="mob-hd">About Us</div>
+          <Link to="/about" className="mob-lnk" onClick={closeMenu}>Our Company</Link>
+          <Link to="/about/nabet" className="mob-lnk" onClick={closeMenu}>NABET Accreditation</Link>
+        </div>
+        
+        <div className="mob-sec">
           <div className="mob-hd">Solutions</div>
           <Link to="/services/eia" className="mob-lnk" onClick={closeMenu}>EIA / ESIA Studies</Link>
           <Link to="/services/forest" className="mob-lnk" onClick={closeMenu}>Forest &amp; Wildlife Clearance</Link>
@@ -179,9 +152,13 @@ export default function Navbar() {
         </div>
 
         <div className="mob-sec">
-          <div className="mob-hd">About</div>
-          <Link to="/about" className="mob-lnk" onClick={closeMenu}>Our Company</Link>
-          <Link to="/about/nabet" className="mob-lnk" onClick={closeMenu}>NABET Accreditation</Link>
+          <div className="mob-hd">Infrastructure</div>
+          <Link to="/infrastructure" className="mob-lnk" onClick={closeMenu}>Infrastructure</Link>
+        </div>
+        
+        <div className="mob-sec">
+          <div className="mob-hd">Clientele</div>
+          <Link to="/clientele" className="mob-lnk" onClick={closeMenu}>Clientele</Link>
         </div>
         <div className="mob-sec">
           <Link to="/contact" className="mob-lnk accent" onClick={closeMenu}>Contact Us →</Link>
