@@ -20,6 +20,8 @@ import imgWater from "../assets/water-treatment.png";
 import imgHandshake from "../assets/vision-handshake.png";
 import certNabet from "../assets/nabet-certificate.png";
 import certIso from "../assets/iso-certificate.png";
+import imgLab from "../assets/lab-image.png";
+import { CLIENT_LOGOS } from "../data/clients.js";
 import Credentials from "../components/Credentials.jsx";
 
 export default function Home() {
@@ -217,6 +219,73 @@ export default function Home() {
               </div>
             </Reveal>
           </div>
+        </div>
+      </section>
+
+      {/* ═══ LABORATORY ════════════════════════════════════════ */}
+      <section className="section" style={{ padding: "80px 0", background: "var(--off)" }}>
+        <div className="container split" style={{ alignItems: "center" }}>
+          <Reveal className="welcome-media">
+            <SmartImg src={imgLab} alt="State-of-the-art Environmental Laboratory" />
+          </Reveal>
+          <Reveal>
+            <span className="eyebrow" style={{ color: "var(--mint)", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", fontSize: "12px", marginBottom: "8px", display: "inline-block" }}>Our Laboratory</span>
+            <h2 className="section-title" style={{ fontFamily: "var(--font-head)", fontSize: "clamp(26px, 2.8vw, 36px)", marginBottom: "16px", lineHeight: 1.25 }}>NABL Accredited Testing Facility</h2>
+            <p className="body" style={{ color: "var(--gtxt)", lineHeight: 1.75 }}>
+              Our state-of-the-art environmental laboratory is equipped with advanced analytical instruments to deliver highly accurate and reliable testing services. We hold ISO/IEC 17025:2017 accreditation from NABL for chemical and biological testing.
+            </p>
+            <p className="body" style={{ marginTop: 12, color: "var(--gtxt)", lineHeight: 1.75 }}>
+              From ambient air quality and stack emissions to complex water, wastewater, and soil analysis, our expert scientists ensure that your project meets the stringent regulatory standards required for MoEFCC and SPCB clearances.
+            </p>
+            <Link to="/about#lab" className="btn btn-primary" style={{ marginTop: 28, display: "inline-flex" }}>
+              Learn about our lab <IconArrow size={18} />
+            </Link>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ═══ CLIENTELE ═════════════════════════════════════════ */}
+      <section className="section" style={{ padding: "80px 0" }}>
+        <div className="container">
+          <Reveal className="text-center" style={{ marginBottom: 48 }}>
+            <span className="eyebrow" style={{ color: "var(--violet-700)", fontSize: "11px", fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase" }}>TRUSTED BY LEADERS</span>
+            <h2 className="section-title" style={{ fontFamily: "var(--font-head)", fontSize: "36px", color: "var(--ink)", margin: "10px 0 16px" }}>Our Esteemed Clients</h2>
+            <p className="section-sub" style={{ margin: "0 auto", maxWidth: 640, color: "var(--muted)", fontSize: "15px", lineHeight: 1.6 }}>
+              We have successfully delivered environmental solutions for more than 50 projects across diverse industrial sectors in India.
+            </p>
+          </Reveal>
+          
+          <Reveal>
+            <div className="client-grid" style={{ 
+              display: "grid", 
+              gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))", 
+              gap: "24px",
+              justifyItems: "center",
+              alignItems: "center"
+            }}>
+              {CLIENT_LOGOS.slice(0, 10).map((client, idx) => (
+                <div key={idx} style={{ 
+                  background: "#fff", 
+                  padding: "20px", 
+                  borderRadius: "12px",
+                  border: "1px solid var(--violet-50)",
+                  boxShadow: "0 4px 12px rgba(0,0,0,0.03)",
+                  width: "100%",
+                  aspectRatio: "3/2",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center"
+                }}>
+                  <img src={client.src} alt={client.name} style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain", filter: "grayscale(100%) opacity(0.7)", transition: "0.3s" }} 
+                       onMouseEnter={(e) => { e.currentTarget.style.filter = "grayscale(0%) opacity(1)"; }}
+                       onMouseLeave={(e) => { e.currentTarget.style.filter = "grayscale(100%) opacity(0.7)"; }} />
+                </div>
+              ))}
+            </div>
+            <div className="text-center mt36">
+              <Link to="/clientele" className="view-all">View all clients →</Link>
+            </div>
+          </Reveal>
         </div>
       </section>
 
