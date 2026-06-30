@@ -4,7 +4,7 @@ import Counter from "../components/Counter.jsx";
 import PageHero from "../components/PageHero.jsx";
 import { IconArrow, IconUsers, IconBeaker, IconStar, IconCheck } from "../components/Icons.jsx";
 import visionDice from "../assets/vision-dice.png";
-import nabetCert from "../assets/nabet-certificate.png";
+import nabetCert from "../assets/nabet-certificate-new.png";
 import isoCert from "../assets/iso-certificate.png";
 
 const TEAM = [
@@ -24,16 +24,16 @@ export default function About() {
         eyebrow="About RGPL"
         title="A team of environmental experts,"
         highlight="pooled for your green journey"
-        subtitle="Incorporated in 2021, RGPL is your techno-legal advisory partner across environmental consultancy — backed by 29 years of legacy."
+        subtitle="Incorporated in 2021, RGPL is your techno-legal advisory partner across environmental consultancy — backed by a growing legacy of excellence."
         breadcrumb="About Us"
         cards={[
           { type: "stat", num: 50, suffix: "+", label: "Sectoral areas", tone: "teal" },
           { type: "info", icon: "🏅", title: "NABET Accredited", sub: `${SECTOR_COUNT} sectors`, tone: "amber" },
-          { type: "stat", num: 29, label: "Years of legacy", tone: "green" },
+          { type: "stat", num: 3, suffix: "+", label: "Years of excellence", tone: "green" },
         ]}
       />
 
-      <section className="section">
+      <section id="company" className="section">
         <div className="container split">
           <Reveal>
             <span className="eyebrow">Our story</span>
@@ -45,6 +45,20 @@ export default function About() {
               <li>RGPL drive innovation and technology adoption by seamlessly integrating our extensive knowledge and skills into every aspect of our services.</li>
               <li>By staying attuned to emerging trends and breakthroughs, RGPL ensures that our services remain at the forefront by bringing together a team of experienced environmental experts dedicated to providing top-notch consultancy and serving as your trusted techno-legal advisory partner.</li>
             </ul>
+            <div style={{ marginTop: 20 }}>
+              <p style={{ fontWeight: 600, marginBottom: 8 }}>Our Presence:</p>
+              <ul className="checklist">
+                <li><span className="tick">✓</span> Head Office located at Hyderabad</li>
+                <li><span className="tick">✓</span> Partner tie-ups across NCR Delhi, Goa and Mumbai</li>
+                <li><span className="tick">✓</span> Strong Pan-India presence</li>
+              </ul>
+            </div>
+            <p style={{ marginTop: 20, lineHeight: 1.6 }}>
+              Our technical experts, experienced consultants, laboratory specialists, and field officers combine industry-leading expertise with in-depth local knowledge and sustainable approaches to deliver resilient, practical, and client-focused solutions.
+            </p>
+            <p style={{ marginTop: 12, lineHeight: 1.6, fontWeight: 600 }}>
+              We have successfully delivered environmental solutions for more than 50 projects across diverse industrial sectors in India.
+            </p>
             <div className="hero-actions" style={{ marginTop: 24 }}>
               <Link to="/contact" className="btn btn-primary">Work with us <IconArrow size={18} /></Link>
               <Link to="/services" className="btn btn-ghost">Our Services</Link>
@@ -107,7 +121,7 @@ export default function About() {
       <Credentials />
 
       {/* Team */}
-      <section className="section section--soft">
+      <section id="people" className="section section--soft">
         <div className="container">
           <Reveal className="section-head text-center">
             <span className="eyebrow">Our people</span>
@@ -185,6 +199,56 @@ export default function About() {
           </Reveal>
           <Reveal delay={1} className="cert-frame">
             <img src={isoCert} alt="ISO 9001:2015 Certificate of Registration" loading="lazy" />
+          </Reveal>
+        </div>
+      </section>
+
+      <section id="events" className="section">
+        <div className="container">
+          <Reveal className="section-head text-center">
+            <span className="eyebrow">Events</span>
+            <h2 className="section-title">Latest Events & Insights</h2>
+            <p className="section-sub">Information about our recent events, webinars, and conferences will be updated here soon.</p>
+          </Reveal>
+        </div>
+      </section>
+
+      <section id="locations" className="section section--soft">
+        <div className="container">
+          <Reveal className="section-head text-center">
+            <span className="eyebrow">Our Presence</span>
+            <h2 className="section-title">Office Locations</h2>
+            <p className="section-sub">Headquartered in Hyderabad with branch operations across India.</p>
+          </Reveal>
+        </div>
+      </section>
+
+      <section id="moefcc" className="section">
+        <div className="container">
+          <Reveal className="section-head text-center">
+            <span className="eyebrow">MoEFCC</span>
+            <h2 className="section-title">MoEFCC Registration</h2>
+            <p className="section-sub">Details on our MoEFCC affiliations and registrations.</p>
+          </Reveal>
+        </div>
+      </section>
+
+      <section id="nsic" className="section section--soft">
+        <div className="container">
+          <Reveal className="section-head text-center">
+            <span className="eyebrow">NSIC</span>
+            <h2 className="section-title">NSIC Certification</h2>
+            <p className="section-sub">RGPL is registered with the National Small Industries Corporation.</p>
+          </Reveal>
+        </div>
+      </section>
+
+      <section id="careers" className="section">
+        <div className="container">
+          <Reveal className="section-head text-center">
+            <span className="eyebrow">Join Us</span>
+            <h2 className="section-title">Careers at RGPL</h2>
+            <p className="section-sub">Explore opportunities to build a sustainable future with our expert team.</p>
           </Reveal>
         </div>
       </section>

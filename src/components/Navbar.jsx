@@ -41,18 +41,18 @@ export default function Navbar() {
                 </div>
                 <div className="mega-r">
                   <div>
-                    <Link to="/about" className="m-lnk" onClick={closeMenu}>Our Company <span className="ma">→</span></Link>
-                    <Link to="/about/people" className="m-lnk" onClick={closeMenu}>Our People <span className="ma">→</span></Link>
-                    <Link to="/about/nabet" className="m-lnk" onClick={closeMenu}>NABET Accreditation <span className="ma">→</span></Link>
+                    <Link to="/about#company" className="m-lnk" onClick={closeMenu}>Our Company <span className="ma">→</span></Link>
+                    <Link to="/about#people" className="m-lnk" onClick={closeMenu}>Our People <span className="ma">→</span></Link>
+                    <Link to="/about#nabet" className="m-lnk" onClick={closeMenu}>NABET Accreditation <span className="ma">→</span></Link>
                   </div>
                   <div>
-                    <Link to="/events" className="m-lnk" onClick={closeMenu}>Events <span className="ma">→</span></Link>
-                    <Link to="/contact" className="m-lnk" onClick={closeMenu}>Locations <span className="ma">→</span></Link>
-                    <Link to="/about/moefcc" className="m-lnk" onClick={closeMenu}>MoEFCC Registration <span className="ma">→</span></Link>
+                    <Link to="/about#events" className="m-lnk" onClick={closeMenu}>Events <span className="ma">→</span></Link>
+                    <Link to="/about#locations" className="m-lnk" onClick={closeMenu}>Locations <span className="ma">→</span></Link>
+                    <Link to="/about#moefcc" className="m-lnk" onClick={closeMenu}>MoEFCC Registration <span className="ma">→</span></Link>
                   </div>
                   <div>
-                    <Link to="/about/nsic" className="m-lnk" onClick={closeMenu}>NSIC Certification <span className="ma">→</span></Link>
-                    <Link to="/contact" className="m-lnk" onClick={closeMenu}>Careers <span className="ma">→</span></Link>
+                    <Link to="/about#nsic" className="m-lnk" onClick={closeMenu}>NSIC Certification <span className="ma">→</span></Link>
+                    <Link to="/about#careers" className="m-lnk" onClick={closeMenu}>Careers <span className="ma">→</span></Link>
                   </div>
                 </div>
               </div>
@@ -117,7 +117,7 @@ export default function Navbar() {
           {/* Right — auth buttons + NABET logo + mobile toggle */}
           <div className="nav-right">
 
-            <div style={{ display: open ? "none" : "flex", alignItems: "center" }}>
+            <div className="nabet-logo" style={{ display: open ? "none" : "flex", alignItems: "center" }}>
               <NabetLogo height={64} />
             </div>
 
@@ -125,7 +125,7 @@ export default function Navbar() {
               className={`hbg ${open ? "open" : ""}`}
               aria-label="Toggle menu"
               onClick={() => setOpen((o) => !o)}
-              style={{ alignSelf: "center", marginLeft: 10 }}
+              style={{ alignSelf: "center", marginLeft: 10, display: "none" }} /* Hidden by default, flex in index.css mobile query */
             >
               <span></span><span></span><span></span>
             </button>

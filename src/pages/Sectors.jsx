@@ -95,7 +95,7 @@ export default function Sectors() {
                 <div className="stat"><div className="num"><Counter to={SECTOR_COUNT} /></div><div className="lbl">Accredited sectors</div></div>
                 <div className="stat"><div className="num"><Counter to={catA} /></div><div className="lbl">Category-A</div></div>
                 <div className="stat"><div className="num"><Counter to={3000} suffix="+" /></div><div className="lbl">Units served</div></div>
-                <div className="stat"><div className="num"><Counter to={29} /></div><div className="lbl">Years of legacy</div></div>
+                <div className="stat"><div className="num"><Counter to={3} /></div><div className="lbl">Years of excellence</div></div>
               </div>
               <ul className="checklist" style={{ marginTop: 22 }}>
                 <li><span className="tick">✓</span> QCI-NABET Category-A EIA Consultant Organisation</li>

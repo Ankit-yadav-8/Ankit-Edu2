@@ -25,7 +25,7 @@ export default function Clientele() {
         cards={[
           { type: "stat", num: 50, suffix: "+", label: "Sectors", tone: "teal" },
           { type: "info", icon: "🤝", title: "Trusted partner", sub: "across India", tone: "amber" },
-          { type: "stat", num: 29, label: "Years", tone: "green" },
+          { type: "stat", num: 3, suffix: "+", label: "Years of excellence", tone: "green" },
         ]}
       />
 
@@ -34,7 +34,7 @@ export default function Clientele() {
           <div className="stats grid-3">
             <div className="stat"><div className="num"><Counter to={50} suffix="+" /></div><div className="lbl">Sectoral areas</div></div>
             <div className="stat"><div className="num"><Counter to={SECTOR_COUNT} /></div><div className="lbl">NABET sectors</div></div>
-            <div className="stat"><div className="num"><Counter to={29} /></div><div className="lbl">Years of legacy</div></div>
+            <div className="stat"><div className="num"><Counter to={3} /></div><div className="lbl">Years of excellence</div></div>
           </div>
         </div>
       </section>
@@ -49,6 +49,13 @@ export default function Clientele() {
             {CLIENT_LOGOS.map((c) => (
               <div className="client-logo" key={c.name}>
                 <img src={c.src} alt={c.name} loading="lazy" />
+              </div>
+            ))}
+          </Reveal>
+          <Reveal className="client-text-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '16px', marginTop: '40px', textAlign: 'center' }}>
+            {CLIENT_LOGOS.map((c) => (
+              <div key={`txt-${c.name}`} style={{ fontWeight: 600, color: 'var(--ink-soft)' }}>
+                {c.name}
               </div>
             ))}
           </Reveal>

@@ -7,6 +7,10 @@ import vbc from "../assets/client-vbc.png";
 import sfal from "../assets/client-sfal.png";
 import hariom from "../assets/client-hariom.png";
 import ngs from "../assets/client-ngs.png";
+import jsw from "../assets/client-jsw.png";
+import jklakshmi from "../assets/client-jklakshmi.png";
+import dcmshriram from "../assets/client-dcmshriram.png";
+import adani from "../assets/client-adani.png";
 
 // Individual client logos (one card each).
 export const CLIENT_LOGOS = [
@@ -19,4 +23,8 @@ export const CLIENT_LOGOS = [
   { name: "SFAL — K-Tech CoE for Fabless", src: sfal },
   { name: "Hariom Pipes", src: hariom },
   { name: "NGS Cement", src: ngs },
+  { name: "JSW", src: jsw },
+  { name: "JK Lakshmi Cement", src: jklakshmi },
+  { name: "DCM Shriram", src: dcmshriram },
+  { name: "Adani", src: adani },
 ];
