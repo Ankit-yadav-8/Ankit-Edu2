@@ -20,10 +20,9 @@ import imgWater from "../assets/water-treatment.png";
 import imgHandshake from "../assets/vision-handshake.png";
 import certNabet from "../assets/nabet-certificate.png";
 import certIso from "../assets/iso-certificate.png";
-import imgLab from "../assets/lab-image.png";
 import { CLIENT_LOGOS } from "../data/clients.js";
 import Credentials from "../components/Credentials.jsx";
-
+import LabServices from "../components/LabServices.jsx";
 export default function Home() {
   return (
     <>
@@ -223,26 +222,7 @@ export default function Home() {
       </section>
 
       {/* ═══ LABORATORY ════════════════════════════════════════ */}
-      <section className="section" style={{ padding: "80px 0", background: "var(--off)" }}>
-        <div className="container split" style={{ alignItems: "center" }}>
-          <Reveal className="welcome-media">
-            <SmartImg src={imgLab} alt="State-of-the-art Environmental Laboratory" />
-          </Reveal>
-          <Reveal>
-            <span className="eyebrow" style={{ color: "var(--mint)", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", fontSize: "12px", marginBottom: "8px", display: "inline-block" }}>Our Laboratory</span>
-            <h2 className="section-title" style={{ fontFamily: "var(--font-head)", fontSize: "clamp(26px, 2.8vw, 36px)", marginBottom: "16px", lineHeight: 1.25 }}>NABL Accredited Testing Facility</h2>
-            <p className="body" style={{ color: "var(--gtxt)", lineHeight: 1.75 }}>
-              Our state-of-the-art environmental laboratory is equipped with advanced analytical instruments to deliver highly accurate and reliable testing services. We hold ISO/IEC 17025:2017 accreditation from NABL for chemical and biological testing.
-            </p>
-            <p className="body" style={{ marginTop: 12, color: "var(--gtxt)", lineHeight: 1.75 }}>
-              From ambient air quality and stack emissions to complex water, wastewater, and soil analysis, our expert scientists ensure that your project meets the stringent regulatory standards required for MoEFCC and SPCB clearances.
-            </p>
-            <Link to="/about#lab" className="btn btn-primary" style={{ marginTop: 28, display: "inline-flex" }}>
-              Learn about our lab <IconArrow size={18} />
-            </Link>
-          </Reveal>
-        </div>
-      </section>
+      <LabServices />
 
       {/* ═══ CLIENTELE ═════════════════════════════════════════ */}
       <section className="section" style={{ padding: "80px 0" }}>
