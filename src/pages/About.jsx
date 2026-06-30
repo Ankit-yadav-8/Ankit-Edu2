@@ -206,8 +206,8 @@ export default function About() {
               <li><span className="tick">✓</span> Continual improvement &amp; client focus</li>
             </ul>
           </Reveal>
-          <Reveal delay={1} className="cert-frame" style={{ maxHeight: 420 }}>
-            <img src={isoCert} alt="ISO 9001:2015 Certificate of Registration" loading="lazy" style={{ objectFit: 'contain' }} />
+          <Reveal delay={1} className="cert-frame">
+            <img src={isoCert} alt="ISO 9001:2015 Certificate of Registration" loading="lazy" />
           </Reveal>
         </div>
       </section>
