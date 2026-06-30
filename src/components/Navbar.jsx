@@ -71,31 +71,31 @@ export default function Navbar() {
                 </div>
                 <div className="mega-r">
                   <div>
-                    <Link to="/services/eia" className="m-lnk" onClick={closeMenu}>EIA / ESIA Studies <span className="ma">→</span></Link>
-                    <Link to="/services/forest" className="m-lnk" onClick={closeMenu}>Forest &amp; Wildlife Clearance <span className="ma">→</span></Link>
-                    <Link to="/services/audit" className="m-lnk" onClick={closeMenu}>Environmental Auditing <span className="ma">→</span></Link>
-                    <Link to="/services/air" className="m-lnk" onClick={closeMenu}>Air Quality Assessment <span className="ma">→</span></Link>
-                    <Link to="/services/gis" className="m-lnk" onClick={closeMenu}>Remote Sensing &amp; GIS <span className="ma">→</span></Link>
-                    <Link to="/services/waste" className="m-lnk" onClick={closeMenu}>Waste Management <span className="ma">→</span></Link>
-                    <Link to="/services/noise" className="m-lnk" onClick={closeMenu}>Noise Impact Studies <span className="ma">→</span></Link>
+                    <Link to="/services?cat=Assessment" className="m-lnk" onClick={closeMenu}>EIA / ESIA STUDIES</Link>
+                    <Link to="/services?cat=Clearance" className="m-lnk" onClick={closeMenu}>FOREST &amp; WILDLIFE CLEARANCE</Link>
+                    <Link to="/services?cat=Audit" className="m-lnk" onClick={closeMenu}>ENVIRONMENTAL AUDITING</Link>
+                    <Link to="/services?cat=Monitoring" className="m-lnk" onClick={closeMenu}>AIR QUALITY ASSESSMENT</Link>
+                    <Link to="/services?cat=Geospatial" className="m-lnk" onClick={closeMenu}>REMOTE SENSING &amp; GIS</Link>
+                    <Link to="/services?cat=Audit" className="m-lnk" onClick={closeMenu}>WASTE MANAGEMENT</Link>
+                    <Link to="/services?cat=Monitoring" className="m-lnk" onClick={closeMenu}>NOISE IMPACT STUDIES</Link>
                   </div>
                   <div>
-                    <Link to="/services/wildlife" className="m-lnk" onClick={closeMenu}>Wildlife &amp; Biodiversity <span className="ma">→</span></Link>
-                    <Link to="/services/water" className="m-lnk" onClick={closeMenu}>Water Quality Studies <span className="ma">→</span></Link>
-                    <Link to="/services/esg" className="m-lnk" onClick={closeMenu}>ESG Advisory &amp; Reporting <span className="ma">→</span></Link>
-                    <Link to="/services/climate" className="m-lnk" onClick={closeMenu}>Climate Change &amp; Carbon <span className="ma">→</span></Link>
-                    <Link to="/services/ehs" className="m-lnk" onClick={closeMenu}>EHS Management <span className="ma">→</span></Link>
-                    <Link to="/services/risk" className="m-lnk" onClick={closeMenu}>Risk Assessment <span className="ma">→</span></Link>
-                    <Link to="/services/compliance" className="m-lnk" onClick={closeMenu}>Regulatory Compliance <span className="ma">→</span></Link>
+                    <Link to="/services?cat=Clearance" className="m-lnk" onClick={closeMenu}>WILDLIFE &amp; BIODIVERSITY</Link>
+                    <Link to="/services?cat=Monitoring" className="m-lnk" onClick={closeMenu}>WATER QUALITY STUDIES</Link>
+                    <Link to="/services?cat=ESG" className="m-lnk" onClick={closeMenu}>ESG ADVISORY &amp; REPORTING</Link>
+                    <Link to="/services?cat=ESG" className="m-lnk" onClick={closeMenu}>CLIMATE CHANGE &amp; CARBON</Link>
+                    <Link to="/services?cat=Audit" className="m-lnk" onClick={closeMenu}>EHS MANAGEMENT</Link>
+                    <Link to="/services?cat=Assessment" className="m-lnk" onClick={closeMenu}>RISK ASSESSMENT</Link>
+                    <Link to="/services?cat=Audit" className="m-lnk" onClick={closeMenu}>REGULATORY COMPLIANCE</Link>
                   </div>
                   <div>
-                    <Link to="/services/ai" className="m-lnk" onClick={closeMenu}>AI-Driven Monitoring <span className="ma">→</span></Link>
-                    <Link to="/services/social" className="m-lnk" onClick={closeMenu}>Social Impact Assessment <span className="ma">→</span></Link>
-                    <Link to="/services/marine" className="m-lnk" onClick={closeMenu}>Marine Environmental Studies <span className="ma">→</span></Link>
-                    <Link to="/services/bio" className="m-lnk" onClick={closeMenu}>Biodiversity Surveys <span className="ma">→</span></Link>
-                    <Link to="/services/cum" className="m-lnk" onClick={closeMenu}>Cumulative Impact Studies <span className="ma">→</span></Link>
-                    <Link to="/services/rapid" className="m-lnk" onClick={closeMenu}>Rapid EIA <span className="ma">→</span></Link>
-                    <Link to="/services/train" className="m-lnk" onClick={closeMenu}>Training Programs <span className="ma">→</span></Link>
+                    <Link to="/services?cat=Monitoring" className="m-lnk" onClick={closeMenu}>AI-DRIVEN MONITORING</Link>
+                    <Link to="/services?cat=Assessment" className="m-lnk" onClick={closeMenu}>SOCIAL IMPACT ASSESSMENT</Link>
+                    <Link to="/services?cat=Monitoring" className="m-lnk" onClick={closeMenu}>MARINE ENVIRONMENTAL STUDIES</Link>
+                    <Link to="/services?cat=Clearance" className="m-lnk" onClick={closeMenu}>BIODIVERSITY SURVEYS</Link>
+                    <Link to="/services?cat=Assessment" className="m-lnk" onClick={closeMenu}>CUMULATIVE IMPACT STUDIES</Link>
+                    <Link to="/services?cat=Assessment" className="m-lnk" onClick={closeMenu}>RAPID EIA</Link>
+                    <Link to="/services?cat=ESG" className="m-lnk" onClick={closeMenu}>TRAINING PROGRAMS</Link>
                   </div>
                 </div>
               </div>
