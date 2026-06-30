@@ -191,8 +191,8 @@ export default function About() {
 
       {/* ISO certificate */}
       <section className="section">
-        <div className="container split">
-          <Reveal>
+        <div className="container cert-split">
+          <Reveal className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%' }}>
             <span className="eyebrow">Quality Management</span>
             <h2 className="section-title">ISO 9001:2015 certified</h2>
             <p className="body">
@@ -200,14 +200,14 @@ export default function About() {
               Quality Management System, independently assessed by QRO — covering the full scope of our
               environmental consultancy, impact assessment, monitoring and compliance services.
             </p>
-            <ul className="checklist">
+            <ul className="checklist" style={{ marginBottom: 0 }}>
               <li><span className="tick">✓</span> Independently audited quality management</li>
               <li><span className="tick">✓</span> Standardised, repeatable delivery processes</li>
               <li><span className="tick">✓</span> Continual improvement &amp; client focus</li>
             </ul>
           </Reveal>
-          <Reveal delay={1} className="cert-frame">
-            <img src={isoCert} alt="ISO 9001:2015 Certificate of Registration" loading="lazy" />
+          <Reveal delay={1} className="cert-frame" style={{ maxHeight: 420 }}>
+            <img src={isoCert} alt="ISO 9001:2015 Certificate of Registration" loading="lazy" style={{ objectPosition: 'top' }} />
           </Reveal>
         </div>
       </section>
