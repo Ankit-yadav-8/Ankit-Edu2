@@ -6,7 +6,7 @@ import { IconArrow, IconUsers, IconBeaker, IconStar, IconCheck } from "../compon
 import visionDice from "../assets/vision-mission.png";
 import nabetCert from "../assets/nabet-certificate-new.png";
 import isoCert from "../assets/iso-certificate.png";
-
+import aboutTeam from "../assets/about-us-team.png";
 const TEAM = [
   { icon: <IconUsers size={22} />, count: 12, role: "Technical Crew", sub: "Senior & project consultants" },
   { icon: <IconBeaker size={22} />, count: 5, role: "Lab Experts", sub: "Sampling & analysis specialists" },
@@ -64,12 +64,8 @@ export default function About() {
               <Link to="/services" className="btn btn-ghost">Our Services</Link>
             </div>
           </Reveal>
-          <Reveal delay={1}>
-            <div className="stats" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}>
-              <div className="stat"><div className="num"><Counter to={50} suffix="+" /></div><div className="lbl">Sectors</div></div>
-              <div className="stat"><div className="num"><Counter to={2021} /></div><div className="lbl">Incorporated</div></div>
-              <div className="stat"><div className="num"><Counter to={SECTOR_COUNT} /></div><div className="lbl">NABET sectors</div></div>
-            </div>
+          <Reveal delay={1} className="about-team-image">
+            <img src={aboutTeam} alt="Our Team" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "16px", boxShadow: "0 8px 30px rgba(0,0,0,0.08)" }} />
           </Reveal>
         </div>
       </section>
@@ -158,18 +154,30 @@ export default function About() {
           </Reveal>
           <div className="cert-split" style={{ marginTop: 40 }}>
             <Reveal className="card">
-              <ol className="sector-list">
-                {SECTORS.map((s) => (
-                  <li key={s.slug}>
-                    <span>{s.certName || s.name}</span>
-                    <span className="sector-list__meta">
-                      <span className="tag">NABET {s.nabet}</span>
-                      <span className="tag" style={{ background: "var(--surface)", border: "1px solid var(--line)", color: "var(--text)" }}>MoEFCC {s.moefcc}</span>
-                      <span className={`sector-badge cat-${s.category}`}>Cat {s.category}</span>
-                    </span>
-                  </li>
-                ))}
-              </ol>
+              <div style={{ overflowX: "auto", paddingBottom: "16px", margin: "0 -16px", padding: "0 16px" }}>
+                <div style={{ minWidth: "600px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                  {/* Header Row */}
+                  <div style={{ display: "grid", gridTemplateColumns: "40px 1fr 80px 100px 60px", gap: "16px", padding: "12px 16px", background: "var(--surface)", borderRadius: "8px", fontWeight: "600", color: "var(--violet-700)", border: "1px solid var(--line)", fontSize: "0.95rem" }}>
+                    <div>S.N</div>
+                    <div>Sector Description</div>
+                    <div style={{ textAlign: "center" }}>NABET</div>
+                    <div style={{ textAlign: "center" }}>MoEFCC</div>
+                    <div style={{ textAlign: "center" }}>Cat.</div>
+                  </div>
+                  {/* Data Rows */}
+                  {SECTORS.map((s, index) => (
+                    <div key={s.slug} style={{ display: "grid", gridTemplateColumns: "40px 1fr 80px 100px 60px", gap: "16px", padding: "12px 16px", background: "#fff", borderRadius: "8px", border: "1px solid var(--violet-50)", alignItems: "center", fontSize: "0.95rem", transition: "all 0.2s" }} onMouseEnter={(e) => { e.currentTarget.style.borderColor = "var(--mint)"; e.currentTarget.style.boxShadow = "var(--shadow)"; }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = "var(--violet-50)"; e.currentTarget.style.boxShadow = "none"; }}>
+                      <div style={{ fontWeight: "600", color: "var(--violet-700)", background: "var(--surface)", width: "32px", height: "32px", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "6px" }}>{index + 1}</div>
+                      <div style={{ color: "var(--text)", lineHeight: 1.4, fontWeight: 500 }}>{s.certName || s.name}</div>
+                      <div style={{ textAlign: "center", fontWeight: "600" }}>{s.nabet}</div>
+                      <div style={{ textAlign: "center", fontWeight: "600" }}>{s.moefcc}</div>
+                      <div style={{ display: "flex", justifyContent: "center" }}>
+                        <span className={`sector-badge cat-${s.category}`} style={{ width: "32px", justifyContent: "center", padding: "2px 0" }}>{s.category}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
               <Link to="/sectors" className="btn btn-ghost btn-sm" style={{ marginTop: 18 }}>
                 View all sectors in detail <IconArrow size={16} />
               </Link>
