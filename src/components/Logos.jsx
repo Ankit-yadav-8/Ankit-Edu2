@@ -11,3 +11,4 @@ export function RCLogo({ height = 48 }) {
       style={{ height, width: "auto", display: "block", objectFit: "contain" }}
     />
   );
+}
