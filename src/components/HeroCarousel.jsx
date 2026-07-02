@@ -14,7 +14,7 @@ const SLIDES = [
     titleA: "Shaping a sustainable future for industry & ",
     hl: "infrastructure",
     titleB: "",
-    text: "A QCI-NABET accredited Category-'A' EIA Consultant Organisation helping industry and infrastructure projects across India secure environmental clearances, manage compliance and build a more sustainable future.",
+    text: "A QCI-NABET accredited Category-'A' EIA Consultant Organisation helping industry and infrastructure projects across India to secure environmental clearances, manage compliance and build a more sustainable future.",
     primary: { to: "/services", label: "Explore services" },
     secondary: { to: "/contact", label: "Start your clearance" },
   },
