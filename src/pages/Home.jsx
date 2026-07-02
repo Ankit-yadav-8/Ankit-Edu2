@@ -75,7 +75,6 @@ export default function Home() {
               <br /><br />
               This crucial update provides actionable strategies for compliance, reducing operational risks and fostering sustainable growth. Our experts have analyzed recent regulatory changes to help your organization stay ahead of the curve.
             </p>
-            <Link to="/insights" className="feat-cta">Read the full report →</Link>
           </Reveal>
           <Reveal delay={1} className="feat-img">
             <img src={imgReport} alt="Regulatory Report" />
