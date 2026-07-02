@@ -118,9 +118,14 @@
 .view-all:hover { background: var(--violet-600); color: var(--ink); }
 
 /* ── FEATURED ────────────────────────────────────────────── */
-.feat-bg { padding: 40px 0; background: var(--bg); }
+.feat-bg { padding: 80px 0; background: var(--bg); }
 .feat-in { 
-  display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; 
+  display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center; 
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 60px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+  border: 1px solid var(--line);
 }
 .feat-lbl { font-size: 10.5px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: var(--violet-600); margin-bottom: 10px; }
 .feat-t { font-family: var(--font-head); font-size: clamp(20px, 2vw, 32px); color: var(--ink); line-height: 1.3; margin-bottom: 16px; }
@@ -134,18 +139,20 @@
 .feat-cta:hover { color: var(--ink); }
 .feat-img {
   cursor: pointer; position: relative;
-  display: block;
+  display: flex; justify-content: center; align-items: center;
 }
 .feat-img img { 
-  width: 100%; height: auto; max-height: 400px; object-fit: cover; border-radius: 12px; display: block; transition: transform .42s; 
+  width: 100%; max-width: 380px; height: auto; max-height: 400px; object-fit: contain; 
+  border-radius: 12px; display: block; transition: transform .4s ease, box-shadow .4s ease; 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
-.feat-img:hover img { transform: scale(1.02); }
+.feat-img:hover img { transform: translateY(-8px) scale(1.02); box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
 .feat-img-ov {
-  position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(22,46,32,.55) 0%, transparent 55%);
+  position: absolute; inset: 0; margin: auto; max-width: 380px; max-height: 400px;
+  background: linear-gradient(to top, rgba(22,46,32,.7) 0%, transparent 50%);
   border-radius: 12px;
   opacity: 0; transition: opacity .3s;
-  display: flex; align-items: flex-end; padding: 18px;
+  display: flex; align-items: flex-end; justify-content: center; padding: 24px;
 }
 .feat-img:hover .feat-img-ov { opacity: 1; }
 .feat-img-lbl { color: white; font-size: 11px; font-weight: 700; letter-spacing: .05em; }
