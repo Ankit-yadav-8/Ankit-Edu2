@@ -32,8 +32,8 @@ export default function Home() {
 
 
       {/* ═══ WELCOME / ABOUT ═══════════════════════════════════ */}
-      <section className="section" style={{ padding: "80px 0" }}>
-        <div className="container split">
+      <section className="section" style={{ padding: "50px 0" }}>
+        <div className="container split" style={{ alignItems: "center" }}>
           <Reveal>
             <span className="eyebrow" style={{ color: "var(--mint)", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", fontSize: "12px", marginBottom: "8px", display: "inline-block" }}>Who we are</span>
             <h2 className="section-title" style={{ fontFamily: "var(--font-head)", fontSize: "clamp(26px, 2.8vw, 42px)", marginBottom: "16px", lineHeight: 1.25 }}>Welcome to Rejig Green Logic Private Limited</h2>
@@ -65,7 +65,7 @@ export default function Home() {
       {/* ═══ FEATURED REPORT ═══════════════════════════════════ */}
       <section className="sec feat-bg">
         <div className="wrap feat-in">
-          <Reveal>
+          <Reveal style={{ padding: '60px 48px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <div className="feat-lbl">New Research &amp; Insights</div>
             <h2 className="feat-t">India Environmental Regulatory Radar 2024</h2>
             <p className="feat-p">
