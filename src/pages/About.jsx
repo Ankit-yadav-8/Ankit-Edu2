@@ -106,10 +106,7 @@ export default function About() {
             <Reveal delay={1} className="card">
               <p>We Would be Glad To Assist You With Our Industry Expertise and Rapid Service Delivery Framework (rsdf). We Are Confident In Extending Our Specialized all-services-related-to-word-ENVIRONMENT On A Turnkey Basis With An end-to-end Planning and Delivery Responsibility.</p>
             </Reveal>
-            <Reveal delay={2} className="card">
-              <p>Rejig Green Logic Private Limited (RGPL) Is A Sister Concern Company Of JM EnviroNet Private Limited (JMEPL), Working In The Field Of Environment For The Past 29 Years. This Consortium Enjoys The Recognitions &amp; Accreditations Of QCI-NABET, Moef &amp; CC, ISO, Msme, Nsic, Moud &amp; Mowr, Govt. of India.</p>
-            </Reveal>
-          </div>
+            </div>
         </div>
       </section>
 
