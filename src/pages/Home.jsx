@@ -43,8 +43,8 @@ export default function Home() {
               consultancy and be your techno-legal advisory partner.
             </p>
             <p className="body" style={{ marginTop: 12, color: "var(--gtxt)", lineHeight: 1.75 }}>
-              We have successfully provided environmental solutions covering
-              more than fifty sectoral areas.
+              We have successfully delivered environmental solutions for 50+
+              projects across diverse industrial sectors.
             </p>
             <ul className="checklist" style={{ listStyle: "none", padding: 0, marginTop: "24px", display: "grid", gap: "12px" }}>
               <li style={{ display: "flex", gap: "10px", alignItems: "flex-start", color: "var(--dark)", fontWeight: 500 }}><span className="tick" style={{ background: "var(--mint)", color: "var(--dark)", borderRadius: "50%", width: "20px", height: "20px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", flexShrink: 0 }}>✓</span> Highest integrity to QCI, NABET &amp; MoEF&amp;CC standards</li>

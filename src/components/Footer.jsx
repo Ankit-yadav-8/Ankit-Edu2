@@ -85,7 +85,7 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <span>© {year} Rejig GreenLogic Private Limited. All rights reserved.</span>
-          <span>NABET · MoEFCC · NSIC Accredited &nbsp;|&nbsp; Crafted with care</span>
+          <span>NABET · MoEFCC Accredited &nbsp;|&nbsp; Crafted with care</span>
         </div>
       </div>
     </footer>

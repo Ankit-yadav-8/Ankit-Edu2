@@ -21,7 +21,7 @@ const SLIDES = [
   {
     bg: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=1920&q=80",
     img: img2,
-    kicker: "NABET · MoEFCC · NSIC Accredited",
+    kicker: "NABET · MoEFCC Accredited",
     titleA: "India's Trusted Environmental Consultancy ",
     hl: "Partner",
     titleB: "",

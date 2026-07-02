@@ -47,7 +47,7 @@ export default function Signup() {
         <p style={{ color: "rgba(255,255,255,.9)" }}>Join 3,000+ industrial units who trust RGPL as their techno-legal advisory partner.</p>
         <div className="pt"><span className="tick">✓</span><span>Save project details for faster proposals</span></div>
         <div className="pt"><span className="tick">✓</span><span>One dashboard for all your enquiries</span></div>
-        <div className="pt"><span className="tick">✓</span><span>NABET · MoEFCC · NSIC accredited partner</span></div>
+        <div className="pt"><span className="tick">✓</span><span>NABET · MoEFCC accredited partner</span></div>
       </div>
 
       <div className="auth-form-wrap">
