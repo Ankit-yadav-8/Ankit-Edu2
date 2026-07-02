@@ -32,8 +32,8 @@ export default function Home() {
 
 
       {/* ═══ WELCOME / ABOUT ═══════════════════════════════════ */}
-      <section className="section" style={{ padding: "50px 0" }}>
-        <div className="container split" style={{ alignItems: "center" }}>
+      <section className="sec feat-bg">
+        <div className="wrap feat-in">
           <Reveal>
             <span className="eyebrow" style={{ color: "var(--mint)", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", fontSize: "12px", marginBottom: "8px", display: "inline-block" }}>Who we are</span>
             <h2 className="section-title" style={{ fontFamily: "var(--font-head)", fontSize: "clamp(26px, 2.8vw, 42px)", marginBottom: "16px", lineHeight: 1.25 }}>Welcome to Rejig Green Logic Private Limited</h2>
@@ -51,13 +51,13 @@ export default function Home() {
               <li style={{ display: "flex", gap: "10px", alignItems: "flex-start", color: "var(--dark)", fontWeight: 500 }}><span className="tick" style={{ background: "var(--mint)", color: "var(--dark)", borderRadius: "50%", width: "20px", height: "20px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", flexShrink: 0 }}>✓</span> Trust, Responsibility, Collaboration &amp; Performance culture</li>
               <li style={{ display: "flex", gap: "10px", alignItems: "flex-start", color: "var(--dark)", fontWeight: 500 }}><span className="tick" style={{ background: "var(--mint)", color: "var(--dark)", borderRadius: "50%", width: "20px", height: "20px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", flexShrink: 0 }}>✓</span> A responsible entity preaching green initiatives</li>
             </ul>
-            <Link to="/about" className="view-all" style={{ marginTop: 28 }}>
+            <Link to="/about" className="view-all" style={{ marginTop: 32 }}>
               Read more →
             </Link>
           </Reveal>
 
-          <Reveal delay={1} className="welcome-media">
-            <SmartImg src={imgWelcome} alt="Hands protecting a green earth" />
+          <Reveal delay={1} className="feat-img">
+            <img src={imgWelcome} alt="Hands protecting a green earth" />
           </Reveal>
         </div>
       </section>

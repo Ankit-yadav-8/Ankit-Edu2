@@ -22,18 +22,23 @@ export default function LabServices({ soft = false }) {
           </p>
         </Reveal>
 
-        <div className="lab-grid" style={{ marginTop: 40, alignItems: "center" }}>
+        <div style={{ marginTop: 48 }}>
           <Reveal>
-            <div className="lab-collage">
-              <img src={lab1} alt="Laboratory facilities" />
-              <img src={lab2} alt="Water testing" />
-              <img src={lab3} alt="Equipment" />
-              <img src={lab4} alt="Scientist inspecting" />
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "20px" }}>
+              <img src={lab1} alt="Laboratory facilities" style={{ width: "100%", borderRadius: "12px", objectFit: "cover", aspectRatio: "4/3", boxShadow: "0 10px 30px rgba(0,0,0,0.06)" }} />
+              <img src={lab2} alt="Water testing" style={{ width: "100%", borderRadius: "12px", objectFit: "cover", aspectRatio: "4/3", boxShadow: "0 10px 30px rgba(0,0,0,0.06)" }} />
+              <img src={lab3} alt="Equipment" style={{ width: "100%", borderRadius: "12px", objectFit: "cover", aspectRatio: "4/3", boxShadow: "0 10px 30px rgba(0,0,0,0.06)" }} />
+              <img src={lab4} alt="Scientist inspecting" style={{ width: "100%", borderRadius: "12px", objectFit: "cover", aspectRatio: "4/3", boxShadow: "0 10px 30px rgba(0,0,0,0.06)" }} />
             </div>
           </Reveal>
 
-          <Reveal delay={1} className="cert-frame" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            <a href="https://jmenvirolab.com/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, color: 'var(--primary)', fontWeight: 600, textDecoration: 'none', paddingBottom: '8px' }}>🌐 Visit JM Envirolab →</a>
+          <Reveal delay={0.2} style={{ marginTop: "40px", textAlign: "center" }}>
+            <p style={{ color: "var(--muted)", marginBottom: "16px", fontSize: "15px" }}>
+              Our state-of-the-art laboratory facilities are NABL-accredited and equipped for rigorous environmental analysis.
+            </p>
+            <a href="https://jmenvirolab.com/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, color: 'var(--primary)', fontWeight: 600, textDecoration: 'none', padding: '12px 24px', background: '#f0fdf4', borderRadius: '100px', border: '1px solid #bbf7d0' }}>
+              🌐 Visit JM Envirolab →
+            </a>
           </Reveal>
         </div>
       </div>
