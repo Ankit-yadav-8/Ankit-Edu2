@@ -6,7 +6,7 @@ import { IconArrow } from "../components/Icons.jsx";
 import { NabetLogo } from "../components/Logos.jsx";
 import SmartImg from "../components/SmartImg.jsx";
 
-import imgWelcome from "../assets/rejig_discussion_meeting_1782487343593.png";
+import imgWelcome from "../assets/clients_meeting.png";
 import imgReport from "../assets/regulatory_report.png";
 import imgS1 from "../assets/service-1.png";
 import imgS2 from "../assets/service-2.png";
@@ -32,7 +32,7 @@ export default function Home() {
 
 
       {/* ═══ WELCOME / ABOUT ═══════════════════════════════════ */}
-      <section className="sec feat-bg">
+      <section className="sec feat-bg" style={{ paddingBottom: "20px" }}>
         <div className="wrap feat-in">
           <Reveal>
             <span className="eyebrow" style={{ color: "var(--mint)", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", fontSize: "12px", marginBottom: "8px", display: "inline-block" }}>Who we are</span>
@@ -63,7 +63,7 @@ export default function Home() {
       </section>
 
       {/* ═══ FEATURED REPORT ═══════════════════════════════════ */}
-      <section className="sec feat-bg">
+      <section className="sec feat-bg" style={{ paddingTop: "20px" }}>
         <div className="wrap feat-in">
           <Reveal>
             <div className="feat-lbl">New Research &amp; Insights</div>
