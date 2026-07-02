@@ -36,7 +36,7 @@ export default function Home() {
         <div className="wrap feat-in">
           <Reveal>
             <span className="eyebrow" style={{ color: "var(--mint)", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", fontSize: "12px", marginBottom: "8px", display: "inline-block" }}>Who we are</span>
-            <h2 className="section-title" style={{ fontFamily: "var(--font-head)", fontSize: "clamp(26px, 2.8vw, 42px)", marginBottom: "16px", lineHeight: 1.25, color: "var(--violet-600)" }}>Welcome to Rejig Green Logic Private Limited</h2>
+            <h2 className="section-title" style={{ fontFamily: "var(--font-head)", fontSize: "clamp(26px, 2.8vw, 42px)", marginBottom: "16px", lineHeight: 1.25, color: "var(--violet-500)" }}>Welcome to Rejig Green Logic Private Limited</h2>
             <p className="body" style={{ color: "var(--gtxt)", lineHeight: 1.75 }}>
               Incorporated on 15th December 2021, <b>Rejig GreenLogic Private Limited (RGPL)</b> is a
               group of well-known environmental experts pooled together to extend environmental
