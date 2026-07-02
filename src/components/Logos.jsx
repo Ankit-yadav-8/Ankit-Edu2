@@ -1,7 +1,7 @@
 /* Official brand marks (image assets). Imported so Vite fingerprints them
    and rewrites the URL with the correct base path on GitHub Pages. */
 import rcLogo from "../assets/rc-logo.png";
-import nabetLogo from "../assets/nabet-logo.png";
+import nabetLogo from "../assets/accred-badge.png";
 
 export function RCLogo({ height = 48 }) {
   return (

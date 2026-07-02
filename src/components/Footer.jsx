@@ -3,7 +3,7 @@ import { RCLogo } from "./Logos.jsx";
 import { Insta, FB, LI, XTw, YT, IconPin, IconPhone, IconMail } from "./Icons.jsx";
 import { EXPERTISE_LINKS } from "../data/services.js";
 import { SECTORS } from "../data/sectors.js";
-import nabetLogo from "../assets/nabet-logo.png";
+import nabetLogo from "../assets/accred-badge.png";
 
 
 export default function Footer() {
