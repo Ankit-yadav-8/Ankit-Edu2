@@ -6,7 +6,7 @@ import { IconArrow } from "../components/Icons.jsx";
 import { NabetLogo } from "../components/Logos.jsx";
 import SmartImg from "../components/SmartImg.jsx";
 
-import imgWelcome from "../assets/media__1782785983888.jpg";
+import imgWelcome from "../assets/rejig_discussion_meeting_1782487343593.png";
 import imgReport from "../assets/regulatory_report.png";
 import imgS1 from "../assets/service-1.png";
 import imgS2 from "../assets/service-2.png";
