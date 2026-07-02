@@ -214,8 +214,13 @@ export default function About() {
           <div className="grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24 }}>
             <Reveal className="card" id="events" style={{ textAlign: 'center', padding: '40px 24px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <span className="eyebrow">Events</span>
-              <h3 style={{ fontSize: '1.4rem', marginBottom: 12, marginTop: 12 }}>Latest Events & Insights</h3>
-              <p className="body" style={{ color: 'var(--muted)' }}>Information about our recent events, webinars, and conferences will be updated here soon.</p>
+              <h3 style={{ fontSize: '1.4rem', marginBottom: 12, marginTop: 12 }}>Latest Events &amp; Insights</h3>
+              <p className="body" style={{ color: 'var(--muted)', marginBottom: 16 }}>Stay updated with key government portals and regulatory resources.</p>
+              <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 10, width: '100%' }}>
+                <li><a href="https://parivesh.nic.in/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, color: 'var(--primary)', fontWeight: 600, textDecoration: 'none' }}>🌐 PARIVESH Portal →</a></li>
+                <li><a href="https://cgwa.mowr.gov.in/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, color: 'var(--primary)', fontWeight: 600, textDecoration: 'none' }}>🌐 CGWA Portal →</a></li>
+                <li><a href="https://cpcb.gov.in/index.php" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, color: 'var(--primary)', fontWeight: 600, textDecoration: 'none' }}>🌐 CPCB Portal →</a></li>
+              </ul>
             </Reveal>
 
             <Reveal className="card" id="locations" delay={0.1} style={{ textAlign: 'center', padding: '40px 24px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
