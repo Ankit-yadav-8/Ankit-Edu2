@@ -6,7 +6,7 @@ import { IconArrow } from "../components/Icons.jsx";
 import { NabetLogo } from "../components/Logos.jsx";
 import SmartImg from "../components/SmartImg.jsx";
 
-import imgWelcome from "../assets/clients_meeting.png";
+import imgWelcome from "../assets/clients_meeting_new.jpg";
 import imgReport from "../assets/regulatory_report.png";
 import imgS1 from "../assets/service-1.png";
 import imgS2 from "../assets/service-2.png";
@@ -171,7 +171,7 @@ export default function Home() {
 
 
       {/* ═══ ACCREDITATIONS (Image 1) ══════════════════════════ */}
-      <section className="section" style={{ padding: "80px 0" }}>
+      <section className="section" style={{ padding: "40px 0" }}>
         <div className="container">
           <Reveal className="text-center" style={{ marginBottom: 48 }}>
             <span className="eyebrow" style={{ color: "var(--violet-700)", fontSize: "11px", fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase" }}>CERTIFICATIONS</span>
@@ -223,7 +223,7 @@ export default function Home() {
       <LabServices />
 
       {/* ═══ CLIENTELE ═════════════════════════════════════════ */}
-      <section className="section" style={{ padding: "80px 0" }}>
+      <section className="section" style={{ padding: "40px 0" }}>
         <div className="container">
           <Reveal className="text-center" style={{ marginBottom: 48 }}>
             <span className="eyebrow" style={{ color: "var(--violet-700)", fontSize: "11px", fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase" }}>TRUSTED BY LEADERS</span>
