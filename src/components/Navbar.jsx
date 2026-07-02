@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
-import { RCLogo, NabetLogo } from "./Logos.jsx";
+import { RCLogo } from "./Logos.jsx";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -99,10 +99,6 @@ export default function Navbar() {
 
           {/* Right — auth buttons + NABET logo + mobile toggle */}
           <div className="nav-right">
-
-            <div className="nabet-logo">
-              <NabetLogo height={64} />
-            </div>
 
             <button
               className={`hbg ${open ? "open" : ""}`}
