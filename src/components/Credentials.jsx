@@ -1,10 +1,10 @@
 import Reveal from "./Reveal.jsx";
 
 const CREDENTIALS = [
-  { level: "Experience", border: "#93c5fd", bg: "#dbeafe", points: ["Team of experts who have served for more than 2 Decades in Environmental Consultancy", "Environmental services in more than 13 varied Industrial sectors"] },
-  { level: "Expertise", border: "#86efac", bg: "#dcfce7", points: ["Experts from IBM, UTCL, ACC (Holcim) etc."] },
-  { level: "Strengths", border: "#bef264", bg: "#ecfccb", points: ["Accreditation and empanelment with MoEF/NABET, NABL, IBM, ISO, State Govt (SPCB), Ministry of Water Resources"] },
-  { level: "Infrastructure", border: "#fdba74", bg: "#ffedd5", points: ["Pan India Presence", "NABL/MoEF Approved Laboratory"] },
+  { level: "Experience", border: "#93c5fd", bg: "#dbeafe", points: ["Supported by a multidisciplinary team with cumulative expertise spanning over two decades in environmental consultancy", "Delivering environmental services across 13+ varied industrial sectors"] },
+  { level: "Expertise", border: "#86efac", bg: "#dcfce7", points: ["A strong panel of experts comprising professionals from reputed government institutions, retired specialists from leading corporate groups, and experienced regulatory body professionals"] },
+  { level: "Strengths", border: "#bef264", bg: "#ecfccb", points: ["Accreditation from QCI-NABET"] },
+  { level: "Infrastructure", border: "#fdba74", bg: "#ffedd5", points: ["Head Office located at Hyderabad", "Partner tie-ups across NCR Delhi, Goa and Mumbai", "Strong Pan-India presence", "NABL/MoEF Approved Laboratory"] },
 ];
 
 const DiagramLayer = ({ data, children }) => (

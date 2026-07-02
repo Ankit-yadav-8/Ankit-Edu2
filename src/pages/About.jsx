@@ -119,7 +119,7 @@ export default function About() {
           <Reveal className="section-head text-center">
             <span className="eyebrow">Our people</span>
             <h2 className="section-title">A multidisciplinary technical crew</h2>
-            <p className="section-sub">Consultants, lab experts and field officers working together on every assessment.</p>
+            <p className="section-sub">Our technical experts, experienced consultants, laboratory specialists, and field officers combine industry-leading expertise with in-depth local knowledge and sustainable approaches to deliver resilient, practical, and client-focused solutions.</p>
           </Reveal>
           <div className="grid grid-4" style={{ marginTop: 44 }}>
             {TEAM.map((t, i) => (
