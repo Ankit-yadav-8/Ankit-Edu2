@@ -2,11 +2,11 @@
 export const CAPABILITIES = [
   {
     title: "Remote Sensing & GIS Application",
-    items: ["Erdas Imagine Professional Ver. 9.2 (Software)", "ArcGIS 10.8"],
+    items: ["Erdas Imagine Professional (Software)", "ArcGIS"],
   },
   {
     title: "Air Pollution Mathematical Modeling & Meteorology",
-    items: ["AERMOD version 10.1.2 (including ISCST-3)", "Wind Monitor EnviroTech WM 251", "WRPLOT View"],
+    items: ["AERMOD (including ISCST-3)", "Wind Monitor EnviroTech WM 251", "WRPLOT View"],
   },
   {
     title: "Risk Assessment & Hazard Identification",

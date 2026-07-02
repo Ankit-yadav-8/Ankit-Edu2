@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { RCLogo } from "./Logos.jsx";
 import { Insta, FB, LI, XTw, YT, IconPin, IconPhone, IconMail } from "./Icons.jsx";
 import { EXPERTISE_LINKS } from "../data/services.js";
-import { SECTORS } from "../data/sectors.js";
+
 import nabetLogo from "../assets/nabet-logo.png";
 
 export default function Footer() {
@@ -27,8 +27,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="desc">
-              Your techno-legal advisory partner in environmental consultancy — trusted by
-              industrial units across 50+ sectors in India.
+              Your techno-legal advisory partner in environmental consultancy — trusted by different industrial units in India.
             </p>
             <div className="socials">
               <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><Insta /></a>
@@ -56,13 +55,6 @@ export default function Footer() {
             ))}
           </div>
 
-          <div className="footer-col">
-            <h4>NABET Sectors</h4>
-            {SECTORS.map((s) => (
-              <span key={s.slug} style={{ display: 'block', color: 'var(--text-light)', marginBottom: '0.75rem', fontSize: '0.95rem' }}>{s.name}</span>
-            ))}
-            <span className="foot-all-sectors" style={{ display: 'inline-block', marginTop: '0.5rem', fontWeight: 500, color: 'var(--text-light)' }}>All Sectors →</span>
-          </div>
 
           <div>
             <h4>Get in touch</h4>
