@@ -65,7 +65,7 @@ export default function Home() {
       {/* ═══ FEATURED REPORT ═══════════════════════════════════ */}
       <section className="sec feat-bg">
         <div className="wrap feat-in">
-          <Reveal style={{ padding: '60px 48px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <Reveal>
             <div className="feat-lbl">New Research &amp; Insights</div>
             <h2 className="feat-t">India Environmental Regulatory Radar 2024</h2>
             <p className="feat-p">
