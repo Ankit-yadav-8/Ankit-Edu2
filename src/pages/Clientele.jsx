@@ -54,19 +54,7 @@ export default function Clientele() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="container">
-          <Reveal className="section-head text-center">
-            <span className="eyebrow">Sectors served</span>
-            <h2 className="section-title">Experience across 50+ sectoral areas</h2>
-          </Reveal>
-          <Reveal className="chips" style={{ justifyContent: "center", marginTop: 30 }}>
-            {SECTORS.map((s) => (
-              <span className="chip" key={s} style={{ cursor: "default" }}>{s}</span>
-            ))}
-          </Reveal>
-        </div>
-      </section>
+
 
       <section className="section section--soft">
         <div className="container">
