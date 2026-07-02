@@ -32,8 +32,9 @@ export default function LabServices({ soft = false }) {
             </div>
           </Reveal>
 
-          <Reveal delay={1} className="cert-frame">
+          <Reveal delay={1} className="cert-frame" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             <img src={nablCert} alt="NABL Certificate of Accreditation — JM Enviro Lab Private Limited" loading="lazy" />
+            <a href="https://jmenvirolab.com/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, color: 'var(--primary)', fontWeight: 600, textDecoration: 'none', paddingBottom: '8px' }}>🌐 Visit JM Envirolab →</a>
           </Reveal>
         </div>
       </div>
