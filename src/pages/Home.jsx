@@ -92,8 +92,7 @@ export default function Home() {
             <div className="tag">Full-Spectrum Expertise</div>
             <h2 className="sec-t">Comprehensive Environmental &amp; Engineering Solutions</h2>
             <p className="sec-s">
-              From initial baseline monitoring to final MoEFCC clearances and ongoing ESG compliance,
-              we provide end-to-end techno-legal advisory for sustainable development.
+              From initial project screening and strategic planning to regulatory clearances and ESG compliance, we provide end-to-end techno-legal advisory for sustainable development.
             </p>
           </Reveal>
 
