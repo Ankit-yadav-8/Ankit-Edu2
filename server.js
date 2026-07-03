@@ -17,11 +17,15 @@ app.use("/api/chat", require("./routes/chat"));
 app.get("/api/health", (_req, res) => res.json({ ok: true, time: new Date().toISOString() }));
 
 // ─── Static frontend (built React SPA in /dist) ───
-const DIST = path.join(__dirname, "dist");
-app.use(express.static(DIST));
+if (process.env.NODE_ENV === 'production' && process.env.SERVE_FRONTEND === 'true') {
+  const DIST = path.join(__dirname, "dist");
+  app.use(express.static(DIST));
 
-// SPA fallback: let React Router handle all non-API routes.
-app.use((_req, res) => res.sendFile(path.join(DIST, "index.html")));
+  // SPA fallback: let React Router handle all non-API routes.
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(DIST, "index.html"));
+  });
+}
 
 const PORT = process.env.PORT || 5000;
 connectDB().finally(() => {
