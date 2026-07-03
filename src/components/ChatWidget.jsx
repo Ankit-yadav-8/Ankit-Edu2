@@ -47,7 +47,8 @@ export default function ChatWidget() {
 
     let reply;
     try {
-      const res = await fetch("/api/chat", {
+      const API_URL = import.meta.env.VITE_API_URL || "";
+      const res = await fetch(`${API_URL}/api/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: value, history: history.current }),
