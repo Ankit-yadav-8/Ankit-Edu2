@@ -1,4 +1,38 @@
 {
+  "redirects": [
+    { "source": "/contact-us", "destination": "/contact", "permanent": true },
+    { "source": "/contact-us.php", "destination": "/contact", "permanent": true },
+    { "source": "/contactus", "destination": "/contact", "permanent": true },
+    { "source": "/contactus.php", "destination": "/contact", "permanent": true },
+    { "source": "/contact.php", "destination": "/contact", "permanent": true },
+
+    { "source": "/about-us", "destination": "/about", "permanent": true },
+    { "source": "/about-us.php", "destination": "/about", "permanent": true },
+    { "source": "/aboutus", "destination": "/about", "permanent": true },
+    { "source": "/aboutus.php", "destination": "/about", "permanent": true },
+    { "source": "/about.php", "destination": "/about", "permanent": true },
+
+    { "source": "/services.php", "destination": "/services", "permanent": true },
+    { "source": "/service.php", "destination": "/services", "permanent": true },
+    { "source": "/our-services", "destination": "/services", "permanent": true },
+    { "source": "/our-services.php", "destination": "/services", "permanent": true },
+    { "source": "/solutions", "destination": "/services", "permanent": true },
+    { "source": "/solutions.php", "destination": "/services", "permanent": true },
+
+    { "source": "/infrastructure.php", "destination": "/infrastructure", "permanent": true },
+    { "source": "/lab.php", "destination": "/infrastructure", "permanent": true },
+    { "source": "/laboratory.php", "destination": "/infrastructure", "permanent": true },
+
+    { "source": "/clientele.php", "destination": "/clientele", "permanent": true },
+    { "source": "/clients", "destination": "/clientele", "permanent": true },
+    { "source": "/clients.php", "destination": "/clientele", "permanent": true },
+    { "source": "/our-clients", "destination": "/clientele", "permanent": true },
+    { "source": "/our-clients.php", "destination": "/clientele", "permanent": true },
+
+    { "source": "/index.php", "destination": "/", "permanent": true },
+    { "source": "/home", "destination": "/", "permanent": true },
+    { "source": "/home.php", "destination": "/", "permanent": true }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",

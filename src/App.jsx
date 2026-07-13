@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
@@ -56,6 +56,23 @@ export default function App() {
           <Route path="/contact/*" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+
+          {/* Legacy URL aliases — old PHP site paths still indexed by Google.
+              Vercel 301-redirects these on full loads; these client-side
+              redirects cover in-app navigation and non-Vercel hosting. */}
+          <Route path="/contact-us" element={<Navigate to="/contact" replace />} />
+          <Route path="/contact-us.php" element={<Navigate to="/contact" replace />} />
+          <Route path="/contactus" element={<Navigate to="/contact" replace />} />
+          <Route path="/about-us" element={<Navigate to="/about" replace />} />
+          <Route path="/about-us.php" element={<Navigate to="/about" replace />} />
+          <Route path="/aboutus" element={<Navigate to="/about" replace />} />
+          <Route path="/services.php" element={<Navigate to="/services" replace />} />
+          <Route path="/solutions" element={<Navigate to="/services" replace />} />
+          <Route path="/infrastructure.php" element={<Navigate to="/infrastructure" replace />} />
+          <Route path="/clientele.php" element={<Navigate to="/clientele" replace />} />
+          <Route path="/clients" element={<Navigate to="/clientele" replace />} />
+          <Route path="/index.php" element={<Navigate to="/" replace />} />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
