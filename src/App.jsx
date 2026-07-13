@@ -70,6 +70,8 @@ export default function App() {
           <Route path="/solutions" element={<Navigate to="/services" replace />} />
           <Route path="/infrastructure.php" element={<Navigate to="/infrastructure" replace />} />
           <Route path="/clientele.php" element={<Navigate to="/clientele" replace />} />
+          <Route path="/client" element={<Navigate to="/clientele" replace />} />
+          <Route path="/client.php" element={<Navigate to="/clientele" replace />} />
           <Route path="/clients" element={<Navigate to="/clientele" replace />} />
           <Route path="/index.php" element={<Navigate to="/" replace />} />
 

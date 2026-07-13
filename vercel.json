@@ -24,6 +24,8 @@
     { "source": "/laboratory.php", "destination": "/infrastructure", "permanent": true },
 
     { "source": "/clientele.php", "destination": "/clientele", "permanent": true },
+    { "source": "/client", "destination": "/clientele", "permanent": true },
+    { "source": "/client.php", "destination": "/clientele", "permanent": true },
     { "source": "/clients", "destination": "/clientele", "permanent": true },
     { "source": "/clients.php", "destination": "/clientele", "permanent": true },
     { "source": "/our-clients", "destination": "/clientele", "permanent": true },
