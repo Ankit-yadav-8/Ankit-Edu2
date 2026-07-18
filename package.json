@@ -1,7 +1,7 @@
 {
   "name": "rgreenlogic-website",
   "version": "2.0.0",
-  "description": "Rejig GreenLogic Private Limited - modern React (Vite) frontend with Express + MongoDB backend, auth, contact and AI visitor assistant.",
+  "description": "Rejig GreenLogic Private Limited - modern React (Vite) frontend with Express + Supabase backend, auth, contact and AI visitor assistant.",
   "main": "server.js",
   "type": "commonjs",
   "scripts": {
@@ -23,18 +23,19 @@
     "ai",
     "react",
     "vite",
-    "mongodb"
+    "supabase"
   ],
   "author": "Rejig GreenLogic Private Limited",
   "license": "MIT",
   "dependencies": {
+    "@supabase/supabase-js": "^2.110.7",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "express-rate-limit": "^7.4.0",
+    "helmet": "^8.3.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.5.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.1"
