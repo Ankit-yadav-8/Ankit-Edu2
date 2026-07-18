@@ -1,33 +1,52 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext.jsx";
+import { warmBackend, postJSON } from "../lib/api.js";
 
 export default function Login() {
-  const [msg, setMsg] = useState({ type: "", text: "" });
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [showPw, setShowPw] = useState(false);
   const [busy, setBusy] = useState(false);
+  const [slow, setSlow] = useState(false);
+  const [msg, setMsg] = useState({ type: "", text: "" });
   const { login } = useAuth();
   const navigate = useNavigate();
+  const slowTimer = useRef(null);
+
+  // Wake the backend the moment this page opens.
+  useEffect(() => {
+    warmBackend();
+    return () => clearTimeout(slowTimer.current);
+  }, []);
 
   async function onSubmit(e) {
     e.preventDefault();
+    if (busy) return; // guard against double-submit
     setBusy(true);
+    setSlow(false);
     setMsg({ type: "", text: "" });
-    const f = e.target;
+    slowTimer.current = setTimeout(() => setSlow(true), 4000);
+
     try {
-      const API_URL = import.meta.env.VITE_API_URL || "";
-      const res = await fetch(`${API_URL}/api/auth/login`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: f.email.value, password: f.password.value }),
+      const { ok, data } = await postJSON("/api/auth/login", {
+        email: email.trim(),
+        password,
       });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.message || "Login failed");
+      if (!ok) throw new Error(data.message || "Login failed");
       login(data.token, data.user);
       setMsg({ type: "success", text: "Welcome back! Redirecting…" });
-      setTimeout(() => navigate("/"), 700);
+      setTimeout(() => navigate("/"), 500);
     } catch (err) {
-      setMsg({ type: "error", text: err.message });
+      const text =
+        err.name === "AbortError"
+          ? "The server took too long to respond. Please try again in a moment."
+          : err.message;
+      setMsg({ type: "error", text });
       setBusy(false);
+    } finally {
+      clearTimeout(slowTimer.current);
+      setSlow(false);
     }
   }
 
@@ -46,11 +65,46 @@ export default function Login() {
         <div className="auth-card">
           <h1>Log in</h1>
           <p className="sub">Enter your credentials to continue.</p>
-          {msg.text && <div className={`form-msg ${msg.type}`}>{msg.text}</div>}
-          <form onSubmit={onSubmit}>
-            <div className="field"><label>Email</label><input name="email" type="email" required placeholder="you@company.com" /></div>
-            <div className="field"><label>Password</label><input name="password" type="password" required placeholder="••••••••" /></div>
-            <button type="submit" className="btn btn-primary btn-block" disabled={busy}>{busy ? "Signing in…" : "Log in"}</button>
+
+          {msg.text ? (
+            <div className={`form-msg ${msg.type}`}>{msg.text}</div>
+          ) : slow ? (
+            <div className="form-msg info">⏳ Waking up the server… the first request after a quiet spell can take up to a minute. Hang tight!</div>
+          ) : null}
+
+          <form onSubmit={onSubmit} noValidate>
+            <div className="field">
+              <label>Email</label>
+              <input
+                name="email"
+                type="email"
+                required
+                autoComplete="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="you@company.com"
+              />
+            </div>
+            <div className="field">
+              <label>Password</label>
+              <div className="pw-field">
+                <input
+                  name="password"
+                  type={showPw ? "text" : "password"}
+                  required
+                  autoComplete="current-password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="••••••••"
+                />
+                <button type="button" className="pw-toggle" onClick={() => setShowPw((s) => !s)} aria-label={showPw ? "Hide password" : "Show password"}>
+                  {showPw ? "Hide" : "Show"}
+                </button>
+              </div>
+            </div>
+            <button type="submit" className="btn btn-primary btn-block" disabled={busy}>
+              {busy ? (<><span className="spinner" />{slow ? "Waking server…" : "Signing in…"}</>) : "Log in"}
+            </button>
           </form>
           <p className="auth-alt">Don't have an account? <Link to="/signup">Create one →</Link></p>
         </div>

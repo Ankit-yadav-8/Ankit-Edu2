@@ -6,6 +6,7 @@ import ChatWidget from "./components/ChatWidget.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import BackToTop from "./components/BackToTop.jsx";
 import WhatsAppButton from "./components/WhatsAppButton.jsx";
+import { warmBackend } from "./lib/api.js";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Services from "./pages/Services.jsx";
@@ -20,6 +21,12 @@ import NotFound from "./pages/NotFound.jsx";
 
 export default function App() {
   const { pathname } = useLocation();
+
+  // Wake the (free-tier) backend as soon as the site loads, so login/signup/
+  // contact are fast by the time a visitor actually submits a form.
+  useEffect(() => {
+    warmBackend();
+  }, []);
 
   // Keep document title roughly in sync with the route.
   useEffect(() => {

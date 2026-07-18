@@ -956,6 +956,27 @@ body.chat-open .back-to-top { opacity: 0; visibility: hidden; pointer-events: no
 .auth-alt { text-align: center; margin-top: 18px; color: var(--muted); font-size: 0.92rem; }
 .auth-alt a { color: var(--violet-700); font-weight: 700; }
 
+/* ── Auth UX enhancements (loading, password toggle, hints) ── */
+.btn:disabled { opacity: 0.72; cursor: not-allowed; transform: none !important; box-shadow: var(--shadow-sm); }
+.spinner {
+  width: 16px; height: 16px; border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.45); border-top-color: #fff;
+  animation: spin 0.7s linear infinite; display: inline-block; flex: none;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.pw-field { position: relative; }
+.pw-field input { padding-right: 60px; }
+.pw-toggle {
+  position: absolute; right: 6px; top: 50%; transform: translateY(-50%);
+  background: none; border: none; cursor: pointer; padding: 6px 10px;
+  color: var(--muted); font-size: 0.8rem; font-weight: 700; border-radius: 8px;
+}
+.pw-toggle:hover { color: var(--violet-700); }
+
+.form-hint { font-size: 0.82rem; color: var(--muted); margin: -8px 0 14px; }
+.form-msg.info { display: block; background: var(--violet-50); color: var(--violet-700); border: 1px solid var(--violet-200); }
+
 /* ===================================================================
    FOOTER
    =================================================================== */
