@@ -18,7 +18,7 @@ create table if not exists public.app_users (
   created_at    timestamptz not null default now(),
   updated_at    timestamptz not null default now()
 );
-create index if not exists app_users_email_idx on public.app_users (lower(email));
+create index if not exists app_users_email_idx on public.app_users (email);
 
 -- ---------- contacts : enquiries / smart intake ----------
 create table if not exists public.contacts (
@@ -31,7 +31,7 @@ create table if not exists public.contacts (
   location     text not null default '',
   project_type text not null default '',
   message      text not null,
-  status       text not null default 'new' check (status in ('new','reviewed','closed')),
+  status       text not null default 'new' check (status in ('new','read','replied','archived')),
   created_at   timestamptz not null default now()
 );
 create index if not exists contacts_created_idx on public.contacts (created_at desc);
