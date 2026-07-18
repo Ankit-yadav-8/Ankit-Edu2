@@ -53,6 +53,13 @@ alter table public.contacts  enable row level security;
 revoke all on public.app_users from anon, authenticated;
 revoke all on public.contacts  from anon, authenticated;
 
+-- The trusted backend (Express on Render) connects as service_role. It bypasses
+-- RLS but STILL needs table privileges — and some Supabase projects don't auto-
+-- grant these for SQL-editor-created tables. Grant them explicitly so the server
+-- can read/write while anon/authenticated remain fully locked out.
+grant all on public.app_users to service_role;
+grant all on public.contacts  to service_role;
+
 -- ---------- keep updated_at fresh ----------
 create or replace function public.set_updated_at()
 returns trigger language plpgsql as $$
