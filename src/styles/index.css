@@ -975,6 +975,11 @@ body.chat-open .back-to-top { opacity: 0; visibility: hidden; pointer-events: no
 .pw-toggle:hover { color: var(--violet-700); }
 
 .form-hint { font-size: 0.82rem; color: var(--muted); margin: -8px 0 14px; }
+
+/* ── Phone field with country code ── */
+.phone-row { display: grid; grid-template-columns: 150px 1fr; gap: 10px; }
+.phone-row select { min-width: 0; }
+@media (max-width: 560px) { .phone-row { grid-template-columns: 116px 1fr; } }
 .form-msg.info { display: block; background: var(--violet-50); color: var(--violet-700); border: 1px solid var(--violet-200); }
 
 /* ===================================================================
