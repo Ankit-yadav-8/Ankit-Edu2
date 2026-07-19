@@ -13,7 +13,9 @@ module.exports = function protect(req, res, next) {
   }
 
   try {
-    req.user = jwt.verify(token, process.env.JWT_SECRET);
+    // Pin the algorithm so a forged token can't downgrade to "none" or trick
+    // the verifier into treating our secret as an RS256 public key.
+    req.user = jwt.verify(token, process.env.JWT_SECRET, { algorithms: ["HS256"] });
     next();
   } catch (err) {
     return res.status(401).json({ message: "Session expired — please log in again." });

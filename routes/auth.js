@@ -17,12 +17,16 @@ const authLimiter = rateLimit({
 });
 
 const EMAIL_RE = /^\S+@\S+\.\S+$/;
+const BCRYPT_COST = 12;
+// A throwaway hash of a random value, used to burn ~constant time on logins for
+// non-existent emails so an attacker can't tell registered emails apart by timing.
+const DUMMY_HASH = bcrypt.hashSync("timing-safe-placeholder", BCRYPT_COST);
 
 function signToken(user) {
   return jwt.sign(
     { id: user.id, name: user.name, email: user.email, role: user.role },
     process.env.JWT_SECRET,
-    { expiresIn: "7d" }
+    { expiresIn: "7d", algorithm: "HS256" }
   );
 }
 
@@ -46,8 +50,10 @@ router.post("/signup", authLimiter, async (req, res) => {
       return res.status(400).json({ message: "Name, email and password are required." });
     if (!EMAIL_RE.test(email))
       return res.status(400).json({ message: "Please enter a valid email." });
-    if (password.length < 6)
-      return res.status(400).json({ message: "Password must be at least 6 characters." });
+    if (password.length < 8)
+      return res.status(400).json({ message: "Password must be at least 8 characters." });
+    if (password.length > 200)
+      return res.status(400).json({ message: "Password is too long." });
     if (name.length > 80 || company.length > 120)
       return res.status(400).json({ message: "Name or company is too long." });
 
@@ -60,7 +66,7 @@ router.post("/signup", authLimiter, async (req, res) => {
     if (existing)
       return res.status(409).json({ message: "An account with this email already exists." });
 
-    const password_hash = await bcrypt.hash(password, 10);
+    const password_hash = await bcrypt.hash(password, BCRYPT_COST);
 
     const { data: user, error } = await supabase
       .from("app_users")
@@ -94,9 +100,12 @@ router.post("/login", authLimiter, async (req, res) => {
       .maybeSingle();
     if (error) throw error;
 
-    // Same generic message + a hash compare whether or not the user exists,
-    // so we don't reveal which emails are registered.
-    const ok = user && (await bcrypt.compare(password, user.password_hash));
+    // Always run a bcrypt compare — against the real hash if the user exists,
+    // otherwise against a dummy hash — so response time (and the generic error)
+    // never reveals which emails are registered.
+    const hash = user ? user.password_hash : DUMMY_HASH;
+    const passwordMatches = await bcrypt.compare(password, hash);
+    const ok = Boolean(user) && passwordMatches;
     if (!ok) return res.status(401).json({ message: "Invalid email or password." });
 
     return res.json({ token: signToken(user), user: publicUser(user) });

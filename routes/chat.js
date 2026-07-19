@@ -65,9 +65,25 @@ function localAnswer(message) {
   return "I can help with RGPL's services, NABET/MoEFCC accreditations, the CEQMS & air-quality products, or getting a proposal. Could you tell me your sector or what you're looking for? You can also reach us at rgpl@rgreenlogic.com.";
 }
 
+// Only accept well-formed { role, content } turns, cap their length, and keep
+// the last few — so a caller can't smuggle a huge/oddly-shaped history into the
+// upstream prompt to burn tokens or hijack the system instructions.
+function sanitizeHistory(history) {
+  if (!Array.isArray(history)) return [];
+  return history
+    .filter(
+      (m) =>
+        m &&
+        (m.role === "user" || m.role === "assistant") &&
+        typeof m.content === "string"
+    )
+    .slice(-6)
+    .map((m) => ({ role: m.role, content: m.content.slice(0, 2000) }));
+}
+
 async function claudeAnswer(message, history) {
   const messages = [
-    ...(Array.isArray(history) ? history.slice(-6) : []),
+    ...sanitizeHistory(history),
     { role: "user", content: message },
   ];
 
@@ -98,9 +114,12 @@ async function claudeAnswer(message, history) {
 
 // POST /api/chat  { message, history? }
 router.post("/", chatLimiter, async (req, res) => {
-  const { message, history } = req.body || {};
-  if (!message || !message.trim())
+  let { message, history } = req.body || {};
+  if (typeof message !== "string" || !message.trim())
     return res.status(400).json({ reply: "Please type a question and I'll help. 😊" });
+
+  // Cap the incoming question so it can't bloat the prompt.
+  message = message.trim().slice(0, 2000);
 
   try {
     if (process.env.ANTHROPIC_API_KEY) {
