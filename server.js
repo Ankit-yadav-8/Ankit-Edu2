@@ -83,6 +83,7 @@ app.use(express.urlencoded({ extended: false, limit: "16kb" }));
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/contact", require("./routes/contact"));
 app.use("/api/chat", require("./routes/chat"));
+app.use("/api/admin", require("./routes/admin"));
 app.get("/api/health", (_req, res) =>
   res.json({ ok: true, db: dbReady(), time: new Date().toISOString() })
 );

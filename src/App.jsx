@@ -17,6 +17,7 @@ import AiIntegration from "./pages/AiIntegration.jsx";
 import Contact from "./pages/Contact.jsx";
 import Login from "./pages/Login.jsx";
 import Signup from "./pages/Signup.jsx";
+import Admin from "./pages/Admin.jsx";
 import NotFound from "./pages/NotFound.jsx";
 
 export default function App() {
@@ -41,6 +42,7 @@ export default function App() {
       "/contact": "Contact Us | Rejig GreenLogic",
       "/login": "Log In | Rejig GreenLogic",
       "/signup": "Sign Up | Rejig GreenLogic",
+      "/admin": "Admin Panel | Rejig GreenLogic",
     };
     document.title = titles[pathname] || "Rejig GreenLogic Private Limited";
   }, [pathname]);
@@ -63,6 +65,7 @@ export default function App() {
           <Route path="/contact/*" element={<Contact />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/admin" element={<Admin />} />
 
           {/* Legacy URL aliases — old PHP site paths still indexed by Google.
               Vercel 301-redirects these on full loads; these client-side

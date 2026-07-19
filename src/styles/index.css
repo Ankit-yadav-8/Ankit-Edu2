@@ -1616,3 +1616,25 @@ body.chat-open .back-to-top { opacity: 0; visibility: hidden; pointer-events: no
   .case-facts { position: static; }
 }
 
+/* ═══ Admin Panel ═══════════════════════════════════════════ */
+.admin-wrap { padding: 40px 0 80px; min-height: calc(100vh - 76px); }
+.admin-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 22px; }
+.admin-head h1 { font-size: 2rem; margin-bottom: 4px; }
+.admin-sub { color: var(--muted); font-size: 0.98rem; }
+.admin-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn-outline { background: #fff; color: var(--violet-700); border-color: var(--violet-400); box-shadow: var(--shadow-sm); }
+.btn-outline:hover { background: var(--grad-soft); transform: translateY(-2px); }
+.admin-tabs { display: flex; gap: 8px; margin-bottom: 18px; border-bottom: 2px solid var(--line); flex-wrap: wrap; }
+.admin-tab { background: none; border: none; padding: 12px 18px; font-weight: 600; font-size: 0.95rem; color: var(--muted); cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px; border-radius: 8px 8px 0 0; }
+.admin-tab:hover { color: var(--ink); }
+.admin-tab.active { color: var(--violet-700); border-bottom-color: var(--violet-700); background: var(--grad-soft); }
+.admin-table-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow-sm); background: var(--card); }
+.admin-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 720px; }
+.admin-table th { text-align: left; padding: 13px 14px; background: var(--grad-soft); color: var(--ink); font-weight: 700; white-space: nowrap; position: sticky; top: 0; }
+.admin-table td { padding: 12px 14px; border-top: 1px solid var(--line); color: var(--ink-soft); vertical-align: top; }
+.admin-table tbody tr:hover, .admin-table tbody tr:hover { background: var(--grad-soft); }
+.admin-msg { max-width: 340px; white-space: pre-wrap; word-break: break-word; }
+.admin-empty { text-align: center; color: var(--muted); padding: 30px; }
+.admin-badge { display: inline-block; padding: 3px 10px; border-radius: 999px; background: var(--grad-soft); color: var(--violet-700); font-size: 0.78rem; font-weight: 700; text-transform: capitalize; }
+.admin-badge-hi { background: var(--grad); color: #fff; }
+

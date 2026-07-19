@@ -43,3 +43,28 @@ export async function postJSON(path, body, { timeoutMs = 65000 } = {}) {
     clearTimeout(timer);
   }
 }
+
+/**
+ * GET JSON with an optional Bearer token (used by the admin panel).
+ * Returns { ok, status, data }.
+ */
+export async function getJSON(path, { token, timeoutMs = 65000 } = {}) {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+  try {
+    const res = await fetch(`${API_URL}${path}`, {
+      method: "GET",
+      headers: token ? { Authorization: `Bearer ${token}` } : {},
+      signal: ctrl.signal,
+    });
+    let data = {};
+    try {
+      data = await res.json();
+    } catch {
+      /* response had no JSON body */
+    }
+    return { ok: res.ok, status: res.status, data };
+  } finally {
+    clearTimeout(timer);
+  }
+}
