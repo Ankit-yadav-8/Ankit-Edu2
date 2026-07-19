@@ -1,8 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { warmBackend, postJSON, getJSON } from "../lib/api.js";
 
-const TOKEN_KEY = "rgpl_admin_token";
-
 function fmtDate(v) {
   if (!v) return "—";
   const d = new Date(v);
@@ -10,7 +8,9 @@ function fmtDate(v) {
 }
 
 export default function Admin() {
-  const [token, setToken] = useState(() => localStorage.getItem(TOKEN_KEY) || "");
+  // Token is kept in memory ONLY (never persisted). Reloading or reopening
+  // /admin — same session or not — always requires the password again.
+  const [token, setToken] = useState("");
   const [password, setPassword] = useState("");
   const [showPw, setShowPw] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -26,7 +26,6 @@ export default function Admin() {
   }, []);
 
   const signOut = useCallback(() => {
-    localStorage.removeItem(TOKEN_KEY);
     setToken("");
     setUsers([]);
     setContacts([]);
@@ -58,7 +57,7 @@ export default function Admin() {
     [signOut]
   );
 
-  // Auto-load when we already have a token (e.g. page refresh).
+  // Load data right after a successful login (token only ever set in memory).
   useEffect(() => {
     if (token) loadData(token);
   }, [token, loadData]);
@@ -71,7 +70,6 @@ export default function Admin() {
     try {
       const { ok, data } = await postJSON("/api/admin/login", { password });
       if (!ok) throw new Error(data.message || "Login failed");
-      localStorage.setItem(TOKEN_KEY, data.token);
       setPassword("");
       setToken(data.token);
     } catch (err) {

@@ -93,9 +93,6 @@ export default function Navbar() {
             <li>
               <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>Contact Us</NavLink>
             </li>
-            <li>
-              <NavLink to="/admin" className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>Admin Panel</NavLink>
-            </li>
 
 
           </ul>
@@ -148,7 +145,6 @@ export default function Navbar() {
         </div>
         <div className="mob-sec">
           <Link to="/contact" className="mob-lnk accent" onClick={closeMenu}>Contact Us →</Link>
-          <Link to="/admin" className="mob-lnk" onClick={closeMenu}>Admin Panel</Link>
         </div>
       </div>
     </>
